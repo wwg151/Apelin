@@ -1,5 +1,6 @@
 import ApelinCore
 @testable import ApelinEnvironment
+@testable import ApelinProtocol
 import Foundation
 import XCTest
 
