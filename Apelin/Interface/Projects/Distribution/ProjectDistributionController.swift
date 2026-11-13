@@ -210,7 +210,12 @@ final class ProjectDistributionController: TableController {
             break
         case let .package(artifactID):
             content.secondaryTextProperties.numberOfLines = 0
-            content.secondaryTextProperties.alignment = .right
+            let paragraph = NSMutableParagraphStyle()
+            paragraph.alignment = .right
+            content.secondaryAttributedText = NSAttributedString(
+                string: value.secondaryText ?? "",
+                attributes: [.paragraphStyle: paragraph],
+            )
             content.image = UIImage(systemName: value.selected ? "checkmark.circle.fill" : "circle")
             content.imageProperties.tintColor = value.selected ? .tintColor : .tertiaryLabel
             cell.selectionStyle = .default
