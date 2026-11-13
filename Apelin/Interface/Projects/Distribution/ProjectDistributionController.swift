@@ -2,23 +2,14 @@ import ApelinCore
 import ApelinProtocol
 import UIKit
 
-/// The first step of distributing a project. The release packages builds
-/// already made of its current version, roothide and rootless, come first
-/// (`DistributionPackages`), each Built, Shared or Published: the selected
-/// ones are published together in one commit, and any one is shared from
-/// its row, as its build made it, so a version already packaged needs no
-/// second build. Below them, pick a target, see what the package should not
-/// carry yet, then build on its own page (`DistributionBuildController`).
-/// What the check finds is advice: Build still goes ahead after a
-/// confirmation, which a version packaged before does not ask for when its
-/// package is listed above, and Ask Agent to Prepare hands the work to the
-/// project's conversation. What stops the build — an error the check
-/// finds, such as a workspace script that is not in the project — is listed
-/// and Build waits for it to be fixed. A workspace is built by its own
-/// script, whose package is checked once it is written, and its newest
-/// release packages are listed whatever their version. A project with no
-/// build description or script (`ProjectBuildMethod`) has nothing to
-/// package: the page says so and offers no target.
+/// Available release artifacts, newest first, each Built, Shared or
+/// Published and identified by its build time. Explicit selection permits
+/// one artifact per architecture; publishing and sharing use those exact
+/// files. Below them, choose build targets and review distribution advice.
+/// Same-version history never asks for confirmation before rebuilding;
+/// other warnings do, while errors block Build. A workspace's own script
+/// produces the package, which is checked after the build. A project with
+/// no build description or script offers no build targets.
 @MainActor
 final class ProjectDistributionController: TableController {
     private enum Section: Hashable {
@@ -26,7 +17,7 @@ final class ProjectDistributionController: TableController {
     }
 
     private enum Row: Hashable {
-        case project, package(BuildBootstrap), publish, target(BuildBootstrap), checking, ready, blocker(Int), issue(Int), prepare, unavailable
+        case project, package(String), publish, target(BuildBootstrap), checking, ready, blocker(Int), issue(Int), prepare, unavailable
     }
 
     private struct RowContent: Equatable {
@@ -45,7 +36,8 @@ final class ProjectDistributionController: TableController {
     /// the page was not opened from one.
     private let onPrepare: ((String) -> Void)?
     @objc private dynamic var displayName: String?
-    private var selectedTarget: BuildBootstrap? = .roothide
+    private var selectedTargets: Set<BuildBootstrap> = [.roothide]
+    private var issuesByTarget: [BuildBootstrap: [ProjectDiagnostic]] = [:]
     /// Nil until the manifest is read; one that cannot build takes the
     /// targets away.
     private var method: ProjectBuildMethod?
@@ -58,9 +50,8 @@ final class ProjectDistributionController: TableController {
     private var loadingDelay: Task<Void, Never>?
     @objc private dynamic var checkFailure: String?
     private var check: Task<Void, Never>?
-    /// The release packages builds left, per target, read again each time
-    /// the page appears; the ones picked to publish, by artifact.
-    private var packages: [BuildBootstrap: DistributionPackage] = [:]
+    /// Available release builds, newest first; selection names artifacts.
+    private var packages: [DistributionPackage] = []
     @objc private dynamic var selectedPackages: Set<String> = []
     private var packageReader: Task<Void, Never>?
     /// While a package is read back to be shared or published.
@@ -107,7 +98,7 @@ final class ProjectDistributionController: TableController {
             switch section {
             case .packages:
                 String(localized: "Publish the selected packages to your package repository together, or share one. Each is the file its build made, unchanged.")
-            case .target: String(localized: "Choose one target, then tap “Build”. To build the other target, come back and build again.")
+            case .target: String(localized: "Choose one or both targets, then tap “Build”. Selected targets build in order: roothide, then rootless.")
             case .readiness:
                 self?.blockers.isEmpty == false
                     ? String(localized: "Fix these before building.")
@@ -141,16 +132,20 @@ final class ProjectDistributionController: TableController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: !UIAccessibility.isReduceMotionEnabled)
         switch dataSource.itemIdentifier(for: indexPath) {
-        case let .package(target):
-            guard let package = packages[target] else { return }
-            if selectedPackages.remove(package.artifactID) == nil {
-                selectedPackages.insert(package.artifactID)
+        case let .package(artifactID):
+            guard !isPreparingPackage, let package = packages.first(where: { $0.artifactID == artifactID }) else { return }
+            if selectedPackages.remove(artifactID) == nil {
+                let sameArchitecture = Set(packages.filter { $0.architecture == package.architecture }.map(\.artifactID))
+                selectedPackages.subtract(sameArchitecture)
+                selectedPackages.insert(artifactID)
             }
             updateRows()
         case .publish:
             publish()
-        case let .target(target) where target != selectedTarget:
-            selectedTarget = target
+        case let .target(target):
+            if selectedTargets.remove(target) == nil {
+                selectedTargets.insert(target)
+            }
             refreshCheck()
         case .prepare:
             prepare()
@@ -179,17 +174,19 @@ final class ProjectDistributionController: TableController {
         switch value.row {
         case .project:
             break
-        case let .package(target):
+        case let .package(artifactID):
+            content.secondaryTextProperties.numberOfLines = 0
+            content.secondaryTextProperties.alignment = .right
             content.image = UIImage(systemName: value.selected ? "checkmark.circle.fill" : "circle")
             content.imageProperties.tintColor = value.selected ? .tintColor : .tertiaryLabel
             cell.selectionStyle = .default
             cell.accessibilityTraits = value.selected ? [.button, .selected] : .button
-            cell.accessoryView = shareButton(for: target)
+            cell.accessoryView = shareButton(for: artifactID)
             // the row is the element, so its Share button is reached as an action
             cell.accessibilityCustomActions = [
                 UIAccessibilityCustomAction(name: String(localized: "Share Package")) { [weak self, weak cell] _ in
                     guard let self, let cell else { return false }
-                    share(target, from: cell)
+                    share(artifactID, from: cell)
                     return true
                 },
             ]
@@ -232,14 +229,14 @@ final class ProjectDistributionController: TableController {
     }
 
     /// The Share button at a package row's trailing edge.
-    private func shareButton(for target: BuildBootstrap) -> UIButton {
+    private func shareButton(for artifactID: String) -> UIButton {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
         button.accessibilityLabel = String(localized: "Share Package")
         button.sizeToFit()
         button.addAction(UIAction { [weak self, weak button] _ in
             guard let self, let button else { return }
-            share(target, from: button)
+            share(artifactID, from: button)
         }, for: .touchUpInside)
         return button
     }
@@ -267,11 +264,18 @@ final class ProjectDistributionController: TableController {
             readiness = blockers.indices.map { index in
                 RowContent(row: .blocker(index), text: blockers[index].message)
             }
-            readiness += issues.indices.map { index in
-                RowContent(
+            let labelledIssues = BuildBootstrap.allCases.flatMap { target in
+                (issuesByTarget[target] ?? []).map { (target, $0) }
+            }
+            readiness += labelledIssues.indices.map { index in
+                let (target, issue) = labelledIssues[index]
+                let advice = DistributionAdvice.advice(for: issue)
+                return RowContent(
                     row: .issue(index),
-                    text: DistributionAdvice.title(of: issues[index]),
-                    secondaryText: DistributionAdvice.advice(for: issues[index]),
+                    text: DistributionAdvice.title(of: issue),
+                    secondaryText: selectedTargets.count > 1
+                        ? [target.rawValue, advice].compactMap(\.self).joined(separator: ": ")
+                        : advice,
                 )
             }
             if onPrepare != nil {
@@ -281,15 +285,16 @@ final class ProjectDistributionController: TableController {
         var sections: [(Section, [RowContent])] = [
             (.project, [RowContent(row: .project, text: String(localized: "Project"), secondaryText: displayName ?? projectName)]),
         ]
-        let listed = BuildBootstrap.allCases.compactMap { packages[$0] }
+        let listed = packages
         if !listed.isEmpty {
             let rows = listed.map { package in
                 let state = package.state.title
+                let date = package.createdAt.formatted(date: .numeric, time: .standard)
                 return RowContent(
-                    row: .package(package.bootstrap),
-                    text: package.bootstrap.rawValue,
-                    secondaryText: "\(package.version) · \(state)",
-                    spokenText: "\(package.bootstrap.rawValue), \(package.version)",
+                    row: .package(package.artifactID),
+                    text: "\(package.bootstrap.rawValue) · \(package.version) · \(state)",
+                    secondaryText: date,
+                    spokenText: "\(package.bootstrap.rawValue), \(package.packageID), \(package.version), \(date)",
                     spokenValue: state,
                     selected: selectedPackages.contains(package.artifactID),
                 )
@@ -300,7 +305,7 @@ final class ProjectDistributionController: TableController {
         }
         if canBuild {
             sections.append((.target, BuildBootstrap.allCases.map { target in
-                RowContent(row: .target(target), text: target.rawValue, selected: target == selectedTarget)
+                RowContent(row: .target(target), text: target.rawValue, selected: selectedTargets.contains(target))
             }))
         }
         if !readiness.isEmpty {
@@ -308,7 +313,7 @@ final class ProjectDistributionController: TableController {
         }
         dataSource.update(sections, reconfigure: true)
         navigationItem.rightBarButtonItem?.isEnabled = canBuild && blockers.isEmpty && !checking
-            && checkFailure == nil && selectedTarget != nil
+            && checkFailure == nil && !selectedTargets.isEmpty
     }
 
     // MARK: - The check
@@ -328,7 +333,7 @@ final class ProjectDistributionController: TableController {
             showsChecking = true
             updateRows()
         }
-        let target = selectedTarget
+        let targets = BuildBootstrap.allCases.filter { selectedTargets.contains($0) }
         check = Task { [weak self] in
             guard let self else { return }
             defer {
@@ -350,15 +355,33 @@ final class ProjectDistributionController: TableController {
                     checkFailure = nil
                     return
                 }
-                let response = try await ApelinService.app.projectCheck(
-                    projectID: project.id,
-                    purpose: .distribution,
-                    bootstrap: target,
-                )
-                guard !Task.isCancelled else { return }
+                var checkedBlockers: [ProjectDiagnostic] = []
+                var checkedIssues: [ProjectDiagnostic] = []
+                var perTarget: [BuildBootstrap: [ProjectDiagnostic]] = [:]
+                for target in targets {
+                    let response = try await ApelinService.app.projectCheck(
+                        projectID: project.id,
+                        purpose: .distribution,
+                        bootstrap: target,
+                    )
+                    try Task.checkCancellation()
+                    let errors = response.diagnostics.filter { $0.severity == .error }
+                    let warnings = response.diagnostics.filter {
+                        $0.code.hasPrefix("distribution.") && $0.severity != .error
+                            && $0.code != DistributionAdvice.versionPackaged
+                    }
+                    perTarget[target] = warnings
+                    checkedBlockers += errors.map { diagnostic in
+                        var diagnostic = diagnostic
+                        if targets.count > 1 { diagnostic.message = "\(target.rawValue): \(diagnostic.message)" }
+                        return diagnostic
+                    }
+                    checkedIssues += warnings
+                }
                 checkFailure = nil
-                blockers = response.diagnostics.filter { $0.severity == .error }
-                issues = response.diagnostics.filter { $0.code.hasPrefix("distribution.") && $0.severity != .error }
+                blockers = checkedBlockers
+                issues = checkedIssues
+                issuesByTarget = perTarget
             } catch is CancellationError {
                 return
             } catch {
@@ -372,18 +395,18 @@ final class ProjectDistributionController: TableController {
 
     // MARK: - Packages
 
-    /// The release packages of the version the manifest names now, and
-    /// whether the linked repository holds each.
+    /// Available release history, and whether the linked repository holds
+    /// the exact bytes of each artifact.
     @objc private dynamic func refreshPackages() {
         packageReader?.cancel()
         dataSource.beginLoad()
         packageReader = Task { [weak self] in
             guard let self else { return }
-            var found: [BuildBootstrap: DistributionPackage] = [:]
+            var found: [DistributionPackage] = []
             if let project = try? await DistributionProject.resolve(named: projectName), project.method.canBuild {
                 // the link needs no network; a failure leaves every package unpublished
                 let linked = try? await ApelinService.app.distributionRepositoryList(repositories: false).linked
-                found = await DistributionPackages.newest(
+                found = await DistributionPackages.history(
                     projectID: project.id,
                     package: project.package,
                     isWorkspace: project.method == .script,
@@ -395,21 +418,21 @@ final class ProjectDistributionController: TableController {
         }
     }
 
-    /// A package seen for the first time is picked unless it is published
-    /// already; one seen before keeps the reader's choice until it becomes
-    /// published.
-    private func show(_ found: [BuildBootstrap: DistributionPackage]) {
-        let before = Dictionary(packages.values.map { ($0.artifactID, $0) }) { first, _ in first }
-        selectedPackages = Set(found.values.filter { package in
-            guard let earlier = before[package.artifactID] else { return !package.isPublished }
-            return selectedPackages.contains(package.artifactID) && (earlier.isPublished || !package.isPublished)
+    /// Preserve explicit choices while refreshing, without selecting new
+    /// artifacts on the reader's behalf. At most one per architecture.
+    private func show(_ found: [DistributionPackage]) {
+        var architectures: Set<String> = []
+        selectedPackages = Set(found.filter { package in
+            selectedPackages.contains(package.artifactID)
+                && architectures.insert(package.architecture).inserted
         }.map(\.artifactID))
         packages = found
         updateRows()
     }
 
-    private func share(_ target: BuildBootstrap, from anchor: UIView) {
-        guard let package = packages[target], !isPreparingPackage, presentedViewController == nil else { return }
+    private func share(_ artifactID: String, from anchor: UIView) {
+        guard let package = packages.first(where: { $0.artifactID == artifactID }),
+              !isPreparingPackage, presentedViewController == nil else { return }
         isPreparingPackage = true
         Task { [weak self] in
             guard let self else { return }
@@ -422,8 +445,11 @@ final class ProjectDistributionController: TableController {
 
     /// The selected packages, roothide's first, in one publish.
     @objc private dynamic func publish() {
-        let chosen = BuildBootstrap.allCases.compactMap { packages[$0] }.filter { selectedPackages.contains($0.artifactID) }
-        guard !chosen.isEmpty, !isPreparingPackage else { return }
+        let chosen = BuildBootstrap.allCases.flatMap { target in
+            packages.filter { $0.bootstrap == target && selectedPackages.contains($0.artifactID) }
+        }
+        guard !chosen.isEmpty, !isPreparingPackage,
+              Set(chosen.map(\.architecture)).count == chosen.count else { return }
         isPreparingPackage = true
         updateRows()
         Task { [weak self] in
@@ -437,16 +463,20 @@ final class ProjectDistributionController: TableController {
     // MARK: - Actions
 
     @objc private dynamic func build() {
-        guard !checking, checkFailure == nil, let target = selectedTarget, let method, method.canBuild, blockers.isEmpty else { return }
+        let targets = BuildBootstrap.allCases.filter { selectedTargets.contains($0) }
+        guard !checking, checkFailure == nil, !targets.isEmpty, let method, method.canBuild, blockers.isEmpty else { return }
         let open = { [weak self] in
             guard let self else { return }
             navigationController?.pushViewController(
-                DistributionBuildController(projectName: projectName, target: target, method: method),
+                DistributionBuildController(projectName: projectName, targets: targets, method: method),
                 animated: true,
             )
         }
-        // a version packaged before needs no question when its package is listed above
-        let asked = issues.filter { $0.code != DistributionAdvice.versionPackaged || packages[target] == nil }
+        // Rebuilding the same version is allowed, regardless of whether
+        // its previous artifact is still available.
+        let asked = targets.flatMap { target in
+            (issuesByTarget[target] ?? []).filter { $0.code != DistributionAdvice.versionPackaged }
+        }
         guard !asked.isEmpty else {
             open()
             return
@@ -463,7 +493,7 @@ final class ProjectDistributionController: TableController {
         guard !checking, let onPrepare else { return }
         let prompt = if method == .script {
             String(localized: "Prepare this workspace for distribution: run apelin_project_check_distribution and fix everything it lists, and make sure its build script writes a release package for each target when APELIN_CONFIGURATION is release, with the package’s real name, identifier, author and a new version. Then tell me what you changed. Do not build yet.")
-        } else if let target = selectedTarget {
+        } else if selectedTargets.count == 1, let target = selectedTargets.first {
             String(localized: "Prepare this project for distribution to \(target.rawValue): run apelin_project_check_distribution, fix everything it lists (the package’s name, description, author and version, its identifiers, and the app’s icon if it has one), then tell me what you changed. Do not build yet.")
         } else {
             String(localized: "Prepare this project for distribution: run apelin_project_check_distribution, fix everything it lists (the package’s name, description, author and version, its identifiers, and the app’s icon if it has one), then tell me what you changed. Do not build yet.")

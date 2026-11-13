@@ -3,17 +3,11 @@ import ApelinProtocol
 import Then
 import UIKit
 
-/// One release build for one distribution target, started as the page
-/// opens: its stages while it runs, then Distribute for the one `.deb` it
-/// made, or Retry. Distribute is the page's prominent action, and its menu
-/// keeps the two ways out apart: Share Package hands the file to the share
-/// sheet, Publish to Repository adds it to the linked package repository
-/// and pushes it, or, with none linked, opens Settings ▸ Git, where
-/// Publishing creates or links one. A workspace's build runs its own
-/// script, and what the build finds in the package it wrote (a placeholder
-/// identifier, a version packaged before, another package for the other
-/// target) is listed under the outcome. The `…` menu holds the build's
-/// whole log and, once the package is ready, the same two choices.
+/// Serial release builds for the selected distribution targets. Each
+/// target keeps its result and log. Success advances automatically; failure
+/// or Stop pauses for Retry or Continue. Successful artifacts can be shared
+/// separately or published together through DistributionPublishing. A workspace
+/// runs its own script and retains the package findings under its outcome.
 @MainActor
 final class DistributionBuildController: TableController {
     private enum Stage: Int {
@@ -48,22 +42,42 @@ final class DistributionBuildController: TableController {
     }
 
     private enum Section: Hashable {
-        case progress, outcome
+        case progress, results, outcome
     }
 
     private enum Row: Hashable {
-        case stage(Stage), outcome, finding(Int)
+        case stage(Stage), outcome, finding(Int), result(BuildBootstrap)
     }
 
     private struct RowContent: Equatable {
         var row: Row
         var text: String?
         var secondaryText: String?
+        var enabled = false
+        var selected = false
+    }
+
+    private struct Result {
+        var state: TaskState
+        var artifact: BuildArtifact?
+        var outcome: String?
+        var findings: [ProjectDiagnostic]
+        var stage: Stage
+        var logLines: [String]
     }
 
     private let projectName: String
-    private let target: BuildBootstrap
+    private let targets: [BuildBootstrap]
+    private var target: BuildBootstrap
+    private var results: [BuildBootstrap: Result] = [:]
+    private var lastEventSeq: EventSeq = .start
+    @objc private dynamic var buildFinished = false
+    private var buildState: TaskState?
     private let method: ProjectBuildMethod
+
+    private var nextTarget: BuildBootstrap? {
+        targets.first { results[$0] == nil }
+    }
     private var stage = Stage.preparing
     private var artifact: BuildArtifact?
     /// The build's `distribution.*` warnings about the package it wrote.
@@ -104,12 +118,34 @@ final class DistributionBuildController: TableController {
     /// Distribute's choices once there is a package, then the log.
     @objc private dynamic func moreMenuElements() -> [UIMenuElement] {
         var elements: [UIMenuElement] = []
-        if artifact != nil, work == nil {
+        if work == nil, artifact != nil || results.values.contains(where: { $0.artifact != nil }) {
             elements.append(UIMenu(options: .displayInline, children: distributionActions(anchor: moreButton)))
         }
-        elements.append(UIAction(title: String(localized: "Build Log"), image: UIImage(systemName: "doc.plaintext")) { [weak self] _ in
-            self?.openLog()
-        })
+        if work == nil, targets.count > 1, artifact == nil {
+            elements.append(UIAction(title: String(localized: "Retry \(target.rawValue)"), image: UIImage(systemName: "arrow.clockwise")) { [weak self] _ in
+                self?.start()
+            })
+        }
+        if targets.count > 1 {
+            for logTarget in targets {
+                guard results[logTarget] != nil || logTarget == target else { continue }
+                elements.append(UIAction(title: String(localized: "Build Log: \(logTarget.rawValue)"), image: UIImage(systemName: "doc.plaintext")) { [weak self] _ in
+                    guard let self else { return }
+                    if logTarget == target {
+                        openLog()
+                    } else if let result = results[logTarget] {
+                        let page = TaskLogController(lines: result.logLines)
+                        page.loadViewIfNeeded()
+                        page.title = logTarget.rawValue
+                        navigationController?.pushViewController(page, animated: true)
+                    }
+                })
+            }
+        } else {
+            elements.append(UIAction(title: String(localized: "Build Log"), image: UIImage(systemName: "doc.plaintext")) { [weak self] _ in
+                self?.openLog()
+            })
+        }
         return elements
     }
 
@@ -117,6 +153,31 @@ final class DistributionBuildController: TableController {
     /// `anchor`, the item whose menu they were chosen from.
     @objc private dynamic func distributionActions(anchor: UIBarButtonItem) -> [UIMenuElement] {
         let attributes: UIMenuElement.Attributes = isPreparingPackage ? .disabled : []
+        if targets.count > 1 {
+            let shares: [UIMenuElement] = targets.compactMap { shareTarget in
+                guard let artifact = results[shareTarget]?.artifact else { return nil }
+                let shareItem = publishingItem(artifact, target: shareTarget)
+                return UIAction(
+                    title: String(localized: "Share Package: \(shareTarget.rawValue)"),
+                    image: UIImage(systemName: "square.and.arrow.up"),
+                    attributes: attributes,
+                ) { [weak self, weak anchor] _ in
+                    guard let self, let anchor, work == nil, !isPreparingPackage else { return }
+                    isPreparingPackage = true
+                    Task { [weak self] in
+                        guard let self else { return }
+                        await DistributionPublishing.share(shareItem, from: self, anchor: anchor)
+                        isPreparingPackage = false
+                    }
+                }
+            }
+            let publish = UIAction(
+                title: String(localized: "Publish to Repository"),
+                image: UIImage(systemName: "shippingbox"),
+                attributes: attributes,
+            ) { [weak self] _ in self?.publish() }
+            return shares + [publish]
+        }
         return [
             UIAction(
                 title: String(localized: "Share Package"),
@@ -136,9 +197,12 @@ final class DistributionBuildController: TableController {
         ]
     }
 
-    init(projectName: String, target: BuildBootstrap, method: ProjectBuildMethod) {
+    init(projectName: String, targets: [BuildBootstrap], method: ProjectBuildMethod) {
+        precondition(!targets.isEmpty)
+        let orderedTargets = BuildBootstrap.allCases.filter { targets.contains($0) }
         self.projectName = projectName
-        self.target = target
+        self.targets = orderedTargets
+        target = orderedTargets[0]
         self.method = method
         super.init(style: .insetGrouped)
     }
@@ -181,6 +245,7 @@ final class DistributionBuildController: TableController {
         content.secondaryText = value.secondaryText
         content.secondaryTextProperties.color = .secondaryLabel
         cell.accessoryView = nil
+        cell.accessoryType = .none
         cell.selectionStyle = .none
         cell.isAccessibilityElement = true
         cell.accessibilityTraits = .staticText
@@ -195,6 +260,11 @@ final class DistributionBuildController: TableController {
                 content.image = UIImage(systemName: finishedState == .cancelled ? "stop.circle.fill" : "exclamationmark.triangle.fill")
                 content.imageProperties.tintColor = finishedState == .cancelled ? .secondaryLabel : .systemRed
             }
+        case .result:
+            cell.selectionStyle = value.enabled ? .default : .none
+            cell.accessoryType = value.enabled ? .disclosureIndicator : .none
+            cell.accessibilityTraits = value.enabled ? .button : .staticText
+            if value.selected { cell.accessibilityTraits.insert(.selected) }
         case .finding:
             content.image = UIImage(systemName: "exclamationmark.triangle.fill")
             content.imageProperties.tintColor = .systemOrange
@@ -202,7 +272,42 @@ final class DistributionBuildController: TableController {
             content.secondaryTextProperties.numberOfLines = 0
         }
         cell.contentConfiguration = content
-        cell.accessibilityLabel = [value.text, value.secondaryText].compactMap(\.self).joined(separator: ", ")
+        if case .result = value.row {
+            cell.accessibilityLabel = value.text
+            cell.accessibilityValue = value.secondaryText
+        } else {
+            cell.accessibilityLabel = [value.text, value.secondaryText].compactMap(\.self).joined(separator: ", ")
+            cell.accessibilityValue = nil
+        }
+    }
+
+    private func stageTitle(_ stage: Stage) -> String {
+        guard targets.count > 1 else { return stage.title }
+        switch stage {
+        case .preparing: return String(localized: "Preparing \(target.rawValue)")
+        case .compiling: return String(localized: "Compiling \(target.rawValue)")
+        case .running: return String(localized: "Running Build Script for \(target.rawValue)")
+        case .packaging: return String(localized: "Packaging \(target.rawValue)")
+        case .verifying: return String(localized: "Verifying Package for \(target.rawValue)")
+        case .readyToDistribute: return String(localized: "Ready to Distribute \(target.rawValue)")
+        }
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: !UIAccessibility.isReduceMotionEnabled)
+        guard work == nil, case let .result(selected) = dataSource.itemIdentifier(for: indexPath),
+              let result = results[selected] else { return }
+        target = selected
+        artifact = result.artifact
+        outcome = result.outcome
+        findings = result.findings
+        finishedState = result.state
+        stage = result.stage
+        logLines = result.logLines
+        logPage = nil
+        title = selected.rawValue
+        updateNavigation()
+        updateRows()
     }
 
     @objc private dynamic func updateRows() {
@@ -220,7 +325,7 @@ final class DistributionBuildController: TableController {
             case .failed: finishedState == .cancelled ? String(localized: "Stopped") : String(localized: "Failed")
             default: finishedState == nil ? String(localized: "Waiting") : String(localized: "Not Started")
             }
-            stepCells[item]?.show(state, status: status, animated: tableView.window != nil && !UIAccessibility.isReduceMotionEnabled, title: item.title)
+            stepCells[item]?.show(state, status: status, animated: tableView.window != nil && !UIAccessibility.isReduceMotionEnabled, title: stageTitle(item))
         }
         var sections: [(Section, [RowContent])] = [
             (.progress, Stage.stages(for: method).map { item in
@@ -230,6 +335,29 @@ final class DistributionBuildController: TableController {
                 )
             }),
         ]
+        if targets.count > 1 {
+            let summaries = targets.map { resultTarget in
+                let status: String
+                if resultTarget == target, work != nil {
+                    status = String(localized: "In Progress")
+                } else {
+                    status = switch results[resultTarget]?.state {
+                    case .succeeded: String(localized: "Completed")
+                    case .cancelled: String(localized: "Stopped")
+                    case .failed: String(localized: "Failed")
+                    default: String(localized: "Waiting")
+                    }
+                }
+                return RowContent(
+                    row: .result(resultTarget),
+                    text: resultTarget.rawValue,
+                    secondaryText: status,
+                    enabled: work == nil && results[resultTarget] != nil,
+                    selected: resultTarget == target,
+                )
+            }
+            sections.append((.results, summaries))
+        }
         if let outcome {
             let title = switch finishedState {
             case .succeeded: String(localized: "Completed")
@@ -260,6 +388,14 @@ final class DistributionBuildController: TableController {
                 title: String(localized: "Stop"),
                 primaryAction: UIAction { [weak self] _ in self?.work?.cancel() },
             )
+        } else if let next = nextTarget {
+            UIBarButtonItem(
+                title: String(localized: "Continue with \(next.rawValue)"),
+                primaryAction: UIAction { [weak self] _ in
+                    self?.target = next
+                    self?.start()
+                },
+            )
         } else if artifact != nil {
             distributeButton
         } else {
@@ -282,58 +418,112 @@ final class DistributionBuildController: TableController {
         findings = []
         stage = .preparing
         logLines = []
-        logPage?.update(logLines)
+        logPage = nil
+        title = target.rawValue
+        results.removeValue(forKey: target)
         work = Task { [weak self] in
             guard let self else { return }
-            do {
-                let id = try await DistributionProject.id(named: projectName)
-                try Task.checkCancellation()
-                artifact = try await build(projectID: id)
-                finishedState = .succeeded
-                outcome = String(localized: "The package is ready to export.")
-                StarPrompt.buildsCompleted(1, from: self)
-            } catch is CancellationError {
-                finishedState = .cancelled
-                outcome = String(localized: "Distribution stopped. You can try again.")
-            } catch {
-                finishedState = .failed
-                outcome = error.readableMessage
+            while true {
+                do {
+                    let id = try await DistributionProject.id(named: projectName)
+                    try Task.checkCancellation()
+                    artifact = try await build(projectID: id)
+                    finishedState = .succeeded
+                    stage = .readyToDistribute
+                    outcome = String(localized: "The package is ready to export.")
+                } catch is CancellationError {
+                    artifact = nil
+                    finishedState = .cancelled
+                    outcome = String(localized: "Distribution stopped. You can try again.")
+                } catch {
+                    artifact = nil
+                    finishedState = .failed
+                    outcome = error.readableMessage
+                }
+                results[target] = Result(
+                    state: finishedState ?? .failed,
+                    artifact: artifact,
+                    outcome: outcome,
+                    findings: findings,
+                    stage: stage,
+                    logLines: logLines,
+                )
+                guard finishedState == .succeeded, !Task.isCancelled, let next = nextTarget else { break }
+                target = next
+                title = next.rawValue
+                artifact = nil
+                outcome = nil
+                finishedState = nil
+                findings = []
+                stage = .preparing
+                logLines = []
+                logPage = nil
+                updateRows()
             }
             work = nil
             updateNavigation()
             updateRows()
+            if finishedState == .succeeded {
+                StarPrompt.buildsCompleted(1, from: self)
+            }
         }
         updateNavigation()
         updateRows()
     }
 
     private func build(projectID: String) async throws -> BuildArtifact {
+        lastEventSeq = .start
+        buildFinished = false
+        buildState = nil
         let handle = try await ApelinService.app.buildStart(
             projectID: projectID,
             configuration: .release,
             bootstrap: target,
         )
-        return try await withTaskCancellationHandler {
+        do {
+            return try await followBuild(handle)
+        } catch {
+            if !buildFinished {
+                // Wait for the worker so queued builds cannot overlap.
+                await Task.detached { @MainActor [self] in
+                    while !buildFinished {
+                        do {
+                            try await ApelinService.app.buildCancel(taskID: handle.taskID)
+                        } catch {
+                            logLines.append(error.readableMessage)
+                            logPage?.update(logLines)
+                        }
+                        do {
+                            for try await event in ApelinService.app.events(of: handle, afterSeq: lastEventSeq) {
+                                record(event)
+                            }
+                        } catch {
+                            logLines.append(error.readableMessage)
+                            logPage?.update(logLines)
+                        }
+                        if !buildFinished { try? await Task.sleep(for: .seconds(1)) }
+                    }
+                }.value
+            }
+            if buildState == .succeeded, let artifact, artifact.bootstrap == target.rawValue {
+                return artifact
+            }
+            if Task.isCancelled { throw CancellationError() }
+            throw error
+        }
+    }
+
+    private func followBuild(_ handle: TaskHandle) async throws -> BuildArtifact {
+        try await withTaskCancellationHandler {
             var artifact: BuildArtifact?
             var succeeded = false
             var failure: String?
             for try await event in ApelinService.app.events(of: handle) {
                 try Task.checkCancellation()
                 record(event)
-                if event.kind == "stage", let name = event.payload?["stage"]?.stringValue {
-                    let next = Stage(event: name)
-                    if next != stage {
-                        stage = next
-                        updateRows()
-                    }
-                } else if event.kind == "artifact" {
+                if event.kind == "artifact" {
                     // persisted-read: a live task event, not saved data
                     artifact = try event.payload?.decode(BuildArtifact.self)
-                } else if event.kind == "diagnostic",
-                          let finding = try? event.payload?.decode(ProjectDiagnostic.self),
-                          finding.code.hasPrefix("distribution.")
-                {
-                    findings.append(finding)
                 } else if event.kind == TaskEvent.stateKind {
                     succeeded = event.payload?["state"]?.stringValue == TaskState.succeeded.rawValue
                     failure = event.payload?["message"]?.stringValue
@@ -357,6 +547,29 @@ final class DistributionBuildController: TableController {
     /// The build's own words for the log: its stages, log lines and
     /// diagnostics, and how it ended.
     private func record(_ event: TaskEvent) {
+        lastEventSeq = event.seq
+        if event.kind == "artifact" {
+            // persisted-read: a live task event, not saved data
+            artifact = try? event.payload?.decode(BuildArtifact.self)
+        } else if event.kind == "stage", let name = event.payload?["stage"]?.stringValue {
+            let next = Stage(event: name)
+            if next != stage {
+                stage = next
+                updateRows()
+            }
+        } else if event.kind == "diagnostic",
+                  let finding = try? event.payload?.decode(ProjectDiagnostic.self),
+                  finding.code.hasPrefix("distribution.")
+        {
+            findings.append(finding)
+        }
+        if event.kind == TaskEvent.stateKind,
+           let state = event.payload?["state"]?.stringValue,
+           [TaskState.succeeded.rawValue, TaskState.failed.rawValue, TaskState.cancelled.rawValue].contains(state)
+        {
+            buildState = TaskState(rawValue: state)
+            buildFinished = true
+        }
         let line: String? = switch event.kind {
         case "stage": event.payload?["stage"]?.stringValue.map { "▸ " + $0 }
         case "log": event.payload?["line"]?.stringValue
@@ -373,6 +586,10 @@ final class DistributionBuildController: TableController {
 
     @objc private dynamic func openLog() {
         let page = TaskLogController(lines: logLines)
+        if targets.count > 1 {
+            page.loadViewIfNeeded()
+            page.title = target.rawValue
+        }
         logPage = page
         navigationController?.pushViewController(page, animated: true)
     }
@@ -380,7 +597,11 @@ final class DistributionBuildController: TableController {
     /// The package this build made, as sharing and publishing take it.
     private var item: DistributionPublishing.Item? {
         guard let artifact, artifact.bootstrap == target.rawValue else { return nil }
-        return DistributionPublishing.Item(
+        return publishingItem(artifact, target: target)
+    }
+
+    private func publishingItem(_ artifact: BuildArtifact, target: BuildBootstrap) -> DistributionPublishing.Item {
+        DistributionPublishing.Item(
             path: artifact.path,
             digest: artifact.digest,
             packageID: artifact.packageID,
@@ -400,11 +621,15 @@ final class DistributionBuildController: TableController {
     }
 
     @objc private dynamic func publish() {
-        guard let item, work == nil, !isPreparingPackage else { return }
+        let items: [DistributionPublishing.Item] = targets.count == 1 ? [item].compactMap { $0 } : targets.compactMap { publishTarget in
+            guard let artifact = results[publishTarget]?.artifact else { return nil }
+            return publishingItem(artifact, target: publishTarget)
+        }
+        guard !items.isEmpty, work == nil, !isPreparingPackage else { return }
         isPreparingPackage = true
         Task { [weak self] in
             guard let self else { return }
-            await DistributionPublishing.publish([item], from: self)
+            await DistributionPublishing.publish(items, from: self)
             isPreparingPackage = false
         }
     }

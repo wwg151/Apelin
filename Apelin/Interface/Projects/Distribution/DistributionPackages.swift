@@ -27,6 +27,8 @@ struct DistributionPackage {
     var bootstrap: BuildBootstrap
     var packageID: String
     var version: String
+    var architecture: String
+    var createdAt: Date
     var file: URL
     /// `sha256:` of the file, as its build recorded it.
     var digest: String
@@ -44,7 +46,7 @@ struct DistributionPackage {
 
     /// What sharing and publishing take.
     var item: DistributionPublishing.Item {
-        DistributionPublishing.Item(path: file.path, digest: digest, packageID: packageID, version: version, bootstrap: bootstrap)
+        DistributionPublishing.Item(path: file.path, digest: digest, packageID: packageID, version: version, bootstrap: bootstrap, createdAt: createdAt)
     }
 }
 
@@ -71,49 +73,49 @@ enum DistributionPackages {
         DataFolder.app.root.appendingPathComponent("Builds", isDirectory: true)
     }
 
-    /// Per target, the newest release build of the project's `package` (its
-    /// ID and version), or, for a workspace, whose script decides both, the
-    /// newest release build's version. An older build of that version is
-    /// taken instead when it is the one `repository` holds, since publishing
-    /// never replaces a package under the same name. Read off the main
-    /// thread.
-    static func newest(
+    /// Every available release build for this project, newest first. A
+    /// description keeps its package identity; a workspace's script chooses
+    /// that identity. Each artifact remains a separate selectable build.
+    static func history(
         projectID: String,
         package: (id: String, version: String)?,
         isWorkspace: Bool,
         repository: DistributionRepository?,
-    ) async -> [BuildBootstrap: DistributionPackage] {
-        guard isWorkspace || package != nil else { return [:] }
-        return await Task.detached { () -> [BuildBootstrap: DistributionPackage] in
+    ) async -> [DistributionPackage] {
+        guard isWorkspace || package != nil else { return [] }
+        return await Task.detached { () -> [DistributionPackage] in
             let releases = records().filter { record in
-                // ApelinProject's `ConfigurationName` spelling, not the wire's
                 record.projectID == projectID && record.configuration == "Release"
-                    && (package.map { record.packageID == $0.id && record.packageVersion == $0.version } ?? true)
+                    && (package.map { record.packageID == $0.id } ?? true)
+            }.sorted {
+                if $0.createdAt != $1.createdAt { return $0.createdAt > $1.createdAt }
+                return $0.artifactID < $1.artifactID
             }
             let debs = repository.flatMap(debsFolder(of:))
-            var found: [BuildBootstrap: DistributionPackage] = [:]
-            for target in BuildBootstrap.allCases {
-                let ofTarget = releases.filter { $0.bootstrap == target.rawValue }.sorted { $0.createdAt > $1.createdAt }
-                let ofVersion = ofTarget.filter { $0.packageVersion == ofTarget.first?.packageVersion }
-                let published = ofVersion.first.flatMap { newest in
-                    debs.flatMap { publishedDigest(of: newest, in: $0) }
+            var publishedDigests: [String: String] = [:]
+            var checkedNames: Set<String> = []
+            return releases.compactMap { record in
+                guard let target = BuildBootstrap(rawValue: record.bootstrap),
+                      let file = try? verify(path: record.path, digest: record.digest)
+                else { return nil }
+                if let debs, let name = fileName(package: record.packageID, version: record.packageVersion, architecture: record.architecture),
+                   checkedNames.insert(name).inserted
+                {
+                    publishedDigests[name] = publishedDigest(of: record, in: debs)
                 }
-                let preferred = ofVersion.filter { $0.digest == published } + ofVersion.filter { $0.digest != published }
-                for record in preferred {
-                    guard let file = try? verify(path: record.path, digest: record.digest) else { continue }
-                    found[target] = DistributionPackage(
-                        artifactID: record.artifactID,
-                        bootstrap: target,
-                        packageID: record.packageID,
-                        version: record.packageVersion,
-                        file: file,
-                        digest: record.digest,
-                        isPublished: record.digest == published,
-                    )
-                    break
-                }
+                let name = fileName(package: record.packageID, version: record.packageVersion, architecture: record.architecture)
+                return DistributionPackage(
+                    artifactID: record.artifactID,
+                    bootstrap: target,
+                    packageID: record.packageID,
+                    version: record.packageVersion,
+                    architecture: record.architecture,
+                    createdAt: record.createdAt,
+                    file: file,
+                    digest: record.digest,
+                    isPublished: name.flatMap { publishedDigests[$0] } == record.digest,
+                )
             }
-            return found
         }.value
     }
 

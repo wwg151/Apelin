@@ -16,10 +16,13 @@ enum DistributionPublishing {
         /// The line a confirmation names it by.
         var title: String
 
-        init(path: String?, digest: String, packageID: String, version: String, bootstrap: BuildBootstrap) {
+        init(path: String?, digest: String, packageID: String, version: String, bootstrap: BuildBootstrap, createdAt: Date? = nil) {
             self.path = path
             self.digest = digest
             title = "\(packageID) \(version) (\(bootstrap.rawValue))"
+            if let createdAt {
+                title += " · " + createdAt.formatted(date: .numeric, time: .standard)
+            }
         }
     }
 

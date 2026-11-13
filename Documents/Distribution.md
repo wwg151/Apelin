@@ -1,27 +1,52 @@
 # Distributing a project
 
-Open a project's menu and choose **Distribute…**. Choose **roothide** or
-**rootless**, then tap **Build**. Opening the page or choosing a target does
-not start a build. Build opens the build page, which runs one existing
-release build for that target, showing Preparing, Compiling, Packaging and
-Verifying (a workspace: Preparing, Running Build Script and Verifying); its
-`…` menu has the Build Log. Stop cancels that build; the page
-stays open with its outcome, and Retry starts a new build for the same
-target. Once it succeeds, **Distribute** is the page's primary action. Its
-menu, repeated in the `…` menu, has **Share Package**, which opens the
-system share sheet with the build's one `.deb` file, and **Publish to
-Repository** (below). Go back, choose the other target and tap Build to make a
-separate package. Neither installs the package.
+Open a project's menu and choose **Distribute…**. Select **roothide**,
+**rootless**, or both, then tap **Build**. Opening the page or changing the
+selection does not start a build. Selected targets always build serially in
+this order: **roothide → rootless**. Each target runs its own release build;
+a successful build automatically starts the next selected target.
 
-A package already built does not need building again. The first page's
-**Packages** section lists, for each target, the newest release build of the
-project's current version (a workspace's newest release build), as long as its
-`.deb` is still in `Builds/` with the digest the build recorded, and says
-whether it is **Built**, **Shared** (a share sheet completed with it) or
-**Published** (the linked repository already holds those bytes). Select the
-packages and tap **Publish to Repository** to publish roothide and rootless
-together in one commit, or share one from its row; either takes the file as
-the build made it.
+The build page names the current target beside Preparing, Compiling,
+Packaging and Verifying Package (a workspace: Preparing, Running Build Script
+and Verifying Package). With both targets selected, separate result rows show
+**Completed**, **Failed**, **Stopped** or **Waiting** for each target. Each
+keeps its own package and build log; the `…` menu offers **Build Log:
+roothide** and **Build Log: rootless** for builds that have started.
+
+A failure pauses the queue. **Retry roothide** or **Retry rootless** starts a
+new build for that target; **Continue with rootless**, when another target
+is waiting, skips ahead without retrying the failed target. **Stop** cancels
+the current build and pauses the queue too: a waiting target does not start
+automatically. The page stays open with the outcomes and the same retry or
+continue choices. Completed packages and each target's log stay available
+when the queue pauses or another target fails.
+
+Successful packages can be distributed from the page's **Distribute** menu,
+also repeated in `…`. With two targets, **Share Package: roothide** and
+**Share Package: rootless** each open the system share sheet with that
+successful build's one `.deb` file; **Publish to Repository** publishes the
+successful packages (below). Selecting only one target keeps the existing
+single-build flow, with **Build Log**, **Retry** and **Share Package**.
+Neither building nor sharing installs a package.
+
+The first page's **Packages** section lists all available release builds,
+newest first, including repeated builds of the same version and older
+versions. A described project keeps builds of its current package ID; a
+workspace keeps builds of the package IDs its script produced. A build is
+offered only while its `.deb` is still in `Builds/` with the recorded digest.
+Each row shows its target, version and **Built**, **Shared** (a share sheet
+completed with it) or **Published** (the linked repository holds those bytes)
+state, with the local build date and time at the bottom right.
+
+No build is selected automatically. Select the exact builds to publish;
+selecting another build for the same architecture replaces that selection,
+so one publication carries at most one package per architecture. Tap
+**Publish to Repository** to publish the selected builds together in one
+commit; the confirmation includes their build times. Sharing still takes one
+build from its row. Both actions use the original files. You can edit code
+and build the same version again without a version-history confirmation;
+publishing different bytes under an already published package ID, version
+and architecture still requires a new version.
 
 ## Publishing to a package repository
 
@@ -70,9 +95,10 @@ from `projectCheck` with `purpose: distribution` (and the chosen target as
   `projectCreate` made up.
 - `distribution.icon.missing`: an app's Info.plist names no icon.
 - `distribution.version.packaged`: a release package of this ID and version
-  was already built for the target (any target, without one). Publish or
-  share that package; raise the version only to ship a change. Build does not
-  ask about it when that package is listed under Packages.
+  was already built for the target (any target, without one). The agent tools
+  and workspace build findings retain this advice. The first distribution
+  page hides it and never asks for confirmation merely to rebuild the same
+  version. Use a new version when shipping an update to package managers.
 
 An error the check finds would stop the build, so it is listed too and Build
 waits until it is fixed.
