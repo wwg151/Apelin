@@ -4,12 +4,13 @@ import UIKit
 
 /// Remote packages, independent of local build history.
 @MainActor
-final class DistributionWithdrawalController: TableController {
+final class DistributionWithdrawalController: TableController, UISearchResultsUpdating {
     private enum Row: Hashable {
         case message(String)
         case package(DistributionRepositoryPackage, Bool)
     }
 
+    private let search = UISearchController(searchResultsController: nil)
     private var snapshot: DistributionPackagesResponse?
     private var selected: Set<DistributionRepositoryPackage> = []
     private var loading = false
@@ -46,6 +47,15 @@ final class DistributionWithdrawalController: TableController {
         super.viewDidLoad()
         title = String(localized: "Withdraw from Repository…")
         navigationItem.largeTitleDisplayMode = .never
+        search.searchResultsUpdater = self
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.placeholder = String(localized: "Search")
+        search.searchBar.autocapitalizationType = .none
+        search.searchBar.autocorrectionType = .no
+        navigationItem.searchController = search
+        navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = true
+        tableView.keyboardDismissMode = .onDrag
         withdrawButton = UIBarButtonItem(title: String(localized: "Withdraw"), primaryAction: UIAction { [weak self] _ in self?.confirm() })
         withdrawButton.tintColor = .systemRed
         refreshControl = UIRefreshControl()
@@ -92,11 +102,27 @@ final class DistributionWithdrawalController: TableController {
         }
     }
 
+    func updateSearchResults(for _: UISearchController) {
+        guard !loading, snapshot != nil else { return }
+        show()
+        tableView.setContentOffset(CGPoint(x: 0, y: -tableView.adjustedContentInset.top), animated: false)
+    }
+
     private func show() {
         let packages = snapshot?.packages ?? []
-        let rows: [Row] = packages.isEmpty
+        let query = (search.searchBar.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        // Stable partition: matching filenames lead, and every package stays selectable.
+        let ordered: [DistributionRepositoryPackage]
+        if query.isEmpty {
+            ordered = packages
+        } else {
+            let matches = packages.filter { String($0.path.dropFirst(5)).localizedStandardContains(query) }
+            let others = packages.filter { !String($0.path.dropFirst(5)).localizedStandardContains(query) }
+            ordered = matches + others
+        }
+        let rows: [Row] = ordered.isEmpty
             ? [.message(String(localized: "No Published Packages"))]
-            : packages.map { .package($0, selected.contains($0)) }
+            : ordered.map { .package($0, selected.contains($0)) }
         dataSource.update([(0, rows)])
         updateControls()
     }
