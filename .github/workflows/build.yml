@@ -174,8 +174,6 @@ jobs:
           done
 
   deploy:
-    # Temporarily disabled until package-source deployment is enabled again.
-    if: ${{ false }}
     name: Push packages to wwg151/repo
     needs: [test, old-runtime, build]
     runs-on: ubuntu-latest

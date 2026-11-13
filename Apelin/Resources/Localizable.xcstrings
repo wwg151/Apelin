@@ -1,6 +1,168 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Select All" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Select All" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تحديد الكل" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Alle auswählen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Seleccionar todo" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Tout sélectionner" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Seleziona tutto" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "すべて選択" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "전체 선택" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Selecionar tudo" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Выбрать все" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Chọn tất cả" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "全选" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "全選" } }
+      }
+    },
+    "More" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "More" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "المزيد" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Mehr" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Más" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Plus" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Altro" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "その他" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "더 보기" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Mais" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Ещё" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Thêm" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "更多" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "更多" } }
+      }
+    },
+    "Batch Remove…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Batch Remove…" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إزالة متعددة…" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Mehrere entfernen…" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Eliminar varios…" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Suppression multiple…" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Rimuovi più pacchetti…" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "一括削除…" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "일괄 제거…" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Remover vários…" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалить несколько…" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Xóa hàng loạt…" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "批量移除…" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "批次移除…" } }
+      }
+    },
+    "Deselect All" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Deselect All" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إلغاء تحديد الكل" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Alle abwählen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Deseleccionar todo" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Tout désélectionner" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Deseleziona tutto" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "すべて選択解除" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "전체 선택 해제" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Desmarcar tudo" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Снять выделение" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Bỏ chọn tất cả" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "取消全选" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "取消全選" } }
+      }
+    },
+    "Remove (%lld)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Remove (%lld)" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إزالة (%lld)" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Entfernen (%lld)" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Eliminar (%lld)" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Supprimer (%lld)" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Rimuovi (%lld)" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "削除（%lld）" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "제거 (%lld)" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Remover (%lld)" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалить (%lld)" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Xóa (%lld)" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "移除（%lld）" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "移除（%lld）" } }
+      }
+    },
+    "Remove %lld Local Packages?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Remove %lld Local Packages?" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إزالة الحزم المحلية المحددة (%lld)؟" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%lld lokale Pakete entfernen?" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "¿Eliminar %lld paquetes locales?" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Supprimer %lld paquets locaux ?" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Rimuovere %lld pacchetti locali?" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "ローカルパッケージを%lld個削除しますか？" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "로컬 패키지 %lld개를 제거할까요?" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Remover %lld pacotes locais?" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалить локальные пакеты (%lld)?" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Xóa %lld gói cục bộ?" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "移除这 %lld 个本地软件包？" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "移除這 %lld 個本機套件？" } }
+      }
+    },
+    "Select the local packages to remove." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Select the local packages to remove." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "حدد الحزم المحلية المراد إزالتها." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wähle die zu entfernenden lokalen Pakete aus." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Selecciona los paquetes locales que quieres eliminar." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Sélectionnez les paquets locaux à supprimer." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Seleziona i pacchetti locali da rimuovere." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "削除するローカルパッケージを選択してください。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "제거할 로컬 패키지를 선택하세요." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Selecione os pacotes locais a remover." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Выберите локальные пакеты для удаления." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Chọn các gói cục bộ cần xóa." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "选择要移除的本地软件包。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "選取要移除的本機套件。" } }
+      }
+    },
+    "Removed %lld packages; %lld could not be removed." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Removed %lld packages; %lld could not be removed." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تمت إزالة %lld حزمة؛ تعذرت إزالة %lld." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%lld Pakete entfernt; %lld konnten nicht entfernt werden." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Se eliminaron %lld paquetes; no se pudieron eliminar %lld." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "%lld paquets supprimés ; %lld n’ont pas pu être supprimés." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Rimossi %lld pacchetti; impossibile rimuoverne %lld." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%lld個を削除しました。%lld個は削除できませんでした。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%lld개를 제거했으며 %lld개는 제거하지 못했습니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "%lld pacotes removidos; não foi possível remover %lld." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалено пакетов: %lld; не удалось удалить: %lld." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Đã xóa %lld gói; không thể xóa %lld gói." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已移除 %lld 个，%lld 个未能移除。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "已移除 %lld 個，%lld 個無法移除。" } }
+      }
+    },
+    "These files will no longer be available to share or publish. You will need to build them again. Installed packages, repository copies, logs and debug symbols are kept." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "These files will no longer be available to share or publish. You will need to build them again. Installed packages, repository copies, logs and debug symbols are kept." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "لن تتوفر هذه الملفات للمشاركة أو النشر. ستحتاج إلى بنائها مجددًا. تُحفظ الحزم المثبتة ونسخ المستودع والسجلات ورموز التصحيح." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Diese Dateien müssen neu gebaut werden, bevor sie geteilt oder veröffentlicht werden können. Installierte Pakete, Repository-Kopien, Protokolle und Debugsymbole bleiben erhalten." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Estos archivos ya no estarán disponibles para compartir o publicar. Tendrás que compilarlos de nuevo. Se conservan los paquetes instalados, las copias del repositorio, los registros y los símbolos de depuración." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ces fichiers ne pourront plus être partagés ni publiés. Vous devrez les reconstruire. Les paquets installés, les copies du dépôt, les journaux et les symboles de débogage sont conservés." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Questi file non saranno più disponibili per la condivisione o la pubblicazione. Dovrai ricompilarli. I pacchetti installati, le copie nel repository, i log e i simboli di debug vengono conservati." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "これらのファイルは共有・公開できなくなり、再ビルドが必要になります。インストール済みのパッケージ、リポジトリのコピー、ログ、デバッグシンボルは保持されます。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "이 파일은 더 이상 공유하거나 게시할 수 없으며 다시 빌드해야 합니다. 설치된 패키지, 저장소 사본, 로그 및 디버그 심볼은 유지됩니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Estes arquivos não poderão mais ser compartilhados ou publicados. Será necessário compilá-los novamente. Os pacotes instalados, as cópias no repositório, os logs e os símbolos de depuração serão mantidos." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Эти файлы больше нельзя будет отправить или опубликовать. Их потребуется собрать заново. Установленные пакеты, копии в репозитории, журналы и отладочные символы сохранятся." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Các tệp này sẽ không còn để chia sẻ hoặc phát hành. Bạn cần biên dịch lại. Các gói đã cài, bản sao trong kho, nhật ký và ký hiệu gỡ lỗi vẫn được giữ." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "移除后无法再分享或发布这些文件，需要重新构建。已安装的软件包、源仓库副本、日志和调试符号会保留。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "移除後無法再分享或發佈這些檔案，需要重新建置。已安裝的套件、來源儲存庫副本、日誌和偵錯符號會保留。" } }
+      }
+    },
     "Remove Package" : {
       "extractionState" : "manual",
       "localizations" : {

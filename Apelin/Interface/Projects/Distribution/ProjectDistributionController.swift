@@ -54,6 +54,11 @@ final class ProjectDistributionController: TableController {
     private var packages: [DistributionPackage] = []
     @objc private dynamic var selectedPackages: Set<String> = []
     private var packageReader: Task<Void, Never>?
+    private var isRemovingPackages = false
+    private var removalSelection: Set<String> = []
+    private var buildButton: UIBarButtonItem!
+    private var moreButton: UIBarButtonItem!
+    private var removalButton: UIBarButtonItem!
     /// While a package is read back to be shared or published.
     @objc private dynamic var isPreparingPackage = false
     @objc private dynamic var hasAppeared = false
@@ -73,10 +78,18 @@ final class ProjectDistributionController: TableController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = String(localized: "Distribute Project")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
+        buildButton = UIBarButtonItem(
             title: String(localized: "Build"),
             primaryAction: UIAction { [weak self] _ in self?.build() },
         )
+        moreButton = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"), menu: UIMenu(children: [
+            UIAction(title: String(localized: "Batch Remove…"), image: UIImage(systemName: "trash"), attributes: .destructive) { [weak self] _ in
+                self?.setRemovalMode(true)
+            },
+        ]))
+        moreButton.accessibilityLabel = String(localized: "More")
+        removalButton = UIBarButtonItem(title: nil, primaryAction: UIAction { [weak self] _ in self?.confirmRemoval() })
+        removalButton.tintColor = .systemRed
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Distribution")
         dataSource = TableDataSource(
             tableView: tableView,
@@ -98,7 +111,9 @@ final class ProjectDistributionController: TableController {
         dataSource.footerTitle = { [weak self] section in
             switch section {
             case .packages:
-                String(localized: "Publish the selected packages to your package repository together, or share one. Each is the file its build made, unchanged.")
+                self?.isRemovingPackages == true
+                    ? String(localized: "Select the local packages to remove.")
+                    : String(localized: "Publish the selected packages to your package repository together, or share one. Each is the file its build made, unchanged.")
             case .target: String(localized: "Choose one or both targets, then tap “Build”. Selected targets build in order: roothide, then rootless.")
             case .readiness:
                 self?.blockers.isEmpty == false
@@ -123,15 +138,27 @@ final class ProjectDistributionController: TableController {
     /// or a publish may have changed them.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        updateRemovalControls()
         if hasAppeared {
             refreshCheck()
         }
-        refreshPackages()
+        if !isPreparingPackage { refreshPackages() }
         hasAppeared = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isRemovingPackages { navigationController?.setToolbarHidden(true, animated: animated) }
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: !UIAccessibility.isReduceMotionEnabled)
+        if isRemovingPackages {
+            guard !isPreparingPackage, case let .package(id) = dataSource.itemIdentifier(for: indexPath) else { return }
+            if removalSelection.remove(id) == nil { removalSelection.insert(id) }
+            updateRows()
+            return
+        }
         switch dataSource.itemIdentifier(for: indexPath) {
         case let .package(artifactID):
             guard !isPreparingPackage, let package = packages.first(where: { $0.artifactID == artifactID }) else { return }
@@ -156,7 +183,7 @@ final class ProjectDistributionController: TableController {
     }
 
     override func tableView(_: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        guard !isPreparingPackage,
+        guard !isPreparingPackage, !isRemovingPackages,
               case .package? = dataSource.itemIdentifier(for: indexPath) else { return .none }
         return .delete
     }
@@ -165,7 +192,7 @@ final class ProjectDistributionController: TableController {
         _: UITableView,
         trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath,
     ) -> UISwipeActionsConfiguration? {
-        guard !isPreparingPackage,
+        guard !isPreparingPackage, !isRemovingPackages,
               case let .package(artifactID) = dataSource.itemIdentifier(for: indexPath),
               let package = packages.first(where: { $0.artifactID == artifactID }) else { return nil }
         let remove = UIContextualAction(style: .destructive, title: String(localized: "Remove")) { [weak self] _, _, complete in
@@ -227,15 +254,17 @@ final class ProjectDistributionController: TableController {
             content.imageProperties.tintColor = value.selected ? .tintColor : .tertiaryLabel
             cell.selectionStyle = .default
             cell.accessibilityTraits = value.selected ? [.button, .selected] : .button
-            cell.accessoryView = shareButton(for: artifactID)
-            // the row is the element, so its Share button is reached as an action
-            cell.accessibilityCustomActions = [
-                UIAccessibilityCustomAction(name: String(localized: "Share Package")) { [weak self, weak cell] _ in
-                    guard let self, let cell else { return false }
-                    share(artifactID, from: cell)
-                    return true
-                },
-            ]
+            if !isRemovingPackages {
+                cell.accessoryView = shareButton(for: artifactID)
+                // the row is the element, so its Share button is reached as an action
+                cell.accessibilityCustomActions = [
+                    UIAccessibilityCustomAction(name: String(localized: "Share Package")) { [weak self, weak cell] _ in
+                        guard let self, let cell else { return false }
+                        share(artifactID, from: cell)
+                        return true
+                    },
+                ]
+            }
         case .publish:
             content.textProperties.color = value.enabled ? .tintColor : .tertiaryLabel
             cell.selectionStyle = value.enabled ? .default : .none
@@ -342,24 +371,105 @@ final class ProjectDistributionController: TableController {
                     secondaryText: date,
                     spokenText: "\(package.bootstrap.rawValue), \(package.packageID), \(package.version), \(date)",
                     spokenValue: state,
-                    selected: selectedPackages.contains(package.artifactID),
+                    selected: isRemovingPackages ? removalSelection.contains(package.artifactID) : selectedPackages.contains(package.artifactID),
                 )
             }
             let canPublish = !isPreparingPackage && listed.contains { selectedPackages.contains($0.artifactID) }
             let publish = RowContent(row: .publish, text: String(localized: "Publish to Repository"), enabled: canPublish)
-            sections.append((.packages, rows + [publish]))
+            sections.append((.packages, isRemovingPackages ? rows : rows + [publish]))
         }
-        if canBuild {
+        if canBuild, !isRemovingPackages {
             sections.append((.target, BuildBootstrap.allCases.map { target in
                 RowContent(row: .target(target), text: target.rawValue, selected: selectedTargets.contains(target))
             }))
         }
-        if !readiness.isEmpty {
+        if !readiness.isEmpty, !isRemovingPackages {
             sections.append((.readiness, readiness))
         }
         dataSource.update(sections, reconfigure: true)
-        navigationItem.rightBarButtonItem?.isEnabled = canBuild && blockers.isEmpty && !checking
+        buildButton.isEnabled = canBuild && blockers.isEmpty && !checking && !isPreparingPackage
             && checkFailure == nil && !selectedTargets.isEmpty
+        updateRemovalControls()
+    }
+
+    private func setRemovalMode(_ enabled: Bool) {
+        guard !isPreparingPackage, !enabled || !packages.isEmpty else { return }
+        isRemovingPackages = enabled
+        removalSelection.removeAll()
+        updateRows()
+    }
+
+    private func updateRemovalControls() {
+        navigationItem.hidesBackButton = isRemovingPackages
+        moreButton.isEnabled = !packages.isEmpty && !isPreparingPackage
+        if isRemovingPackages {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(
+                title: String(localized: "Cancel"),
+                primaryAction: UIAction { [weak self] _ in self?.setRemovalMode(false) },
+            )
+            let allSelected = !packages.isEmpty && removalSelection.count == packages.count
+            navigationItem.rightBarButtonItems = [UIBarButtonItem(
+                title: allSelected ? String(localized: "Deselect All") : String(localized: "Select All"),
+                primaryAction: UIAction { [weak self] _ in
+                    guard let self, !isPreparingPackage else { return }
+                    removalSelection = allSelected ? [] : Set(packages.map(\.artifactID))
+                    updateRows()
+                },
+            )]
+            navigationItem.leftBarButtonItem?.isEnabled = !isPreparingPackage
+            navigationItem.rightBarButtonItem?.isEnabled = !isPreparingPackage && !packages.isEmpty
+            removalButton.title = String(localized: "Remove (\(removalSelection.count))")
+            removalButton.isEnabled = !isPreparingPackage && !removalSelection.isEmpty
+            toolbarItems = [.flexibleSpace(), removalButton, .flexibleSpace()]
+        } else {
+            navigationItem.leftBarButtonItem = nil
+            navigationItem.rightBarButtonItems = [buildButton, moreButton]
+            toolbarItems = nil
+        }
+        navigationController?.setToolbarHidden(!isRemovingPackages, animated: false)
+    }
+
+    private func confirmRemoval() {
+        let chosen = packages.filter { removalSelection.contains($0.artifactID) }
+        guard isRemovingPackages, !isPreparingPackage, !chosen.isEmpty else { return }
+        presentConfirmation(
+            title: "Remove \(chosen.count) Local Packages?",
+            message: "These files will no longer be available to share or publish. You will need to build them again. Installed packages, repository copies, logs and debug symbols are kept.",
+            confirmTitle: "Remove",
+            destructive: true,
+        ) { [weak self] in
+            self?.removePackages(chosen)
+        }
+    }
+
+    private func removePackages(_ chosen: [DistributionPackage]) {
+        guard isRemovingPackages, !isPreparingPackage else { return }
+        isPreparingPackage = true
+        packageReader?.cancel()
+        updateRows()
+        Task { [weak self] in
+            guard let self else { return }
+            var removed: Set<String> = []
+            var failures: [String] = []
+            for package in chosen {
+                do {
+                    try await DistributionPackages.remove(package)
+                    removed.insert(package.artifactID)
+                } catch {
+                    failures.append("\(package.bootstrap.rawValue) · \(package.version): \(error.readableMessage)")
+                }
+            }
+            packages.removeAll { removed.contains($0.artifactID) }
+            selectedPackages.subtract(removed)
+            removalSelection.subtract(removed)
+            isPreparingPackage = false
+            if failures.isEmpty { setRemovalMode(false) }
+            updateRows()
+            if !failures.isEmpty {
+                let summary = String(localized: "Removed \(removed.count) packages; \(failures.count) could not be removed.")
+                presentNotice(title: "Unable to Remove Package", message: ([summary] + failures).joined(separator: "\n\n"))
+            }
+        }
     }
 
     // MARK: - The check
@@ -473,6 +583,7 @@ final class ProjectDistributionController: TableController {
                 && architectures.insert(package.architecture).inserted
         }.map(\.artifactID))
         packages = found
+        removalSelection.formIntersection(Set(found.map(\.artifactID)))
         updateRows()
     }
 
