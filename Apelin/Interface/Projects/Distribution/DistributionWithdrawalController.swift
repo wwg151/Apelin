@@ -130,7 +130,7 @@ final class DistributionWithdrawalController: TableController {
         let chosen = snapshot.packages.filter { selected.contains($0) }
         let message = snapshot.repository.fullName + "\n\n" + chosen.map(\.path).joined(separator: "\n") + "\n\n"
             + String(localized: "These packages will be removed from the repository in one commit. Local builds and installed packages are kept. The source updates after GitHub Actions finishes.")
-        presentConfirmation(title: "Withdraw from Repository?", message: "\(message)", confirmTitle: "Withdraw", destructive: true) { [weak self] in
+        presentConfirmation(title: "Withdraw from Repository?", message: String.LocalizationValue(message), confirmTitle: "Withdraw", destructive: true) { [weak self] in
             self?.start(snapshot, packages: chosen)
         }
     }
