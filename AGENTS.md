@@ -161,14 +161,21 @@ the same executable in session mode; the workers are its children.
   `com.apple.private.security.storage.AppBundles` and `.AppDataContainers`
   beside `no-sandbox`**, on the app and on the daemon; `no-sandbox` alone
   does not open them on every platform.
-- **CI builds; Release publishes what CI built.** `ci.yml` compiles, packages
-  and verifies on every push and pull request, and keeps `build/Packages/` as
-  the artifact `<app>-<sha>` for thirty days. `release.yml` runs on the tag,
-  compiles nothing, waits for that commit's CI run, refuses to publish unless
-  it passed, and ships the bytes CI verified. Never rebuild at tag time: a
-  second build is a different build number, a different runner image and
-  bytes no test ever ran against. The workflow stays named `Release` —
-  `pages.yml` watches for it. Tag a commit only after its CI run passed.
+- **Build once; publish the verified artifacts.** `build.yml` runs on branch
+  pushes whose names contain no slash (except Markdown-only changes) and manual dispatch. It keeps host
+  tests, old-runtime checks and the dual-bootstrap `deb-all` build, retaining
+  `apelin-<sha>` for thirty days. Its publish and deploy jobs wait for all
+  three checks, then use those artifacts without rebuilding: the `dev-builds`
+  prerelease and deployment to `wwg151/repo` carry only Debian packages.
+  The workflow does not archive dSYMs or generate a checksum manifest, and
+  does not upload or deploy source or template archives produced by `deb-all`.
+  Deployment uses `DEPLOY_PAT` and is temporarily disabled with a job-level
+  `if: ${{ false }}`; builds and GitHub Release publishing remain enabled. Fixed-name
+  main-package downloads are `Apelin-dev-rootless.deb` and
+  `Apelin-dev-roothide.deb`. Release and package-source writes each serialize
+  across branches. Separate tag-release, Pages and catalog workflows were
+  removed by the fork owner's decision; their historical notes below do not
+  describe active automation.
 - **The release notes are a file in the repo**, `<docs>/Releases/<version>.md`,
   written before the tag. One headline sentence saying what this release
   does, one bullet per user-visible change in the user's words with the
@@ -3769,34 +3776,41 @@ export reuses `transferExport` and the real `.apeproj` transfer format; no new
 archive format or exporter is introduced. Distribution sends `buildStart` with
 its optional `bootstrap` (`roothide` or `rootless`); omission retains the current
 device default. The distribution page starts with no build. Its Packages
-section (2026-10-29, `DistributionPackages`) lists per target the newest
-release build of the manifest's version (a workspace's newest), from the
-records in `Builds/artifacts/`, offered only while its deb still has the
-recorded digest (an older build of that version when it is the one the
-repository holds), each Built, Shared (a completed share sheet, by digest in
-the app's defaults) or Published (the repository's clone holds those bytes
-under `distributionPublish`'s file name). Publish to Repository sends the
-selected ones, roothide and rootless together, in one `distributionPublish`
-after a confirmation naming each; Share Package works per row
-(`DistributionPublishing`, the build page's too). Nothing is built or
-packaged again; `distribution.version.packaged` is advice to publish or share
-that build, and Build asks nothing for it alone when that package is listed.
-Building again stays: the user chooses one target and taps Build. The first
-page lists the distribution check's warnings for that target, offers Ask
-Agent to Prepare (a prompt sent to the project's conversation), and asks before building with
-warnings left; Build pushes `DistributionBuildController`, which sends one
-build request, shows only that target's progress and keeps the build log behind
-its `…` menu. Once its one package is verified, the page's primary action is
-Distribute (2026-10-29: the bar's prominent style on iOS 26, a bold title
-before it), whose menu, repeated in `…`, keeps sharing and publishing apart:
-Share Package hands the `.deb` to the share sheet, and Publish to Repository
-adds it to the linked package repository or, with none linked, opens
-Settings at its Git page (`SettingsViewController.presentGit`) over the
-build page, where Publishing sets one up, after Sign In if GitHub has no
-account yet. Choosing another target
-requires going back and a new run. The table uses stable diffable identities and
-reconfigures progress rows in place. Each release build produces its own package
-and dSYM through the existing complete build pipeline (see `Documents/Distribution.md`).
+section (`DistributionPackages.history`) lists every available release
+artifact newest first, including repeated builds and older versions, from
+`Builds/artifacts/`. Described projects filter by their current package ID;
+workspace scripts choose their package IDs. Each deb must still have its
+recorded digest. Rows use artifact IDs and show target, version, state and
+local build date/time at the bottom right. State is Built, Shared (a completed
+share sheet, by digest in defaults) or Published (the repository's clone
+holds those bytes under `distributionPublish`'s file name). Nothing is
+selected automatically; refreshing preserves explicit choices that remain
+available. Selecting another artifact of the same architecture replaces the
+previous choice. Publish to Repository sends exactly the selected artifacts,
+at most one per architecture, after a confirmation naming their build times.
+Share Package works per artifact (`DistributionPublishing`, the build page's
+too). Neither action rebuilds. The first page ignores
+`distribution.version.packaged` advice, allowing same-version rebuilds even
+when an earlier artifact is missing. Repository conflicts for different
+bytes under the same package ID/version/architecture remain enforced.
+Building again lets the user choose one or both targets and tap Build. The
+first page checks each selected target and shows its warnings (labelled by
+target when both are selected), offers Ask Agent to Prepare, and asks before
+building with warnings left. `DistributionBuildController` builds selected
+targets serially in roothide, then rootless order. Success starts the next
+target automatically; a failure or Stop pauses the queue, with Continue for
+the unstarted target and Retry for a failed or stopped target. Stop waits for
+the active worker to finish cancelling before another build can start. The
+title and progress follow the active target. Each result retains its package,
+findings and log; when idle, tapping a result restores those details. Sharing
+works per successful package, and Publish to Repository sends all successful
+packages from the queue together. A single target retains its original Build,
+Retry and Distribute flow. Publishing adds the original artifacts to the linked
+package repository or opens Settings at its Git page
+(`SettingsViewController.presentGit`) when none is linked. The table uses stable
+diffable identities and reconfigures progress rows in place. Each release build
+produces its own package and dSYM through the existing complete build pipeline
+(see `Documents/Distribution.md`).
 
 
 The agent's system prompt (`ApelinAgent/Session/SystemPrompt.swift`) is kept
