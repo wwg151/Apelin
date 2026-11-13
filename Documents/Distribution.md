@@ -38,6 +38,12 @@ Each row shows its target, version and **Built**, **Shared** (a share sheet
 completed with it) or **Published** (the linked repository holds those bytes)
 state, with the local build date and time at the bottom right.
 
+Swipe a package row left and tap **Remove Package** to delete that build's
+local `.deb` and artifact record. Full swipe does not delete automatically.
+The row is removed from the selection too. Repository copies, installed
+packages, build logs and dSYMs are retained. A removal failure is shown on
+screen and the list is refreshed.
+
 No build is selected automatically. Select the exact builds to publish;
 selecting another build for the same architecture replaces that selection,
 so one publication carries at most one package per architecture. Tap

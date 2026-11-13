@@ -134,6 +134,36 @@ enum DistributionPackages {
         return URL(fileURLWithPath: canonical)
     }
 
+    /// Remove only this build's local package and artifact record. Logs,
+    /// dSYMs and repository copies remain available.
+    static func remove(_ package: DistributionPackage) async throws {
+        let artifactID = package.artifactID
+        let path = package.file.path
+        let digest = package.digest
+        try await Task.detached {
+            guard !artifactID.isEmpty, !artifactID.hasPrefix("."),
+                  !artifactID.contains("/"), !artifactID.contains("\0"),
+                  let builds = CanonicalPath.resolve(buildsFolder.path),
+                  let folder = CanonicalPath.resolve(buildsFolder.appendingPathComponent("artifacts").path),
+                  folder == builds + "/artifacts"
+            else { throw ApelinError(.notFound, String(localized: "The package is no longer available. Build it again.")) }
+            let recordPath = folder + "/" + artifactID + ".json"
+            guard CanonicalPath.resolve(recordPath) == recordPath else {
+                throw ApelinError(.notFound, String(localized: "The package is no longer available. Build it again."))
+            }
+            let record = try JSONCoding.decode(Record.self, from: Data(contentsOf: URL(fileURLWithPath: recordPath)))
+            let recordedPath = BootstrapRootPath.rebased(record.path, onto: folder)
+            let file = try verify(path: path, digest: digest)
+            guard record.artifactID == artifactID, record.digest == digest,
+                  CanonicalPath.resolve(recordedPath) == file.path,
+                  file.path.hasSuffix(".deb")
+            else { throw ApelinError(.conflict, String(localized: "The package changed after it was built. Build it again before exporting.")) }
+            // unlink never recursively removes a directory or follows a link.
+            guard unlink(file.path) == 0 else { throw NSError(domain: NSPOSIXErrorDomain, code: Int(errno)) }
+            guard unlink(recordPath) == 0 else { throw NSError(domain: NSPOSIXErrorDomain, code: Int(errno)) }
+        }.value
+    }
+
     /// `<Package>_<Version>_<Architecture>.deb`, the name
     /// `distributionPublish` gives a package in the repository's `debs/`,
     /// the epoch's colon spelled `%3a` as dpkg-name does; nil for fields it

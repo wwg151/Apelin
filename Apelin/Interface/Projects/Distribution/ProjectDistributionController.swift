@@ -154,6 +154,40 @@ final class ProjectDistributionController: TableController {
         }
     }
 
+    override func tableView(
+        _: UITableView,
+        trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath,
+    ) -> UISwipeActionsConfiguration? {
+        guard !isPreparingPackage,
+              case let .package(artifactID) = dataSource.itemIdentifier(for: indexPath),
+              let package = packages.first(where: { $0.artifactID == artifactID }) else { return nil }
+        let remove = UIContextualAction(style: .destructive, title: String(localized: "Remove Package")) { [weak self] _, _, complete in
+            guard let self, !isPreparingPackage else { complete(false); return }
+            isPreparingPackage = true
+            packageReader?.cancel()
+            updateRows()
+            Task { [weak self] in
+                guard let self else { complete(false); return }
+                do {
+                    try await DistributionPackages.remove(package)
+                    selectedPackages.remove(artifactID)
+                    packages.removeAll { $0.artifactID == artifactID }
+                    complete(true)
+                } catch {
+                    complete(false)
+                    presentNotice(title: "Unable to Remove Package", message: error.readableMessage)
+                }
+                isPreparingPackage = false
+                updateRows()
+                refreshPackages()
+            }
+        }
+        remove.image = UIImage(systemName: "trash")
+        let configuration = UISwipeActionsConfiguration(actions: [remove])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
+    }
+
     // MARK: - Rows
 
     private func configure(_ cell: UITableViewCell, value: RowContent) {

@@ -1,6 +1,42 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Remove Package" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Remove Package" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إزالة الحزمة" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Paket entfernen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Eliminar paquete" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Supprimer le paquet" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Rimuovi pacchetto" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージを削除" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지 제거" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Remover pacote" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалить пакет" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Xóa gói" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "移除软件包" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "移除套件" } }
+      }
+    },
+    "Unable to Remove Package" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Unable to Remove Package" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تعذرت إزالة الحزمة" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Paket kann nicht entfernt werden" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudo eliminar el paquete" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Impossible de supprimer le paquet" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Impossibile rimuovere il pacchetto" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージを削除できません" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지를 제거할 수 없음" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Não foi possível remover o pacote" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Не удалось удалить пакет" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Không thể xóa gói" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法移除软件包" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "無法移除套件" } }
+      }
+    },
     "Choose one or both targets, then tap “Build”. Selected targets build in order: roothide, then rootless." : {
       "extractionState" : "manual",
       "localizations" : {
