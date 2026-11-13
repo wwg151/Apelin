@@ -86,6 +86,7 @@ final class ProjectDistributionController: TableController {
             self?.configure(cell, value: content)
             return cell
         }
+        dataSource.allowsEditing = true
         dataSource.headerTitle = { section in
             switch section {
             case .project: nil
@@ -152,6 +153,12 @@ final class ProjectDistributionController: TableController {
         default:
             break
         }
+    }
+
+    override func tableView(_: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        guard !isPreparingPackage,
+              case .package? = dataSource.itemIdentifier(for: indexPath) else { return .none }
+        return .delete
     }
 
     override func tableView(
