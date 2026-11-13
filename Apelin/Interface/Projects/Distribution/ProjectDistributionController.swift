@@ -168,7 +168,7 @@ final class ProjectDistributionController: TableController {
         guard !isPreparingPackage,
               case let .package(artifactID) = dataSource.itemIdentifier(for: indexPath),
               let package = packages.first(where: { $0.artifactID == artifactID }) else { return nil }
-        let remove = UIContextualAction(style: .destructive, title: String(localized: "Remove Package")) { [weak self] _, _, complete in
+        let remove = UIContextualAction(style: .destructive, title: String(localized: "Remove")) { [weak self] _, _, complete in
             guard let self, !isPreparingPackage else { complete(false); return }
             isPreparingPackage = true
             packageReader?.cancel()
