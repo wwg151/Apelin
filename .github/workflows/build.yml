@@ -106,15 +106,22 @@ jobs:
             brew install "${formulae[@]}"
           fi
 
-      - name: Build, package and verify the IDE and every extension
-        # One build, both bootstraps, every extension and corresponding source.
-        run: make deb-all CONFIGURATION=Release SKIP_HARNESS=1 DERIVED_DATA="$DERIVED_DATA" BUILD_NUMBER="$GITHUB_RUN_NUMBER"
+      - name: Build Apelin and package both bootstraps
+        shell: bash
+        run: |
+          set -euo pipefail
+          options=(CONFIGURATION=Release SKIP_HARNESS=1 DERIVED_DATA="$DERIVED_DATA" BUILD_NUMBER="$GITHUB_RUN_NUMBER")
+          make build "${options[@]}"
+          make _package FLAVOR=rootless "${options[@]}"
+          make _package FLAVOR=roothide "${options[@]}"
 
       - name: Upload Debian packages
         uses: actions/upload-artifact@main
         with:
           name: apelin-${{ github.sha }}
-          path: build/Packages/*.deb
+          path: |
+            build/Packages/wiki.qaq.apelin_*_iphoneos-arm64.deb
+            build/Packages/wiki.qaq.apelin_*_iphoneos-arm64e.deb
           if-no-files-found: error
           retention-days: 30
 
@@ -144,9 +151,7 @@ jobs:
           set -euo pipefail
           cd packages
           shopt -s nullglob
-          for id in wiki.qaq.apelin wiki.qaq.apelin.dev.app wiki.qaq.apelin.dev.tweak \
-                    wiki.qaq.apelin.dev.cli wiki.qaq.apelin.dev.preferences \
-                    wiki.qaq.apelin.agent-tools.disassembler wiki.qaq.apelin.agent-tools.assembler; do
+          for id in wiki.qaq.apelin; do
             for architecture in iphoneos-arm64 iphoneos-arm64e; do
               matches=("${id}_"*"_${architecture}.deb")
               test "${#matches[@]}" -eq 1
@@ -154,20 +159,19 @@ jobs:
               test "$(dpkg-deb -f "${matches[0]}" Architecture)" = "$architecture"
             done
           done
-          rootless=(wiki.qaq.apelin_*_iphoneos-arm64.deb)
-          roothide=(wiki.qaq.apelin_*_iphoneos-arm64e.deb)
-          cp "${rootless[0]}" Apelin-dev-rootless.deb
-          cp "${roothide[0]}" Apelin-dev-roothide.deb
           tag=dev-builds
           if ! gh release view "$tag" >/dev/null 2>&1; then
             gh release create "$tag" --target "$GITHUB_SHA" \
               --title "Apelin — dev builds" \
-              --notes "Automatic rootless and roothide builds of Apelin and its extensions. Choose Apelin-dev-rootless.deb or Apelin-dev-roothide.deb for your bootstrap. The tag identifies the first build; assets are updated by later successful builds." \
+              --notes "Automatic rootless and roothide builds of Apelin. Choose the iphoneos-arm64 package for rootless or iphoneos-arm64e for roothide. Extensions are distributed by upstream. The tag identifies the first build; assets are updated by later successful builds." \
               --prerelease
           fi
-          gh release upload "$tag" ./*.deb --clobber
-          echo "https://github.com/$GH_REPO/releases/download/$tag/Apelin-dev-rootless.deb"
-          echo "https://github.com/$GH_REPO/releases/download/$tag/Apelin-dev-roothide.deb"
+          gh release upload "$tag" wiki.qaq.apelin_*_iphoneos-arm64.deb wiki.qaq.apelin_*_iphoneos-arm64e.deb --clobber
+          # Remove legacy aliases only after the original packages are uploaded.
+          mapfile -t legacy_aliases < <(gh release view "$tag" --json assets --jq '.assets[].name | select(. == "Apelin-dev-rootless.deb" or . == "Apelin-dev-roothide.deb")')
+          for asset in "${legacy_aliases[@]}"; do
+            gh release delete-asset "$tag" "$asset" --yes
+          done
 
   deploy:
     # Temporarily disabled until package-source deployment is enabled again.
@@ -192,15 +196,13 @@ jobs:
           name: apelin-${{ github.sha }}
           path: packages
 
-      - name: Verify both bootstraps and extensions
+      - name: Verify Apelin for both bootstraps
         shell: bash
         run: |
           set -euo pipefail
           cd packages
           shopt -s nullglob
-          for id in wiki.qaq.apelin wiki.qaq.apelin.dev.app wiki.qaq.apelin.dev.tweak \
-                    wiki.qaq.apelin.dev.cli wiki.qaq.apelin.dev.preferences \
-                    wiki.qaq.apelin.agent-tools.disassembler wiki.qaq.apelin.agent-tools.assembler; do
+          for id in wiki.qaq.apelin; do
             for architecture in iphoneos-arm64 iphoneos-arm64e; do
               matches=("${id}_"*"_${architecture}.deb")
               test "${#matches[@]}" -eq 1
@@ -221,7 +223,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p website/debs website/depictions
-          cp packages/*.deb website/debs/
+          cp packages/wiki.qaq.apelin_*_iphoneos-arm64.deb packages/wiki.qaq.apelin_*_iphoneos-arm64e.deb website/debs/
           cp src/Documents/Site/depiction.json website/depictions/wiki.qaq.apelin.json
 
       - name: Commit and push packages
