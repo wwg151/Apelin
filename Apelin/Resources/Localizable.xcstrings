@@ -1,6 +1,168 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Withdraw from Repository…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Withdraw from Repository…" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "سحب من المستودع…" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Aus Repository zurückziehen…" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Retirar del repositorio…" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retirer du dépôt…" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Ritira dal repository…" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "リポジトリから取り下げる…" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "저장소에서 철회…" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Retirar do repositório…" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отозвать из репозитория…" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Rút khỏi kho…" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "从仓库撤回…" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "從倉庫撤回…" } }
+      }
+    },
+    "Withdraw" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Withdraw" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "سحب" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zurückziehen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Retirar" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retirer" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Ritira" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "取り下げる" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "철회" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Retirar" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отозвать" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Rút" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "撤回" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "撤回" } }
+      }
+    },
+    "Withdraw from Repository?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Withdraw from Repository?" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "السحب من المستودع؟" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Aus Repository zurückziehen?" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "¿Retirar del repositorio?" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retirer du dépôt ?" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Ritirare dal repository?" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "リポジトリから取り下げますか？" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "저장소에서 철회할까요?" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Retirar do repositório?" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отозвать из репозитория?" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Rút khỏi kho?" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "从仓库撤回？" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "從倉庫撤回？" } }
+      }
+    },
+    "No Published Packages" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "No Published Packages" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "لا توجد حزم منشورة" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Keine veröffentlichten Pakete" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "No hay paquetes publicados" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Aucun paquet publié" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Nessun pacchetto pubblicato" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "公開済みパッケージはありません" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "게시된 패키지 없음" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Nenhum pacote publicado" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Нет опубликованных пакетов" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Chưa có gói đã phát hành" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "没有已发布的软件包" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "沒有已發佈的套件" } }
+      }
+    },
+    "Withdrawing Packages" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Withdrawing Packages" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "جارٍ سحب الحزم" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Pakete werden zurückgezogen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Retirando paquetes" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retrait des paquets" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Ritiro dei pacchetti" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージを取り下げ中" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지 철회 중" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Retirando pacotes" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отзыв пакетов" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Đang rút các gói" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "正在撤回软件包" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "正在撤回套件" } }
+      }
+    },
+    "Withdrawn" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Withdrawn" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تم السحب" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zurückgezogen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Retirado" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retiré" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Ritirato" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "取り下げ済み" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "철회됨" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Retirado" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отозвано" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Đã rút" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已撤回" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "已撤回" } }
+      }
+    },
+    "Unable to Withdraw Packages" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Unable to Withdraw Packages" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تعذر سحب الحزم" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Pakete konnten nicht zurückgezogen werden" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudieron retirar los paquetes" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Impossible de retirer les paquets" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Impossibile ritirare i pacchetti" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージを取り下げられません" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지를 철회할 수 없음" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Não foi possível retirar os pacotes" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Не удалось отозвать пакеты" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Không thể rút các gói" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法撤回软件包" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "無法撤回套件" } }
+      }
+    },
+    "Select packages to withdraw. Local builds and installed packages are kept. The source updates after GitHub Actions finishes." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Select packages to withdraw. Local builds and installed packages are kept. The source updates after GitHub Actions finishes." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "حدد الحزم المراد سحبها. تُحفظ البنيات المحلية والحزم المثبتة. يُحدَّث المصدر بعد انتهاء GitHub Actions." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wähle die zurückzuziehenden Pakete. Lokale Builds und installierte Pakete bleiben erhalten. Die Quelle wird nach Abschluss von GitHub Actions aktualisiert." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Selecciona los paquetes que quieres retirar. Se conservan las compilaciones locales y los paquetes instalados. La fuente se actualiza cuando finaliza GitHub Actions." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Sélectionnez les paquets à retirer. Les compilations locales et les paquets installés sont conservés. La source est actualisée après la fin de GitHub Actions." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Seleziona i pacchetti da ritirare. Le build locali e i pacchetti installati vengono conservati. La sorgente si aggiorna al termine di GitHub Actions." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "取り下げるパッケージを選択してください。ローカルのビルドとインストール済みパッケージは保持されます。GitHub Actions の完了後にソースが更新されます。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "철회할 패키지를 선택하세요. 로컬 빌드와 설치된 패키지는 유지됩니다. GitHub Actions가 완료되면 소스가 업데이트됩니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Selecione os pacotes a retirar. As compilações locais e os pacotes instalados são mantidos. A fonte é atualizada após a conclusão do GitHub Actions." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Выберите пакеты для отзыва. Локальные сборки и установленные пакеты сохранятся. Источник обновится после завершения GitHub Actions." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Chọn các gói cần rút. Bản dựng cục bộ và các gói đã cài đặt được giữ lại. Nguồn cập nhật sau khi GitHub Actions hoàn tất." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "选择要撤回的软件包。本地构建和已安装的软件包会保留。GitHub Actions 完成后软件源才会更新。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "選取要撤回的套件。本機建置和已安裝的套件會保留。GitHub Actions 完成後軟體源才會更新。" } }
+      }
+    },
+    "These packages will be removed from the repository in one commit. Local builds and installed packages are kept. The source updates after GitHub Actions finishes." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "These packages will be removed from the repository in one commit. Local builds and installed packages are kept. The source updates after GitHub Actions finishes." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "ستُزال هذه الحزم من المستودع في إيداع واحد. تُحفظ البنيات المحلية والحزم المثبتة. يُحدَّث المصدر بعد انتهاء GitHub Actions." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Diese Pakete werden mit einem Commit aus dem Repository entfernt. Lokale Builds und installierte Pakete bleiben erhalten. Die Quelle wird nach Abschluss von GitHub Actions aktualisiert." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Estos paquetes se eliminarán del repositorio en un solo commit. Se conservan las compilaciones locales y los paquetes instalados. La fuente se actualiza cuando finaliza GitHub Actions." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ces paquets seront supprimés du dépôt en un seul commit. Les compilations locales et les paquets installés sont conservés. La source est actualisée après la fin de GitHub Actions." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Questi pacchetti verranno rimossi dal repository in un unico commit. Le build locali e i pacchetti installati vengono conservati. La sorgente si aggiorna al termine di GitHub Actions." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "これらのパッケージは1回のコミットでリポジトリから削除されます。ローカルのビルドとインストール済みパッケージは保持されます。GitHub Actions の完了後にソースが更新されます。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "이 패키지는 하나의 커밋으로 저장소에서 제거됩니다. 로컬 빌드와 설치된 패키지는 유지됩니다. GitHub Actions가 완료되면 소스가 업데이트됩니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Estes pacotes serão removidos do repositório em um único commit. As compilações locais e os pacotes instalados são mantidos. A fonte é atualizada após a conclusão do GitHub Actions." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Эти пакеты будут удалены из репозитория одним коммитом. Локальные сборки и установленные пакеты сохранятся. Источник обновится после завершения GitHub Actions." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Các gói này sẽ được xóa khỏi kho trong một commit. Bản dựng cục bộ và các gói đã cài đặt được giữ lại. Nguồn cập nhật sau khi GitHub Actions hoàn tất." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "这些软件包将通过一次提交从仓库移除。本地构建和已安装的软件包会保留。GitHub Actions 完成后软件源才会更新。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "這些套件將透過一次提交從倉庫移除。本機建置和已安裝的套件會保留。GitHub Actions 完成後軟體源才會更新。" } }
+      }
+    },
     "Select All" : {
       "extractionState" : "manual",
       "localizations" : {

@@ -183,6 +183,14 @@ final class ServiceTableTests: XCTestCase {
             return Row(reply: handle) { _ = try await $0.distributionRepositoryLink(fullName: "someone/packages") }
         case .distributionRepositoryUnlink:
             return Row(reply: ack) { try await $0.distributionRepositoryUnlink() }
+        case .distributionPackages:
+            let repository = DistributionRepository(fullName: "someone/packages", url: "https://github.com/someone/packages", sourceURL: "https://someone.github.io/packages/", projectID: "repo", projectName: "packages")
+            let snapshot = DistributionPackagesResponse(repository: repository, branch: "main", commit: "abc", packages: [])
+            return Row(reply: snapshot) { _ = try await $0.distributionPackages() }
+        case .distributionWithdraw:
+            let repository = DistributionRepository(fullName: "someone/packages", url: "https://github.com/someone/packages", sourceURL: "https://someone.github.io/packages/", projectID: "repo", projectName: "packages")
+            let snapshot = DistributionPackagesResponse(repository: repository, branch: "main", commit: "abc", packages: [])
+            return Row(reply: handle) { _ = try await $0.distributionWithdraw(snapshot: snapshot, packages: []) }
         case .distributionPublish:
             return Row(reply: handle) { _ = try await $0.distributionPublish(files: ["/tmp/a.deb"]) }
         case .feedbackSend:

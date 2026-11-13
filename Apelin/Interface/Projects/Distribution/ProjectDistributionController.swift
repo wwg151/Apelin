@@ -83,6 +83,9 @@ final class ProjectDistributionController: TableController {
             primaryAction: UIAction { [weak self] _ in self?.build() },
         )
         moreButton = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"), menu: UIMenu(children: [
+            UIAction(title: String(localized: "Withdraw from Repository…"), image: UIImage(systemName: "arrow.uturn.backward"), attributes: .destructive) { [weak self] _ in
+                self?.navigationController?.pushViewController(DistributionWithdrawalController(), animated: true)
+            },
             UIAction(title: String(localized: "Batch Remove…"), image: UIImage(systemName: "trash"), attributes: .destructive) { [weak self] _ in
                 self?.setRemovalMode(true)
             },
@@ -401,7 +404,7 @@ final class ProjectDistributionController: TableController {
 
     private func updateRemovalControls() {
         navigationItem.hidesBackButton = isRemovingPackages
-        moreButton.isEnabled = !packages.isEmpty && !isPreparingPackage
+        moreButton.isEnabled = !isPreparingPackage
         if isRemovingPackages {
             navigationItem.leftBarButtonItem = UIBarButtonItem(
                 title: String(localized: "Cancel"),

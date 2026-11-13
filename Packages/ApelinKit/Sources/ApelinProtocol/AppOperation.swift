@@ -114,6 +114,8 @@ public enum AppOperation: String, Codable, CaseIterable, Sendable {
     case distributionRepositoryLink
     case distributionRepositoryUnlink
     case distributionPublish
+    case distributionPackages
+    case distributionWithdraw
     case feedbackSend
     case feedbackRead
     case feedbackEdit
@@ -152,7 +154,7 @@ public enum AppOperation: String, Codable, CaseIterable, Sendable {
             .git
         case .transferExport, .transferInspect, .transferImport: .transfer
         case .distributionRepositoryList, .distributionRepositoryCreate, .distributionRepositoryLink,
-             .distributionRepositoryUnlink, .distributionPublish, .feedbackSend, .feedbackRead, .feedbackEdit,
+             .distributionRepositoryUnlink, .distributionPublish, .distributionPackages, .distributionWithdraw, .feedbackSend, .feedbackRead, .feedbackEdit,
              .feedbackStarState, .feedbackStar:
             .distribution
         }
@@ -253,6 +255,8 @@ public enum AppOperation: String, Codable, CaseIterable, Sendable {
         case .distributionRepositoryLink: DistributionRepositoryLinkRequest.self
         case .distributionRepositoryUnlink: DistributionRepositoryUnlinkRequest.self
         case .distributionPublish: DistributionPublishRequest.self
+        case .distributionPackages: DistributionPackagesRequest.self
+        case .distributionWithdraw: DistributionWithdrawRequest.self
         case .feedbackSend: FeedbackSendRequest.self
         case .feedbackRead: FeedbackReadRequest.self
         case .feedbackEdit: FeedbackEditRequest.self

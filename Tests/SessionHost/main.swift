@@ -3497,6 +3497,9 @@ do {
 // MARK: - Packages are published under Strict only as the user approved exactly them
 
 do {
+    check(CallerPolicy.allows(.app, .distributionWithdraw), "the app may withdraw confirmed packages")
+    check(!CallerPolicy.allows(.worker(.agent, instance: "s"), .distributionWithdraw), "withdrawal stays app-only")
+    check(!CallerPolicy.allows(.worker(.environment, instance: nil), .distributionWithdraw), "workers cannot start withdrawals")
     check(CallerPolicy.allows(.worker(.agent, instance: "s"), .distributionPublish), "the agent may publish packages")
     check(!CallerPolicy.allows(.worker(.build, instance: nil), .distributionPublish), "the build worker may not")
     check(!CallerPolicy.allows(.worker(.environment, instance: nil), .distributionPublish), "nor the environment worker")

@@ -197,6 +197,52 @@ public struct DistributionPublishRequest: OperationRequest {
     }
 }
 
+/// A published file, identified by its repository path and Git blob ID.
+public struct DistributionRepositoryPackage: Codable, Sendable, Hashable {
+    public var path: String
+    public var sha: String
+
+    public init(path: String, sha: String) {
+        self.path = path
+        self.sha = sha
+    }
+}
+
+/// A remote snapshot; withdrawal refuses a changed branch or link.
+public struct DistributionPackagesResponse: Codable, Sendable, Equatable {
+    public var repository: DistributionRepository
+    public var branch: String
+    public var commit: String
+    public var packages: [DistributionRepositoryPackage]
+
+    public init(repository: DistributionRepository, branch: String, commit: String, packages: [DistributionRepositoryPackage]) {
+        self.repository = repository
+        self.branch = branch
+        self.commit = commit
+        self.packages = packages
+    }
+}
+
+public struct DistributionPackagesRequest: OperationRequest {
+    public typealias Response = DistributionPackagesResponse
+    public static let operation = AppOperation.distributionPackages
+    public init() {}
+}
+
+/// App-only, confirmed by the user. Deletes selected remote blobs in one
+/// commit, then advances the branch without force. Local builds stay put.
+public struct DistributionWithdrawRequest: OperationRequest {
+    public typealias Response = TaskHandle
+    public static let operation = AppOperation.distributionWithdraw
+    public var snapshot: DistributionPackagesResponse
+    public var packages: [DistributionRepositoryPackage]
+
+    public init(snapshot: DistributionPackagesResponse, packages: [DistributionRepositoryPackage]) {
+        self.snapshot = snapshot
+        self.packages = packages
+    }
+}
+
 /// Files feedback as a public issue on Apelin's own repository
 /// (`FeedbackRules.repository`, never one the request names) with the
 /// github.com sign-in, the title and body checked by `FeedbackRules` first
@@ -388,6 +434,14 @@ public extension ApelinService {
     /// Starts publishing; follow it with `events(of:)`.
     func distributionPublish(files: [String], digests: [String]? = nil, repository: String? = nil) async throws -> TaskHandle {
         try await send(DistributionPublishRequest(files: files, digests: digests, repository: repository))
+    }
+
+    func distributionPackages() async throws -> DistributionPackagesResponse {
+        try await send(DistributionPackagesRequest())
+    }
+
+    func distributionWithdraw(snapshot: DistributionPackagesResponse, packages: [DistributionRepositoryPackage]) async throws -> TaskHandle {
+        try await send(DistributionWithdrawRequest(snapshot: snapshot, packages: packages))
     }
 
     func feedbackSend(title: String, body: String) async throws -> FeedbackSendResponse {
