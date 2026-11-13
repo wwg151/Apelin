@@ -2,8 +2,7 @@ name: Build Apelin and Deploy Repo
 
 on:
   push:
-    branches:
-      - dev
+    branches: ["*"]
     paths-ignore:
       - "**/*.md"
   workflow_dispatch:
@@ -31,11 +30,13 @@ jobs:
         uses: actions/checkout@main
         with:
           persist-credentials: false
+
       - name: Select Xcode 27.1
         run: |
           sudo xcode-select -s /Applications/Xcode_27.1.app/Contents/Developer
           xcodebuild -version
           echo "iPhoneOS SDK $(xcrun --sdk iphoneos --show-sdk-version)"
+
       - name: Run host tests
         run: make harness SWIFTPM_SCRATCH="$RUNNER_TEMP/apelin-spm"
 
@@ -48,18 +49,22 @@ jobs:
         uses: actions/checkout@main
         with:
           persist-credentials: false
+
       - name: Select Xcode 27.1
         run: |
           sudo xcode-select -s /Applications/Xcode_27.1.app/Contents/Developer
           xcodebuild -version
+
       - name: Restore the runtime
         id: runtime
         uses: actions/cache/restore@main
         with:
           path: ~/Library/Caches/apelin-old-runtime
           key: apelin-old-runtime-ios15.5-${{ hashFiles('Scripts/old-runtime/runtime-root.py') }}
+
       - name: Run the checks
         run: make old-runtime
+
       - name: Keep the runtime
         if: always() && steps.runtime.outputs.cache-hit != 'true'
         uses: actions/cache/save@main
@@ -77,15 +82,18 @@ jobs:
         run: |
           set -euo pipefail
           echo "DERIVED_DATA=$RUNNER_TEMP/apelin-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT" >> "$GITHUB_ENV"
+
       - name: Check out repository
         uses: actions/checkout@main
         with:
           persist-credentials: false
+
       - name: Select Xcode 27.1
         run: |
           sudo xcode-select -s /Applications/Xcode_27.1.app/Contents/Developer
           xcodebuild -version
           echo "iPhoneOS SDK $(xcrun --sdk iphoneos --show-sdk-version)"
+
       - name: Install packaging dependencies
         shell: bash
         run: |
@@ -97,33 +105,16 @@ jobs:
           if (( ${#formulae[@]} > 0 )); then
             brew install "${formulae[@]}"
           fi
-      # One build, both bootstraps, every extension and corresponding source.
+
       - name: Build, package and verify the IDE and every extension
+        # One build, both bootstraps, every extension and corresponding source.
         run: make deb-all CONFIGURATION=Release SKIP_HARNESS=1 DERIVED_DATA="$DERIVED_DATA" BUILD_NUMBER="$GITHUB_RUN_NUMBER"
-      - name: Archive dSYMs
-        shell: bash
-        run: |
-          set -euo pipefail
-          version="$(make --no-print-directory print-version)"
-          cd "$DERIVED_DATA/Build/Products/Release-iphoneos"
-          zip -qry "$GITHUB_WORKSPACE/build/Packages/Apelin_${version}_dSYMs.zip" ./*.dSYM
-      - name: Write checksums
-        shell: bash
-        run: |
-          set -euo pipefail
-          cd build/Packages
-          shasum -a 256 ./*.deb ./*_source.tar.xz ./*_dSYMs.zip ./*_Templates.tar.zst > SHA256SUMS
-          cat SHA256SUMS
+
       - name: Upload Debian packages
         uses: actions/upload-artifact@main
         with:
           name: apelin-${{ github.sha }}
-          path: |
-            build/Packages/*.deb
-            build/Packages/*_source.tar.xz
-            build/Packages/*_dSYMs.zip
-            build/Packages/*_Templates.tar.zst
-            build/Packages/SHA256SUMS
+          path: build/Packages/*.deb
           if-no-files-found: error
           retention-days: 30
 
@@ -143,6 +134,7 @@ jobs:
         with:
           name: apelin-${{ github.sha }}
           path: packages
+
       - name: Verify and publish packages to GitHub Releases
         shell: bash
         env:
@@ -151,7 +143,6 @@ jobs:
         run: |
           set -euo pipefail
           cd packages
-          sha256sum --check SHA256SUMS
           shopt -s nullglob
           for id in wiki.qaq.apelin wiki.qaq.apelin.dev.app wiki.qaq.apelin.dev.tweak \
                     wiki.qaq.apelin.dev.cli wiki.qaq.apelin.dev.preferences \
@@ -167,19 +158,20 @@ jobs:
           roothide=(wiki.qaq.apelin_*_iphoneos-arm64e.deb)
           cp "${rootless[0]}" Apelin-dev-rootless.deb
           cp "${roothide[0]}" Apelin-dev-roothide.deb
-          sha256sum ./*.deb ./*_source.tar.xz ./*_dSYMs.zip ./*_Templates.tar.zst > SHA256SUMS
           tag=dev-builds
           if ! gh release view "$tag" >/dev/null 2>&1; then
             gh release create "$tag" --target "$GITHUB_SHA" \
               --title "Apelin — dev builds" \
-              --notes "Automatic rootless and roothide builds of Apelin and its extensions. Choose Apelin-dev-rootless.deb or Apelin-dev-roothide.deb for your bootstrap. Corresponding source, templates, dSYMs and SHA256SUMS are included. The tag identifies the first build; assets are updated by later successful builds." \
+              --notes "Automatic rootless and roothide builds of Apelin and its extensions. Choose Apelin-dev-rootless.deb or Apelin-dev-roothide.deb for your bootstrap. The tag identifies the first build; assets are updated by later successful builds." \
               --prerelease
           fi
-          gh release upload "$tag" ./*.deb ./*_source.tar.xz ./*_dSYMs.zip ./*_Templates.tar.zst SHA256SUMS --clobber
+          gh release upload "$tag" ./*.deb --clobber
           echo "https://github.com/$GH_REPO/releases/download/$tag/Apelin-dev-rootless.deb"
           echo "https://github.com/$GH_REPO/releases/download/$tag/Apelin-dev-roothide.deb"
 
   deploy:
+    # Temporarily disabled until package-source deployment is enabled again.
+    if: ${{ false }}
     name: Push packages to wwg151/repo
     needs: [test, old-runtime, build]
     runs-on: ubuntu-latest
@@ -193,17 +185,18 @@ jobs:
         with:
           path: src
           persist-credentials: false
+
       - name: Download build artifacts
         uses: actions/download-artifact@main
         with:
           name: apelin-${{ github.sha }}
           path: packages
+
       - name: Verify both bootstraps and extensions
         shell: bash
         run: |
           set -euo pipefail
           cd packages
-          sha256sum --check SHA256SUMS
           shopt -s nullglob
           for id in wiki.qaq.apelin wiki.qaq.apelin.dev.app wiki.qaq.apelin.dev.tweak \
                     wiki.qaq.apelin.dev.cli wiki.qaq.apelin.dev.preferences \
@@ -215,20 +208,22 @@ jobs:
               test "$(dpkg-deb -f "${matches[0]}" Architecture)" = "$architecture"
             done
           done
+
       - name: Check out package source
         uses: actions/checkout@main
         with:
           repository: wwg151/repo
           token: ${{ secrets.DEPLOY_PAT }}
           path: website
-      - name: Copy Apelin packages and supporting archives
+
+      - name: Copy Apelin packages
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p website/debs website/depictions
-          cp packages/*.deb packages/*_source.tar.xz packages/*_dSYMs.zip packages/*_Templates.tar.zst website/debs/
-          cp packages/SHA256SUMS website/debs/Apelin-SHA256SUMS
+          cp packages/*.deb website/debs/
           cp src/Documents/Site/depiction.json website/depictions/wiki.qaq.apelin.json
+
       - name: Commit and push packages
         shell: bash
         env:
