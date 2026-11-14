@@ -10,7 +10,6 @@ on:
 permissions:
   contents: read
 
-# Publishing jobs use a second concurrency group to serialize shared destinations.
 concurrency:
   group: apelin-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
