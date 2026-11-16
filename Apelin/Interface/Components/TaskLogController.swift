@@ -63,6 +63,10 @@ final class TaskLogController: UIViewController, UITableViewDelegate {
         tableView: tableView,
     ) { [weak self] table, indexPath, line in
         let cell = table.dequeueReusableCell(withIdentifier: TaskLogCell.reuseIdentifier, for: indexPath)
+        (cell as? TaskLogCell)?.selectionBegan = { [weak self] in
+            self?.followsLatest = false
+            self?.latestButton.isHidden = false
+        }
         (cell as? TaskLogCell)?.configure(
             number: line + 1,
             message: self.flatMap { $0.displayedLines.indices.contains(line) ? $0.displayedLines[line] : nil } ?? "",
@@ -171,11 +175,16 @@ final class TaskLogController: UIViewController, UITableViewDelegate {
 }
 
 /// A log line: its number in a narrow column, the text beside it.
-private final class TaskLogCell: UITableViewCell {
+private final class TaskLogCell: UITableViewCell, UITextViewDelegate {
     static let reuseIdentifier = "log"
 
     private let numberLabel = UILabel()
-    private let messageLabel = UILabel()
+    private let messageLabel = UITextView()
+    var selectionBegan: (() -> Void)?
+
+    func textViewDidChangeSelection(_ textView: UITextView) {
+        if textView.selectedRange.length > 0 { selectionBegan?() }
+    }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -192,7 +201,13 @@ private final class TaskLogCell: UITableViewCell {
             weight: .regular,
         )
         messageLabel.textColor = .label
-        messageLabel.numberOfLines = 0
+        messageLabel.isEditable = false
+        messageLabel.isSelectable = true
+        messageLabel.isScrollEnabled = false
+        messageLabel.backgroundColor = .clear
+        messageLabel.textContainerInset = .zero
+        messageLabel.textContainer.lineFragmentPadding = 0
+        messageLabel.delegate = self
         contentView.addSubview(numberLabel)
         contentView.addSubview(messageLabel)
         numberLabel.snp.makeConstraints { x in
@@ -205,8 +220,9 @@ private final class TaskLogCell: UITableViewCell {
             x.trailing.equalToSuperview().inset(20)
             x.top.bottom.equalToSuperview().inset(5)
         }
-        // the line is the row; its number is only drawn
-        isAccessibilityElement = true
+        // Expose the selectable text itself, including its native copy actions.
+        isAccessibilityElement = false
+        numberLabel.isAccessibilityElement = false
     }
 
     @available(*, unavailable)
@@ -214,11 +230,17 @@ private final class TaskLogCell: UITableViewCell {
         fatalError("Use init(style:reuseIdentifier:)")
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        selectionBegan = nil
+        messageLabel.resignFirstResponder()
+        messageLabel.selectedRange = NSRange(location: 0, length: 0)
+    }
+
     @objc dynamic func configure(number: Int, message: String, isError: Bool) {
         numberLabel.text = String(number)
-        messageLabel.text = message
+        if messageLabel.text != message { messageLabel.text = message }
         messageLabel.textColor = isError ? .systemRed : .label
-        accessibilityLabel = message
     }
 
     /// The number stands against the line it numbers: on its right left
