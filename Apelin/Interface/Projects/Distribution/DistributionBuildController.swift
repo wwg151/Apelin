@@ -46,7 +46,7 @@ final class DistributionBuildController: TableController {
     }
 
     private enum Row: Hashable {
-        case stage(Stage), outcome, finding(Int), result(BuildBootstrap)
+        case stage(Stage), log, outcome, finding(Int), result(BuildBootstrap)
     }
 
     private struct RowContent: Equatable {
@@ -64,6 +64,7 @@ final class DistributionBuildController: TableController {
         var findings: [ProjectDiagnostic]
         var stage: Stage
         var logLines: [String]
+        var errorLines: Set<Int>
     }
 
     private let projectName: String
@@ -87,6 +88,34 @@ final class DistributionBuildController: TableController {
     private var finishedState: TaskState?
     private lazy var stepCells = Dictionary(uniqueKeysWithValues: Stage.stages(for: method).map { ($0, TaskStepCell(stage: String($0.rawValue))) })
     private var logLines: [String] = []
+    private var errorLines: Set<Int> = []
+    private let inlineLog = TaskLogController(lines: [])
+    private let logCell = UITableViewCell(style: .default, reuseIdentifier: nil)
+
+    private func refreshLogs() {
+        inlineLog.update(logLines, errorLines: errorLines)
+        logPage?.update(logLines, errorLines: errorLines)
+    }
+
+    private func resetInlineLog() {
+        errorLines = []
+        inlineLog.reset(logLines)
+    }
+
+    private static let errorPattern = try! NSRegularExpression(
+        pattern: #"(?im)(?:^|\s)(?:fatal\s+error|error)(?:\s+[A-Z]+\d+)?\s*:|^\s*(?:\[error\]|##\[error\]|failed:|\*\* BUILD FAILED \*\*)|^.*undefined (?:symbols|reference)|^make(?:\[\d+\])?: \*\*\*"#
+    )
+
+    private func appendLog(_ text: String, isError: Bool = false) {
+        let clean = text.replacingOccurrences(of: #"\x1B\[[0-?]*[ -/]*[@-~]"#, with: "", options: .regularExpression)
+        for line in clean.components(separatedBy: .newlines) {
+            if isError || Self.errorPattern.firstMatch(in: line, range: NSRange(line.startIndex..., in: line)) != nil {
+                errorLines.insert(logLines.count)
+            }
+            logLines.append(line)
+        }
+        refreshLogs()
+    }
     @objc private dynamic weak var logPage: TaskLogController?
     private var dataSource: TableDataSource<Section, Row, RowContent>!
     /// While the package is read back for Share Package or Publish to
@@ -135,6 +164,7 @@ final class DistributionBuildController: TableController {
                         openLog()
                     } else if let result = results[logTarget] {
                         let page = TaskLogController(lines: result.logLines)
+                        page.update(result.logLines, errorLines: result.errorLines)
                         page.loadViewIfNeeded()
                         page.title = logTarget.rawValue
                         navigationController?.pushViewController(page, animated: true)
@@ -217,10 +247,24 @@ final class DistributionBuildController: TableController {
         title = target.rawValue
         navigationItem.largeTitleDisplayMode = .never
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Build")
+        addChild(inlineLog)
+        logCell.selectionStyle = .none
+        logCell.isAccessibilityElement = false
+        logCell.contentView.addSubview(inlineLog.view)
+        inlineLog.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            inlineLog.view.leadingAnchor.constraint(equalTo: logCell.contentView.leadingAnchor),
+            inlineLog.view.trailingAnchor.constraint(equalTo: logCell.contentView.trailingAnchor),
+            inlineLog.view.topAnchor.constraint(equalTo: logCell.contentView.topAnchor),
+            inlineLog.view.bottomAnchor.constraint(equalTo: logCell.contentView.bottomAnchor),
+            inlineLog.view.heightAnchor.constraint(equalToConstant: 320),
+        ])
+        inlineLog.didMove(toParent: self)
         dataSource = TableDataSource(
             tableView: tableView,
             identifier: { $0.row },
         ) { [weak self] tableView, indexPath, content in
+            if case .log = content.row { return self?.logCell }
             if case let .stage(stage) = content.row {
                 return self?.stepCells[stage]
             }
@@ -251,7 +295,7 @@ final class DistributionBuildController: TableController {
         cell.accessibilityTraits = .staticText
         cell.accessibilityValue = nil
         switch value.row {
-        case .stage:
+        case .stage, .log:
             break
         case .outcome:
             content.textProperties.numberOfLines = 0
@@ -304,6 +348,8 @@ final class DistributionBuildController: TableController {
         finishedState = result.state
         stage = result.stage
         logLines = result.logLines
+        errorLines = result.errorLines
+        inlineLog.reset(logLines, errorLines: errorLines)
         logPage = nil
         title = selected.rawValue
         updateNavigation()
@@ -328,11 +374,10 @@ final class DistributionBuildController: TableController {
             stepCells[item]?.show(state, status: status, animated: tableView.window != nil && !UIAccessibility.isReduceMotionEnabled, title: stageTitle(item))
         }
         var sections: [(Section, [RowContent])] = [
-            (.progress, Stage.stages(for: method).map { item in
-                RowContent(
-                    row: .stage(item),
-                    text: item.title,
-                )
+            (.progress, Stage.stages(for: method).flatMap { item -> [RowContent] in
+                let row = RowContent(row: .stage(item), text: item.title)
+                return item == (method == .script ? .running : .compiling)
+                    ? [row, RowContent(row: .log)] : [row]
             }),
         ]
         if targets.count > 1 {
@@ -418,6 +463,7 @@ final class DistributionBuildController: TableController {
         findings = []
         stage = .preparing
         logLines = []
+        resetInlineLog()
         logPage = nil
         title = target.rawValue
         results.removeValue(forKey: target)
@@ -439,6 +485,7 @@ final class DistributionBuildController: TableController {
                     artifact = nil
                     finishedState = .failed
                     outcome = error.readableMessage
+                    appendLog(error.readableMessage, isError: true)
                 }
                 results[target] = Result(
                     state: finishedState ?? .failed,
@@ -447,6 +494,7 @@ final class DistributionBuildController: TableController {
                     findings: findings,
                     stage: stage,
                     logLines: logLines,
+                    errorLines: errorLines,
                 )
                 guard finishedState == .succeeded, !Task.isCancelled, let next = nextTarget else { break }
                 target = next
@@ -457,6 +505,7 @@ final class DistributionBuildController: TableController {
                 findings = []
                 stage = .preparing
                 logLines = []
+                resetInlineLog()
                 logPage = nil
                 updateRows()
             }
@@ -490,16 +539,14 @@ final class DistributionBuildController: TableController {
                         do {
                             try await ApelinService.app.buildCancel(taskID: handle.taskID)
                         } catch {
-                            logLines.append(error.readableMessage)
-                            logPage?.update(logLines)
+                            appendLog(error.readableMessage, isError: true)
                         }
                         do {
                             for try await event in ApelinService.app.events(of: handle, afterSeq: lastEventSeq) {
                                 record(event)
                             }
                         } catch {
-                            logLines.append(error.readableMessage)
-                            logPage?.update(logLines)
+                            appendLog(error.readableMessage, isError: true)
                         }
                         if !buildFinished { try? await Task.sleep(for: .seconds(1)) }
                     }
@@ -580,12 +627,14 @@ final class DistributionBuildController: TableController {
         default: nil
         }
         guard let line else { return }
-        logLines.append(line)
-        logPage?.update(logLines)
+        let isError = (event.kind == "diagnostic" && event.payload?["severity"]?.stringValue == "error") ||
+            (event.kind == TaskEvent.stateKind && event.payload?["state"]?.stringValue == TaskState.failed.rawValue)
+        appendLog(line, isError: isError)
     }
 
     @objc private dynamic func openLog() {
         let page = TaskLogController(lines: logLines)
+        page.update(logLines, errorLines: errorLines)
         if targets.count > 1 {
             page.loadViewIfNeeded()
             page.title = target.rawValue
