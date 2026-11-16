@@ -3893,9 +3893,8 @@ available. Selecting another artifact of the same architecture replaces the
 previous choice. Publish to Repository sends exactly the selected artifacts,
 at most one per architecture, after a confirmation naming their build times.
 Share Package works per artifact (`DistributionPublishing`, the build page's
-too). Neither action rebuilds. The first page ignores
-`distribution.version.packaged` advice, allowing same-version rebuilds even
-when an earlier artifact is missing. Repository conflicts for different
+too). Neither action rebuilds. Same-version rebuilds generate no distribution
+advice, even when an earlier artifact is missing. Repository conflicts for different
 bytes under the same package ID/version/architecture remain enforced.
 Building again lets the user choose one or both targets and tap Build. The
 first page checks each selected target and shows its warnings (labelled by

@@ -100,11 +100,9 @@ from `projectCheck` with `purpose: distribution` (and the chosen target as
   ID or an app's `CFBundleIdentifier` is still the `local.apelin.` one
   `projectCreate` made up.
 - `distribution.icon.missing`: an app's Info.plist names no icon.
-- `distribution.version.packaged`: a release package of this ID and version
-  was already built for the target (any target, without one). The agent tools
-  and workspace build findings retain this advice. The first distribution
-  page hides it and never asks for confirmation merely to rebuild the same
-  version. Use a new version when shipping an update to package managers.
+
+Same-version rebuilds produce no distribution warning. Use a new version when
+shipping an update to package managers.
 
 An error the check finds would stop the build, so it is listed too and Build
 waits until it is fixed.
@@ -138,8 +136,6 @@ only say whether the script is declared. The release build reads the package it
 wrote and lists, under the outcome and among the agent's build diagnostics:
 
 - `distribution.package.id.local`: the package ID starts `local.apelin.`.
-- `distribution.version.packaged`: this project already packaged this ID and
-  version for the target.
 - `distribution.package.id.differs`: the other target's latest release package
   has another ID.
 

@@ -527,7 +527,6 @@ final class ProjectDistributionController: TableController {
                     let errors = response.diagnostics.filter { $0.severity == .error }
                     let warnings = response.diagnostics.filter {
                         $0.code.hasPrefix("distribution.") && $0.severity != .error
-                            && $0.code != DistributionAdvice.versionPackaged
                     }
                     perTarget[target] = warnings
                     checkedBlockers += errors.map { diagnostic in
@@ -632,11 +631,7 @@ final class ProjectDistributionController: TableController {
                 animated: true,
             )
         }
-        // Rebuilding the same version is allowed, regardless of whether
-        // its previous artifact is still available.
-        let asked = targets.flatMap { target in
-            (issuesByTarget[target] ?? []).filter { $0.code != DistributionAdvice.versionPackaged }
-        }
+        let asked = targets.flatMap { issuesByTarget[$0] ?? [] }
         guard !asked.isEmpty else {
             open()
             return
