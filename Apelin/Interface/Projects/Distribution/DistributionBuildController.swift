@@ -400,7 +400,7 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
             }
             stepCells[item]?.show(state, status: status, animated: tableView.window != nil && !UIAccessibility.isReduceMotionEnabled, title: stageTitle(item))
         }
-        let showInstall = target == deviceTarget && finishedState == .succeeded && artifact?.bootstrap == target.rawValue
+        let showInstall = target == deviceTarget
         if showInstall { updateInstallSteps() }
         var sections: [(Section, [RowContent])] = [
             (.progress, Stage.stages(for: method).flatMap { item -> [RowContent] in
@@ -505,7 +505,7 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
         case let .running(fraction): fraction?.formatted(.percent.precision(.fractionLength(0))) ?? String(localized: "In Progress")
         case .done: String(localized: "Completed")
         case .failed: String(localized: "Failed")
-        default: String(localized: "Waiting")
+        default: installWaitingStatus
         }
         let animated = tableView.window != nil && !UIAccessibility.isReduceMotionEnabled
         installingCell.show(installState, status: status, animated: animated, title: String(localized: "Installing"))
@@ -516,20 +516,30 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
         }
         installedCell.show(
             completion,
-            status: completion == .done ? String(localized: "Completed") : String(localized: "Not Started"),
+            status: completion == .done ? String(localized: "Completed") : installWaitingStatus,
             animated: animated,
             title: String(localized: "Installation Complete"),
+        )
+    }
+
+    @objc private dynamic var installWaitingStatus: String {
+        if finishedState == nil { return String(localized: "Waiting") }
+        if case .running = installState { return String(localized: "Waiting") }
+        return String(localized: "Not Started")
+    }
+
+    private func resolveDeviceTarget() async throws {
+        let hello = try await ApelinService.app.hello()
+        deviceTarget = BuildBootstrap.resolve(
+            installRoot: hello.installRoot,
+            home: RoothideRoot.mobileHome(for: Bundle.main.bundlePath),
         )
     }
 
     private func autoInstall(_ artifact: BuildArtifact) async {
         if deviceTarget == nil {
             do {
-                let hello = try await ApelinService.app.hello()
-                deviceTarget = BuildBootstrap.resolve(
-                    installRoot: hello.installRoot,
-                    home: RoothideRoot.mobileHome(for: Bundle.main.bundlePath),
-                )
+                try await resolveDeviceTarget()
             } catch {
                 appendLog(error.readableMessage, isError: true)
                 return
@@ -606,8 +616,13 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
         results.removeValue(forKey: target)
         work = Task { [weak self] in
             guard let self else { return }
+            if deviceTarget == nil {
+                try? await resolveDeviceTarget()
+                updateRows()
+            }
             while true {
                 do {
+                    try Task.checkCancellation()
                     let id = try await DistributionProject.id(named: projectName)
                     try Task.checkCancellation()
                     artifact = try await build(projectID: id)
