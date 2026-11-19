@@ -101,10 +101,14 @@ public struct InstallPackageRequest: OperationRequest {
     /// SHA-256 of the deb, lowercase hex (a `sha256:` prefix is accepted).
     /// Must match what the host stages, and the build's own record.
     public var digest: String
+    /// Only the app can explicitly replace an unmanaged package with a registered build.
+    /// Absent on older clients and on requests that keep the default policy.
+    public var allowExternalReplacement: Bool?
 
-    public init(artifactID: String, digest: String) {
+    public init(artifactID: String, digest: String, allowExternalReplacement: Bool? = nil) {
         self.artifactID = artifactID
         self.digest = digest
+        self.allowExternalReplacement = allowExternalReplacement
     }
 }
 
@@ -241,8 +245,16 @@ public struct ApprovalDigestStateResponse: Codable, Sendable, Equatable {
 
 public extension ApelinService {
     /// Starts an install; follow it with `events(of:)`.
-    func installPackage(artifactID: String, digest: String) async throws -> TaskHandle {
-        try await send(InstallPackageRequest(artifactID: artifactID, digest: digest))
+    func installPackage(
+        artifactID: String,
+        digest: String,
+        allowExternalReplacement: Bool? = nil,
+    ) async throws -> TaskHandle {
+        try await send(InstallPackageRequest(
+            artifactID: artifactID,
+            digest: digest,
+            allowExternalReplacement: allowExternalReplacement,
+        ))
     }
 
     func removePackage(installationID: String) async throws -> TaskHandle {

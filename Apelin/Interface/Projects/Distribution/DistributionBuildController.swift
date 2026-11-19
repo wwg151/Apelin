@@ -46,7 +46,7 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
     }
 
     private enum Row: Hashable {
-        case stage(Stage), log, outcome, finding(Int), result(BuildBootstrap)
+        case stage(Stage), installing, installed, installError, log, outcome, finding(Int), result(BuildBootstrap)
     }
 
     private struct RowContent: Equatable {
@@ -92,13 +92,12 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
     private let inlineLog = TaskLogController(lines: [])
     private let logCell = UITableViewCell(style: .default, reuseIdentifier: nil)
     @objc private dynamic lazy var tableView = FirstFillTableView(frame: .zero, style: .insetGrouped)
-    @objc private dynamic lazy var installBar = DistributionInstallBar(frame: .zero)
-    @objc private dynamic var listWithoutInstallBar: NSLayoutConstraint?
-    @objc private dynamic var listAboveInstallBar: NSLayoutConstraint?
-    @objc private dynamic var installInProgress = false
-    private var pendingInstall: TaskHandle?
-    private var installEventSeq: EventSeq = .start
+    @objc private dynamic lazy var installingCell = TaskStepCell(stage: "installing")
+    @objc private dynamic lazy var installedCell = TaskStepCell(stage: "installed")
+    private var installState: EnvironmentTaskProgress.StageState = .pending
     private var deviceTarget: BuildBootstrap?
+    private var installFailure: String?
+    @objc private dynamic var installing = false
 
     private func refreshLogs() {
         inlineLog.update(logLines, errorLines: errorLines)
@@ -131,7 +130,6 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
     @objc private dynamic var isPreparingPackage = false {
         didSet {
             distributeButton.isEnabled = !isPreparingPackage
-            updateInstallBar()
         }
     }
 
@@ -259,23 +257,15 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
         navigationItem.largeTitleDisplayMode = .never
         view.backgroundColor = .systemGroupedBackground
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        installBar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
-        view.addSubview(installBar)
-        let withoutBar = tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        listWithoutInstallBar = withoutBar
-        listAboveInstallBar = tableView.bottomAnchor.constraint(equalTo: installBar.topAnchor)
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            installBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            installBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            installBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            withoutBar,
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
-        installBar.isHidden = true
         tableView.delegate = self
+        tableView.selfSizingInvalidation = .enabledIncludingConstraints
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Build")
         addChild(inlineLog)
         logCell.selectionStyle = .none
@@ -295,6 +285,8 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
             identifier: { $0.row },
         ) { [weak self] tableView, indexPath, content in
             if case .log = content.row { return self?.logCell }
+            if case .installing = content.row { return self?.installingCell }
+            if case .installed = content.row { return self?.installedCell }
             if case let .stage(stage) = content.row {
                 return self?.stepCells[stage]
             }
@@ -305,17 +297,7 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
         dataSource.headerTitle = { section in
             section == .progress ? String(localized: "Steps") : nil
         }
-        installBar.button.addAction(UIAction { [weak self] _ in self?.chooseInstallPackage() }, for: .touchUpInside)
         start()
-        Task { [weak self] in
-            let hello = try? await ApelinService.app.hello()
-            guard let self, let hello else { return }
-            deviceTarget = BuildBootstrap.resolve(
-                installRoot: hello.installRoot,
-                home: RoothideRoot.mobileHome(for: Bundle.main.bundlePath),
-            )
-            updateInstallBar()
-        }
     }
 
     // MARK: - Rows
@@ -335,14 +317,15 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
         cell.accessibilityTraits = .staticText
         cell.accessibilityValue = nil
         switch value.row {
-        case .stage, .log:
+        case .stage, .installing, .installed, .log:
             break
-        case .outcome:
+        case .installError, .outcome:
             content.textProperties.numberOfLines = 0
             content.secondaryTextProperties.numberOfLines = 0
-            if finishedState == .failed || finishedState == .cancelled {
-                content.image = UIImage(systemName: finishedState == .cancelled ? "stop.circle.fill" : "exclamationmark.triangle.fill")
-                content.imageProperties.tintColor = finishedState == .cancelled ? .secondaryLabel : .systemRed
+            if value.row == .installError || finishedState == .failed || finishedState == .cancelled {
+                let stopped = value.row == .outcome && finishedState == .cancelled
+                content.image = UIImage(systemName: stopped ? "stop.circle.fill" : "exclamationmark.triangle.fill")
+                content.imageProperties.tintColor = stopped ? .secondaryLabel : .systemRed
             }
         case .result:
             cell.selectionStyle = value.enabled ? .default : .none
@@ -381,6 +364,12 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: !UIAccessibility.isReduceMotionEnabled)
         guard work == nil, case let .result(selected) = dataSource.itemIdentifier(for: indexPath),
               let result = results[selected] else { return }
+        showResult(result, for: selected)
+        updateNavigation()
+        updateRows()
+    }
+
+    private func showResult(_ result: Result, for selected: BuildBootstrap) {
         target = selected
         artifact = result.artifact
         outcome = result.outcome
@@ -392,8 +381,6 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
         inlineLog.reset(logLines, errorLines: errorLines)
         logPage = nil
         title = selected.rawValue
-        updateNavigation()
-        updateRows()
     }
 
     @objc private dynamic func updateRows() {
@@ -413,9 +400,18 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
             }
             stepCells[item]?.show(state, status: status, animated: tableView.window != nil && !UIAccessibility.isReduceMotionEnabled, title: stageTitle(item))
         }
+        let showInstall = target == deviceTarget && finishedState == .succeeded && artifact?.bootstrap == target.rawValue
+        if showInstall { updateInstallSteps() }
         var sections: [(Section, [RowContent])] = [
             (.progress, Stage.stages(for: method).flatMap { item -> [RowContent] in
                 let row = RowContent(row: .stage(item), text: item.title)
+                if item == .readyToDistribute, showInstall {
+                    var steps = [row, RowContent(row: .installing), RowContent(row: .installed)]
+                    if let installFailure {
+                        steps.append(RowContent(row: .installError, text: String(localized: "Failed"), secondaryText: installFailure))
+                    }
+                    return steps
+                }
                 return item == (method == .script ? .running : .compiling)
                     ? [row, RowContent(row: .log)] : [row]
             }),
@@ -462,23 +458,30 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
             }
         }
         dataSource.update(sections, reconfigure: true)
-        updateInstallBar()
     }
 
     @objc private dynamic func updateNavigation() {
         let running = work != nil
         navigationController?.isModalInPresentation = running
         navigationItem.hidesBackButton = running
+        // Once submitted, Irisin owns the installation transaction.
+        if installing {
+            navigationItem.rightBarButtonItems = [moreButton]
+            return
+        }
         let primary: UIBarButtonItem = if running {
             UIBarButtonItem(
                 title: String(localized: "Stop"),
-                primaryAction: UIAction { [weak self] _ in self?.work?.cancel() },
+                primaryAction: UIAction { [weak self] _ in
+                    guard let self, !installing else { return }
+                    work?.cancel()
+                },
             )
         } else if let next = nextTarget {
             UIBarButtonItem(
                 title: String(localized: "Continue with \(next.rawValue)"),
                 primaryAction: UIAction { [weak self] _ in
-                    guard let self, !installInProgress else { return }
+                    guard let self, work == nil else { return }
                     target = next
                     start()
                 },
@@ -491,159 +494,86 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
                 primaryAction: UIAction { [weak self] _ in self?.start() },
             )
         }
-        if !running, nextTarget != nil || artifact == nil {
-            primary.isEnabled = !installInProgress
-        }
         // the right bar's items run from the trailing edge in
         navigationItem.rightBarButtonItems = [primary, moreButton]
     }
 
     // MARK: - Installation
 
-    private var installableResults: [(BuildBootstrap, BuildArtifact)] {
-        targets.compactMap { bootstrap in
-            guard let result = results[bootstrap], result.state == .succeeded,
-                  let artifact = result.artifact, artifact.bootstrap == bootstrap.rawValue
-            else { return nil }
-            return (bootstrap, artifact)
+    @objc private dynamic func updateInstallSteps() {
+        let status: String = switch installState {
+        case let .running(fraction): fraction?.formatted(.percent.precision(.fractionLength(0))) ?? String(localized: "In Progress")
+        case .done: String(localized: "Completed")
+        case .failed: String(localized: "Failed")
+        default: String(localized: "Waiting")
         }
+        let animated = tableView.window != nil && !UIAccessibility.isReduceMotionEnabled
+        installingCell.show(installState, status: status, animated: animated, title: String(localized: "Installing"))
+        let completion: EnvironmentTaskProgress.StageState = switch installState {
+        case .done: .done
+        case .failed: .skipped
+        default: .pending
+        }
+        installedCell.show(
+            completion,
+            status: completion == .done ? String(localized: "Completed") : String(localized: "Not Started"),
+            animated: animated,
+            title: String(localized: "Installation Complete"),
+        )
     }
 
-    @objc private dynamic func updateInstallBar() {
-        let packages = installableResults
-        let hide = work != nil || packages.isEmpty
-        if installBar.isHidden != hide {
-            installBar.isHidden = hide
-            if hide {
-                listAboveInstallBar?.isActive = false
-                listWithoutInstallBar?.isActive = true
-            } else {
-                listWithoutInstallBar?.isActive = false
-                listAboveInstallBar?.isActive = true
-            }
-        }
-        let incompatible = pendingInstall == nil && targets.count == 1 && deviceTarget.map { $0 != target } == true
-        installBar.button.isEnabled = !installInProgress && !isPreparingPackage && !incompatible
-        installBar.setButtonTitle(pendingInstall == nil ? String(localized: "Install") : String(localized: "Retry"))
-        if incompatible {
-            installBar.show(status: String(localized: "Not compatible with this device"))
-        }
-    }
-
-    @objc private dynamic func chooseInstallPackage() {
-        guard work == nil, !installInProgress, !isPreparingPackage, presentedViewController == nil else { return }
-        if let pendingInstall {
-            runInstall(artifact: nil, resuming: pendingInstall)
-            return
-        }
-        let packages = installableResults
-        if targets.count == 1, let (_, artifact) = packages.first {
-            runInstall(artifact: artifact)
-            return
-        }
-        let picker = UIAlertController(title: String(localized: "Packages"), message: nil, preferredStyle: .actionSheet)
-        for (bootstrap, artifact) in packages {
-            let compatible = deviceTarget == nil || deviceTarget == bootstrap
-            let summary = "\(bootstrap.rawValue) · \(artifact.packageID) \(artifact.version)"
-            let subtitle = if !compatible {
-                String(localized: "Not compatible with this device")
-            } else if deviceTarget != nil {
-                String(localized: "This device")
-            } else {
-                ""
-            }
-            let action = UIAlertAction(title: subtitle.isEmpty ? summary : "\(summary) · \(subtitle)", style: .default) { [weak self] _ in
-                self?.runInstall(artifact: artifact)
-            }
-            action.isEnabled = compatible
-            picker.addAction(action)
-        }
-        picker.addAction(UIAlertAction(title: String(localized: "Cancel"), style: .cancel))
-        picker.popoverPresentationController?.sourceView = installBar.button
-        picker.popoverPresentationController?.sourceRect = installBar.button.bounds
-        present(picker, animated: true)
-    }
-
-    private func runInstall(artifact: BuildArtifact?, resuming handle: TaskHandle? = nil) {
-        guard work == nil, !installInProgress else { return }
-        installInProgress = true
-        updateNavigation()
-        updateInstallBar()
-        installBar.show(status: String(localized: "Connecting…"))
-        Task { [self] in
-            defer {
-                installInProgress = false
-                updateNavigation()
-                updateInstallBar()
-            }
+    private func autoInstall(_ artifact: BuildArtifact) async {
+        if deviceTarget == nil {
             do {
-                if let handle {
-                    try await followInstall(handle)
-                    return
-                }
-                guard let artifact else { return }
-                if deviceTarget == nil {
-                    let hello = try await ApelinService.app.hello()
-                    deviceTarget = BuildBootstrap.resolve(
-                        installRoot: hello.installRoot,
-                        home: RoothideRoot.mobileHome(for: Bundle.main.bundlePath),
-                    )
-                }
-                guard artifact.bootstrap == deviceTarget?.rawValue else {
-                    installBar.show(status: String(localized: "Not compatible with this device"))
-                    return
-                }
-                if SileoPackageHandoff.isInstalled,
-                   let file = try? await Task.detached(operation: {
-                       try DistributionPackages.stageForDocumentImport(path: artifact.path, digest: artifact.digest)
-                   }).value {
-                    if SileoPackageHandoff.open(file) {
-                        installBar.show(status: String(localized: "Opened in Sileo"))
-                        return
-                    }
-                    try? FileManager.default.removeItem(at: file.deletingLastPathComponent())
-                }
-                let handle = try await ApelinService.app.installPackage(artifactID: artifact.artifactID, digest: artifact.digest)
-                pendingInstall = handle
-                installEventSeq = .start
-                try await followInstall(handle)
-            } catch let error as ApelinError where error.code == .notFound && pendingInstall != nil {
-                pendingInstall = nil
-                installBar.show(status: String(localized: "Unavailable"))
-            } catch let error as ApelinError where error.code == .backendUnavailable {
-                // The transport has already given launchd its startup grace period.
-                installBar.show(status: String(localized: "Unavailable"))
+                let hello = try await ApelinService.app.hello()
+                deviceTarget = BuildBootstrap.resolve(
+                    installRoot: hello.installRoot,
+                    home: RoothideRoot.mobileHome(for: Bundle.main.bundlePath),
+                )
             } catch {
-                installBar.show(status: pendingInstall == nil ? String(localized: "Failed") : String(localized: "Unavailable"))
-                if viewIfLoaded?.window != nil, presentedViewController == nil {
-                    presentNotice(title: "Install", message: error.readableMessage)
-                }
+                appendLog(error.readableMessage, isError: true)
+                return
             }
         }
+        guard !Task.isCancelled, target == deviceTarget, artifact.bootstrap == target.rawValue else { return }
+        installing = true
+        installState = .running(nil)
+        updateNavigation()
+        updateRows()
+        defer { installing = false }
+        do {
+            let handle = try await ApelinService.app.installPackage(
+                artifactID: artifact.artifactID,
+                digest: artifact.digest,
+                allowExternalReplacement: true,
+            )
+            try await followInstall(handle)
+            installState = .done
+        } catch {
+            installState = .failed
+            installFailure = EnvironmentTaskProgress.readableDetail(error.readableMessage)
+        }
+        updateRows()
     }
 
     private func followInstall(_ handle: TaskHandle) async throws {
-        installBar.show(status: String(localized: "Installing"))
-        if installEventSeq == .start { installBar.show(progress: 0) }
+        var cursor: EventSeq = .start
         var reconnects = 0
         while true {
             do {
-                for try await event in ApelinService.app.events(of: handle, afterSeq: installEventSeq) {
-                    installEventSeq = event.seq
+                for try await event in ApelinService.app.events(of: handle, afterSeq: cursor) {
+                    cursor = event.seq
                     reconnects = 0
                     if event.kind == "irisin", let done = event.payload?["done"]?.doubleValue,
-                       let total = event.payload?["total"]?.doubleValue, total > 0, total.isFinite, done.isFinite {
-                        installBar.show(progress: done / total)
+                       let total = event.payload?["total"]?.doubleValue, total > 0, total.isFinite, done.isFinite
+                    {
+                        installState = .running(min(max(done / total, 0), 1))
+                        updateInstallSteps()
                     }
                     guard event.kind == TaskEvent.stateKind,
                           let raw = event.payload?["state"]?.stringValue,
                           let state = TaskState(rawValue: raw), state.isTerminal else { continue }
-                    pendingInstall = nil
-                    if state == .succeeded {
-                        installBar.show(status: String(localized: "Installed"))
-                        installBar.show(progress: 1)
-                        return
-                    }
+                    if state == .succeeded { return }
                     let message = event.payload?["message"]?.stringValue
                         ?? (state == .cancelled ? String(localized: "Stopped") : String(localized: "Failed"))
                     throw ApelinError(.internal, message)
@@ -659,8 +589,11 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
     // MARK: - The build
 
     @objc private dynamic func start() {
-        guard work == nil, !installInProgress else { return }
-        installBar.show(status: nil)
+        guard work == nil else { return }
+        if target == deviceTarget {
+            installState = .pending
+            installFailure = nil
+        }
         artifact = nil
         outcome = nil
         finishedState = nil
@@ -691,6 +624,9 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
                     outcome = error.readableMessage
                     appendLog(error.readableMessage, isError: true)
                 }
+                if finishedState == .succeeded, let artifact, !Task.isCancelled {
+                    await autoInstall(artifact)
+                }
                 results[target] = Result(
                     state: finishedState ?? .failed,
                     artifact: artifact,
@@ -711,9 +647,17 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
                 logLines = []
                 resetInlineLog()
                 logPage = nil
+                updateNavigation()
                 updateRows()
             }
             work = nil
+            // Keep the native install result in view after both builds succeed.
+            if finishedState == .succeeded, nextTarget == nil,
+               let deviceTarget, deviceTarget != target,
+               let result = results[deviceTarget], result.state == .succeeded
+            {
+                showResult(result, for: deviceTarget)
+            }
             updateNavigation()
             updateRows()
             if finishedState == .succeeded {

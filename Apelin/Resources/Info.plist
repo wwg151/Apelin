@@ -8,10 +8,6 @@
 	<string>Save cards you make to Photos.</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>Confirm it is you before the agent runs a command as root.</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>sileo</string>
-	</array>
 	<!--
 	Merged with the keys Xcode generates (GENERATE_INFOPLIST_FILE). Only what
 	the INFOPLIST_KEY_ settings cannot say lives here: the three transfer file

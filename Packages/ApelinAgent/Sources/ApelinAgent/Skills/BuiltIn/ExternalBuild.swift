@@ -106,10 +106,11 @@ extension BuiltInSkills {
         `apelin_package_confirm_loaded` and `apelin_package_remove` work as the
         apelin-packaging-and-install skill describes. The first install asks the
         user; it asks again only when the control file (but `Version`), a
-        maintainer script or an installed path changes. A package someone
-        installed on this device without Apelin is never replaced: never
-        rename the package to get past that, tell the user. Write how the
-        project builds into `AGENTS.md` once it works.
+        maintainer script or an installed path changes. The agent cannot
+        replace a package installed outside Apelin. Do not rename it to get
+        past that. The app's distribution page can replace it when a new
+        build for this device installs automatically. Write how the project
+        builds into `AGENTS.md` once it works.
 
         ## Distribution
         A workspace is distributed like any project: build

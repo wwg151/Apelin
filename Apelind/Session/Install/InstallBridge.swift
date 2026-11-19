@@ -115,6 +115,11 @@ actor InstallBridge {
             expectedPackage = found.packageID
         }
 
+        let allowExternalReplacement = request.allowExternalReplacement == true
+        if allowExternalReplacement, caller != .app || origin != .build {
+            throw ApelinError(.denied, "Only the app can replace an externally installed package with a build artifact.")
+        }
+
         // Confirm mode, decided here whatever the agent concluded.
         if case let .worker(.agent, session) = caller {
             try await checkAgentInstall(artifact: artifact, session: session)
@@ -172,6 +177,7 @@ actor InstallBridge {
                 origin: origin,
                 installed: packages.installedPackages(),
                 records: installations.all(),
+                allowExternalReplacement: allowExternalReplacement,
             )
         } catch {
             unlink(staged.path)
