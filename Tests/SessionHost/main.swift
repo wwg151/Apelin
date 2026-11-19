@@ -2008,7 +2008,7 @@ do {
         check(error.code == .conflict && error.message.contains(newer?.installationID ?? "-"), "the refusal of a superseded installation names the newer one")
     }
     let everything = try await install.list(InstallationListRequest(), caller: lister)
-    check(everything.installations.map(\.packageID) == ["com.example.hello", "com.example.resume"], "every package still installed is listed, newest first (\(everything.installations.map(\.packageID)))")
+    check(everything.installations.map(\.packageID) == ["com.example.hello", "com.example.resume", "com.example.foreign"], "every package still installed is listed, newest first (\(everything.installations.map(\.packageID)))")
     // The agent installs build artifacts only, and removes only those.
     let fileForAgent = everything.installations.first { $0.packageID == "com.example.resume" }
     check(fileForAgent.map { !$0.removable && ($0.reason ?? "").contains("from a file") } == true, "the agent sees a file the app installed as not its to remove")
@@ -2019,7 +2019,7 @@ do {
     }
     let byProject = try await install.list(InstallationListRequest(projectID: "p-1"), caller: lister)
     let otherProject = try await install.list(InstallationListRequest(projectID: "p-2"), caller: lister)
-    check(byProject.installations.map(\.packageID) == ["com.example.hello"] && otherProject.installations.isEmpty, "the list is filtered by project")
+    check(byProject.installations.map(\.packageID) == ["com.example.hello", "com.example.foreign"] && otherProject.installations.isEmpty, "the list is filtered by project, including a build that replaced an external package")
 
     irisin.lock.withLock { irisin.installedVersions["com.example.hello"] = "2.0" }
     let replaced = try await install.list(InstallationListRequest(packageID: "com.example.hello"), caller: lister)
