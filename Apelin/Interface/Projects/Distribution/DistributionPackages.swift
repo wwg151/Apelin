@@ -134,6 +134,27 @@ enum DistributionPackages {
         return URL(fileURLWithPath: canonical)
     }
 
+    /// Give the document importer a disposable copy. Sileo may remove the
+    /// incoming file after importing; it must never receive the build itself.
+    static func stageForDocumentImport(path: String?, digest: String) throws -> URL {
+        let source = try verify(path: path, digest: digest)
+        let manager = FileManager.default
+        let folder = manager.temporaryDirectory.appendingPathComponent("ApelinDeb-\(UUID())", isDirectory: true)
+        try manager.createDirectory(at: folder, withIntermediateDirectories: false, attributes: [.posixPermissions: 0o700])
+        let copy = folder.appendingPathComponent("Package.deb")
+        do {
+            try manager.copyItem(at: source, to: copy)
+            var metadata = stat()
+            guard lstat(copy.path, &metadata) == 0, metadata.st_mode & S_IFMT == S_IFREG,
+                  sha256(ofFileAt: copy.path) == digest
+            else { throw ApelinError(.conflict, String(localized: "The package changed after it was built. Build it again before exporting.")) }
+            return copy
+        } catch {
+            try? manager.removeItem(at: folder)
+            throw error
+        }
+    }
+
     /// Remove only this build's local package and artifact record. Logs,
     /// dSYMs and repository copies remain available.
     static func remove(_ package: DistributionPackage) async throws {
