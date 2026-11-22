@@ -24,6 +24,8 @@ struct EnvironmentTaskProgress {
         case distributionLink
         case distributionPublish
         case distributionWithdraw
+        /// A project's release builds published as a GitHub Release.
+        case distributionRelease
         /// Open in Apelin for a repository: `gitCloneInto` into the
         /// workspace made for it.
         case repositoryImport
@@ -31,7 +33,7 @@ struct EnvironmentTaskProgress {
         var includesDownload: Bool {
             switch self {
             case .toolchainSetup, .sdkImport, .transferImport(.toolchain), .distributionLink, .distributionPublish,
-                 .repositoryImport: true
+                 .distributionRelease, .repositoryImport: true
             default: false
             }
         }
@@ -63,6 +65,8 @@ struct EnvironmentTaskProgress {
                 ["fetching", "preparing", "pushing", "publishing"]
             case .distributionPublish, .distributionWithdraw:
                 ["fetching", "preparing", "pushing"]
+            case .distributionRelease:
+                ["fetching", "checking", "uploading", "releasing"]
             case .repositoryImport:
                 ["fetching"]
             }
@@ -269,6 +273,9 @@ extension EnvironmentTaskProgress {
         case "preparing": String(localized: "Adding Files")
         case "pushing": String(localized: "Pushing")
         case "publishing": String(localized: "Turning On GitHub Pages")
+        case "checking": String(localized: "Checking Packages")
+        case "uploading": String(localized: "Uploading Packages")
+        case "releasing": String(localized: "Publishing Release")
         default: stage.capitalized
         }
     }

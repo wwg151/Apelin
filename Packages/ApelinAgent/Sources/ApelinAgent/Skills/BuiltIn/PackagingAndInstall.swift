@@ -1,7 +1,7 @@
 extension BuiltInSkills {
     static let packagingAndInstall = SkillDocument(
         name: "apelin-packaging-and-install",
-        description: "From a successful build to a confirmed load: the package artifact, the package and bundle identifiers to settle before the first install and how to change one after it, install through the system installer and what to do when another package is in its way, maintainer scripts, respring, apelin_package_confirm_loaded, and removal.",
+        description: "From a successful build to a confirmed load: the package artifact and the GitHub Release of release builds, the package and bundle identifiers to settle before the first install and how to change one after it, install through the system installer and what to do when another package is in its way, maintainer scripts, respring, apelin_package_confirm_loaded, and removal.",
         body: """
         # Packaging and install
 
@@ -22,6 +22,27 @@ extension BuiltInSkills {
           you already made go to the user's package repository with
           `apelin_package_publish`, as they are, when the user asks for it
           (apelin-package-repository).
+
+        ## A GitHub Release
+        - A source that indexes each repository's newest stable GitHub
+          Release, such as owngoal-dev/owngoal-packages, takes a project's
+          packages from a release of its repository, not from committed
+          files. `apelin_package_release`, in the project's chat, publishes
+          the release builds of one version as the release `v<version>` of
+          the GitHub repository the user names (the project's own origin
+          when they name none), with a `SHA256SUMS`, exactly as the builds
+          made them.
+        - Its tag names the project's current commit, which must already be
+          on that repository: commit, then `git_push`, then release. A tag
+          GitHub has at another commit is never moved; release a new version.
+        - A release the tag has already is filled in, a file of the same
+          bytes left as it is; one with other bytes is refused, so raise the
+          version and build again.
+        - Only when the user asked for the release, or agreed when you
+          asked, after telling them which packages go to which repository and
+          tag. Never write a workflow that builds the package again on GitHub
+          Actions to release it: that is a second build that drifts from
+          Apelin's and keeps no dSYM for `apelin_crash_symbolicate`.
 
         ## Package identity
         - A new project's `package.id` in apelin-project.json, and an app's
@@ -135,15 +156,24 @@ extension BuiltInSkills {
           bundle id is the `CFBundleIdentifier` of the app product's
           Info.plist; `icli app list` names it too.
         - `apelin_package_confirm_loaded` with the `buildID` and the target process reports
-          the marker log line and whether the filter selects the target,
+          the marker log line, whether the filter selects the target and
+          whether the target process ran while it listened (`targetProcess`),
           separately; its `loaded` rests on the marker alone, since the image
           list is never read, on any iOS version. The marker is logged once,
           when the target starts, and is only seen while `apelin_package_confirm_loaded`
-          listens (15 s; 30 s with a respring): for a SpringBoard tweak pass
+          listens (15 s; 30 s with a respring; the call ends as soon as it
+          hears it): for a SpringBoard tweak pass
           `respring: true` instead of a separate `apelin_device_respring`. For an app, your
           tool calls run one at a time, so quit it first if it runs
           (`icli app kill --force <bundle id>`), then ask the user to open it
-          while the call listens. "Installed" is not "loaded": report both.
+          while the call listens; an installed app's bundle id works when it
+          is not running. For a process that starts only on demand — a
+          daemon launched when a Mac connects, such as `dtremotedisplayd`, or
+          a helper an action starts — first tell the user what to do, then
+          call with `wait_seconds` (up to 180) and have them do it while the
+          call listens; call again rather than asking for longer.
+          "Installed" is not "loaded": report both. When `targetProcess` says
+          the process never ran, report it as not started, not as not loaded.
         - If nothing loaded: check the filter plist's bundle id against the
           target, the injection framework dependency (`mobilesubstrate` in
           `depends`), then `apelin_log_read` for the target process. A daemon

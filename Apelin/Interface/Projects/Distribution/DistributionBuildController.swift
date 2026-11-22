@@ -3,11 +3,21 @@ import ApelinProtocol
 import Then
 import UIKit
 
-/// Serial release builds for the selected distribution targets. Each
-/// target keeps its result and log. Success advances automatically; failure
-/// or Stop pauses for Retry or Continue. Successful artifacts can be shared
-/// separately or published together through DistributionPublishing. A workspace
-/// runs its own script and retains the package findings under its outcome.
+/// One release build for one distribution target, started as the page
+/// opens: its stages while it runs, then Distribute for the one `.deb` it
+/// made, or Retry. A build of this device's own target offers to install its
+/// package once it succeeds, with Installing and Installed steps beside the
+/// build's, and declining leaves the package to share or publish. Distribute
+/// is the page's prominent action, and its menu keeps the ways out apart:
+/// Share Package hands the file to the share sheet, Publish to Repository
+/// adds it to the linked package repository and pushes it, or, with none
+/// linked, opens Settings ▸ Git, where Publishing creates or links one, and
+/// Publish to GitHub Release puts it on the release of its version on the
+/// project's GitHub repository. A workspace's build runs its own script, and
+/// what the build finds in the package it wrote (a placeholder identifier, a
+/// version packaged before, another package for the other target) is listed
+/// under the outcome. The `…` menu holds the build's whole log and, once the
+/// package is ready, the same choices.
 @MainActor
 final class DistributionBuildController: UIViewController, UITableViewDelegate {
     private enum Stage: Int {
@@ -233,6 +243,13 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
                 attributes: attributes,
             ) { [weak self] _ in
                 self?.publish()
+            },
+            UIAction(
+                title: String(localized: "Publish to GitHub Release"),
+                image: UIImage(systemName: "tag"),
+                attributes: attributes,
+            ) { [weak self] _ in
+                self?.publishRelease()
             },
         ]
     }
@@ -894,6 +911,19 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
         Task { [weak self] in
             guard let self else { return }
             await DistributionPublishing.publish(items, from: self)
+            isPreparingPackage = false
+        }
+    }
+
+    /// This build's one package as a GitHub Release; the other target's
+    /// joins the release when it is published from its own build page, or
+    /// both from the distribution page.
+    @objc private dynamic func publishRelease() {
+        guard let item, work == nil, !isPreparingPackage else { return }
+        isPreparingPackage = true
+        Task { [weak self] in
+            guard let self else { return }
+            await DistributionPublishing.release([item], projectName: projectName, from: self)
             isPreparingPackage = false
         }
     }

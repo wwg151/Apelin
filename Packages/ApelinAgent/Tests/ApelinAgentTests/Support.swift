@@ -127,6 +127,7 @@ actor MockBackend: AgentHostBackend {
         case createRepository(RepositoryCreateApproval, evidence: ApprovalEvidence)
         case createIssue(IssueCreateApproval, evidence: ApprovalEvidence)
         case publishPackages(PackagePublishApproval, evidence: ApprovalEvidence)
+        case releasePackages(PackageReleaseApproval, evidence: ApprovalEvidence)
         /// A fetch that compares a branch with the remote's, as a forced
         /// push makes before it asks.
         case gitFetchComparing(remote: String?, branch: String)
@@ -221,6 +222,44 @@ actor MockBackend: AgentHostBackend {
         )
     }
 
+    /// What apelin_package_release reads before it asks: the project's
+    /// commit and GitHub remotes and a sign-in; the builds are `record`'s.
+    var releaseCommit: String? = String(repeating: "d", count: 40)
+    var releaseRemotes = ["someone/clock"]
+
+    func setRelease(commit: String?, remotes: [String], signedIn: Bool?) {
+        releaseCommit = commit
+        releaseRemotes = remotes
+        publishSignedIn = signedIn
+    }
+
+    func packageReleaseFacts(_ request: PackageReleaseFactsRequest) -> PackageReleaseFacts {
+        PackageReleaseFacts(
+            commit: releaseCommit,
+            branch: "main",
+            githubRemotes: releaseRemotes,
+            signedIn: publishSignedIn,
+            builds: request.buildIDs.map { buildRecords[$0] },
+        )
+    }
+
+    func releasePackages(_ request: PackageReleaseToolRequest) -> PackageReleaseToolResponse {
+        calls.append(.releasePackages(request.release, evidence: request.context.approval))
+        let files = request.release.packages.map { "\($0.packageID)_\($0.version)_\($0.architecture).deb" }
+        return PackageReleaseToolResponse(
+            repository: request.release.repository,
+            tag: request.release.tag,
+            commit: request.release.commit,
+            url: "https://github.com/\(request.release.repository)/releases/tag/\(request.release.tag)",
+            uploaded: files,
+            alreadyThere: [],
+            checksums: "added",
+            created: true,
+            warnings: [],
+            next: "The release is published on GitHub; give the user its link.",
+        )
+    }
+
     /// What apelin_toolchain_list and apelin_sdk_list answer.
     var toolchainList = ToolchainListToolResponse(
         installed: [InstalledToolchain(id: "clt-16.4-c", version: "16.4", components: ["c"], newestSDK: "18.5", boundByThisProject: true)],
@@ -240,6 +279,8 @@ actor MockBackend: AgentHostBackend {
     var environmentFindings: [String: [EnvironmentDiagnostic]] = [:]
     /// Other projects resolve_project finds, by name or id.
     var otherProjects: [String: ProjectIdentity] = [:]
+    /// The project a conversation opens in when the call names none.
+    static let ownProject = try! ProjectIdentity(id: "project-own", name: ProjectName("Hello"))
 
     /// What apelin_project_list answers: none, as a backend without other
     /// projects answers, unless a test lists some.
@@ -254,6 +295,10 @@ actor MockBackend: AgentHostBackend {
         listedProjects = listing
     }
 
+    func setToolchainList(_ listing: ToolchainListToolResponse) {
+        toolchainList = listing
+    }
+
     func setFindings(_ findings: [EnvironmentDiagnostic], forSDK sdkID: String) {
         environmentFindings[sdkID] = findings
     }
@@ -266,6 +311,8 @@ actor MockBackend: AgentHostBackend {
     }
 
     var calls: [Call] = []
+    /// Each load check's wait, as the tool passed it on.
+    var confirmWaits: [Int?] = []
     var sdkRoot: String = "/nonexistent"
 
     func setSDKRoot(_ path: String) {
@@ -367,6 +414,7 @@ actor MockBackend: AgentHostBackend {
 
     func confirmLoaded(_ request: ConfirmLoadedRequest) -> ConfirmLoadedResponse {
         calls.append(.confirmLoaded(build: request.buildID, target: request.target))
+        confirmWaits.append(request.waitSeconds)
         return ConfirmLoadedResponse(loaded: true, markerLogged: true, filterMatches: true, logEvidence: ["Hello loaded build-1"])
     }
 
@@ -551,7 +599,12 @@ actor MockBackend: AgentHostBackend {
         } else {
             calls.append(.conversationCreate(prompt: request.prompt, title: request.title))
         }
-        return ConversationCreateToolResponse(sessionID: "child-session", taskID: "child-task", project: request.target)
+        return ConversationCreateToolResponse(
+            sessionID: "child-session",
+            taskID: "child-task",
+            project: request.target ?? Self.ownProject,
+            isThisProject: request.target == nil,
+        )
     }
 
     func conversationSend(_ request: ConversationSendToolRequest) -> ConversationActionToolResponse {

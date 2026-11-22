@@ -25,9 +25,10 @@ Successful packages can be distributed from the page's **Distribute** menu,
 also repeated in `…`. With two targets, **Share Package: roothide** and
 **Share Package: rootless** each open the system share sheet with that
 successful build's one `.deb` file; **Publish to Repository** publishes the
-successful packages (below). Selecting only one target keeps the existing
-single-build flow, with **Build Log**, **Retry** and **Share Package**.
-Neither building nor sharing installs a package.
+successful packages (below), and **Publish to GitHub Release** puts them on
+one release of the project's GitHub repository. Selecting only one target
+keeps the existing single-build flow, with **Build Log**, **Retry** and
+**Share Package**. Neither building nor sharing installs a package.
 
 The first page's **Packages** section lists all available release builds,
 newest first, including repeated builds of the same version and older
@@ -48,11 +49,12 @@ No build is selected automatically. Select the exact builds to publish;
 selecting another build for the same architecture replaces that selection,
 so one publication carries at most one package per architecture. Tap
 **Publish to Repository** to publish the selected builds together in one
-commit; the confirmation includes their build times. Sharing still takes one
-build from its row. Both actions use the original files. You can edit code
-and build the same version again without a version-history confirmation;
-publishing different bytes under an already published package ID, version
-and architecture still requires a new version.
+commit, or **Publish to GitHub Release** to put them on one release; the
+confirmation includes their build times and, for a release, the tag and the
+commit. Sharing still takes one build from its row. Both actions use the
+original files. You can edit code and build the same version again without a
+version-history confirmation; publishing different bytes under an already
+published package ID, version and architecture still requires a new version.
 
 ## Publishing to a package repository
 
@@ -84,6 +86,48 @@ commit —, each held to the digest its build recorded, and none goes in if
 one has changed. In Strict mode it asks first, naming the repository and
 every package with its digest; in every mode it publishes only what the user
 asked for or agreed to.
+
+## Publishing to a GitHub Release
+
+Some package sources do not take committed packages: owngoal-dev's shared
+source, owngoal-dev/owngoal-packages, names GitHub repositories and indexes
+each one's newest stable **GitHub Release**, serving the `.deb` files from
+it. **Publish to GitHub Release**, under the first page's Packages or in the
+build page's Distribute menu, publishes the selected release packages there,
+exactly as their builds made them, so the release carries the device's own
+packages, whose dSYMs Apelin keeps to symbolicate their crashes. Never build
+the package a second way for a release, such as a GitHub Actions workflow
+that rebuilds it: that build drifts from Apelin's and keeps no dSYM.
+
+- The release goes to the repository the project's GitHub remote names
+  (`origin` first); a project with none asks for `owner/name`.
+- Its tag is `v` and the version (`v1.0.2`), at the project's current
+  commit, which must already be pushed there: commit, push, then publish. A
+  version holding anything but letters, digits, periods, hyphens and
+  underscores cannot name a release. All the selected packages must be one
+  version.
+- The confirmation names the tag, the repository, the commit and every
+  package. Apelin then makes the release as a draft, uploads each package
+  and a `SHA256SUMS` of every package on the release, and publishes it, not
+  as a pre-release, so a source that takes the newest stable release picks
+  it up. Open Release shows it on GitHub.
+- A release of that tag that exists already is filled in: a package of the
+  same name and bytes is left as it is, `SHA256SUMS` is written again when
+  it changes, and notes it has are kept. A package already there with other
+  bytes is refused before anything is uploaded; raise the version and build
+  again.
+- A tag GitHub has at another commit is never moved: release a new version
+  from this commit instead. A release GitHub keeps immutable takes no new
+  file once published.
+- Without a GitHub sign-in it opens Settings ▸ Git, where Sign In with GitHub
+  is. A release cut off part way stays a draft on GitHub; publishing the same
+  version again fills it in and publishes it.
+
+A conversation does the same with `apelin_package_release`, in the project's
+own chat: the release builds of one version, to the repository the user
+names or the project's own on GitHub. In Strict mode it asks first, naming
+the repository, the tag, the commit and every package with its digest; in
+every mode it releases only what the user asked for or agreed to.
 
 ## Before distributing
 

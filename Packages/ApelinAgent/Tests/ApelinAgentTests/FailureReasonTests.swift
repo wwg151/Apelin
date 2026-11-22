@@ -104,45 +104,49 @@ struct FailureReasonTests {
     }
 
     /// One that does not answer its cancellation either, as a request to a
-    /// connection that answers nothing may not.
+    /// connection that answers nothing may not. The operation ends only when
+    /// the test lets it, after the limit has answered, so the answer cannot
+    /// have waited for it however slow the machine: no wall clock is read
+    /// (one was, and a loaded runner failed it).
     @Test(.timeLimit(.minutes(1)))
     func `an operation past its limit is no longer waited for`() async throws {
-        let operation = SuspendedOperation()
-        defer { operation.release() }
+        let gate = Gate()
         await #expect(throws: Deadline.Exceeded.self) {
             _ = try await Deadline.within(.milliseconds(100)) {
-                // A checked continuation ignores cancellation. Only this test
-                // releases it, after the deadline has answered the caller.
-                await operation.wait()
+                await gate.wait()
+                await gate.markEnded()
                 return 1
             }
         }
+        #expect(await !gate.ended, "the limit answered while the operation still ran")
+        await gate.open()
     }
 
-    /// Release may precede registration when the executor is busy.
-    private final class SuspendedOperation: @unchecked Sendable {
-        private let lock = NSLock()
-        private var continuation: CheckedContinuation<Void, Never>?
-        private var released = false
+    /// An operation's end, held until the test opens it; waiting on it
+    /// ignores cancellation, as a request that answers nothing does.
+    private actor Gate {
+        private var isOpen = false
+        private var waiter: CheckedContinuation<Void, Never>?
+        private(set) var ended = false
 
         func wait() async {
             await withCheckedContinuation { continuation in
-                let resume = lock.withLock {
-                    if released { return true }
-                    self.continuation = continuation
-                    return false
+                if isOpen {
+                    continuation.resume()
+                } else {
+                    waiter = continuation
                 }
-                if resume { continuation.resume() }
             }
         }
 
-        func release() {
-            let pending = lock.withLock {
-                released = true
-                defer { continuation = nil }
-                return continuation
-            }
-            pending?.resume()
+        func open() {
+            isOpen = true
+            waiter?.resume()
+            waiter = nil
+        }
+
+        func markEnded() {
+            ended = true
         }
     }
 

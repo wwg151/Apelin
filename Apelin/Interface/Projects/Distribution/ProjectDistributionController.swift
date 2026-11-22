@@ -2,14 +2,25 @@ import ApelinCore
 import ApelinProtocol
 import UIKit
 
-/// Available release artifacts, newest first, each Built, Shared or
-/// Published and identified by its build time. Explicit selection permits
-/// one artifact per architecture; publishing and sharing use those exact
-/// files. Below them, choose build targets and review distribution advice.
-/// Same-version history never asks for confirmation before rebuilding;
-/// other warnings do, while errors block Build. A workspace's own script
-/// produces the package, which is checked after the build. A project with
-/// no build description or script offers no build targets.
+/// The first step of distributing a project. The release packages builds
+/// already made of its current version, roothide and rootless, come first
+/// (`DistributionPackages`), each Built, Shared or Published: selected ones
+/// are published together in one commit, or as one GitHub Release of the
+/// project's repository, and can be removed from the repository they were
+/// published to (`distributionWithdraw`); any one is shared from its row, as
+/// its build made it, so a version already packaged needs no second build.
+/// Below them, pick one or both targets, see what the package should not
+/// carry yet, then build on its own page (`DistributionBuildController`).
+/// What the check finds is advice: Build still goes ahead after a
+/// confirmation, which a version packaged before does not ask for when its
+/// package is listed above, and Ask Agent to Prepare hands the work to the
+/// project's conversation. What stops the build — an error the check finds,
+/// such as a workspace script that is not in the project — is listed and
+/// Build waits for it to be fixed. A workspace is built by its own script,
+/// whose package is checked once it is written, and its newest release
+/// packages are listed whatever their version. A project with no build
+/// description or script (`ProjectBuildMethod`) has nothing to package: the
+/// page says so and offers no target.
 @MainActor
 final class ProjectDistributionController: TableController {
     private enum Section: Hashable {
@@ -17,7 +28,8 @@ final class ProjectDistributionController: TableController {
     }
 
     private enum Row: Hashable {
-        case project, package(String), publish, target(BuildBootstrap), checking, ready, blocker(Int), issue(Int), prepare, unavailable
+        case project, package(String), publish, release, target(BuildBootstrap), checking, ready, blocker(Int), issue(Int),
+             prepare, unavailable
     }
 
     private struct RowContent: Equatable {
@@ -116,7 +128,7 @@ final class ProjectDistributionController: TableController {
             case .packages:
                 self?.isRemovingPackages == true
                     ? String(localized: "Select the local packages to remove.")
-                    : String(localized: "Publish the selected packages to your package repository together, or share one. Each is the file its build made, unchanged.")
+                    : String(localized: "Publish the selected packages together to your package repository or as a GitHub release, or share one. Each is the file its build made, unchanged.")
             case .target: String(localized: "Choose one or both targets, then tap “Build”. Selected targets build in order: roothide, then rootless.")
             case .readiness:
                 self?.blockers.isEmpty == false
@@ -173,6 +185,8 @@ final class ProjectDistributionController: TableController {
             updateRows()
         case .publish:
             publish()
+        case .release:
+            publishRelease()
         case let .target(target):
             if selectedTargets.remove(target) == nil {
                 selectedTargets.insert(target)
@@ -268,7 +282,7 @@ final class ProjectDistributionController: TableController {
                     },
                 ]
             }
-        case .publish:
+        case .publish, .release:
             content.textProperties.color = value.enabled ? .tintColor : .tertiaryLabel
             cell.selectionStyle = value.enabled ? .default : .none
             cell.accessibilityTraits = value.enabled ? .button : [.button, .notEnabled]
@@ -379,7 +393,8 @@ final class ProjectDistributionController: TableController {
             }
             let canPublish = !isPreparingPackage && listed.contains { selectedPackages.contains($0.artifactID) }
             let publish = RowContent(row: .publish, text: String(localized: "Publish to Repository"), enabled: canPublish)
-            sections.append((.packages, isRemovingPackages ? rows : rows + [publish]))
+            let release = RowContent(row: .release, text: String(localized: "Publish to GitHub Release"), enabled: canPublish)
+            sections.append((.packages, isRemovingPackages ? rows : rows + [publish, release]))
         }
         if canBuild, !isRemovingPackages {
             sections.append((.target, BuildBootstrap.allCases.map { target in
@@ -614,6 +629,20 @@ final class ProjectDistributionController: TableController {
         Task { [weak self] in
             guard let self else { return }
             await DistributionPublishing.publish(chosen.map(\.item), from: self)
+            isPreparingPackage = false
+            updateRows()
+        }
+    }
+
+    /// The selected packages, roothide's first, as one GitHub Release.
+    @objc private dynamic func publishRelease() {
+        let chosen = BuildBootstrap.allCases.compactMap { packages[$0] }.filter { selectedPackages.contains($0.artifactID) }
+        guard !chosen.isEmpty, !isPreparingPackage else { return }
+        isPreparingPackage = true
+        updateRows()
+        Task { [weak self] in
+            guard let self else { return }
+            await DistributionPublishing.release(chosen.map(\.item), projectName: projectName, from: self)
             isPreparingPackage = false
             updateRows()
         }

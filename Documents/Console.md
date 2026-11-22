@@ -394,8 +394,11 @@ error, or on `ok: false` where the exact refusal is the worker's to choose.
   `locked` false, `devicePasscodeState`, `captureScreen`,
   `readUITree`, one `uiAction` tap in
   the status bar at (200, 4) — not its corner, where iPadOS 26 puts a
-  window's close control —, and a `confirmLoaded` for a build that does not
-  exist (allowed to fail).
+  window's close control —, a `confirmLoaded` for a build that does not
+  exist (allowed to fail), whose answer must say SpringBoard was running
+  (`result.process`, the process list read as mobile), and a ten-minute
+  `confirmLoaded` of a process that does not exist, stopped at once with
+  `confirmLoadedCancel` and read back `cancelled`.
 - `agent.json` — needs the tweak extension; a Copilot credential in
   `inbox/credentials/` for the prompt to be answered.
   `agentCredentialImport`, `agentList`, a Confirm `agentOpen` unfollowed,
@@ -444,8 +447,9 @@ error, or on `ok: false` where the exact refusal is the worker's to choose.
   an `.apetc` (a GB or more, minutes; RootHide's runtime brand undone),
   inspects it (already set up here) and is refused an import of it.
 - `distribution.json` — nothing written to GitHub: `distributionRepositoryList`
-  without GitHub, a bad repository name, a bad `owner/name` and a package
-  outside `Builds/` each refused `badRequest` before a task starts, an
+  without GitHub, a bad repository name, a bad `owner/name`, a package
+  outside `Builds/` and a GitHub Release to a repository named without its
+  owner each refused `badRequest` before a task starts, an
   empty feedback title, a `feedbackRead` of issue 0 and a `feedbackEdit`
   to an empty title each refused before anything reaches GitHub,
   `feedbackStarState` (a read: `denied` without a GitHub sign-in),

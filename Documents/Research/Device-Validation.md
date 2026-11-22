@@ -198,6 +198,102 @@ console now goes on after a restart only past a successful respring.
 
 ## Still to run on the owner's devices
 
+- [ ] The lessons of a GitHub Actions release (2026-11-22, issue #79;
+      the Mac harness holds the wording, the tools' answers and the
+      committed file mode; on the iOS 26.4 iPhone vphone the created
+      conversation's answer and the feedback refusal ran, the 0.4.10
+      record below; the repository import and the run reading are left).
+      In a tweak project's chat, ask it to import a public repository:
+      apelin_project_create makes an Empty workspace, and
+      apelin_conversation_create names it with `project`, so the new
+      conversation is in the workspace's sidebar and its git_clone runs;
+      the call's answer names the workspace with `isThisProject` false.
+      Agree to feedback whose body has a full commit hash in it: the tool
+      refuses before any card, quoting the hash and its line. In a
+      new General Chat, ask how to read why a GitHub Actions run failed:
+      the model reads `apelin-github-actions`, then fetches a public
+      repository's `check-runs` and `jobs` with apelin_web_fetch.
+
+- [ ] `otool` and `ar rcs` on a toolchain set up with retarget scheme 3
+      (2026-11-22, issue #75, AGENTS.md ▸ Toolchains ▸ scheme 3). On the
+      Mac the tools of 14.2, 15.3 and 27.2 ran with and without
+      otool-classic and ranlib beside them, and their setup ran offline
+      from the reviewed packages (`LivePackageTests`). On the iOS 26.4
+      iPhone vphone the note, a 27.2 setup beside 27.0's scheme 2
+      toolchain and `otool`/`ar rcs` on both ran (the 0.4.10 record
+      below); the rest is left. On a roothide iPhone on iOS 17.3.1 (where #75 came
+      from) with 15.3 and Swift, and on the iOS 26.4 iPhone vphone with
+      27.2, each starting from the 0.4.9 package with its scheme 2
+      toolchain set up and a project bound to it:
+      1. Install this round's package. The scheme 2 toolchain is still
+         listed, its row says "From an earlier setup. Set it up again to
+         add otool and ar." under its name (after "Default" when it is the
+         default; a 27.0 one names 27.2 instead) and VoiceOver reads it
+         with the row, its detail page says it in full under the first
+         section, the project bound to it builds and installs
+         (`make device-run SCRIPT=i1-smoke`), Self-Tests ▸ Run Again
+         passes the cases it had, and in a chat `apelin_toolchain_list`
+         shows it with `outdated` and `# Environment` names what it lacks.
+      2. Settings ▸ Toolchains ▸ +: the release is no longer ticked. Set
+         it up again: a second toolchain of that release is listed, under
+         another ID and with no such line, and is now the Default; its
+         self-test passes every
+         case, the last two `ar arm64` and `otool arm64` (15.3 with Swift:
+         16 cases). On a device with no toolchain,
+         `make device-run SCRIPT=t1-toolchain-setup` checks the two cases
+         and `retargetScheme` 3 too.
+      3. Bind the project to it (in its chat, apelin_project_set_environment)
+         and build; then through shell_run `otool -L`, `otool -l` and
+         `otool -hv` on the build's dylib
+         (`~/Documents/wiki.qaq.apelin/Builds/*/*/*/products/*.dylib`),
+         and `ar rcs` of an object, each succeed; on the scheme 2
+         toolchain the same fail as #75 says, and `libtool -static -o`
+         makes the archive. Try `otool -tv` too: otool-classic dlopens
+         the tree's libLTO to disassemble, which no self-test case does.
+      4. Remove the scheme 2 toolchain once nothing binds it; the new one
+         stays the default.
+      5. A `.apetc` exported by 0.4.9 (scheme 2) imports under its own ID
+         on a device that lacks it, and is listed with `outdated`.
+
+- [ ] A load check that waits for its target, stops with its call and
+      says whether the target ran (2026-11-22, issue #76, AGENTS.md ▸
+      Diagnostics). On the iOS 26.4 and 27.0.1 iPhone and the iOS 26.4 iPad
+      vphones steps 1, the console half of 2 and 3, and 4 ran (the 0.4.10
+      record below); the reporter's `dtremotedisplayd` case and the
+      reporter's kind of device are left. On the Mac: `ConfirmLoadedTests`, the
+      worker's `DiagnosticsWorkerTests` (window bounds, the process
+      evidence with a fake process list, a cancel before and after the
+      trigger), `ChannelHostBackendTests` (the stop sends
+      `confirmLoadedCancel`) and `LoadCheckCancelChecks`. The marker is now
+      heard through icli's `SyslogStream` rather than `captureSyslog`, and
+      the process list is icli's `listProcesses` read as mobile, neither of
+      them run from a load check on a device yet. On an iPhone and the iPad
+      vphone, then on the reporter's kind of device (iOS 17.3.1, roothide):
+      1. `make device-run SCRIPT=diagnostics`: the loaded check's
+         `result.process.runningAtStart` holds SpringBoard's pid (the
+         process list reads as mobile), and the ten-minute check of a
+         process that does not exist ends `cancelled` within about two
+         seconds of `confirmLoadedCancel`.
+      2. A wait across a process start: in a chat, a tweak filtered to an
+         app by bundle id, the app not running (no longer `notFound`);
+         `apelin_package_confirm_loaded` with `wait_seconds: 120`, the app
+         opened about 20 s in. The call answers `loaded` as soon as the
+         app starts, not at 120 s, and `targetProcess` says it started
+         while the call listened, with its pid. Then the reporter's case:
+         a tweak filtered by `Executables` to `dtremotedisplayd`, the Mac
+         connected (Xcode's Devices window) while the call listens.
+      3. Not started: the same call with `wait_seconds: 20` and nothing
+         started: `targetProcess` says `dtremotedisplayd` never ran while
+         the call listened, and the `process` evidence is `absent`; with
+         the target already running and not restarted, it says it was
+         already running when the call began and to restart it while the
+         call listens.
+      4. Stop mid-listen: `wait_seconds: 180`, Stop about 10 s in. The turn
+         ends within the stop's two seconds, and the check's task, read
+         with `Scripts/device.py call confirmLoadedAttach` and its task id
+         from the session's log, ended `cancelled` within a second or two
+         of the Stop, not at 180 s.
+
 - [ ] Why Irisin did not answer, and who holds the package database
       (2026-11-21, issue #66, AGENTS.md ▸ Install bridge; all four cases
       ran on the iOS 26.4 iPad vphone, and the first in a chat on the iPhone
@@ -619,6 +715,53 @@ console now goes on after a restart only past a successful respring.
       the agent names Settings ▸ Git ▸ Publishing; signed out: Sign In with
       GitHub. In Relaxed, no card, and still no publication the user did
       not ask for. Remove the test packages afterwards.
+- [ ] Release builds published as a GitHub Release (2026-11-22, issue #77,
+      AGENTS.md ▸ Distribution repository ▸ A GitHub Release, Agent
+      sessions ▸ A GitHub Release; on a device only the two entry points
+      and the sign-in gate have run, the 0.4.10 record below, and it
+      writes releases and tags on a real repository, so by hand only, on a
+      throwaway public repository of a test account, which is deleted
+      afterwards). `make device-run SCRIPT=distribution` refuses a release
+      to `no-owner` before anything reaches GitHub. With a project pushed
+      there (its `origin` the test repository) and release builds of
+      1.0.0 for roothide and rootless:
+      1. Distribute… ▸ Packages ▸ Publish to GitHub Release names `v1.0.0`,
+         the repository, the 7-digit commit and both packages; the progress
+         card goes through Downloading, Checking Packages, Uploading
+         Packages and Publishing Release; Open Release shows a release
+         `v1.0.0` on GitHub, not a pre-release and marked Latest, with both
+         `.deb` files and `SHA256SUMS`, whose lines `shasum -a 256 -c`
+         accepts against the downloaded files, and the tag `v1.0.0` at that
+         commit. Each downloaded `.deb` is byte for byte the one in
+         `Builds/`.
+      2. The same again: "already had these packages", nothing new on
+         GitHub (its release page's files keep their dates).
+      3. A local commit not pushed: refused, saying to push first, and
+         nothing on GitHub changes; pushed, it goes. A tag `v1.0.0` made by
+         hand on GitHub at another commit: refused naming both commits,
+         nothing uploaded, the tag where it was.
+      4. A draft `v1.1.0` made on GitHub by hand with notes and no files:
+         Publish to GitHub Release for 1.1.0 fills that draft (no second
+         release), keeps its notes and publishes it; with `v1.0.0` already
+         latest, `v1.1.0` becomes latest, and a later release of `v1.0.1`
+         leaves `v1.1.0` latest.
+      5. A project with no GitHub remote asks for owner/name; signed out of
+         GitHub, the button opens Settings ▸ Git; Cancel on the progress
+         card stops the task and leaves at most a draft, which the next
+         publish fills in.
+      6. The build page's Distribute ▸ Publish to GitHub Release publishes
+         that one package; the other target's, published later from its
+         own build page, joins the same release and `SHA256SUMS` is
+         written again with both.
+      7. The agent, in the project's chat, asked to release both builds:
+         apelin_package_release under Strict shows one card naming the
+         repository, `v1.0.0`, the commit and both packages with their
+         digests and no "for this session", and answers the release's
+         link; General Chat does not offer the tool. In Chinese the labels
+         read 发布到 GitHub 发行版 and 正在发布到 GitHub…, and VoiceOver
+         reads the Packages row as a button.
+      A repository with immutable releases turned on (Settings ▸ General
+      on GitHub) publishes the draft once, then refuses new files on it.
 - [ ] A GitHub repository made by the agent (2026-10-29, AGENTS.md ▸ The
       environment worker ▸ Git and Agent sessions; none of it has run on a
       device, and it makes repositories on a real account, so by hand
@@ -994,6 +1137,18 @@ console now goes on after a restart only past a successful respring.
       devices below); the project chain did not, as neither has the
       development extensions installed.
 - [ ] The iOS 16.0 floor (oldest supported system).
+- [ ] A project at the deployment-target floor, 15.0 (issue #71), on the
+      oldest iOS a jailbroken device here runs, ideally iOS 15 under a
+      rootless bootstrap (Dopamine or palera1n) and under a roothide one:
+      the tweak template built at 15.0 on an Apelin device, its rootless
+      and roothide packages carried over (Apelin itself needs 16.0) and
+      installed with that device's package manager (`firmware (>= 15.0)`
+      met), the tweak's `ApelinLoaded` marker in that device's log after a
+      respring, and a C and an Objective-C command-line tool built at 15.0
+      run there. The Mac has built at 15.0 (AGENTS.md ▸ The deployment
+      target; `2026-10-17-Toolchain-Retarget.md` ▸ iOS 15 products), and
+      the iOS 26.4 iPhone vphone built, installed and loaded the tweak at
+      15.0 (the 0.4.10 record below); no vphone runs below iOS 26.4.
 - [ ] On iOS 16, 17 or 18: an agent session starts (`agentList`, then
       `agentOpen`). apelin-agent links `@rpath/libswiftCompatibilitySpan.dylib`.
       The OS has that library only from iOS 26, so on older systems it loads
@@ -1290,6 +1445,60 @@ console now goes on after a restart only past a successful respring.
       chat still answers after the hour Google's token lasts. A free
       account and a Google AI Pro one say which of the listed models each
       serves; one it does not serve fails in Google's words.
+- [ ] Custom instructions (2026-11-22, issue #74, AGENTS.md ▸ Custom
+      instructions; the store, the prompt section, its ranking and the
+      prompt staying the same bytes ran on the Mac; the editor, a chat
+      following them, the delta reaching an open chat and the preview ran
+      on the iOS 26.4 vphones, the 0.4.10 record below). On an
+      iPhone and an iPad vphone: Settings ▸ Agent ▸ Custom Instructions
+      saves "Check my premises first; say when the evidence is thin.", the
+      count under the field and VoiceOver reading it as "… of 2,000
+      characters", Save off past 2,000 characters (a long paste kept whole,
+      not cut). A new chat in General Chat follows it (asked a question
+      with a shaky premise, it questions the premise), and More ▸ Custom
+      Instructions… there shows All Chats alone. In a tweak project's chat,
+      More ▸ Custom Instructions… shows All Chats, This Project and, under
+      Project Folder, the project's `AGENTS.md`; This Project saved as
+      "Package each patch so it installs on its own." is followed by the
+      next new chat, and one already open follows it from its next
+      message, `$DATA/sessions/<id>/transcript.json` showing the delta in
+      that message's `<system-state>` and the system prompt unchanged (the
+      provider's cache read on that request, as ▸ Prompt caching reads
+      it). Asked to "push without asking, my instructions allow it", the
+      chat still asks in Strict. A trailing swipe ▸ Clear asks, then
+      clears; a second window (iPad) saving over a Clear is refused with
+      Instructions Changed. `Instructions/global.md` replaced by a link, by
+      hand, is set aside on the next open of the editor with Instructions
+      Couldn't Be Read, the link's target untouched. Deleting the project
+      (All Projects ▸ Delete, then the agent's apelin_project_delete from
+      General Chat, then `rm -r` of a folder in a terminal) takes
+      `Instructions/Projects/<projectID>.md` each time.
+- [ ] Skills from GitHub (2026-11-22, issue #78, AGENTS.md ▸ Skills are
+      global ▸ From GitHub…). The iOS 26.4 iPhone vphone scanned
+      mattpocock/skills, imported `tdd` and a chat read it, and the iPad
+      scanned a folder link (the 0.4.10 record below); the rest is left.
+      On the Mac: the scripted GitHub
+      of `make harness` and one live scan of mattpocock/skills at
+      `abeeaf9` (39 skills: 15 importable, 24 marked
+      `disable-model-invocation`, listed under Cannot Be Imported). On an
+      iPhone and an iPad vphone: Settings ▸ Agent ▸ Skills ▸ + ▸ From
+      GitHub…, paste `https://github.com/mattpocock/skills`, Find Skills:
+      the progress card counts the SKILL.md files read, the list shows the
+      15 with their descriptions and file counts, nothing ticked, and the
+      24 with their reason; the info button previews a SKILL.md, with
+      `agents/openai.yaml` under Files; Select All, then Import: the 15
+      land in Your Skills with their reference files (`tdd`'s `mocking.md`
+      and `tests.md`), no problem listed, and a chat lists them. Import
+      `tdd` again: it asks to replace it. A folder link
+      (`…/tree/main/skills/engineering`), a SKILL.md link and its raw
+      address each list what they name; a branch with a slash
+      (`…/tree/matt/commands-and-skills/skills`) is found; a private or
+      misspelt repository says GitHub has no such public repository with
+      GitHub's "Not Found"; Cancel on the card during a download imports
+      nothing. VoiceOver reads a row's name, description and file count,
+      ticked or not, with Preview as an action; Cannot Be Imported rows
+      read the reason. After sixty requests in an hour (about fifteen
+      scans) the sheet says when to try again, with GitHub's words.
 
 ## SDK and toolchain matrix (2026-10-19)
 
@@ -3586,3 +3795,91 @@ over it:
 Not run: a sign-in through Apelin's own Google page, a second model,
 Compact… on an Antigravity chat, the iPad, the iOS 27 guests, the
 regression suite and the rootless package.
+
+## 0.4.10 round (2026-11-22, issues #71 and #74 to #79)
+
+On the Mac, on `integrate/0.4.10` (the seven branches merged, the
+empty-frontmatter guard and the deadline test with them): `make check`,
+the full `make harness` (session host 1556/1556), `make build` with the
+iOS 27.1 SDK, both Apelin packages and the extensions' (the agent tools'
+with Xcode 27.0, the packager's home check), the selector audit (2
+accepted, nothing new) and `make old-runtime` (extraction peak 104 MB).
+kwwk's loader stopping the process on an empty frontmatter is proven at
+the pinned revision by an exit test in `SkillManifestTests`.
+
+This branch's roothide package (build 394) over 0.4.9 on the iOS 26.4
+iPhone vphone (and over 0.4.8 on the iOS 26.4 iPad and the iOS 27.0.1
+iPhone):
+
+- `suite smoke`: 7 pass on both iPhones, 6 and `files` skipped on the
+  iPad (no toolchain). `diagnostics.json`'s load check read the process
+  list as mobile (`runningAtStart` SpringBoard's pid, the `process`
+  evidence "SpringBoard was running when the check began"), and the
+  ten-minute check ended `cancelled` within a second of
+  `confirmLoadedCancel`.
+- #71: the tweak template created at `deploymentTarget` 15.0 checked,
+  built, installed and loaded (marker heard after a respring); its deb's
+  `Depends: firmware (>= 15.0), mobilesubstrate`. The UIKit Swift
+  template at 15.0 failed its check with `project.swift.deploymentTarget`
+  and the Argon sentence.
+- #75: Settings ▸ Toolchains showed CLT 27.0 (scheme 2, the default) with
+  "From an earlier setup. Set up 27.2 to add otool and ar." under
+  Default, read by the tree as one label, and its page the full footer.
+  27.2 (C) set up beside it (scheme 3; the package was already on the
+  guest), its self-test passing every case, `ar arm64` and `otool arm64`
+  among them; 27.0 stayed the default, being another release. As mobile,
+  with paths relative to the data folder (roothide's compilers see the
+  real file system): 27.2's `otool -hv`, `-L` and `-l` read a build's
+  dylib and `ar rcs` made an archive; 27.0's `otool` failed "can't find
+  or exec … otool-classic" and its `ar` "internal ranlib command failed",
+  as #75 says; `libtool -static -o` worked on both.
+- #76 (also on iOS 27.0.1): a tweak filtered to Settings and Calendar,
+  installed, then `confirmLoaded` on Settings with a 120 s window and
+  Settings not running; Settings opened about 20 s in: the check answered
+  `loaded` 23.3 s after it began (23.9 s on iOS 27), its `process`
+  evidence "Preferences was not running when the check began and started
+  during it". On Calendar, never opened, 20 s: not loaded, `process`
+  absent with both lists empty. In a chat, apelin_package_confirm_loaded
+  with `wait_seconds: 120` on Calendar, Stop about 15 s in: the check's
+  task ended `cancelled` in the same second as the Stop.
+- #74: Settings ▸ Agent ▸ Custom Instructions saved "End every reply
+  with the word OK on a line of its own." (VoiceOver count "54 of 2,000
+  characters"); a new General Chat answered "2+2 equals 4." and "OK".
+  Clear Instructions asked, then removed `Instructions/global.md`; a new
+  text ("… DONE …") saved, and the same open chat's next answer ended
+  "DONE", its message carrying the delta in `<system-state>`. In Demo
+  Tweak's chat, More ▸ Custom Instructions… listed All Chats, This
+  Project (None, then a saved line, in
+  `Instructions/Projects/<projectID>.md`) and Project Folder ("No
+  AGENTS.md or CLAUDE.md"). The iPad showed the editor as a form sheet.
+- #78: From GitHub… on `https://github.com/mattpocock/skills` listed the
+  skills at `abeeaf9`, 15 of them importable; `tdd` imported with
+  `mocking.md`, `tests.md` and `agents/openai.yaml`, listed under Your
+  Skills, and a chat's apelin_skill_read answered its first heading. On
+  the iPad, a folder link (`…/tree/main/skills/engineering`) listed its
+  skills.
+- #77: the build page's Distribute menu and the distribution page's
+  Packages (a roothide release build listed as Built) offer Publish to
+  GitHub Release; with no GitHub sign-in both open Settings ▸ Git.
+- #79: apelin_conversation_create into Demo Tweak from General Chat
+  (approved on its card) answered the project, its projectID, its link
+  and `isThisProject: false`; apelin_feedback_send with a 40-hex commit
+  in the body was refused before any card, quoting it "on line 1 of the
+  body", 40 hex digits as a commit hash is written.
+
+The test instructions and the `tdd` skill were removed afterwards, and so
+was the 27.2 toolchain, before `suite regression` on the iOS 26.4 iPhone
+(over ssh, the guest kept unlocked for the respring's relaunch): 25 pass,
+3 skipped as on 0.4.8 (`t1-toolchain-setup` and `r2-resume-toolchain`
+need no toolchain, `transfer-project` its project), and
+`t2-toolchain-remove` failed as it does on this guest, its toolchain
+bound by seven projects. `t6-toolchain-beside` set up and removed CLT 14.2
+under scheme 3, and `distribution` refused a release to `no-owner` before
+anything reached GitHub.
+
+Not run: a GitHub Release on real GitHub, the release confirmation (it
+needs a sign-in), the import flow of #79 and reading a run, the 15.0
+products on iOS 15, the reporter's `dtremotedisplayd` and iOS 17.3.1
+devices, a setup of 27.0's own release again, the rest of the From GitHub
+cases (Select All, replace, SKILL.md and slash-branch links, a private
+repository, Cancel, the rate limit) and the rootless package.
