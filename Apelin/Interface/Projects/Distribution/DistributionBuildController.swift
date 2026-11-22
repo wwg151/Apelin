@@ -576,12 +576,13 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
             showResult(result, for: deviceTarget)
             installing = true
             installState = .running(nil)
-            work = Task { [self] in
-                await install(pendingInstall)
-                installing = false
-                work = nil
-                updateNavigation()
-                updateRows()
+            work = Task { [weak self] in
+                guard let self else { return }
+                await self.install(pendingInstall)
+                self.installing = false
+                self.work = nil
+                self.updateNavigation()
+                self.updateRows()
                 if shouldCountBuild { StarPrompt.buildsCompleted(1, from: self) }
             }
             updateNavigation()
