@@ -1,0 +1,76 @@
+    "If the page does not work on this device, open this link in a browser on another device and enter the code there." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إذا لم تعمل الصفحة على هذا الجهاز، فافتح هذا الرابط في متصفح على جهاز آخر وأدخل الرمز هناك."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn die Seite auf diesem Gerät nicht funktioniert, öffne diesen Link in einem Browser auf einem anderen Gerät und gib den Code dort ein."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si la página no funciona en este dispositivo, abre este enlace en un navegador de otro dispositivo e introduce allí el código."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si la page ne fonctionne pas sur cet appareil, ouvrez ce lien dans un navigateur sur un autre appareil et saisissez-y le code."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se la pagina non funziona su questo dispositivo, apri questo link in un browser su un altro dispositivo e inserisci lì il codice."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このデバイスでページが正しく動作しない場合は、別のデバイスのブラウザでこのリンクを開き、そこでコードを入力してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 기기에서 페이지가 작동하지 않으면 다른 기기의 브라우저에서 이 링크를 열고 거기에 코드를 입력하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se a página não funcionar neste dispositivo, abra este link em um navegador de outro dispositivo e digite o código lá."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если страница не работает на этом устройстве, откройте эту ссылку в браузере на другом устройстве и введите код там."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nếu trang không hoạt động trên thiết bị này, hãy mở liên kết này trong trình duyệt trên thiết bị khác và nhập mã tại đó."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果页面在这台设备上无法使用，请在另一台设备的浏览器中打开此链接，并在那里输入验证码。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果頁面在此裝置上無法使用，請在另一台裝置的瀏覽器中打開此連結，並在那裡輸入驗證碼。"
+          }
+        }
+      }
+    },

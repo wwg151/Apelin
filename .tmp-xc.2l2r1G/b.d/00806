@@ -1,0 +1,83 @@
+    "The skills folder already has a skill here. Replacing it removes its files." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يحتوي مجلد المهارات بالفعل على مهارة هنا. يؤدي الاستبدال إلى إزالة ملفاتها."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Im Skills-Ordner gibt es hier bereits einen Skill. Beim Ersetzen werden seine Dateien entfernt."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The skills folder already has a skill here. Replacing it removes its files."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La carpeta de habilidades ya tiene una habilidad aquí. Al reemplazarla se eliminan sus archivos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le dossier des compétences contient déjà une compétence à cet emplacement. La remplacer supprime ses fichiers."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La cartella delle competenze contiene già una competenza qui. Sostituendola, i suoi file vengono rimossi."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スキルフォルダのこの場所にはすでにスキルがあります。置き換えるとそのファイルは削除されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스킬 폴더의 이 위치에 이미 스킬이 있습니다. 대체하면 해당 파일이 제거됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A pasta de habilidades já tem uma habilidade aqui. Substituí-la remove os arquivos dela."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В папке навыков здесь уже есть навык. При замене его файлы будут удалены."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thư mục kỹ năng đã có một kỹ năng ở đây. Thay thế sẽ xóa các tệp của nó."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "技能文件夹中已有同名技能。替换会删除它的文件。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "技能檔案夾中已有同名技能。取代會刪除它的檔案。"
+          }
+        }
+      }
+    },

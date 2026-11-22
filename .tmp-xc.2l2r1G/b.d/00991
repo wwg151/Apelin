@@ -1,0 +1,76 @@
+    "This needs Apelin’s background service, which is not running on this device. Reinstall Apelin with your preferred package manager to set it up again." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتطلب هذا خدمة Apelin في الخلفية، وهي لا تعمل على هذا الجهاز. أعد تثبيت Apelin باستخدام مدير الحزم المفضّل لديك لإعدادها مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dafür wird der Hintergrunddienst von Apelin benötigt, der auf diesem Gerät nicht läuft. Installiere Apelin mit deinem bevorzugten Paketmanager neu, um ihn wieder einzurichten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esto requiere el servicio en segundo plano de Apelin, que no se está ejecutando en este dispositivo. Vuelve a instalar Apelin con tu gestor de paquetes preferido para configurarlo de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette action nécessite le service d’arrière-plan d’Apelin, qui ne s’exécute pas sur cet appareil. Réinstallez Apelin avec votre gestionnaire de paquets préféré pour le configurer à nouveau."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questa operazione richiede il servizio in background di Apelin, che non è in esecuzione su questo dispositivo. Reinstalla Apelin con il tuo gestore di pacchetti preferito per configurarlo di nuovo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この操作にはApelinのバックグラウンドサービスが必要ですが、このデバイスでは実行されていません。もう一度セットアップするには、お使いのパッケージマネージャでApelinを再インストールしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 작업에는 Apelin 백그라운드 서비스가 필요하지만 이 기기에서 실행되고 있지 않습니다. 다시 설정하려면 선호하는 패키지 관리자로 Apelin을 다시 설치하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isso requer o serviço em segundo plano do Apelin, que não está em execução neste dispositivo. Reinstale o Apelin com seu gerenciador de pacotes preferido para configurá-lo novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для этого нужна фоновая служба Apelin, но она не запущена на этом устройстве. Чтобы настроить её заново, переустановите Apelin через удобный вам менеджер пакетов."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thao tác này cần dịch vụ nền của Apelin, nhưng dịch vụ này không chạy trên thiết bị. Hãy cài đặt lại Apelin bằng trình quản lý gói bạn ưa dùng để thiết lập lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此操作需要 Apelin 的后台服务，但它没有在这台设备上运行。请使用你喜欢的软件包管理器重新安装 Apelin，以重新配置该服务。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此操作需要 Apelin 的背景服務，但它未在此裝置上執行。請使用你偏好的套件管理器重新安裝 Apelin，以重新設定該服務。"
+          }
+        }
+      }
+    },

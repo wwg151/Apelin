@@ -1,0 +1,76 @@
+    "This file contains Apple’s Command Line Tools adapted for your own devices. Apelin does not upload it." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يحتوي هذا الملف على Command Line Tools من Apple مكيّفة لأجهزتك الخاصة. لا يرفعه Apelin إلى أي مكان."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Datei enthält die für deine eigenen Geräte angepassten Command Line Tools von Apple. Apelin lädt sie nicht hoch."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este archivo contiene las Command Line Tools de Apple adaptadas para tus propios dispositivos. Apelin no lo sube a ningún sitio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce fichier contient les Command Line Tools d’Apple adaptés pour vos propres appareils. Apelin ne l’envoie sur aucun serveur."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo file contiene i Command Line Tools di Apple adattati per i tuoi dispositivi. Apelin non lo carica online."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このファイルには、ご自身のデバイス向けに調整されたAppleのCommand Line Toolsが含まれています。Apelinがこのファイルをアップロードすることはありません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 파일에는 본인의 기기에 맞게 변환된 Apple의 Command Line Tools가 들어 있습니다. Apelin은 이 파일을 업로드하지 않습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este arquivo contém as Command Line Tools da Apple adaptadas para seus próprios dispositivos. O Apelin não o envia para lugar nenhum."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Этот файл содержит Command Line Tools от Apple, адаптированные для ваших собственных устройств. Apelin не выгружает его в сеть."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tệp này chứa Command Line Tools của Apple đã được điều chỉnh cho các thiết bị của riêng bạn. Apelin không tải tệp này lên."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此文件包含为你自己的设备适配的 Apple Command Line Tools。Apelin 不会上传它。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此檔案包含為你自己的裝置調整過的 Apple Command Line Tools。Apelin 不會上傳此檔案。"
+          }
+        }
+      }
+    },

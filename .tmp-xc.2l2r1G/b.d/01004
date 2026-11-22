@@ -1,0 +1,76 @@
+    "This link names no HTTPS repository Apelin can import." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يشير هذا الرابط إلى مستودع HTTPS يمكن لـ Apelin استيراده."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieser Link nennt kein HTTPS-Repository, das Apelin importieren kann."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este enlace no indica ningún repositorio HTTPS que Apelin pueda importar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce lien n’indique aucun dépôt HTTPS qu’Apelin peut importer."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo link non indica alcun repository HTTPS che Apelin possa importare."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このリンクには、ApelinがインポートできるHTTPSリポジトリが指定されていません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 링크에는 Apelin이 가져올 수 있는 HTTPS 저장소가 없습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este link não indica nenhum repositório HTTPS que o Apelin possa importar."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Эта ссылка не указывает на репозиторий HTTPS, который Apelin может импортировать."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liên kết này không chỉ đến kho lưu trữ HTTPS nào mà Apelin có thể nhập."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此链接没有指向 Apelin 可以导入的 HTTPS 仓库。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此連結沒有指向 Apelin 可以匯入的 HTTPS 儲存庫。"
+          }
+        }
+      }
+    },

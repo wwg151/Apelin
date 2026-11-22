@@ -1,0 +1,76 @@
+    "Apelin could not remove the project “%@”. Delete it in All Projects." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذّر على Apelin إزالة المشروع «%@». احذفه من «كل المشاريع»."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin konnte das Projekt „%@“ nicht entfernen. Lösche es unter „Alle Projekte“."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin no pudo quitar el proyecto “%@”. Elimínalo en Todos los proyectos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin n’a pas pu supprimer le projet « %@ ». Supprimez-le dans Tous les projets."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin non è riuscito a rimuovere il progetto “%@”. Eliminalo in Tutti i progetti."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelinはプロジェクト「%@」を削除できませんでした。「すべてのプロジェクト」で削除してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin이 ‘%@’ 프로젝트를 제거하지 못했습니다. ‘모든 프로젝트’에서 삭제하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Apelin não conseguiu remover o projeto “%@”. Apague-o em Todos os projetos."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin не удалось удалить проект «%@». Удалите его в разделе «Все проекты»."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin không thể xóa dự án “%@”. Hãy xóa dự án trong Tất cả dự án."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 无法移除项目“%@”。请在“所有项目”中删除它。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 無法移除專案「%@」。請在「所有專案」中刪除它。"
+          }
+        }
+      }
+    },

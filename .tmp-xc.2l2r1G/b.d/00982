@@ -1,0 +1,83 @@
+    "The package could not be built. Check the build script’s log and try again." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذّر بناء الحزمة. تحقق من سجل سكربت البناء وحاول مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Paket konnte nicht gebaut werden. Prüfe das Protokoll des Build-Skripts und versuche es erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The package could not be built. Check the build script’s log and try again."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se ha podido compilar el paquete. Revisa el registro del script de compilación e inténtalo de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de compiler le paquet. Vérifiez le journal du script de compilation et réessayez."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossibile compilare il pacchetto. Controlla il log dello script di build e riprova."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パッケージをビルドできませんでした。ビルドスクリプトのログを確認して、もう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "패키지를 빌드할 수 없습니다. 빌드 스크립트의 로그를 확인한 후 다시 시도하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não foi possível compilar o pacote. Verifique o registro do script de compilação e tente novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось собрать пакет. Проверьте журнал скрипта сборки и повторите попытку."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể xây dựng gói. Hãy kiểm tra nhật ký của tập lệnh bản dựng rồi thử lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法构建软件包。请检查构建脚本的日志后重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法建置套件。請檢查建置指令碼的記錄後再試一次。"
+          }
+        }
+      }
+    },

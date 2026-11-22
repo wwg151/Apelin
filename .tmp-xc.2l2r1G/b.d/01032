@@ -1,0 +1,83 @@
+    "A maximum output under %@ tokens may cut off longer replies and the model’s thinking." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قد يؤدي الحد الأقصى للمخرجات الذي يقل عن %@ رمز إلى اقتطاع الردود الطويلة وتفكير النموذج."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine maximale Ausgabe unter %@ Tokens kann längere Antworten und das Denken des Modells abschneiden."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A maximum output under %@ tokens may cut off longer replies and the model’s thinking."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una salida máxima inferior a %@ tokens puede cortar las respuestas largas y el razonamiento del modelo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une sortie maximale inférieure à %@ jetons risque d’interrompre les réponses longues et la réflexion du modèle."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un output massimo inferiore a %@ token potrebbe troncare le risposte più lunghe e il ragionamento del modello."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最大出力が%@トークン未満の場合、長い返信やモデルの思考が途中で切れることがあります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최대 출력이 %@토큰 미만이면 긴 응답이나 모델의 사고 과정이 중간에 잘릴 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uma saída máxima abaixo de %@ tokens pode cortar respostas mais longas e o raciocínio do modelo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "При максимальном выводе менее %@ токенов длинные ответы и размышления модели могут обрываться."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đầu ra tối đa dưới %@ token có thể làm cắt cụt các câu trả lời dài và quá trình suy nghĩ của mô hình."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最大输出小于 %@ 个 Token 时，较长的回复和模型的思考过程可能会被截断。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最大輸出小於 %@ 個 Token 時，較長的回覆和模型的思考過程可能會被截斷。"
+          }
+        }
+      }
+    },

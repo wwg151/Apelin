@@ -1,0 +1,83 @@
+    "The total tokens a model can process at once. Apelin compacts the chat when the context reaches %@ of this window." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إجمالي الرموز التي يمكن للنموذج معالجتها في وقت واحد. يضغط Apelin المحادثة عندما يصل السياق إلى %@ من هذه النافذة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Gesamtzahl an Tokens, die ein Modell gleichzeitig verarbeiten kann. Apelin komprimiert den Chat, wenn der Kontext %@ dieses Fensters erreicht."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The total tokens a model can process at once. Apelin compacts the chat when the context reaches %@ of this window."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El total de tokens que el modelo puede procesar a la vez. Apelin compacta el chat cuando el contexto alcanza el %@ de esta ventana."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le nombre total de jetons que le modèle peut traiter à la fois. Apelin compacte la discussion lorsque le contexte atteint %@ de cette fenêtre."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il numero totale di token che il modello può elaborare contemporaneamente. Apelin compatta la chat quando il contesto raggiunge il %@ di questa finestra."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "モデルが一度に処理できるトークンの総数です。コンテキストがこのウィンドウの%@に達すると、Apelinはチャットを圧縮します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모델이 한 번에 처리할 수 있는 총 토큰 수입니다. 컨텍스트가 이 윈도우의 %@에 도달하면 Apelin이 채팅을 압축합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O total de tokens que o modelo pode processar de uma vez. O Apelin compacta a conversa quando o contexto atinge %@ desta janela."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Общее количество токенов, которое модель может обработать за раз. Apelin сжимает чат, когда контекст заполняет это окно на %@."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tổng số token mà mô hình có thể xử lý cùng lúc. Apelin sẽ nén cuộc trò chuyện khi ngữ cảnh đạt %@ cửa sổ này."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "模型单次可处理的 Token 总数。当上下文达到此窗口的 %@ 时，Apelin 会压缩聊天。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "模型單次可處理的 Token 總數。當上下文達到此視窗的 %@ 時，Apelin 會壓縮聊天。"
+          }
+        }
+      }
+    },

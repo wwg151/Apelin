@@ -1,0 +1,76 @@
+    "Apelin clones it as a project, adds the package index’s files it lacks — a GitHub Pages workflow and an index script — without changing any it has, pushes them, and turns on GitHub Pages." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يستنسخه Apelin كمشروع، ويضيف ملفات فهرس الحزم الناقصة — سير عمل GitHub Pages وسكربت الفهرسة — دون تغيير أي ملف موجود، ثم يدفعها ويشغّل GitHub Pages."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin klont es als Projekt, fügt die fehlenden Dateien des Paketindex hinzu – einen GitHub-Pages-Workflow und ein Indexskript –, ohne vorhandene zu ändern, pusht sie und schaltet GitHub Pages ein."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin lo clona como proyecto, añade los archivos del índice de paquetes que le falten —un flujo de trabajo de GitHub Pages y un script de índice— sin cambiar los que tiene, los envía y activa GitHub Pages."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin le clone en tant que projet, ajoute les fichiers de l’index des paquets qui lui manquent — un workflow GitHub Pages et un script d’index — sans modifier ceux qu’il a, les pousse et active GitHub Pages."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin lo clona come progetto, aggiunge i file dell’indice dei pacchetti che mancano — un workflow di GitHub Pages e uno script di indice — senza cambiare quelli presenti, li invia e attiva GitHub Pages."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelinはプロジェクトとしてクローンし、パッケージインデックスに足りないファイル（GitHub Pagesのワークフローとインデックススクリプト）を既存のファイルを変えずに追加してプッシュし、GitHub Pagesをオンにします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin이 프로젝트로 복제하고, 패키지 색인에 없는 파일(GitHub Pages 워크플로와 색인 스크립트)을 기존 파일은 바꾸지 않고 추가한 뒤 푸시하고 GitHub Pages를 켭니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Apelin o clona como projeto, adiciona os arquivos do índice de pacotes que faltam — um fluxo de trabalho do GitHub Pages e um script de índice — sem alterar os existentes, envia-os e ativa o GitHub Pages."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin клонирует его как проект, добавляет недостающие файлы индекса пакетов — рабочий процесс GitHub Pages и скрипт индекса, — не меняя существующие, отправляет их и включает GitHub Pages."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin sao chép nó thành một dự án, thêm các tệp chỉ mục gói còn thiếu — một quy trình GitHub Pages và một tập lệnh chỉ mục — mà không thay đổi tệp đã có, đẩy chúng lên và bật GitHub Pages."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 会把它克隆为项目，补上软件包索引缺少的文件（一个 GitHub Pages 工作流和一个索引脚本），不改动已有的任何文件，然后推送并开启 GitHub Pages。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 會把它複製為專案，補上套件索引缺少的檔案（一個 GitHub Pages 工作流程和一個索引指令碼），不改動既有的任何檔案，然後推送並開啟 GitHub Pages。"
+          }
+        }
+      }
+    },

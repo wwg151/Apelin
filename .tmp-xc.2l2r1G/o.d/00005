@@ -1,0 +1,18 @@
+    "No Published Packages" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "No Published Packages" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "لا توجد حزم منشورة" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Keine veröffentlichten Pakete" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "No hay paquetes publicados" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Aucun paquet publié" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Nessun pacchetto pubblicato" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "公開済みパッケージはありません" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "게시된 패키지 없음" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Nenhum pacote publicado" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Нет опубликованных пакетов" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Chưa có gói đã phát hành" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "没有已发布的软件包" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "沒有已發佈的套件" } }
+      }
+    },

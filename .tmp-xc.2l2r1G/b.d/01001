@@ -1,0 +1,83 @@
+    "While this is on, the agent asks you before it opens an app or a link, reads what is on the screen or acts on it, through Apelin’s screen tools or icli, in every permission mode. Before a screenshot it always asks in the conversation. Each chat follows a change when you send its next message." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عند تفعيل هذا الخيار، يسألك الوكيل قبل أن يفتح تطبيقًا أو رابطًا، أو يقرأ ما على الشاشة، أو يتفاعل معها، سواء عبر أدوات الشاشة في Apelin أو عبر icli، في كل أوضاع الأذونات. وقبل لقطة الشاشة يسأل دائمًا في المحادثة. تتبع كل محادثة التغيير عند إرسال رسالتها التالية."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solange dies aktiviert ist, fragt dich der Agent, bevor er eine App oder einen Link öffnet, liest, was auf dem Bildschirm zu sehen ist, oder ihn bedient – über die Bildschirmwerkzeuge von Apelin oder über icli, in jedem Berechtigungsmodus. Vor einem Bildschirmfoto fragt er immer im Chat. Jeder Chat übernimmt eine Änderung, wenn du seine nächste Nachricht sendest."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "While this is on, the agent asks you before it opens an app or a link, reads what is on the screen or acts on it, through Apelin’s screen tools or icli, in every permission mode. Before a screenshot it always asks in the conversation. Each chat follows a change when you send its next message."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mientras esté activado, el agente te pregunta antes de abrir una app o un enlace, leer lo que hay en la pantalla o actuar sobre ella, con las herramientas de pantalla de Apelin o con icli, en todos los modos de permisos. Antes de una captura de pantalla siempre pregunta en el chat. Cada chat aplica el cambio cuando envías su siguiente mensaje."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tant que cette option est activée, l’agent vous demande avant d’ouvrir une app ou un lien, de lire ce qui est à l’écran ou d’agir dessus, avec les outils d’écran d’Apelin ou avec icli, dans tous les modes d’autorisation. Avant une capture d’écran, il demande toujours dans la discussion. Chaque discussion applique le changement lorsque vous envoyez son prochain message."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finché è attiva, l’agente ti chiede prima di aprire un’app o un link, leggere ciò che è sullo schermo o agire su di esso, con gli strumenti dello schermo di Apelin o con icli, in ogni modalità dei permessi. Prima di uno screenshot chiede sempre nella chat. Ogni chat applica la modifica quando invii il suo prossimo messaggio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オンのあいだ、エージェントはAppやリンクを開く前、画面の内容を読み取る前、画面を操作する前に、どの権限モードでも確認します。Apelinの画面ツールでもicliでも同じです。スクリーンショットの前には常にチャットで確認します。各チャットは、次にメッセージを送信したときに変更が反映されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "켜져 있는 동안 에이전트는 앱이나 링크를 열기 전, 화면 내용을 읽기 전, 화면을 조작하기 전에 모든 권한 모드에서 묻습니다. Apelin의 화면 도구든 icli든 마찬가지입니다. 스크린샷을 찍기 전에는 항상 채팅에서 묻습니다. 각 채팅은 다음 메시지를 보낼 때 변경 사항을 따릅니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enquanto estiver ativado, o agente pergunta a você antes de abrir um app ou um link, ler o que está na tela ou agir sobre ela, pelas ferramentas de tela do Apelin ou pelo icli, em todos os modos de permissões. Antes de uma captura de tela, ele sempre pergunta na conversa. Cada conversa aplica a mudança quando você envia a próxima mensagem dela."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пока этот параметр включён, агент спрашивает вас, прежде чем открыть приложение или ссылку, прочитать то, что на экране, или выполнить на нём действие — через инструменты экрана Apelin или через icli, в любом режиме разрешений. Перед снимком экрана он всегда спрашивает в чате. Каждый чат применит изменение, когда вы отправите в нём следующее сообщение."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khi bật, tác nhân sẽ hỏi bạn trước khi mở một ứng dụng hoặc một liên kết, đọc nội dung trên màn hình hoặc thao tác trên đó, dù qua các công cụ màn hình của Apelin hay qua icli, ở mọi chế độ quyền. Trước khi chụp màn hình, tác nhân luôn hỏi trong cuộc trò chuyện. Mỗi cuộc trò chuyện sẽ áp dụng thay đổi khi bạn gửi tin nhắn tiếp theo trong đó."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启后，在任何权限模式下，智能体在打开 App 或链接、读取屏幕内容或操作屏幕之前都会先询问你，无论是通过 Apelin 的屏幕工具还是 icli。截屏前始终会在聊天中询问。每个聊天会在你下次发送消息时应用更改。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟後，在任何權限模式下，代理程式在開啟 App 或連結、讀取螢幕內容或操作螢幕之前都會先詢問你，無論是透過 Apelin 的螢幕工具還是 icli。截圖前一律會在聊天中詢問。每個聊天會在你傳送下一則訊息時套用變更。"
+          }
+        }
+      }
+    },

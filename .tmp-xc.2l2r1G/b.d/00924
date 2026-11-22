@@ -1,0 +1,77 @@
+    "%@\n\nDownload: %@\nA compatible iOS SDK is downloaded automatically when needed." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nالتنزيل: %@\nيتم تنزيل iOS SDK متوافق تلقائيًا عند الحاجة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nDownload: %@\nEin kompatibles iOS-SDK wird bei Bedarf automatisch heruntergeladen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nDescarga: %@\nSe descargará automáticamente un SDK de iOS compatible cuando sea necesario."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nTéléchargement : %@\nUn SDK iOS compatible est téléchargé automatiquement si nécessaire."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nDownload: %@\nSe necessario, viene scaricato automaticamente un SDK iOS compatibile."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nダウンロード：%@\n必要に応じて互換性のあるiOS SDKを自動的にダウンロードします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\n다운로드: %@\n필요한 경우 호환되는 iOS SDK가 자동으로 다운로드됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nDownload: %@\nUm SDK do iOS compatível é baixado automaticamente quando necessário."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nЗагрузка: %@\nПри необходимости совместимый iOS SDK будет загружен автоматически."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nTải xuống: %@\nSDK iOS tương thích sẽ tự động được tải xuống khi cần."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\n下载大小：%@\n需要时会自动下载兼容的 iOS SDK。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\n下載大小：%@\n需要時會自動下載相容的 iOS SDK。"
+          }
+        }
+      }
+    },

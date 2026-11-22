@@ -1,0 +1,83 @@
+    "Recommendations are unavailable. Try again, or set up your build tools later in Settings." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التوصيات غير متاحة. حاول مرة أخرى، أو أعدّ أدوات البناء لاحقًا في «الإعدادات»."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empfehlungen sind nicht verfügbar. Versuche es erneut oder richte deine Build-Tools später in den Einstellungen ein."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recommendations are unavailable. Try again, or set up your build tools later in Settings."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las recomendaciones no están disponibles. Inténtalo de nuevo o configura las herramientas de compilación más tarde en Ajustes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les recommandations sont indisponibles. Réessayez ou configurez vos outils de compilation plus tard dans Réglages."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I consigli non sono disponibili. Riprova o configura gli strumenti di compilazione più tardi in Impostazioni."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "おすすめを利用できません。もう一度試すか、あとで「設定」でビルドツールをセットアップしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추천 항목을 사용할 수 없습니다. 다시 시도하거나 나중에 ‘설정’에서 빌드 도구를 설정하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "As recomendações não estão disponíveis. Tente novamente ou configure as ferramentas de compilação depois em Ajustes."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рекомендации недоступны. Повторите попытку или настройте инструменты сборки позже в «Настройках»."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiện không có đề xuất. Hãy thử lại, hoặc thiết lập công cụ xây dựng sau trong Cài đặt."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂时无法获取推荐。请重试，或稍后在“设置”中配置构建工具。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目前無法取得推薦項目。請再試一次，或稍後在「設定」中設定建置工具。"
+          }
+        }
+      }
+    },

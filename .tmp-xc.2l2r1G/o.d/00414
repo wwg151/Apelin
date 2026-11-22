@@ -1,0 +1,83 @@
+    "Compact the context or start a new chat, then send your message again." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط السياق أو ابدأ محادثة جديدة، ثم أرسل رسالتك مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Komprimiere den Kontext oder beginne einen neuen Chat und sende deine Nachricht dann erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compact the context or start a new chat, then send your message again."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compacta el contexto o inicia un chat nuevo y vuelve a enviar el mensaje."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compactez le contexte ou démarrez une nouvelle discussion, puis renvoyez votre message."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compatta il contesto o inizia una nuova chat, poi invia di nuovo il messaggio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コンテキストを圧縮するか新規チャットを開始してから、もう一度メッセージを送信してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "컨텍스트를 압축하거나 새 채팅을 시작한 다음 메시지를 다시 보내세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compacte o contexto ou inicie uma nova conversa e envie a mensagem novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сожмите контекст или начните новый чат и отправьте сообщение ещё раз."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy nén ngữ cảnh hoặc bắt đầu cuộc trò chuyện mới rồi gửi lại tin nhắn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请压缩上下文或新建聊天，然后重新发送消息。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請壓縮上下文或開始新聊天，然後重新傳送訊息。"
+          }
+        }
+      }
+    },

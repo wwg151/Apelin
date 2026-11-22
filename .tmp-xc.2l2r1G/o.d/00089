@@ -1,0 +1,83 @@
+    "Choose a name for this chat. Your agent will no longer rename it." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر اسمًا لهذه المحادثة. لن يعيد الوكيل تسميتها بعد الآن."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle einen Namen für diesen Chat. Dein Agent benennt ihn dann nicht mehr um."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose a name for this chat. Your agent will no longer rename it."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige un nombre para este chat. Tu agente ya no le cambiará el nombre."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez un nom pour cette discussion. Votre agent ne la renommera plus."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli un nome per questa chat. L’agente non la rinominerà più."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このチャットの名前を決めてください。以後、エージェントがこの名前を変更することはありません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 채팅의 이름을 정하세요. 이후 에이전트가 이름을 변경하지 않습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolha um nome para esta conversa. Seu agente não vai mais renomeá-la."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите название для этого чата. Агент больше не будет его переименовывать."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn tên cho cuộc trò chuyện này. Tác nhân sẽ không đổi tên nó nữa."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为此聊天选择一个名称。智能体将不再为它重命名。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "為此聊天選擇一個名稱。代理程式將不再為它重新命名。"
+          }
+        }
+      }
+    },

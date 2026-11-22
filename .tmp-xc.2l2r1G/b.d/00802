@@ -1,0 +1,83 @@
+    "Its files are removed from the skills folder, and chats are no longer offered it." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ستُزال ملفاتها من مجلد المهارات، ولن تُتاح في المحادثات بعد الآن."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seine Dateien werden aus dem Skills-Ordner entfernt, und Chats steht er nicht mehr zur Verfügung."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Its files are removed from the skills folder, and chats are no longer offered it."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sus archivos se eliminarán de la carpeta de habilidades y los chats dejarán de tenerla."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ses fichiers seront supprimés du dossier des compétences, et les conversations n’en disposeront plus."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I suoi file verranno rimossi dalla cartella delle competenze e le chat non ne disporranno più."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ファイルはスキルフォルダから削除され、チャットでは使えなくなります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스킬 폴더에서 해당 파일이 제거되며, 채팅에서 더 이상 사용할 수 없습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Os arquivos dela serão removidos da pasta de habilidades e os chats deixarão de tê-la."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Его файлы будут удалены из папки навыков, и в чатах он больше не будет доступен."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các tệp của kỹ năng sẽ bị xóa khỏi thư mục kỹ năng và các cuộc trò chuyện sẽ không còn dùng được nó."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "它的文件会从技能文件夹中删除，聊天中也不再提供它。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "它的檔案會從技能檔案夾中刪除，聊天中也不再提供它。"
+          }
+        }
+      }
+    },

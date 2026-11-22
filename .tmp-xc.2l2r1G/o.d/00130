@@ -1,0 +1,83 @@
+    "%@ Your chats keep working, and Apelin tries again with the next change." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ تستمر المحادثات في العمل، وسيحاول Apelin مرة أخرى عند التغيير التالي."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Deine Chats laufen weiter, und Apelin versucht es bei der nächsten Änderung erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Your chats keep working, and Apelin tries again with the next change."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Tus chats siguen funcionando y Apelin lo volverá a intentar con el próximo cambio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Vos discussions continuent de fonctionner et Apelin réessaiera à la prochaine modification."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Le chat continuano a funzionare e Apelin riproverà alla prossima modifica."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ チャットは引き続き使用できます。Apelinは次の変更時にもう一度保存を試みます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 채팅은 계속 사용할 수 있으며, Apelin은 다음 변경 시 다시 저장을 시도합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Suas conversas continuam funcionando, e o Apelin tentará novamente na próxima alteração."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Чаты продолжают работать, а Apelin повторит попытку при следующем изменении."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Các cuộc trò chuyện vẫn hoạt động và Apelin sẽ thử lại ở lần thay đổi tiếp theo."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 聊天可以继续，Apelin 会在下次有改动时再试一次。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 聊天可以繼續進行，Apelin 會在下次有變更時再試一次。"
+          }
+        }
+      }
+    },

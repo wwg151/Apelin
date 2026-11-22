@@ -1,0 +1,83 @@
+    "The agent can run commands as root without asking, with full control of this device. Each chat switches when you send its next message." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمكن للوكيل تنفيذ الأوامر بصلاحيات الجذر دون سؤال، مع تحكّم كامل في هذا الجهاز. تتحول كل محادثة عند إرسال رسالتها التالية."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Agent kann Befehle als root ohne Nachfrage ausführen und hat damit volle Kontrolle über dieses Gerät. Jeder Chat wechselt, wenn du seine nächste Nachricht sendest."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The agent can run commands as root without asking, with full control of this device. Each chat switches when you send its next message."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El agente puede ejecutar comandos como root sin preguntar, con control total de este dispositivo. Cada chat cambia cuando envías su siguiente mensaje."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’agent peut exécuter des commandes en tant que root sans demander, avec un contrôle total de cet appareil. Chaque discussion bascule lorsque vous envoyez son prochain message."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’agente può eseguire comandi come root senza chiedere, con pieno controllo di questo dispositivo. Ogni chat cambia modalità quando invii il suo prossimo messaggio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エージェントは確認せずに root としてコマンドを実行でき、このデバイスを完全に制御できます。各チャットは、次にメッセージを送信したときに切り替わります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "에이전트가 묻지 않고 명령을 root로 실행할 수 있으며, 이 기기를 완전히 제어합니다. 각 채팅은 다음 메시지를 보낼 때 전환됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O agente pode executar comandos como root sem perguntar, com controle total deste dispositivo. Cada conversa muda quando você envia a próxima mensagem dela."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Агент сможет выполнять команды от имени root без вопросов, с полным контролем над этим устройством. Каждый чат переключится, когда вы отправите в нём следующее сообщение."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tác nhân có thể chạy lệnh với quyền root mà không hỏi, toàn quyền kiểm soát thiết bị này. Mỗi cuộc trò chuyện sẽ chuyển chế độ khi bạn gửi tin nhắn tiếp theo trong đó."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "智能体可以无需确认即以 root 身份运行命令，对本设备拥有完全控制权。每个聊天会在你下次发送消息时切换。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理程式可以在不詢問的情況下以 root 身分執行指令，對本裝置擁有完全控制權。每個聊天會在你傳送下一則訊息時切換。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,83 @@
+    "Sign in to the account the agent uses to write, build and install your tweaks." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجّل الدخول إلى الحساب الذي يستخدمه الوكيل لكتابة إضافاتك وبنائها وتثبيتها."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Melde dich bei dem Account an, mit dem der Agent deine Tweaks schreibt, baut und installiert."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign in to the account the agent uses to write, build and install your tweaks."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicia sesión en la cuenta que el agente usa para escribir, compilar e instalar tus tweaks."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connectez-vous au compte que l’agent utilise pour écrire, compiler et installer vos tweaks."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accedi all’account che l’agente usa per scrivere, compilare e installare i tuoi tweak."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エージェントがTweakの作成、ビルド、インストールに使用するアカウントにサインインしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "에이전트가 트윅을 작성, 빌드, 설치하는 데 사용할 계정에 로그인하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicie sessão na conta que o agente usa para escrever, compilar e instalar seus tweaks."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Войдите в учётную запись, с помощью которой агент пишет, собирает и устанавливает ваши твики."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đăng nhập vào tài khoản mà tác nhân dùng để viết, xây dựng và cài đặt tweak của bạn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登录一个账户，智能体会用它来编写、构建和安装你的插件。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登入代理程式用來撰寫、建置和安裝外掛的帳號。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,83 @@
+    "An empty workspace. No SDK or toolchain is required." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مساحة عمل فارغة. لا يلزم SDK أو سلسلة أدوات."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein leerer Arbeitsbereich. Kein SDK und keine Toolchain erforderlich."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An empty workspace. No SDK or toolchain is required."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un espacio de trabajo vacío. No requiere SDK ni cadena de herramientas."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un espace de travail vide. Aucun SDK ni chaîne d’outils requis."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uno spazio di lavoro vuoto. Non servono SDK né toolchain."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "空のワークスペース。SDKやツールチェーンは不要です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빈 작업 공간입니다. SDK나 툴체인이 필요하지 않습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um espaço de trabalho vazio. Não requer SDK nem cadeia de ferramentas."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пустое рабочее пространство. SDK и набор инструментов не нужны."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không gian làm việc trống. Không cần SDK hay chuỗi công cụ."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "空白工作区，无需 SDK 或工具链。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "空白工作區，不需要 SDK 或工具鏈。"
+          }
+        }
+      }
+    },

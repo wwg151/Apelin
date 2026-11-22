@@ -1,0 +1,76 @@
+    "A public repository on your GitHub account, published with GitHub Pages as a package source." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مستودع عام في حساب GitHub الخاص بك، يُنشر عبر GitHub Pages كمصدر للحزم."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein öffentliches Repository in deinem GitHub-Konto, über GitHub Pages als Paketquelle veröffentlicht."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un repositorio público en tu cuenta de GitHub, publicado con GitHub Pages como fuente de paquetes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un dépôt public sur votre compte GitHub, publié avec GitHub Pages comme source de paquets."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un repository pubblico nel tuo account GitHub, pubblicato con GitHub Pages come sorgente di pacchetti."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHubアカウント上の公開リポジトリで、GitHub Pagesでパッケージソースとして公開されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub 계정의 공개 저장소로, GitHub Pages를 통해 패키지 소스로 게시됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um repositório público na sua conta do GitHub, publicado com o GitHub Pages como fonte de pacotes."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Публичный репозиторий в вашем аккаунте GitHub, опубликованный через GitHub Pages как источник пакетов."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một kho công khai trên tài khoản GitHub của bạn, được phát hành qua GitHub Pages như một nguồn gói."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你 GitHub 账户中的公开仓库，通过 GitHub Pages 发布为软件源。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你 GitHub 帳號中的公開儲存庫，透過 GitHub Pages 發佈為軟體源。"
+          }
+        }
+      }
+    },

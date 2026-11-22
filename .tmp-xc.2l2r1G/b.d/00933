@@ -1,0 +1,76 @@
+    "Apelin’s background service is unavailable. Reinstall Apelin with your preferred package manager to sign in." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خدمة Apelin في الخلفية غير متاحة. أعد تثبيت Apelin باستخدام مدير الحزم المفضّل لديك لتسجيل الدخول."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Hintergrunddienst von Apelin ist nicht verfügbar. Installiere Apelin mit deinem bevorzugten Paketmanager neu, um dich anzumelden."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El servicio en segundo plano de Apelin no está disponible. Vuelve a instalar Apelin con tu gestor de paquetes preferido para poder iniciar sesión."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le service d’arrière-plan d’Apelin est indisponible. Réinstallez Apelin avec votre gestionnaire de paquets préféré pour vous connecter."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il servizio in background di Apelin non è disponibile. Reinstalla Apelin con il tuo gestore di pacchetti preferito per accedere."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelinのバックグラウンドサービスを利用できません。サインインするには、お使いのパッケージマネージャでApelinを再インストールしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 백그라운드 서비스를 사용할 수 없습니다. 로그인하려면 선호하는 패키지 관리자로 Apelin을 다시 설치하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O serviço em segundo plano do Apelin não está disponível. Reinstale o Apelin com seu gerenciador de pacotes preferido para iniciar sessão."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фоновая служба Apelin недоступна. Чтобы войти, переустановите Apelin через удобный вам менеджер пакетов."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dịch vụ nền của Apelin không khả dụng. Hãy cài đặt lại Apelin bằng trình quản lý gói bạn ưa dùng để đăng nhập."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 的后台服务不可用。请用你喜欢的软件包管理器重新安装 Apelin 后再登录。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法使用 Apelin 的背景服務。請使用你偏好的套件管理器重新安裝 Apelin 後再登入。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,83 @@
+    "Strict: asks before commands and sensitive changes. Relaxed: runs these operations without asking, within the app’s permissions. This setting applies to all chats." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صارم: يسأل قبل تنفيذ الأوامر والتغييرات الحساسة. متساهل: ينفّذ هذه العمليات دون سؤال، ضمن أذونات التطبيق. ينطبق هذا الإعداد على كل المحادثات."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Streng: fragt vor Befehlen und heiklen Änderungen. Locker: führt diese Aktionen ohne Nachfrage aus, im Rahmen der Berechtigungen der App. Diese Einstellung gilt für alle Chats."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strict: asks before commands and sensitive changes. Relaxed: runs these operations without asking, within the app’s permissions. This setting applies to all chats."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estricto: pregunta antes de ejecutar comandos y hacer cambios delicados. Flexible: realiza estas operaciones sin preguntar, dentro de los permisos de la app. Este ajuste se aplica a todos los chats."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strict : demande avant les commandes et les modifications sensibles. Souple : exécute ces opérations sans demander, dans la limite des autorisations de l’app. Ce réglage s’applique à toutes les discussions."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rigorosa: chiede prima di comandi e modifiche sensibili. Permissiva: esegue queste operazioni senza chiedere, entro i permessi dell’app. Questa impostazione vale per tutte le chat."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "厳格：コマンドの実行や重要な変更の前に確認します。緩和：Appの権限の範囲内で、これらの操作を確認せずに実行します。この設定はすべてのチャットに適用されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "엄격: 명령을 실행하거나 민감한 변경을 하기 전에 묻습니다. 완화: 앱 권한 범위 내에서 이러한 작업을 묻지 않고 실행합니다. 이 설정은 모든 채팅에 적용됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estrito: pergunta antes de executar comandos e fazer alterações sensíveis. Flexível: realiza essas operações sem perguntar, dentro das permissões do app. Este ajuste se aplica a todas as conversas."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Строгий: спрашивает перед командами и важными изменениями. Свободный: выполняет такие операции без вопросов в пределах прав приложения. Настройка действует для всех чатов."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghiêm ngặt: hỏi trước khi chạy lệnh và thực hiện thay đổi nhạy cảm. Linh hoạt: thực hiện các thao tác này mà không hỏi, trong phạm vi quyền của ứng dụng. Cài đặt này áp dụng cho mọi cuộc trò chuyện."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "严格：执行命令和敏感改动前会先询问。宽松：在 App 权限范围内直接执行这些操作，不会询问。此设置适用于所有聊天。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "嚴格：執行指令和敏感變更前會先詢問。寬鬆：在 App 權限範圍內直接執行這些操作，不會詢問。此設定適用於所有聊天。"
+          }
+        }
+      }
+    },

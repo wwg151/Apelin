@@ -1,0 +1,76 @@
+    "Clones, pulls and pushes to github.com stop working until you sign in again. The package repository stays linked." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ستتوقف عمليات الاستنساخ والسحب والدفع إلى github.com حتى تسجّل الدخول مجددًا. يبقى مستودع الحزم مرتبطًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klonen, Pullen und Pushen zu github.com funktionieren erst wieder, wenn du dich erneut anmeldest. Das Paket-Repository bleibt verknüpft."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las clonaciones, extracciones y envíos a github.com dejarán de funcionar hasta que vuelvas a iniciar sesión. El repositorio de paquetes sigue vinculado."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les clonages, tirages et envois vers github.com ne fonctionneront plus jusqu’à votre prochaine connexion. Le dépôt de paquets reste lié."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clonazioni, download e invii su github.com smetteranno di funzionare finché non accedi di nuovo. Il repository di pacchetti resta collegato."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もう一度サインインするまで、github.comへのクローン、プル、プッシュはできなくなります。パッケージリポジトリのリンクはそのままです。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 로그인할 때까지 github.com에 대한 복제, 풀, 푸시가 작동하지 않습니다. 패키지 저장소 연결은 유지됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clones, pulls e pushes para github.com param de funcionar até você entrar de novo. O repositório de pacotes continua vinculado."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клонирование, получение и отправка на github.com не будут работать, пока вы снова не войдёте. Репозиторий пакетов останется привязанным."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Việc sao chép, kéo và đẩy lên github.com sẽ ngừng hoạt động cho đến khi bạn đăng nhập lại. Kho gói vẫn được liên kết."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在你重新登录之前，克隆、拉取和推送 github.com 都将无法进行。软件源仓库仍保持关联。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在你重新登入之前，複製、拉取和推送 github.com 都將無法進行。軟體源儲存庫仍保持連結。"
+          }
+        }
+      }
+    },

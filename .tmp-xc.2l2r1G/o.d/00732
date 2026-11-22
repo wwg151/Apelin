@@ -1,0 +1,76 @@
+    "Sign in to WorkBuddy AI with your CodeBuddy international plan." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجّل الدخول إلى WorkBuddy AI باستخدام خطة CodeBuddy الدولية."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Melde dich bei WorkBuddy AI mit deinem internationalen CodeBuddy-Tarif an."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicia sesión en WorkBuddy AI con tu plan internacional de CodeBuddy."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connectez-vous à WorkBuddy AI avec votre forfait CodeBuddy international."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accedi a WorkBuddy AI con il tuo piano CodeBuddy internazionale."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CodeBuddyの国際版プランでWorkBuddy AIにサインインします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CodeBuddy 국제판 요금제로 WorkBuddy AI에 로그인합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicie sessão no WorkBuddy AI com seu plano internacional do CodeBuddy."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Войдите в WorkBuddy AI с международным тарифом CodeBuddy."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đăng nhập WorkBuddy AI bằng gói CodeBuddy quốc tế của bạn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用你的 CodeBuddy 国际版套餐登录 WorkBuddy AI。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用你的 CodeBuddy 國際版方案登入 WorkBuddy AI。"
+          }
+        }
+      }
+    },

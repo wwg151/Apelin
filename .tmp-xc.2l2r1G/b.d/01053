@@ -1,0 +1,76 @@
+    "The unlock test didn’t finish, so the passcode wasn’t saved. Try again." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم يكتمل اختبار فتح القفل، لذا لم يُحفظ رمز الدخول. حاول مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Entsperrtest wurde nicht abgeschlossen, daher wurde der Code nicht gesichert. Versuche es erneut."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La prueba de desbloqueo no terminó, por lo que el código no se guardó. Inténtalo de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le test de déverrouillage ne s’est pas terminé, le code n’a donc pas été enregistré. Réessayez."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La verifica di sblocco non è terminata, quindi il codice non è stato salvato. Riprova."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ロック解除のテストが完了しなかったため、パスコードは保存されませんでした。もう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잠금 해제 테스트가 완료되지 않아 암호가 저장되지 않았습니다. 다시 시도하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O teste de desbloqueio não foi concluído, portanto o código não foi salvo. Tente novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверка разблокировки не завершилась, поэтому код-пароль не был сохранен. Повторите попытку."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quá trình kiểm tra mở khóa chưa hoàn tất nên mật mã chưa được lưu. Hãy thử lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "解锁测试未完成，因此未存储密码。请重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "解鎖測試未完成，因此未儲存密碼。請再試一次。"
+          }
+        }
+      }
+    },

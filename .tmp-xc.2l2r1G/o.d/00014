@@ -1,0 +1,18 @@
+    "Deselect All" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Deselect All" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إلغاء تحديد الكل" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Alle abwählen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Deseleccionar todo" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Tout désélectionner" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Deseleziona tutto" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "すべて選択解除" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "전체 선택 해제" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Desmarcar tudo" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Снять выделение" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Bỏ chọn tất cả" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "取消全选" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "取消全選" } }
+      }
+    },

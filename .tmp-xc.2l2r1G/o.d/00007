@@ -1,0 +1,18 @@
+    "Withdrawn" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Withdrawn" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تم السحب" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zurückgezogen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Retirado" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retiré" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Ritirato" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "取り下げ済み" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "철회됨" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Retirado" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отозвано" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Đã rút" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已撤回" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "已撤回" } }
+      }
+    },

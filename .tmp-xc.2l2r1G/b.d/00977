@@ -1,0 +1,83 @@
+    "Tap “+” to download Apple’s Command Line Tools or import a toolchain from a file." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط «+» لتنزيل Command Line Tools من Apple أو لاستيراد سلسلة أدوات من ملف."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tippe auf „+“, um die Command Line Tools von Apple zu laden oder eine Toolchain aus einer Datei zu importieren."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca “+” para descargar las Command Line Tools de Apple o importar una cadena de herramientas desde un archivo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Touchez « + » pour télécharger les Command Line Tools d’Apple ou importer une chaîne d’outils depuis un fichier."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca “+” per scaricare i Command Line Tools di Apple o importare una toolchain da un file."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「+」をタップしてAppleのCommand Line Toolsをダウンロードするか、ファイルからツールチェーンをインポートしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“+”를 탭하여 Apple의 Command Line Tools를 다운로드하거나 파일에서 툴체인을 가져오세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque em “+” para baixar as Command Line Tools da Apple ou importar uma cadeia de ferramentas de um arquivo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Коснитесь «+», чтобы загрузить Command Line Tools от Apple или импортировать набор инструментов из файла."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm “+” để tải Command Line Tools của Apple hoặc nhập chuỗi công cụ từ tệp."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轻点“+”下载 Apple 的 Command Line Tools，或从文件导入工具链。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "點一下「+」下載 Apple 的 Command Line Tools，或從檔案匯入工具鏈。"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap “+” to download Apple’s Command Line Tools or import a toolchain from a file."
+          }
+        }
+      }
+    },

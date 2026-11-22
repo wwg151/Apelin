@@ -1,0 +1,76 @@
+    "“Distribute…” stops publishing to it. The repository on GitHub and its project stay as they are." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سيتوقف «توزيع…» عن النشر إليه. يبقى المستودع على GitHub ومشروعه كما هما."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "„Verteilen …“ veröffentlicht nicht mehr dorthin. Das Repository auf GitHub und sein Projekt bleiben, wie sie sind."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "«Distribuir…» deja de publicar en él. El repositorio de GitHub y su proyecto quedan como están."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "« Distribuer… » cesse d’y publier. Le dépôt sur GitHub et son projet restent tels quels."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "«Distribuisci…» smette di pubblicarvi. Il repository su GitHub e il suo progetto restano come sono."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「配布…」はここへの公開をやめます。GitHub上のリポジトリとそのプロジェクトはそのまま残ります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "‘배포…’가 더 이상 여기에 게시하지 않습니다. GitHub의 저장소와 그 프로젝트는 그대로 남습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“Distribuir…” deixa de publicar nele. O repositório no GitHub e seu projeto continuam como estão."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "«Распространить…» перестанет публиковать в него. Репозиторий на GitHub и его проект останутся как есть."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“Phân phối…” sẽ ngừng phát hành lên kho này. Kho trên GitHub và dự án của nó vẫn giữ nguyên."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“分发…”将不再发布到这里。GitHub 上的仓库和它的项目都会保留原样。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「分發…」將不再發佈到這裡。GitHub 上的儲存庫和它的專案都會保留原樣。"
+          }
+        }
+      }
+    },

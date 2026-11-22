@@ -1,0 +1,83 @@
+    "Tell me which app you want to change and what you want it to do. We can then choose a template and review the files together." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أخبرني بالتطبيق الذي تريد تغييره وما تريده أن يفعل. بعد ذلك يمكننا اختيار قالب ومراجعة الملفات معًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sag mir, welche App du ändern möchtest und was sie tun soll. Dann können wir eine Vorlage wählen und die Dateien gemeinsam ansehen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tell me which app you want to change and what you want it to do. We can then choose a template and review the files together."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dime qué app quieres cambiar y qué quieres que haga. Después podemos elegir una plantilla y revisar los archivos juntos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dites-moi quelle app vous voulez modifier et ce qu’elle doit faire. Nous pourrons ensuite choisir un modèle de projet et examiner les fichiers ensemble."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dimmi quale app vuoi modificare e cosa vuoi che faccia. Poi potremo scegliere un template e controllare i file insieme."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どのAppを変更したいか、何をさせたいかを教えてください。そのあとでテンプレートを選び、一緒にファイルを確認しましょう。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "어떤 앱을 바꾸고 싶은지, 무엇을 하게 하고 싶은지 알려 주세요. 그런 다음 템플릿을 고르고 함께 파일을 살펴볼 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diga qual app você quer alterar e o que quer que ele faça. Depois podemos escolher um modelo de projeto e revisar os arquivos juntos."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Расскажите, какое приложение нужно изменить и что оно должно делать. Затем мы выберем шаблон и вместе посмотрим файлы."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy cho tôi biết bạn muốn thay đổi ứng dụng nào và muốn nó làm gì. Sau đó chúng ta có thể chọn mẫu và cùng xem các tệp."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "告诉我你想修改哪个 App，以及想实现什么功能。接下来可以选择模板，一起查看文件。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "告訴我你想修改哪個 App，以及想讓它做什麼。接著我們可以選擇範本，一起檢視檔案。"
+          }
+        }
+      }
+    },

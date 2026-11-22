@@ -1,0 +1,76 @@
+    "Apelin will lock the screen and unlock it with this passcode. Don’t use the device until it unlocks. A wrong passcode counts as one failed attempt." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سيقفل Apelin الشاشة ثم يفتح قفلها باستخدام رمز الدخول هذا. لا تستخدم الجهاز حتى يُفتح قفله. يُحتسب رمز الدخول الخاطئ كمحاولة فاشلة واحدة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin sperrt das Display und entsperrt es mit diesem Code. Benutze das Gerät erst, wenn es entsperrt ist. Ein falscher Code zählt als ein fehlgeschlagener Versuch."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin bloqueará la pantalla y la desbloqueará con este código. No uses el dispositivo hasta que se desbloquee. Un código incorrecto cuenta como un intento fallido."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin va verrouiller l’écran puis le déverrouiller avec ce code. N’utilisez pas l’appareil tant qu’il n’est pas déverrouillé. Un code erroné compte comme une tentative échouée."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin bloccherà lo schermo e lo sbloccherà con questo codice. Non usare il dispositivo finché non si sblocca. Un codice errato conta come un tentativo fallito."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelinが画面をロックし、このパスコードでロックを解除します。ロックが解除されるまでデバイスを操作しないでください。パスコードが間違っていると、入力失敗が1回記録されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin이 화면을 잠근 후 이 암호로 잠금을 해제합니다. 잠금이 해제될 때까지 기기를 조작하지 마세요. 잘못된 암호는 입력 실패 1회로 기록됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Apelin bloqueará a tela e a desbloqueará com este código. Não use o dispositivo até que ele seja desbloqueado. Um código incorreto conta como uma tentativa malsucedida."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin заблокирует экран и разблокирует его с помощью этого код-пароля. Не используйте устройство, пока оно не разблокируется. Неверный код-пароль засчитывается как одна неудачная попытка."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin sẽ khóa màn hình và mở khóa bằng mật mã này. Không sử dụng thiết bị cho đến khi mở khóa xong. Mật mã sai sẽ được tính là một lần thử không thành công."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 将锁定屏幕并使用此密码解锁。在设备解锁前请勿操作。密码错误会记为一次尝试失败。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 將會鎖定螢幕並使用此密碼解鎖。在裝置解鎖前請勿操作。密碼錯誤會計為一次嘗試失敗。"
+          }
+        }
+      }
+    },

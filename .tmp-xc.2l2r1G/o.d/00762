@@ -1,0 +1,76 @@
+    "The imported project has a new ID and no saved approvals. In Strict mode, the agent asks for approval before its first build or installation." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يحصل المشروع المستورد على معرّف جديد ولا توجد له موافقات محفوظة. في الوضع الصارم، يطلب الوكيل الموافقة قبل أول بناء أو تثبيت."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das importierte Projekt erhält eine neue ID und keine gespeicherten Genehmigungen. Im strengen Modus bittet der Agent vor dem ersten Build oder der ersten Installation um Genehmigung."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El proyecto importado tiene un ID nuevo y ninguna aprobación guardada. En el modo estricto, el agente pide aprobación antes de su primera compilación o instalación."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le projet importé reçoit un nouvel ID et aucune approbation enregistrée. En mode strict, l’agent demande une approbation avant sa première compilation ou installation."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il progetto importato riceve un nuovo ID e nessuna approvazione salvata. In modalità rigorosa, l’agente chiede l’approvazione prima della prima build o installazione."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "インポートしたプロジェクトには新しいIDが割り当てられ、保存済みの承認はありません。厳格モードでは、最初のビルドやインストールの前にエージェントが承認を求めます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가져온 프로젝트에는 새 ID가 부여되며 저장된 승인이 없습니다. 엄격 모드에서는 첫 빌드나 설치 전에 에이전트가 승인을 요청합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O projeto importado tem um novo ID e nenhuma aprovação salva. No modo estrito, o agente pede aprovação antes da primeira compilação ou instalação."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Импортированный проект получает новый ID и не содержит сохранённых разрешений. В строгом режиме агент запросит разрешение перед первой сборкой или установкой."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dự án được nhập có ID mới và chưa có phê duyệt nào được lưu. Ở chế độ nghiêm ngặt, tác nhân sẽ xin phê duyệt trước lần xây dựng hoặc cài đặt đầu tiên."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "导入的项目会获得新的 ID，且没有任何已保存的批准。在严格模式下，智能体会在首次构建或安装前请求批准。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "匯入的專案會取得新的 ID，且沒有任何已儲存的核准。在嚴格模式下，代理程式會在首次建置或安裝前請求核准。"
+          }
+        }
+      }
+    },

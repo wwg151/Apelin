@@ -1,0 +1,18 @@
+    "These files will no longer be available to share or publish. You will need to build them again. Installed packages, repository copies, logs and debug symbols are kept." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "These files will no longer be available to share or publish. You will need to build them again. Installed packages, repository copies, logs and debug symbols are kept." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "لن تتوفر هذه الملفات للمشاركة أو النشر. ستحتاج إلى بنائها مجددًا. تُحفظ الحزم المثبتة ونسخ المستودع والسجلات ورموز التصحيح." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Diese Dateien müssen neu gebaut werden, bevor sie geteilt oder veröffentlicht werden können. Installierte Pakete, Repository-Kopien, Protokolle und Debugsymbole bleiben erhalten." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Estos archivos ya no estarán disponibles para compartir o publicar. Tendrás que compilarlos de nuevo. Se conservan los paquetes instalados, las copias del repositorio, los registros y los símbolos de depuración." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ces fichiers ne pourront plus être partagés ni publiés. Vous devrez les reconstruire. Les paquets installés, les copies du dépôt, les journaux et les symboles de débogage sont conservés." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Questi file non saranno più disponibili per la condivisione o la pubblicazione. Dovrai ricompilarli. I pacchetti installati, le copie nel repository, i log e i simboli di debug vengono conservati." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "これらのファイルは共有・公開できなくなり、再ビルドが必要になります。インストール済みのパッケージ、リポジトリのコピー、ログ、デバッグシンボルは保持されます。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "이 파일은 더 이상 공유하거나 게시할 수 없으며 다시 빌드해야 합니다. 설치된 패키지, 저장소 사본, 로그 및 디버그 심볼은 유지됩니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Estes arquivos não poderão mais ser compartilhados ou publicados. Será necessário compilá-los novamente. Os pacotes instalados, as cópias no repositório, os logs e os símbolos de depuração serão mantidos." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Эти файлы больше нельзя будет отправить или опубликовать. Их потребуется собрать заново. Установленные пакеты, копии в репозитории, журналы и отладочные символы сохранятся." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Các tệp này sẽ không còn để chia sẻ hoặc phát hành. Bạn cần biên dịch lại. Các gói đã cài, bản sao trong kho, nhật ký và ký hiệu gỡ lỗi vẫn được giữ." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "移除后无法再分享或发布这些文件，需要重新构建。已安装的软件包、源仓库副本、日志和调试符号会保留。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "移除後無法再分享或發佈這些檔案，需要重新建置。已安裝的套件、來源儲存庫副本、日誌和偵錯符號會保留。" } }
+      }
+    },

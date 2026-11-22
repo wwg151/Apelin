@@ -1,0 +1,76 @@
+    "Agent sessions that use it stop working until you sign in again." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ستتوقف جلسات الوكيل التي تستخدمه عن العمل حتى تسجّل الدخول مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agent-Sitzungen, die ihn verwenden, funktionieren erst wieder, wenn du dich erneut anmeldest."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las sesiones del agente que lo usan dejarán de funcionar hasta que vuelvas a iniciar sesión."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les sessions d’agent qui l’utilisent cessent de fonctionner jusqu’à ce que vous vous reconnectiez."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le sessioni dell’agente che lo usano smettono di funzionare finché non accedi di nuovo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "これを使用しているエージェントのセッションは、もう一度サインインするまで動作しなくなります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 계정을 사용하는 에이전트 세션은 다시 로그인할 때까지 작동하지 않습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "As sessões do agente que o usam deixarão de funcionar até você iniciar sessão novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сеансы агента, которые его используют, перестанут работать, пока вы не войдёте снова."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các phiên tác nhân dùng nó sẽ ngừng hoạt động cho đến khi bạn đăng nhập lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在你重新登录之前，使用它的聊天将无法继续。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在你重新登入之前，使用它的聊天將無法繼續。"
+          }
+        }
+      }
+    },

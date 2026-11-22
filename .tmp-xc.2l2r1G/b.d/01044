@@ -1,0 +1,76 @@
+    "To test the passcode before saving, Apelin locks the screen and tries this passcode only once to unlock it. A wrong passcode counts as one failed passcode attempt on this device." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لاختبار رمز الدخول قبل حفظه، يقفل Apelin الشاشة ويجرب رمز الدخول هذا مرة واحدة فقط لفتح قفلها. يُحتسب رمز الدخول الخاطئ كمحاولة فاشلة واحدة لإدخال رمز الدخول على هذا الجهاز."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um den Code vor dem Sichern zu testen, sperrt Apelin das Display und probiert diesen Code nur einmal zum Entsperren aus. Ein falscher Code zählt auf diesem Gerät als ein fehlgeschlagener Code-Versuch."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para probar el código antes de guardarlo, Apelin bloquea la pantalla e intenta desbloquearla con este código una sola vez. Un código incorrecto cuenta como un intento de código fallido en este dispositivo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pour tester le code avant de l’enregistrer, Apelin verrouille l’écran et essaie ce code une seule fois pour le déverrouiller. Un code erroné compte comme une tentative de code échouée sur cet appareil."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Per verificare il codice prima di salvarlo, Apelin blocca lo schermo e prova questo codice una sola volta per sbloccarlo. Un codice errato conta come un tentativo di inserimento del codice fallito su questo dispositivo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存前にパスコードをテストするため、Apelinは画面をロックし、ロックを解除するためにこのパスコードを1回だけ試行します。パスコードが間違っていると、このデバイスでパスコードの入力失敗が1回記録されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장하기 전에 암호를 테스트하기 위해 Apelin이 화면을 잠그고 잠금 해제를 위해 이 암호를 한 번만 시도합니다. 잘못된 암호는 이 기기에서 암호 입력 실패 1회로 기록됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para testar o código antes de salvar, o Apelin bloqueia a tela e tenta usar este código apenas uma vez para desbloqueá-la. Um código incorreto conta como uma tentativa de código malsucedida neste dispositivo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чтобы проверить код-пароль перед сохранением, Apelin блокирует экран и только один раз пытается разблокировать его этим код-паролем. Неверный код-пароль засчитывается как одна неудачная попытка ввода код-пароля на этом устройстве."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Để kiểm tra mật mã trước khi lưu, Apelin sẽ khóa màn hình và chỉ thử mật mã này một lần để mở khóa. Mật mã sai sẽ được tính là một lần nhập mật mã không thành công trên thiết bị này."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为在存储前测试密码，Apelin 会锁定屏幕并仅尝试使用此密码解锁一次。密码错误会在此设备上计为一次密码尝试失败。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "為了在儲存前測試密碼，Apelin 會鎖定螢幕並僅嘗試使用此密碼解鎖一次。密碼錯誤會在此裝置上計為一次密碼嘗試失敗。"
+          }
+        }
+      }
+    },

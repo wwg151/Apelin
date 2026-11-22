@@ -1,0 +1,83 @@
+    "Git can no longer sign in to this host until you add a credential for it again." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لن يتمكن Git من تسجيل الدخول إلى هذا المضيف حتى تضيف بيانات اعتماد له مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Git kann sich bei diesem Host erst wieder anmelden, wenn du erneut Zugangsdaten dafür hinzufügst."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Git can no longer sign in to this host until you add a credential for it again."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Git no podrá iniciar sesión en este host hasta que vuelvas a añadir una credencial para él."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Git ne pourra plus se connecter à cet hôte tant que vous n’aurez pas ajouté de nouveaux identifiants pour celui-ci."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Git non potrà più accedere a questo host finché non aggiungi di nuovo le credenziali."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "認証情報をもう一度追加するまで、Gitはこのホストにサインインできなくなります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "자격 증명을 다시 추가할 때까지 Git이 이 호스트에 로그인할 수 없습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Git não poderá mais iniciar sessão neste host até você adicionar uma credencial para ele novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Git не сможет входить на этот хост, пока вы снова не добавите для него учётные данные."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Git sẽ không thể đăng nhập vào máy chủ này cho đến khi bạn thêm lại thông tin xác thực cho nó."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在重新添加凭据之前，Git 无法再登录这台主机。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在你重新加入憑證之前，Git 將無法登入此主機。"
+          }
+        }
+      }
+    },

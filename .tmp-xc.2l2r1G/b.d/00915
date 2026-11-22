@@ -1,0 +1,83 @@
+    "A public repository in the organization %@, published with GitHub Pages as a package source." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مستودع عام في المؤسسة %@، يُنشر عبر GitHub Pages كمصدر للحزم."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein öffentliches Repository in der Organisation %@, mit GitHub Pages als Paketquelle veröffentlicht."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A public repository in the organization %@, published with GitHub Pages as a package source."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un repositorio público en la organización %@, publicado con GitHub Pages como fuente de paquetes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un dépôt public dans l’organisation %@, publié avec GitHub Pages comme source de paquets."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un repository pubblico nell’organizzazione %@, pubblicato con GitHub Pages come sorgente di pacchetti."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "組織 %@ の公開リポジトリ。GitHub Pages でパッケージソースとして公開されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "조직 %@의 공개 저장소로, GitHub Pages를 통해 패키지 소스로 게시됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um repositório público na organização %@, publicado com o GitHub Pages como fonte de pacotes."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Публичный репозиторий в организации %@, опубликованный через GitHub Pages как источник пакетов."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một kho công khai trong tổ chức %@, được xuất bản bằng GitHub Pages làm nguồn gói."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "组织 %@ 中的公开仓库，通过 GitHub Pages 发布为软件源。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "組織 %@ 中的公開儲存庫，透過 GitHub Pages 發佈為軟體源。"
+          }
+        }
+      }
+    },

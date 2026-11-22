@@ -1,0 +1,76 @@
+    "Quit to apply the change, or keep using this version for now." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أنهِ التطبيق لاعتماد التغيير، أو واصل استخدام هذا الإصدار حاليًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beende die App, um die Änderung zu übernehmen, oder verwende diese Version vorerst weiter."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sal para aplicar el cambio o sigue usando esta versión por ahora."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quittez pour appliquer la modification, ou continuez à utiliser cette version pour l’instant."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esci per applicare la modifica, oppure continua a usare questa versione per ora."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終了して変更を適用するか、当面はこのバージョンを使い続けてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "종료하여 변경 사항을 적용하거나, 당분간 이 버전을 계속 사용하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encerre para aplicar a alteração ou continue usando esta versão por enquanto."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Завершите работу, чтобы применить изменение, или пока продолжайте пользоваться этой версией."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thoát để áp dụng thay đổi, hoặc tạm thời tiếp tục dùng phiên bản này."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出以应用更改，或暂时继续使用此版本。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "結束以套用變更，或暫時繼續使用此版本。"
+          }
+        }
+      }
+    },

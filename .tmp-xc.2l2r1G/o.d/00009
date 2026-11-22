@@ -1,0 +1,18 @@
+    "Select packages to withdraw. Local builds and installed packages are kept. The source updates after GitHub Actions finishes." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Select packages to withdraw. Local builds and installed packages are kept. The source updates after GitHub Actions finishes." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "حدد الحزم المراد سحبها. تُحفظ البنيات المحلية والحزم المثبتة. يُحدَّث المصدر بعد انتهاء GitHub Actions." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wähle die zurückzuziehenden Pakete. Lokale Builds und installierte Pakete bleiben erhalten. Die Quelle wird nach Abschluss von GitHub Actions aktualisiert." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Selecciona los paquetes que quieres retirar. Se conservan las compilaciones locales y los paquetes instalados. La fuente se actualiza cuando finaliza GitHub Actions." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Sélectionnez les paquets à retirer. Les compilations locales et les paquets installés sont conservés. La source est actualisée après la fin de GitHub Actions." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Seleziona i pacchetti da ritirare. Le build locali e i pacchetti installati vengono conservati. La sorgente si aggiorna al termine di GitHub Actions." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "取り下げるパッケージを選択してください。ローカルのビルドとインストール済みパッケージは保持されます。GitHub Actions の完了後にソースが更新されます。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "철회할 패키지를 선택하세요. 로컬 빌드와 설치된 패키지는 유지됩니다. GitHub Actions가 완료되면 소스가 업데이트됩니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Selecione os pacotes a retirar. As compilações locais e os pacotes instalados são mantidos. A fonte é atualizada após a conclusão do GitHub Actions." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Выберите пакеты для отзыва. Локальные сборки и установленные пакеты сохранятся. Источник обновится после завершения GitHub Actions." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Chọn các gói cần rút. Bản dựng cục bộ và các gói đã cài đặt được giữ lại. Nguồn cập nhật sau khi GitHub Actions hoàn tất." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "选择要撤回的软件包。本地构建和已安装的软件包会保留。GitHub Actions 完成后软件源才会更新。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "選取要撤回的套件。本機建置和已安裝的套件會保留。GitHub Actions 完成後軟體源才會更新。" } }
+      }
+    },

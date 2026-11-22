@@ -1,0 +1,76 @@
+    "Sign in to OpenRouter for a new key, or use a key you have." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجّل الدخول إلى OpenRouter للحصول على مفتاح جديد، أو استخدم مفتاحًا لديك."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Melde dich bei OpenRouter an, um einen neuen Schlüssel zu erhalten, oder verwende einen vorhandenen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicia sesión en OpenRouter para obtener una clave nueva o usa una que ya tengas."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connectez-vous à OpenRouter pour obtenir une nouvelle clé, ou utilisez une clé que vous avez déjà."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accedi a OpenRouter per ottenere una nuova chiave, oppure usa una chiave che hai già."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OpenRouterにサインインして新しいキーを取得するか、お持ちのキーを使用します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OpenRouter에 로그인하여 새 키를 받거나, 가지고 있는 키를 사용합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicie sessão no OpenRouter para obter uma nova chave ou use uma que você já tem."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Войдите в OpenRouter, чтобы получить новый ключ, или используйте имеющийся."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đăng nhập OpenRouter để lấy khóa mới, hoặc dùng khóa bạn đã có."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登录 OpenRouter 获取新密钥，或使用你已有的密钥。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登入 OpenRouter 取得新金鑰，或使用你已有的金鑰。"
+          }
+        }
+      }
+    },

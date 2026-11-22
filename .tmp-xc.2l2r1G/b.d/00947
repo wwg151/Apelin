@@ -1,0 +1,76 @@
+    "GitHub’s page asks you to authorize GitHub CLI: Apelin signs in through its app. The token is kept only in this device’s keychain and used for remotes on github.com." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ستطلب منك صفحة GitHub تفويض GitHub CLI: يسجّل Apelin الدخول عبر تطبيقه. يُحفظ الرمز المميز في سلسلة مفاتيح هذا الجهاز فقط ويُستخدم للمستودعات البعيدة على github.com."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die GitHub-Seite bittet dich, GitHub CLI zu autorisieren: Apelin meldet sich über diese App an. Das Token wird nur im Schlüsselbund dieses Geräts gespeichert und für Remotes auf github.com verwendet."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La página de GitHub te pedirá que autorices GitHub CLI: Apelin inicia sesión a través de esa app. El token se guarda solo en el llavero de este dispositivo y se usa para los remotos de github.com."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La page de GitHub vous demande d’autoriser GitHub CLI : Apelin se connecte via cette app. Le jeton est conservé uniquement dans le trousseau de cet appareil et sert aux dépôts distants sur github.com."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La pagina di GitHub ti chiede di autorizzare GitHub CLI: Apelin accede tramite quell’app. Il token è conservato solo nel portachiavi di questo dispositivo e usato per i remoti su github.com."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHubのページでGitHub CLIの承認を求められます。ApelinはこのアプリとしてGitHubにサインインします。トークンはこのデバイスのキーチェーンにのみ保存され、github.comのリモートに使われます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub 페이지에서 GitHub CLI 승인을 요청합니다. Apelin은 그 앱을 통해 로그인합니다. 토큰은 이 기기의 키체인에만 보관되며 github.com의 원격 저장소에 사용됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A página do GitHub pede que você autorize o GitHub CLI: o Apelin entra por meio desse app. O token fica apenas no chaveiro deste dispositivo e é usado para remotos em github.com."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Страница GitHub попросит авторизовать GitHub CLI: Apelin входит через это приложение. Токен хранится только в связке ключей этого устройства и используется для удалённых репозиториев на github.com."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trang GitHub sẽ yêu cầu bạn cấp quyền cho GitHub CLI: Apelin đăng nhập thông qua ứng dụng đó. Mã thông báo chỉ được lưu trong chuỗi khóa của thiết bị này và dùng cho các kho từ xa trên github.com."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub 页面会请你授权 GitHub CLI：Apelin 通过这个 App 登录。令牌只保存在这台设备的钥匙串中，用于 github.com 上的远端仓库。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub 頁面會請你授權 GitHub CLI：Apelin 透過這個 App 登入。權杖只保存在這台裝置的鑰匙圈中，用於 github.com 上的遠端儲存庫。"
+          }
+        }
+      }
+    },

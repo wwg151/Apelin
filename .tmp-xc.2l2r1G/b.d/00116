@@ -1,0 +1,83 @@
+    "Enter an HTTPS address, such as https://github.com/owner/repository, with no username or token in it. Save a token in Settings ▸ Git instead." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أدخل عنوان HTTPS، مثل https://github.com/owner/repository، دون اسم مستخدم أو رمز مميز. واحفظ الرمز المميز في «الإعدادات» ▸ «Git» بدلًا من ذلك."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gib eine HTTPS-Adresse ein, z. B. https://github.com/owner/repository, ohne Benutzernamen oder Token. Sichere ein Token stattdessen unter Einstellungen ▸ Git."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter an HTTPS address, such as https://github.com/owner/repository, with no username or token in it. Save a token in Settings ▸ Git instead."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce una dirección HTTPS, como https://github.com/owner/repository, sin nombre de usuario ni token. Guarda el token en Ajustes ▸ Git."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saisissez une adresse HTTPS, par exemple https://github.com/owner/repository, sans nom d’utilisateur ni jeton. Enregistrez plutôt un jeton dans Réglages ▸ Git."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inserisci un indirizzo HTTPS, ad esempio https://github.com/owner/repository, senza nome utente né token. Salva invece un token in Impostazioni ▸ Git."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://github.com/owner/repository のようなHTTPSアドレスを、ユーザ名やトークンを含めずに入力してください。トークンは「設定 ▸ Git」に保存してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://github.com/owner/repository와 같은 HTTPS 주소를 사용자 이름이나 토큰 없이 입력하세요. 토큰은 ‘설정 ▸ Git’에 저장하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Digite um endereço HTTPS, como https://github.com/owner/repository, sem nome de usuário nem token. Salve o token em Ajustes ▸ Git."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите адрес HTTPS, например https://github.com/owner/repository, без имени пользователя и токена. Токен сохраните в разделе «Настройки» ▸ «Git»."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhập địa chỉ HTTPS, ví dụ https://github.com/owner/repository, không chứa tên người dùng hay token. Hãy lưu token trong Cài đặt ▸ Git."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请输入 HTTPS 地址，例如 https://github.com/owner/repository，地址中不要带用户名或令牌。令牌请保存在“设置 ▸ Git”中。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請輸入 HTTPS 位址，例如 https://github.com/owner/repository，位址中不要包含使用者名稱或權杖。權杖請儲存在「設定 ▸ Git」中。"
+          }
+        }
+      }
+    },

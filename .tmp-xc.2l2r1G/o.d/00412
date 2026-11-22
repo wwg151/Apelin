@@ -1,0 +1,83 @@
+    "The model provider did not answer in time. Send your message again." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم يستجب مزوّد النماذج في الوقت المناسب. أرسل رسالتك مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Modellanbieter hat nicht rechtzeitig geantwortet. Sende deine Nachricht erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The model provider did not answer in time. Send your message again."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El proveedor de modelos no respondió a tiempo. Vuelve a enviar el mensaje."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le fournisseur de modèles n’a pas répondu à temps. Renvoyez votre message."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il fornitore di modelli non ha risposto in tempo. Invia di nuovo il messaggio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "モデルプロバイダが時間内に応答しませんでした。もう一度メッセージを送信してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모델 제공업체가 제시간에 응답하지 않았습니다. 메시지를 다시 보내세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O provedor de modelos não respondeu a tempo. Envie a mensagem novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поставщик моделей не ответил вовремя. Отправьте сообщение ещё раз."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhà cung cấp mô hình không phản hồi kịp thời. Hãy gửi lại tin nhắn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "模型服务商未及时响应。请重新发送消息。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "模型供應商未及時回應。請重新傳送訊息。"
+          }
+        }
+      }
+    },

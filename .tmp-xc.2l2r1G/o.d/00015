@@ -1,0 +1,18 @@
+    "Remove (%lld)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Remove (%lld)" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إزالة (%lld)" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Entfernen (%lld)" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Eliminar (%lld)" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Supprimer (%lld)" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Rimuovi (%lld)" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "削除（%lld）" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "제거 (%lld)" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Remover (%lld)" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалить (%lld)" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Xóa (%lld)" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "移除（%lld）" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "移除（%lld）" } }
+      }
+    },

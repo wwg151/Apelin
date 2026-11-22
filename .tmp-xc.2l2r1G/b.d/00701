@@ -1,0 +1,76 @@
+    "Sign in to bigmodel.cn to get an API key for your GLM Coding Plan." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجّل الدخول إلى bigmodel.cn للحصول على مفتاح API لخطة GLM Coding Plan."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Melde dich bei bigmodel.cn an, um einen API-Schlüssel für deinen GLM Coding Plan zu erhalten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicia sesión en bigmodel.cn para obtener una clave de API para tu GLM Coding Plan."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connectez-vous à bigmodel.cn pour obtenir une clé API pour votre GLM Coding Plan."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accedi a bigmodel.cn per ottenere una chiave API per il tuo GLM Coding Plan."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "bigmodel.cnにサインインして、GLM Coding PlanのAPIキーを取得します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "bigmodel.cn에 로그인하여 GLM Coding Plan용 API 키를 받습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicie sessão no bigmodel.cn para obter uma chave de API para seu GLM Coding Plan."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Войдите на bigmodel.cn, чтобы получить ключ API для тарифа GLM Coding Plan."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đăng nhập bigmodel.cn để lấy khóa API cho GLM Coding Plan của bạn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登录 bigmodel.cn，为你的 GLM Coding Plan 获取 API 密钥。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登入 bigmodel.cn，為你的 GLM Coding Plan 取得 API 金鑰。"
+          }
+        }
+      }
+    },

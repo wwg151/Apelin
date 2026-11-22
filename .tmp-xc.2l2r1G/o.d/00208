@@ -1,0 +1,83 @@
+    "Pick a template to start your first project. You can also create one later from the sidebar." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر قالبًا لبدء مشروعك الأول. يمكنك أيضًا إنشاء مشروع لاحقًا من الشريط الجانبي."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle eine Vorlage für dein erstes Projekt. Du kannst auch später eines über die Seitenleiste erstellen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick a template to start your first project. You can also create one later from the sidebar."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige una plantilla para empezar tu primer proyecto. También puedes crear uno más tarde desde la barra lateral."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez un modèle de projet pour commencer votre premier projet. Vous pouvez aussi en créer un plus tard depuis la barre latérale."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli un template per iniziare il tuo primo progetto. Puoi anche crearne uno più tardi dalla barra laterale."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "テンプレートを選んで、最初のプロジェクトを作成してください。あとでサイドバーから作成することもできます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "템플릿을 선택하여 첫 프로젝트를 시작하세요. 나중에 사이드바에서 생성할 수도 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolha um modelo de projeto para começar seu primeiro projeto. Você também pode criar um depois pela barra lateral."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите шаблон для первого проекта. Создать проект можно и позже — на боковой панели."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn một mẫu để bắt đầu dự án đầu tiên. Bạn cũng có thể tạo dự án sau từ thanh bên."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择一个模板来创建你的第一个项目。你也可以稍后从侧边栏创建。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選擇一個範本來建立你的第一個專案。你也可以稍後從側邊欄建立。"
+          }
+        }
+      }
+    },

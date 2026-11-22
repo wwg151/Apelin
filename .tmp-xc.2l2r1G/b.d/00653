@@ -1,0 +1,76 @@
+    "Projects using this toolchain cannot build until you download and set it up again." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لن تتمكن المشاريع التي تستخدم سلسلة الأدوات هذه من البناء حتى تنزّلها وتعدّها مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Projekte, die diese Toolchain verwenden, können erst wieder gebaut werden, wenn du sie erneut lädst und einrichtest."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los proyectos que usan esta cadena de herramientas no podrán compilarse hasta que la descargues y configures de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les projets qui utilisent cette chaîne d’outils ne pourront plus être compilés tant que vous ne l’aurez pas téléchargée et configurée à nouveau."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I progetti che usano questa toolchain non potranno essere compilati finché non la scarichi e configuri di nuovo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このツールチェーンを使用するプロジェクトは、もう一度ダウンロードしてセットアップするまでビルドできません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 툴체인을 사용하는 프로젝트는 다시 다운로드하고 설정할 때까지 빌드할 수 없습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Os projetos que usam esta cadeia de ferramentas não poderão ser compilados até você baixá-la e configurá-la novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проекты, использующие этот набор инструментов, не смогут собираться, пока вы снова не загрузите и не настроите его."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các dự án dùng chuỗi công cụ này sẽ không thể xây dựng cho đến khi bạn tải xuống và thiết lập lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新下载并配置此工具链之前，使用它的项目将无法构建。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新下載並設定此工具鏈之前，使用它的專案將無法建置。"
+          }
+        }
+      }
+    },

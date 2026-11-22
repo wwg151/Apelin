@@ -1,0 +1,76 @@
+    "Clones, pulls and pushes to github.com use this account. Its token is kept only in this device’s keychain and never synced." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تستخدم عمليات الاستنساخ والسحب والدفع إلى github.com هذا الحساب. يُحفظ رمزه المميز في سلسلة مفاتيح هذا الجهاز فقط ولا تتم مزامنته أبدًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klonen, Pullen und Pushen zu github.com verwenden dieses Konto. Sein Token wird nur im Schlüsselbund dieses Geräts gespeichert und nie synchronisiert."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las clonaciones, extracciones y envíos a github.com usan esta cuenta. Su token se guarda solo en el llavero de este dispositivo y nunca se sincroniza."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les clonages, tirages et envois vers github.com utilisent ce compte. Son jeton est conservé uniquement dans le trousseau de cet appareil et n’est jamais synchronisé."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clonazioni, download e invii su github.com usano questo account. Il suo token è conservato solo nel portachiavi di questo dispositivo e non viene mai sincronizzato."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "github.comへのクローン、プル、プッシュにはこのアカウントが使われます。トークンはこのデバイスのキーチェーンにのみ保存され、同期されることはありません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "github.com에 대한 복제, 풀, 푸시에 이 계정이 사용됩니다. 토큰은 이 기기의 키체인에만 보관되며 동기화되지 않습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clones, pulls e pushes para github.com usam esta conta. O token fica apenas no chaveiro deste dispositivo e nunca é sincronizado."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клонирование, получение и отправка на github.com используют этот аккаунт. Его токен хранится только в связке ключей этого устройства и никогда не синхронизируется."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Việc sao chép, kéo và đẩy lên github.com dùng tài khoản này. Mã thông báo của nó chỉ được lưu trong chuỗi khóa của thiết bị này và không bao giờ được đồng bộ."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "克隆、拉取和推送 github.com 时使用这个账户。它的令牌只保存在这台设备的钥匙串中，不会同步。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "複製、拉取和推送 github.com 時使用這個帳號。它的權杖只保存在這台裝置的鑰匙圈中，不會同步。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,76 @@
+    "Sign in to Kiro with AWS Builder ID, Google or GitHub." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجّل الدخول إلى Kiro باستخدام AWS Builder ID أو Google أو GitHub."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Melde dich bei Kiro mit AWS Builder ID, Google oder GitHub an."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicia sesión en Kiro con AWS Builder ID, Google o GitHub."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connectez-vous à Kiro avec AWS Builder ID, Google ou GitHub."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accedi a Kiro con AWS Builder ID, Google o GitHub."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AWS Builder ID、Google、GitHubのいずれかでKiroにサインインします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AWS Builder ID, Google 또는 GitHub로 Kiro에 로그인합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicie sessão no Kiro com AWS Builder ID, Google ou GitHub."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Войдите в Kiro с помощью AWS Builder ID, Google или GitHub."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đăng nhập Kiro bằng AWS Builder ID, Google hoặc GitHub."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用 AWS Builder ID、Google 或 GitHub 登录 Kiro。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用 AWS Builder ID、Google 或 GitHub 登入 Kiro。"
+          }
+        }
+      }
+    },

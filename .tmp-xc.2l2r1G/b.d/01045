@@ -1,0 +1,76 @@
+    "If you change this device’s passcode, remove the saved passcode here and save the new one." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إذا غيّرت رمز دخول هذا الجهاز، فأزل رمز الدخول المحفوظ هنا واحفظ الرمز الجديد."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn du den Code dieses Geräts änderst, entferne hier den gesicherten Code und sichere den neuen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si cambias el código de este dispositivo, elimina aquí el código guardado y guarda el nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si vous modifiez le code de cet appareil, supprimez le code enregistré ici et enregistrez le nouveau."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se cambi il codice di questo dispositivo, rimuovi quello salvato qui e salva quello nuovo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このデバイスのパスコードを変更した場合は、ここで保存済みのパスコードを削除して新しいパスコードを保存してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 기기의 암호를 변경한 경우 여기에서 저장된 암호를 제거하고 새 암호를 저장하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se você alterar o código deste dispositivo, remova o código salvo aqui e salve o novo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если вы измените код-пароль этого устройства, удалите сохраненный код-пароль здесь и сохраните новый."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nếu bạn thay đổi mật mã của thiết bị này, hãy xóa mật mã đã lưu tại đây và lưu mật mã mới."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果你更改了此设备的密码，请在此处移除已存储的密码并存储新密码。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果你更改了此裝置的密碼，請在此處移除已儲存的密碼並儲存新密碼。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,83 @@
+    "No compatible pair is available from the current catalogs. You can import build tools in Settings." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يتوفر زوج متوافق في الكتالوجات الحالية. يمكنك استيراد أدوات البناء في «الإعدادات»."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In den aktuellen Katalogen ist kein kompatibles Paar verfügbar. Du kannst Build-Tools in den Einstellungen importieren."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No compatible pair is available from the current catalogs. You can import build tools in Settings."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los catálogos actuales no ofrecen ninguna combinación compatible. Puedes importar herramientas de compilación en Ajustes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune combinaison compatible n’est disponible dans les catalogues actuels. Vous pouvez importer des outils de compilation dans Réglages."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessuna combinazione compatibile disponibile nei cataloghi attuali. Puoi importare strumenti di compilazione in Impostazioni."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在のカタログには互換性のある組み合わせがありません。ビルドツールは「設定」でインポートできます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 카탈로그에는 호환되는 조합이 없습니다. ‘설정’에서 빌드 도구를 가져올 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Os catálogos atuais não oferecem nenhuma combinação compatível. Você pode importar ferramentas de compilação em Ajustes."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В текущих каталогах нет совместимой пары. Инструменты сборки можно импортировать в «Настройках»."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các danh mục hiện tại không có cặp tương thích nào. Bạn có thể nhập công cụ xây dựng trong Cài đặt."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前目录没有兼容的组合。你可以在“设置”中导入构建工具。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目前的目錄中沒有相容的組合。你可以在「設定」中匯入建置工具。"
+          }
+        }
+      }
+    },

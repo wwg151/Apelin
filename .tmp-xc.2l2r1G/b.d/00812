@@ -1,0 +1,83 @@
+    "This workspace needs a build script before it can be distributed. Ask your agent to declare one that writes a package." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحتاج مساحة العمل هذه إلى سكربت للبناء قبل توزيعها. اطلب من الوكيل تعريف سكربت يكتب حزمة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieser Arbeitsbereich benötigt ein Build-Skript, bevor er verteilt werden kann. Bitte deinen Agenten, eines anzugeben, das ein Paket schreibt."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This workspace needs a build script before it can be distributed. Ask your agent to declare one that writes a package."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este espacio de trabajo necesita un script de compilación para poder distribuirse. Pide a tu agente que declare uno que genere un paquete."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cet espace de travail a besoin d’un script de compilation avant de pouvoir être distribué. Demandez à votre agent d’en déclarer un qui produit un paquet."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo spazio di lavoro ha bisogno di uno script di build prima di poter essere distribuito. Chiedi all’agente di dichiararne uno che produca un pacchetto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このワークスペースを配布するには、ビルドスクリプトが必要です。パッケージを書き出すスクリプトを宣言するようエージェントに依頼してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 작업 공간을 배포하려면 빌드 스크립트가 필요합니다. 패키지를 만드는 스크립트를 선언하도록 에이전트에게 요청하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este espaço de trabalho precisa de um script de compilação para ser distribuído. Peça ao seu agente para declarar um que gere um pacote."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чтобы распространять это рабочее пространство, нужен скрипт сборки. Попросите агента объявить скрипт, который создаёт пакет."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không gian làm việc này cần có tập lệnh bản dựng trước khi phân phối. Hãy nhờ tác nhân khai báo một tập lệnh tạo ra gói."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此工作区需要构建脚本才能分发。请让智能体声明一个会写出软件包的脚本。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此工作區需要建置指令碼才能分發。請讓代理程式宣告一個會寫出套件的指令碼。"
+          }
+        }
+      }
+    },

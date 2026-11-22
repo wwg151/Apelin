@@ -1,0 +1,76 @@
+    "A toolchain holds programs that run on this device. Import only one you exported yourself. It is installed, then checked by compiling and running a program for each language, and set up only if that passes." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحتوي سلسلة الأدوات على برامج تعمل على هذا الجهاز. لا تستورد إلا سلسلة صدّرتها بنفسك. يتم تثبيتها، ثم فحصها بتجميع برنامج وتشغيله لكل لغة، ولا يكتمل إعدادها إلا إذا نجح ذلك."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine Toolchain enthält Programme, die auf diesem Gerät laufen. Importiere nur eine, die du selbst exportiert hast. Sie wird installiert, dann durch Kompilieren und Ausführen eines Programms für jede Sprache geprüft und nur eingerichtet, wenn das gelingt."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una cadena de herramientas contiene programas que se ejecutan en este dispositivo. Importa solo una que hayas exportado tú. Se instala, se comprueba compilando y ejecutando un programa para cada lenguaje y solo se configura si supera la prueba."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une chaîne d’outils contient des programmes qui s’exécutent sur cet appareil. N’importez que celle que vous avez exportée vous-même. Elle est installée, puis vérifiée en compilant et en exécutant un programme pour chaque langage, et n’est configurée que si cette vérification réussit."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una toolchain contiene programmi che vengono eseguiti su questo dispositivo. Importa solo una toolchain che hai esportato tu. Viene installata, poi verificata compilando ed eseguendo un programma per ogni linguaggio, e configurata solo se la verifica riesce."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ツールチェーンには、このデバイス上で実行されるプログラムが含まれています。自分でエクスポートしたものだけをインポートしてください。インストール後、言語ごとにプログラムをコンパイルして実行することで確認され、合格した場合にのみセットアップされます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "툴체인에는 이 기기에서 실행되는 프로그램이 들어 있습니다. 직접 내보낸 툴체인만 가져오세요. 툴체인은 설치된 후 언어마다 프로그램을 컴파일하고 실행하여 확인되며, 이를 통과한 경우에만 설정됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uma cadeia de ferramentas contém programas que rodam neste dispositivo. Importe apenas uma que você mesmo exportou. Ela é instalada, verificada compilando e executando um programa para cada linguagem e só é configurada se passar."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Набор инструментов содержит программы, которые запускаются на этом устройстве. Импортируйте только тот, что экспортировали сами. Он устанавливается, затем проверяется компиляцией и запуском программы на каждом языке и настраивается, только если проверка пройдена."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuỗi công cụ chứa các chương trình chạy trên thiết bị này. Chỉ nhập chuỗi công cụ do chính bạn xuất. Chuỗi công cụ sẽ được cài đặt, kiểm tra bằng cách biên dịch và chạy một chương trình cho mỗi ngôn ngữ, và chỉ được thiết lập nếu vượt qua."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工具链包含会在这台设备上运行的程序。请只导入你自己导出的工具链。导入后会先安装，再为每种语言编译并运行一个程序来检查，通过后才会完成配置。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工具鏈包含會在此裝置上執行的程式。請只匯入你自己匯出的工具鏈。匯入後會先安裝，再為每種語言編譯並執行一個程式來檢查，通過後才會完成設定。"
+          }
+        }
+      }
+    },

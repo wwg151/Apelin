@@ -1,0 +1,83 @@
+    "Send up to 8 files, each no larger than 32 MB." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أرسل حتى 8 ملفات، بحيث لا يتجاوز حجم كل منها 32 ميغابايت."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sende bis zu 8 Dateien mit jeweils höchstens 32 MB."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send up to 8 files, each no larger than 32 MB."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Envía hasta 8 archivos de 32 MB como máximo cada uno."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Envoyez jusqu’à 8 fichiers, de 32 Mo maximum chacun."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invia fino a 8 file, ciascuno di massimo 32 MB."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一度に送信できるファイルは8個までで、それぞれ32 MB以下です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "파일은 최대 8개까지 보낼 수 있으며, 각 파일은 32 MB 이하여야 합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Envie até 8 arquivos, cada um com no máximo 32 MB."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Можно отправить до 8 файлов размером не более 32 МБ каждый."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gửi tối đa 8 tệp, mỗi tệp không quá 32 MB."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每次最多发送 8 个文件，每个文件不超过 32 MB。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一次最多可傳送 8 個檔案，每個檔案不超過 32 MB。"
+          }
+        }
+      }
+    },

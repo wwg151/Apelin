@@ -1,0 +1,76 @@
+    "With a saved passcode, the agent can wake the screen, unlock this device and go to the Home Screen during testing. The passcode stays in this device’s keychain, and the agent never sees it." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "باستخدام رمز الدخول المحفوظ، يمكن للوكيل تنبيه الشاشة، وفتح قفل هذا الجهاز، والانتقال إلى الشاشة الرئيسية أثناء الاختبار. يبقى رمز الدخول في سلسلة المفاتيح على هذا الجهاز، ولا يطّلع عليه الوكيل أبدًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit einem gesicherten Code kann der Agent beim Testen das Display aktivieren, dieses Gerät entsperren und zum Home-Bildschirm wechseln. Der Code bleibt im Schlüsselbund dieses Geräts und ist für den Agenten niemals sichtbar."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Con un código guardado, el agente puede activar la pantalla, desbloquear este dispositivo e ir a la pantalla de inicio durante las pruebas. El código permanece en el llavero de este dispositivo y el agente nunca lo ve."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avec un code enregistré, l’agent peut réactiver l’écran, déverrouiller cet appareil et accéder à l’écran d’accueil pendant les tests. Le code reste dans le trousseau de cet appareil et l’agent ne le voit jamais."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Con un codice salvato, l’agente può riattivare lo schermo, sbloccare questo dispositivo e andare alla schermata Home durante i test. Il codice rimane nel portachiavi di questo dispositivo e l’agente non lo vede mai."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パスコードを保存すると、エージェントはテスト中に画面を点灯してこのデバイスのロックを解除し、ホーム画面に移動できます。パスコードはこのデバイスのキーチェーンに保管され、エージェントが読み取ることはありません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "암호를 저장하면 에이전트가 테스트 중에 화면을 깨우고 이 기기를 잠금 해제한 뒤 홈 화면으로 이동할 수 있습니다. 암호는 이 기기의 키체인에 보관되며 에이전트에게 절대 노출되지 않습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Com um código salvo, o agente pode despertar a tela, desbloquear este dispositivo e ir para a Tela de Início durante os testes. O código permanece nas chaves deste dispositivo e o agente nunca o vê."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "С сохраненным код-паролем агент может включать экран, разблокировать это устройство и переходить на экран «Домой» во время тестирования. Код-пароль хранится в связке ключей этого устройства, и агент никогда его не видит."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Với mật mã đã lưu, tác nhân có thể đánh thức màn hình, mở khóa thiết bị này và đi tới Màn hình chính trong khi kiểm tra. Mật mã được lưu trong chuỗi khóa của thiết bị này và tác nhân không bao giờ nhìn thấy nó."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存储密码后，智能体可在测试期间唤醒屏幕、解锁此设备并前往主屏幕。密码保留在此设备的钥匙串中，智能体绝不会看到它。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "儲存密碼後，代理程式可在測試期間喚醒螢幕、解鎖此裝置並前往主畫面。密碼會保留在此裝置的鑰匙圈中，代理程式絕不會看到它。"
+          }
+        }
+      }
+    },

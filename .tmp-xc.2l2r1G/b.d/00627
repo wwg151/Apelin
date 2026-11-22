@@ -1,0 +1,76 @@
+    "No license information is available. Reinstall Apelin to restore it." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا تتوفر معلومات الترخيص. أعد تثبيت Apelin لاستعادتها."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Lizenzinformationen verfügbar. Installiere Apelin neu, um sie wiederherzustellen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay información de licencias disponible. Vuelve a instalar Apelin para restaurarla."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune information de licence n’est disponible. Réinstallez Apelin pour la rétablir."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessuna informazione sulla licenza disponibile. Reinstalla Apelin per ripristinarla."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ライセンス情報がありません。Apelinを再インストールすると復元されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "라이선스 정보가 없습니다. Apelin을 다시 설치하면 복구됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nenhuma informação de licença disponível. Reinstale o Apelin para restaurá-la."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сведения о лицензиях недоступны. Переустановите Apelin, чтобы восстановить их."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không có thông tin giấy phép. Hãy cài đặt lại Apelin để khôi phục."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有可用的许可信息。重新安装 Apelin 即可恢复。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有可用的授權資訊。重新安裝 Apelin 即可恢復。"
+          }
+        }
+      }
+    },

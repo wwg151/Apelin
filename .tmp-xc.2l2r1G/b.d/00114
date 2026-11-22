@@ -1,0 +1,83 @@
+    "Optional. Your agent imports the repository into the new project and works out how to build it." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختياري. يستورد الوكيل المستودع إلى المشروع الجديد ويكتشف طريقة بنائه."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Optional. Dein Agent importiert das Repository in das neue Projekt und findet heraus, wie es gebaut wird."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Optional. Your agent imports the repository into the new project and works out how to build it."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opcional. Tu agente importa el repositorio al nuevo proyecto y averigua cómo compilarlo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Facultatif. Votre agent importe le dépôt dans le nouveau projet et détermine comment le compiler."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Facoltativo. L’agente importa il repository nel nuovo progetto e capisce come compilarlo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "省略可。エージェントがリポジトリを新しいプロジェクトにインポートし、ビルド方法を調べます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택 사항. 에이전트가 저장소를 새 프로젝트로 가져오고 빌드 방법을 알아냅니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opcional. Seu agente importa o repositório para o novo projeto e descobre como compilá-lo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Необязательно. Агент импортирует репозиторий в новый проект и разберётся, как его собрать."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không bắt buộc. Tác nhân sẽ nhập kho lưu trữ vào dự án mới và tìm cách xây dựng nó."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可选。智能体会将此仓库导入新项目，并确定构建方式。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選填。代理程式會將此儲存庫匯入新專案，並確定建置方式。"
+          }
+        }
+      }
+    },

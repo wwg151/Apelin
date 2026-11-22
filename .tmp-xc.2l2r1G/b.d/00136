@@ -1,0 +1,83 @@
+    "A Settings pane with a switch and text field, package-specific preferences and change notifications." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جزء في «الإعدادات» يحتوي على مفتاح تبديل وحقل نص، مع تفضيلات خاصة بالحزمة وإشعارات عند التغيير."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Einstellungsbereich mit Schalter und Textfeld, paketeigenen Einstellungen und Benachrichtigungen bei Änderungen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A Settings pane with a switch and text field, package-specific preferences and change notifications."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un panel de Ajustes con un interruptor y un campo de texto, preferencias propias del paquete y notificaciones de cambios."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un panneau de Réglages avec un interrupteur et un champ de texte, des préférences propres au paquet et des notifications de modification."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un pannello di Impostazioni con un interruttore e un campo di testo, preferenze specifiche del pacchetto e notifiche di modifica."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スイッチとテキストフィールド、パッケージ固有の環境設定、変更通知を備えた設定パネル。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스위치와 텍스트 필드, 패키지별 환경설정, 변경 알림을 갖춘 설정 패널입니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um painel de Ajustes com um botão de ativação e um campo de texto, preferências próprias do pacote e notificações de alteração."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Панель в «Настройках» с переключателем и текстовым полем, собственными настройками пакета и уведомлениями об изменениях."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một khung Cài đặt có công tắc và ô văn bản, tùy chọn riêng của gói và thông báo khi thay đổi."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "带开关和文本框的设置面板，使用软件包专属的偏好设置，并在更改时发送通知。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帶有開關和文字欄位的設定面板，使用套件專屬的偏好設定，並在變更時發出通知。"
+          }
+        }
+      }
+    },

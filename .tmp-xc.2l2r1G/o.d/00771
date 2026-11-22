@@ -1,0 +1,76 @@
+    "This device can install the C, C++ and Objective-C components only." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمكن لهذا الجهاز تثبيت مكوّنات C وC++ وObjective-C فقط."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieses Gerät kann nur die Komponenten für C, C++ und Objective-C installieren."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este dispositivo solo puede instalar los componentes de C, C++ y Objective-C."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cet appareil ne peut installer que les composants C, C++ et Objective-C."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo dispositivo può installare solo i componenti C, C++ e Objective-C."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このデバイスにインストールできるのは、C、C++、Objective-Cのコンポーネントのみです。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 기기에는 C, C++, Objective-C 구성 요소만 설치할 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este dispositivo só pode instalar os componentes C, C++ e Objective-C."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На это устройство можно установить только компоненты C, C++ и Objective-C."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thiết bị này chỉ có thể cài đặt các thành phần C, C++ và Objective-C."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这台设备只能安装 C、C++ 和 Objective-C 组件。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此裝置只能安裝 C、C++ 和 Objective-C 元件。"
+          }
+        }
+      }
+    },

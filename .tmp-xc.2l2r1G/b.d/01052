@@ -1,0 +1,76 @@
+    "This passcode didn’t unlock the device and counted as one failed attempt. Check the passcode and try again." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم يفتح رمز الدخول هذا قفل الجهاز وقد احتُسب كمحاولة فاشلة واحدة. تحقق من رمز الدخول وحاول مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieser Code hat das Gerät nicht entsperrt und wurde als ein fehlgeschlagener Versuch gezählt. Überprüfe den Code und versuche es erneut."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este código no desbloqueó el dispositivo y contó como un intento fallido. Comprueba el código e inténtalo de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce code n’a pas déverrouillé l’appareil et a compté comme une tentative échouée. Vérifiez le code et réessayez."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo codice non ha sbloccato il dispositivo ed è stato contato come un tentativo fallito. Controlla il codice e riprova."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このパスコードではデバイスのロックを解除できなかったため、入力失敗が1回記録されました。パスコードを確認してもう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 암호로 기기를 잠금 해제하지 못했으며 입력 실패 1회로 기록되었습니다. 암호를 확인하고 다시 시도하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este código não desbloqueou o dispositivo e contou como uma tentativa malsucedida. Verifique o código e tente novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Этот код-пароль не разблокировал устройство и был засчитан как одна неудачная попытка. Проверьте код-пароль и повторите попытку."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mật mã này không mở khóa được thiết bị và đã được tính là một lần thử không thành công. Hãy kiểm tra lại mật mã và thử lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此密码未能解锁设备，并已计为一次尝试失败。请检查密码后重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此密碼無法解鎖裝置，且已計為一次嘗試失敗。請檢查密碼並再試一次。"
+          }
+        }
+      }
+    },

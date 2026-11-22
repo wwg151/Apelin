@@ -1,0 +1,83 @@
+    "A skill can hold up to 2,000 files and 32 MB." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمكن أن تحتوي المهارة على ما يصل إلى 2000 ملف و32 ميغابايت."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Skill kann bis zu 2.000 Dateien und 32 MB enthalten."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A skill can hold up to 2,000 files and 32 MB."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una habilidad puede contener hasta 2000 archivos y 32 MB."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une compétence peut contenir jusqu’à 2 000 fichiers et 32 Mo."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una competenza può contenere fino a 2.000 file e 32 MB."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スキルに含められるのは最大 2,000 ファイル、32 MB までです。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스킬에는 최대 2,000개 파일, 32MB까지 담을 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uma habilidade pode ter até 2.000 arquivos e 32 MB."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Навык может содержать до 2000 файлов и 32 МБ."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một kỹ năng có thể chứa tối đa 2.000 tệp và 32 MB."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一个技能最多包含 2,000 个文件、32 MB。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一個技能最多可包含 2,000 個檔案、32 MB。"
+          }
+        }
+      }
+    },

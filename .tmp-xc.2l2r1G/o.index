@@ -1,0 +1,949 @@
+00001	Jump to Latest
+00002	Withdraw from Repository…
+00003	Withdraw
+00004	Withdraw from Repository?
+00005	No Published Packages
+00006	Withdrawing Packages
+00007	Withdrawn
+00008	Unable to Withdraw Packages
+00009	Select packages to withdraw. Local builds and installed packages are kept. The source updates after GitHub Actions finishes.
+00010	These packages will be removed from the repository in one commit. Local builds and installed packages are kept. The source updates after GitHub Actions finishes.
+00011	Select All
+00012	More
+00013	Batch Remove…
+00014	Deselect All
+00015	Remove (%lld)
+00016	Remove %lld Local Packages?
+00017	Select the local packages to remove.
+00018	Removed %lld packages; %lld could not be removed.
+00019	These files will no longer be available to share or publish. You will need to build them again. Installed packages, repository copies, logs and debug symbols are kept.
+00020	Remove Package
+00021	Unable to Remove Package
+00022	Choose one or both targets, then tap “Build”. Selected targets build in order: roothide, then rootless.
+00023	Preparing %@
+00024	Compiling %@
+00025	Running Build Script for %@
+00026	Packaging %@
+00027	Verifying Package for %@
+00028	Ready to Distribute %@
+00029	Continue with %@
+00030	Retry %@
+00031	Build Log: %@
+00032	Share Package: %@
+00033	Raccoon
+00034	Sign in with your Raccoon account in the browser.
+00035	Trae CN
+00036	Trae
+00037	Sign in with your Trae CN account in the browser.
+00038	Sign in with your Trae account in the browser.
+00039	Apelin cannot build on roothide Bootstrap. Bootstrap runs only programs it signs itself, and it does not sign Apelin’s build tools or the programs they build.
+00040	OpenCode Go
+00041	OpenCode Zen
+00042	Kimi For Coding Global
+00043	Use an API key from the OpenCode Console with a Go subscription.
+00044	Use an API key from the OpenCode Console with pay-as-you-go billing.
+00045	Sign in with your kimi.ai coding plan.
+00046	%lld Messages Not Sent
+00047	%lld attachments could not be put back
+00048	Back in the input box
+00049	Verifying Package
+00050	Ready to Distribute
+00051	Built
+00052	Shared
+00053	Command
+00054	DeepSeek
+00055	Use an API key from the DeepSeek platform.
+00056	Enable Full Mode
+00057	Enable Full Mode?
+00058	Full
+00059	Not Approved
+00060	Root Approval Required
+00061	Runs as root, with full control of this device
+00062	Approve a command that runs as root on this device.
+00063	The agent can run commands as root without asking, with full control of this device. Each chat switches when you send its next message.
+00064	Let the agent run commands as root without asking.
+00065	The request is still waiting.
+00066	Logs
+00067	This Launch
+00068	Earlier Launches
+00069	Chats
+00070	Apelin keeps the logs of its last 100 chats.
+00071	No Logs
+00072	Unable to Delete Log
+00073	Filter by Level
+00074	Filter by Category
+00075	All Categories
+00076	No Categories
+00077	Errors Only
+00078	Share
+00079	Clear
+00080	Copy Message
+00081	Verbose
+00082	Info
+00083	Warning
+00084	Error
+00085	Critical
+00086	Report a Problem
+00087	Rename…
+00088	Rename Chat
+00089	Choose a name for this chat. Your agent will no longer rename it.
+00090	Chat Name
+00091	Unable to Open Folder
+00092	Needs a build description
+00093	This project needs a build description before it can be distributed. Ask your agent to add one.
+00094	The dropped item could not be read.
+00095	New
+00096	Create a chat
+00097	Send to a chat
+00098	List chats
+00099	Read a chat
+00100	Stop a chat
+00101	Send feedback
+00102	Read a feedback issue
+00103	Edit a feedback issue
+00104	Send a notification
+00105	From %@
+00106	From another chat
+00107	Read the Git settings
+00108	Set the commit author
+00109	Save a Git credential
+00110	Remove a Git credential
+00111	Create a GitHub repository
+00112	Create a GitHub issue
+00113	Check the repository
+00114	Read the changes
+00115	Stage changes
+00116	Unstage changes
+00117	Commit changes
+00118	Fetch from the remote
+00119	Pull from the remote
+00120	Push to the remote
+00121	Force-push to the remote
+00122	Import the repository
+00123	List the remotes
+00124	Set a remote
+00125	Remove a remote
+00126	Reset to the remote
+00127	Squash commits
+00128	Unable to Save Chats
+00129	Storage Almost Full
+00130	%@ Your chats keep working, and Apelin tries again with the next change.
+00131	Your chats keep working, but Apelin can’t save them on this device until you free up space.
+00132	Git
+00133	Save
+00134	Email
+00135	Author
+00136	Commits in your projects carry this name and email.
+00137	Saved
+00138	Unable to Save Author
+00139	Remove Credential for %@?
+00140	Git can no longer sign in to this host until you add a credential for it again.
+00141	Unable to Remove Credential
+00142	Removed
+00143	Git Settings Unavailable
+00144	https://github.com/owner/repository
+00145	Git Repository
+00146	Optional. Your agent imports the repository into the new project and works out how to build it.
+00147	Check the Repository Address
+00148	Enter an HTTPS address, such as https://github.com/owner/repository, with no username or token in it. Save a token in Settings ▸ Git instead.
+00149	Import the Git repository %@ into this workspace with git_clone, then work out how to build it and tell me what you find.
+00150	List project templates
+00151	List toolchains
+00152	List SDKs
+00153	Set up a toolchain
+00154	Import an SDK
+00155	Test the toolchain
+00156	Switch the toolchain or SDK
+00157	Create a project
+00158	Create %@
+00159	Waiting to Send
+00160	Creating Project…
+00161	UIKit App (Objective-C)
+00162	A single-screen UIKit app with scene support, saved-state cleanup and entitlements for running outside a container.
+00163	UIKit App (Swift)
+00164	A single-screen UIKit app in Swift. Requires an installed, verified Swift toolchain component.
+00165	Objective-C Tweak
+00166	A dylib injected into SpringBoard that hooks -[SpringBoard applicationDidFinishLaunching:] and logs when it loads.
+00167	Preference Bundle (Objective-C)
+00168	A Settings pane with a switch and text field, package-specific preferences and change notifications.
+00169	Command-Line Tool (C)
+00170	A C program with --version and --help that greets its argument and exits with sysexits codes.
+00171	Command-Line Tool (Objective-C)
+00172	A Foundation command-line tool with a greeting, --version, --help, standard sysexits exit codes and iOS version output.
+00173	Install
+00174	Install on This Device?
+00175	Skip Installation
+00176	Continue in Background
+00177	Before Distributing
+00178	These are suggestions. You can still build the package.
+00179	Checking…
+00180	Ready to distribute
+00181	Ask Agent to Prepare
+00182	The package uses a placeholder identifier
+00183	The app uses a placeholder bundle identifier
+00184	The app has no icon
+00185	A build of this version exists
+00186	Give it the name people will see in their package manager.
+00187	Describe what the package does.
+00188	Give the first release its own version.
+00189	Use a reverse-DNS identifier you own.
+00190	The Home Screen and package managers show a blank icon.
+00191	Publish or share that build as it is. Raise the version only to ship a change, so package managers offer it as an update.
+00192	Build Anyway?
+00193	Some details still need attention before other people install this package.
+00194	Release Build
+00195	Build Log
+00196	Retry
+00197	Executing tool…
+00198	Executing %lld tools…
+00199	1 token received
+00200	%@ tokens received
+00201	1 line added
+00202	%lld lines added
+00203	1 line removed
+00204	%lld lines removed
+00205	Result
+00206	Project Ready
+00207	Your new project “%@” is ready. Your agent will give it a better name later.
+00208	Pick a template to start your first project. You can also create one later from the sidebar.
+00209	Sign in to the account the agent uses to write, build and install your tweaks.
+00210	Temporary Chat
+00211	Unavailable Project
+00212	Memories
+00213	Add Memory
+00214	Edit Memory
+00215	Memory
+00216	Title
+00217	All Chats
+00218	The agent remembers useful preferences and project facts. You can review or correct them here.
+00219	No memories yet
+00220	Unable to Load Memories
+00221	Pull down to try again.
+00222	Memory Changed
+00223	A chat or another window changed these memories. Reopen the memory to review the latest version before editing.
+00224	Check This Memory
+00225	Memory Is Full
+00226	Shorten or delete an older memory before adding more.
+00227	Unable to Save Memory
+00228	Your changes weren’t saved. Try again.
+00229	A short title
+00230	Delete Conversation?
+00231	Delete Conversation…
+00232	Delete Memory
+00233	Used in: %@
+00234	Delete Memory?
+00235	This memory will no longer be used in future replies.
+00236	Checking Files
+00237	Checking File
+00238	%lld items checked
+00239	Build
+00240	Target
+00241	First Project
+00242	Create Project…
+00243	You can also create a project later from the sidebar.
+00244	No compatible versions are available. You can set up build tools later in Settings.
+00245	An installation is in progress. Check Settings for details.
+00246	Finding a compatible version…
+00247	Welcome to\nApelin
+00248	Build Tools
+00249	Recommended
+00250	Swift, Objective-C, C and C++
+00251	Objective-C, C and C++
+00252	You can add more providers later in Settings.
+00253	Loading Templates…
+00254	Allow notifications from Apelin. You can change permission in Settings at any time.
+00255	Open Onboarding
+00256	Preparing
+00257	Compiling
+00258	Packaging
+00259	Verifying
+00260	Export Package
+00261	Distribute Project
+00262	Completed
+00263	The package is ready to export.
+00264	Distribution stopped. You can try again.
+00265	This project is no longer available.
+00266	The package is no longer available. Build it again.
+00267	The package changed after it was built. Build it again before exporting.
+00268	Open in iGhostVT
+00269	Open in Fila
+00270	Distribute…
+00271	Distribute
+00272	Packages
+00273	The project folder is no longer available.
+00274	Unable to Open App
+00275	Install or update the required app with your preferred package manager, then try again.
+00276	Unable to Open Project
+00277	A compatible toolchain and iOS SDK, selected for this device. You can also install them later in Settings.
+00278	Add a Model Provider
+00279	Disclaimer
+00280	An environment task is already running. You can continue now and check its progress in Settings.
+00281	Build Apps and Tweaks
+00282	Build on your device, with an agent beside you.
+00283	ChatGPT
+00284	ChatGPT and Codex use the same ChatGPT account authorization.
+00285	Codex
+00286	Connected
+00287	Continue
+00288	Create
+00289	Create Project
+00290	Create Your First Project
+00291	Create a Project Later
+00292	Describe What You Want
+00293	Finding compatible versions…
+00294	Get Started
+00295	Install a toolchain and an iOS SDK before creating this project, or create a project later.
+00296	Next
+00297	No compatible pair is available from the current catalogs. You can import build tools in Settings.
+00298	Not Now
+00299	Notifications from Apelin will appear here.
+00300	Open Settings
+00301	Ready to download
+00302	Recommendations are unavailable. Try again, or set up your build tools later in Settings.
+00303	Review changes, test results, and approve actions that affect your device.
+00304	Agents can make mistakes. Review generated code and important changes before you run or install them.
+00305	Set up a compiler and SDK, then start from a project template.
+00306	Star Now
+00307	Starred on GitHub
+00308	Start with an app, a tweak, or a command-line tool.
+00309	Stay in Control
+00310	This provider is not available. You can add another provider in Settings.
+00311	Turn On Notifications
+00312	Work with an agent to write and understand your code.
+00313	Provider Unavailable
+00314	Notifications Unavailable
+00315	iOS SDK %@
+00316	Installing iOS SDK %@…
+00317	Installing Command Line Tools %@…
+00318	Created %@.
+00319	Translate
+00320	Look Up
+00321	Share…
+00322	Select All
+00323	Called 1 tool
+00324	Called %lld tools
+00325	Edit Configuration
+00326	Edit
+00327	Configuration Updated
+00328	Unable to Load Configuration
+00329	Strict: asks before commands and sensitive changes. Relaxed: runs these operations without asking, within the app’s permissions. Each chat uses this setting when you send its next message.
+00330	Thank You
+00331	The agent can run commands and make changes without asking, within the app’s permissions. Each chat switches when you send its next message.
+00332	Thought for 1 second
+00333	Thought for %lld seconds
+00334	Search chats
+00335	Delete Project?
+00336	“%@” and its messages will be deleted. This cannot be undone.
+00337	“%@” is still working. It will be stopped, then deleted with its messages. This cannot be undone.
+00338	This permanently deletes “%@” and its files and chats from this device.
+00339	Unable to Delete Project
+00340	Scroll to latest message
+00341	Review these images and project notes.
+00342	Keep the existing layout, update the title, and check the result on both screen sizes.
+00343	Project Notes
+00344	Start with an empty workspace. No SDK or toolchain is required.
+00345	Create UIKit apps with Objective-C or Swift.
+00346	Build tools that run in a terminal.
+00347	Customize apps and SpringBoard.
+00348	Add settings pages for your tweaks.
+00349	Trace
+00350	Thinking
+00351	Thoughts
+00352	View Thoughts
+00353	Templates
+00354	Empty
+00355	Workspace
+00356	An empty workspace. No SDK or toolchain is required.
+00357	Toolchains, SDKs and project templates available on this device.
+00358	Templates Unavailable
+00359	Projects Unavailable
+00360	Unable to Create Project
+00361	Unable to Load Chats
+00362	Unable to Send Message
+00363	Unable to Send Decision
+00364	Unable to Delete Chat
+00365	Send up to 8 files, each no larger than 32 MB.
+00366	Thought for 1 second and called 1 tool
+00367	Thought for 1 second and called %lld tools
+00368	Thought for %lld seconds and called 1 tool
+00369	Thought for %lld seconds and called %lld tools
+00370	Read a file
+00371	Read a webpage
+00372	Read %@
+00373	Write a file
+00374	Write %@
+00375	Edit a file
+00376	Edit %@
+00377	List files
+00378	Search files
+00379	Show a file
+00380	Show %@
+00381	Show %lld files
+00382	Run a command
+00383	Build the project
+00384	Install the package
+00385	Remove the package
+00386	List installed packages
+00387	Capture the screen
+00388	Inspect the screen
+00389	Interact with the screen
+00390	Read logs
+00391	Restart SpringBoard
+00392	Read Sources/TitleView.swift
+00393	Review changes in Sources/TitleView.swift
+00394	Approve
+00395	Image
+00396	Thinking…
+00397	Reconnecting…
+00398	Waiting for Network…
+00399	Something Went Wrong
+00400	No Internet Connection
+00401	Unable to Reach Model Provider
+00402	Request Timed Out
+00403	Sign-In Not Accepted
+00404	Usage Limit Reached
+00405	Too Many Requests
+00406	Model Provider Error
+00407	Chat Too Long
+00408	Did Not Stop in Time
+00409	Apelin ended this reply. Send a message to continue.
+00410	Connect to the internet, then send your message again.
+00411	Check your network or proxy, then send your message again.
+00412	The model provider did not answer in time. Send your message again.
+00413	Check this provider’s sign-in in Settings ▸ Model Providers.
+00414	Compact the context or start a new chat, then send your message again.
+00415	Wait a moment, then send your message again.
+00416	Message Not Sent
+00417	Approval Required
+00418	Allow Once
+00419	Deny
+00420	Allowed Once
+00421	Denied
+00422	Working
+00423	Permission Mode
+00424	Strict
+00425	Relaxed
+00426	Strict: asks before commands and sensitive changes. Relaxed: runs these operations without asking, within the app’s permissions. This setting applies to all chats.
+00427	Enable Relaxed Mode?
+00428	The model will be able to run commands and make changes without asking for confirmation, within the app’s permissions. This applies to all chats.
+00429	Enable Relaxed Mode
+00430	Enter a model ID without spaces or line breaks.
+00431	Invalid Model ID
+00432	Unable to Verify Models
+00433	Model verification did not finish.
+00434	Model verification failed.
+00435	Waiting for a response from each selected model…
+00436	Enabling Models
+00437	Verifying Models
+00438	Unable to Fetch Models
+00439	Model ID
+00440	Enter the model ID accepted by this provider.
+00441	Add Custom Model
+00442	Save Without Verification
+00443	Fetching Models
+00444	Fetch Models
+00445	Added %lld attachments
+00446	Unable to Preview Attachment
+00447	Unable to Capture Webpage
+00448	Fetching Content
+00449	Enter a web address, such as example.com.
+00450	Invalid Web Address
+00451	Capture
+00452	Web Address
+00453	Enter the webpage address to attach its text.
+00454	Capture Web Content
+00455	Pasted Text
+00456	Choose an image smaller than 32 MB.
+00457	Unable to Import Image
+00458	Unable to Import File
+00459	This device does not have an available camera.
+00460	Camera Unavailable
+00461	Opens the attachment preview.
+00462	Remove Attachment
+00463	Web
+00464	File
+00465	Photo
+00466	Stop and Delete
+00467	Stop Generating
+00468	Reasoning Effort
+00469	Off
+00470	Minimal
+00471	Low
+00472	Maybe Later
+00473	Medium
+00474	High
+00475	Extra High
+00476	Maximum
+00477	Choose the models to show in the chat model picker. You can change this later in Model Providers.
+00478	Search Models
+00479	Enable Models
+00480	Models Unavailable
+00481	Models
+00482	Select Model
+00483	Waiting for a response from the model…
+00484	Verifying Provider
+00485	We will locate the title, make the change, and review the build output before installing it. You can type here to preview how your own messages appear.
+00486	I want to change the title on the home screen.
+00487	Tell me which app you want to change and what you want it to do. We can then choose a template and review the files together.
+00488	Can you help me build a tweak?
+00489	This is a sample conversation. These messages do not come from a model.
+00490	Message Preview
+00491	Use Return to Insert New Lines
+00492	Use Return to Send
+00493	Paste Text
+00494	%@\n\nDownload: %@. A compatible iOS SDK is downloaded automatically when needed.
+00495	%@ (Optional)
+00496	%@ - %lld
+00497	%@ Options
+00498	%@ files, %@
+00499	%@ of %@
+00500	%@ s
+00501	%@/s
+00502	%@…
+00503	%lld of %lld Passed
+00504	A toolchain holds programs that run on this device. Import only one you exported yourself. It is installed, then checked by compiling and running a program for each language, and set up only if that passes.
+00505	A12 or later
+00506	A13 or later
+00507	API Key
+00508	API Keys
+00509	About
+00510	Adapting for iOS
+00511	Add
+00512	Add SDK
+00513	Add Toolchain
+00514	Adding Project
+00515	Agent
+00516	Agent sessions that use it stop working until you sign in again.
+00517	All Projects…
+00518	Already on This Device
+00519	An item with the same name or identifier already exists.
+00520	Anthropic API
+00521	Antigravity
+00522	Apelin
+00523	Apelin Updated or Removed
+00524	Apelin and its background service are different versions. Reinstall Apelin with your preferred package manager, then try again.
+00525	Apelin does not have permission to complete this action.
+00526	Apelin opens toolchains (.apetc), SDKs (.apesdk) and projects (.apeproj).
+00527	App
+00528	Apple Product ID
+00529	Architectures
+00530	Ask anything
+00531	Available
+00532	Base URL
+00533	BigModel Coding Plan
+00534	Bound SDK
+00535	Building Package
+00536	C, C++, Objective-C
+00537	CPU Features
+00538	Camera
+00539	Cancel
+00540	Cancelled
+00541	ChatGPT Codex
+00542	Check the Details
+00543	Check the information you entered and try again.
+00544	Checked after installation by compiling, linking, signing and running a program for each language and architecture.
+00545	Checking SDK
+00546	Choose a display name. The project folder and build settings stay the same.
+00547	Choose a file smaller than 32 MB.
+00548	Choose a regular file smaller than 32 MB.
+00549	Clang modules are unavailable with this release on this device.
+00550	Claude Code
+00551	Close
+00552	Code
+00553	Code Copied
+00554	Sign-In Link
+00555	Link Copied
+00556	Copies the link.
+00557	If the page does not work on this device, open this link in a browser on another device and enter the code there.
+00558	If the page does not work on this device, open this link in a browser on another device and sign in there.
+00559	If the page does not work on this device, open this link in a browser on another device and sign in there. That browser ends on a page it cannot open. Copy that page’s address and paste it here.
+00560	Paste Redirect Address
+00561	Nothing to Paste
+00562	Copy the address of the page the other browser ended on, then try again.
+00563	Address Not Accepted
+00564	This is not the address the other browser ended on after sign-in. Copy the full address from its address bar and paste it again.
+00565	Collapse
+00566	Collapsed
+00567	Collecting Files
+00568	Command Line Tools
+00569	Command Line Tools %@
+00570	Command-Line Tool
+00571	Confirm
+00572	Connecting…
+00573	Contents
+00574	Copied
+00575	Copies the code.
+00576	Copy
+00577	Cursor
+00578	Default
+00579	Delete
+00580	Devin
+00581	Dismiss
+00582	Do You Like Apelin?
+00583	Done
+00584	Downloading
+00585	Enter an HTTPS link to a zip, tar.xz or tar.zst archive containing one iPhoneOS SDK.
+00586	Environment
+00587	Expand
+00588	Expanded
+00589	Export
+00590	Export the Project?
+00591	Export the SDK?
+00592	Export the Toolchain?
+00593	Exported By
+00594	Exported From
+00595	Exported On
+00596	Exporting Project
+00597	Exporting Project…
+00598	Exporting SDK
+00599	Exporting SDK…
+00600	Exporting Toolchain
+00601	Exporting Toolchain…
+00602	Export…
+00603	Extracting
+00604	Failed
+00605	File Size
+00606	Files
+00607	From Apple…
+00608	From Files…
+00609	From File…
+00610	From Inbox
+00611	From Link…
+00612	Full Log
+00613	General Chat
+00614	Getting SDK
+00615	Git History
+00616	GitHub Copilot
+00617	Google AI Studio
+00618	Grok
+00619	Hide Sidebar
+00620	Identifier
+00621	Import
+00622	Import from Link
+00623	Imported from a file
+00624	Imported from inbox: %@
+00625	Importing Project
+00626	Importing SDK
+00627	Importing Project…
+00628	Importing SDK…
+00629	Importing Toolchain
+00630	Importing Toolchain…
+00631	In Progress
+00632	In Progress…
+00633	In progress. Tap to view.
+00634	Included
+00635	Includes project files and Git history, if available. Files ignored by Git are excluded.
+00636	Insert New Line
+00637	Install Fila
+00638	Installed
+00639	Installing
+00640	Interrupted
+00641	Kimi For Coding
+00642	Kiro
+00643	Languages
+00644	Later
+00645	Loading…
+00646	Minimum iOS Version
+00647	Model
+00648	Model Providers
+00649	Model Providers Unavailable
+00650	More
+00651	More Projects
+00652	Name
+00653	Name Already Used
+00654	Name on This Device
+00655	New Chat
+00656	New Project
+00657	Newest Supported SDK
+00658	No
+00659	No Results
+00660	No SDKs available. Import one from a link or a file in the menu above.
+00661	No license information is available. Reinstall Apelin to restore it.
+00662	No projects yet. Use New Project to create one.
+00663	None
+00664	Not Supported
+00665	Not an Apelin File
+00666	Notes
+00667	Notifications
+00668	Open Irisin
+00669	Open Source Licenses
+00670	Open files and folders with Fila. Install it from the OwnGoal Studio repository in Irisin.
+00671	OpenAI API
+00672	OpenAI-Compatible API
+00673	OpenRouter
+00674	Other Ways to Import
+00675	Passed
+00676	Paste as Attachment
+00677	Pin
+00678	Pinned
+00679	Please star us on GitHub. It helps us go further.
+00680	Preference Bundle
+00681	Preparing…
+00682	Progress so far is discarded. Starting again begins from scratch.
+00683	Project
+00684	Project Imported
+00685	Project Name
+00686	Projects
+00687	Projects using this toolchain cannot build until you download and set it up again.
+00688	Qoder
+00689	Qoder CN
+00690	Quit
+00691	Quit to apply the change, or keep using this version for now.
+00692	Reading File
+00693	Redirect Address
+00694	Registering
+00695	Remote
+00696	Remove
+00697	Remove the SDK?
+00698	Remove the Toolchain?
+00699	Removing
+00700	Removing SDK
+00701	Removing Toolchain
+00702	Rename
+00703	Rename Project
+00704	Rename Project…
+00705	Requirements
+00706	Run Again
+00707	Running Self-Tests
+00708	SDK
+00709	SDK Import
+00710	SDK Imported
+00711	SDKs
+00712	Search
+00713	Self-Tests
+00714	Self-Tests Done
+00715	Send
+00716	Set Up
+00717	Set Up This Toolchain?
+00718	Setting Up Toolchain
+00719	Settings
+00720	Share Log
+00721	Share Package
+00722	Show Sidebar
+00723	Show in Fila
+00724	Sign In
+00725	Sign In Again
+00726	Sign In with an Account
+00727	Sign Out
+00728	Sign Out of %@?
+00729	Sign in to Kiro with AWS Builder ID, Google or GitHub.
+00730	Sign in with the Google account you use for Antigravity.
+00731	Sign in to OpenRouter for a new key, or use a key you have.
+00732	Sign in to WorkBuddy AI with your CodeBuddy international plan.
+00733	Sign in to WorkBuddy with your CodeBuddy China plan.
+00734	Sign in to Z.ai to get an API key for your GLM Coding Plan.
+00735	Sign in to bigmodel.cn to get an API key for your GLM Coding Plan.
+00736	Sign in with the GitHub account that has your Copilot subscription.
+00737	Sign in with your ChatGPT Plus or Pro plan.
+00738	Sign in with your Claude Pro or Max plan.
+00739	Sign in with your Cursor subscription.
+00740	Sign in with your Devin or Windsurf subscription.
+00741	Sign in with your Kimi coding plan.
+00742	Sign in with your SuperGrok or X Premium subscription.
+00743	Sign in with your qoder.cn subscription.
+00744	Sign in with your qoder.com subscription.
+00745	Sign-In Failed
+00746	Sign-in did not finish
+00747	Signed In
+00748	Size
+00749	Skipped
+00750	Something went wrong. Try again.
+00751	Stop
+00752	Stop This Task?
+00753	Stopped
+00754	Swift
+00755	Swift %@
+00756	Swift Interfaces
+00757	Swift SDK: iPhoneOS %@.x
+00758	Swift Version
+00759	Swift has not been verified for this release.
+00760	Swift is included on this device.
+00761	Template
+00762	The imported project has a new ID and no saved approvals. In Strict mode, the agent asks for approval before its first build or installation.
+00763	The item could not be found. It may have been removed.
+00764	The operation was cancelled.
+00765	The request timed out. Try again.
+00766	The selected file could not be read.
+00767	The task was cancelled.
+00768	The task was interrupted. Try again.
+00769	The webpage did not return readable content.
+00770	This deletes the SDK files. SDKs used by a project cannot be removed.
+00771	This device can install the C, C++ and Objective-C components only.
+00772	This feature is not available in this version.
+00773	This file could not be read. Choose the file again.
+00774	This item is not a file. Choose a toolchain, SDK or project file.
+00775	Toolchain
+00776	Toolchain Imported
+00777	Toolchain Ready
+00778	Toolchain Task
+00779	Toolchains
+00780	Try Again
+00781	Tweak
+00782	Unable to Export
+00783	Unable to Import
+00784	Unable to Open
+00785	Unable to Remove
+00786	Unable to Rename Project
+00787	Unable to Sign Out
+00788	Unable to Start Import
+00789	Unable to Start Self-Tests
+00790	Unable to Start Setup
+00791	Unable to Stop
+00792	Unable to read the file: %@
+00793	Unavailable
+00794	Unknown Version
+00795	Unpin
+00796	Unread
+00797	Use API Key
+00798	Use Sign-In Code
+00799	Use Web Sign-In
+00800	Use a Gemini API key from Google AI Studio.
+00801	Use an API key from the Anthropic Console.
+00802	Use an API key from the OpenAI platform.
+00803	Use an endpoint that supports the OpenAI Chat Completions API.
+00804	Version
+00805	View Full Log
+00806	Waiting
+00807	Warnings
+00808	WorkBuddy
+00809	WorkBuddy AI
+00810	Writing File
+00811	Yes
+00812	Z.ai Coding Plan
+00813	https://
+00814	iOS %@
+00815	iOS %@, Installed
+00816	iOS SDK
+00817	iPhoneOS SDK
+00818	iPhoneOS SDK: up to %@
+00819	Conversation Not Found
+00820	Project Not Found
+00821	Link Not Recognized
+00822	Speed
+00823	Standard
+00824	Fast
+00825	Ultrafast
+00826	Skills
+00827	Import Skill
+00828	Built-in
+00829	Your Skills
+00830	Problems
+00831	Import a folder that holds a SKILL.md, or a Markdown file. Every chat is offered these skills, and the agent reads one when a task matches its description.
+00832	Check This Skill
+00833	Skills Folder
+00834	No skills yet
+00835	Remove %@?
+00836	Its files are removed from the skills folder, and chats are no longer offered it.
+00837	Unable to Remove Skill
+00838	Imported
+00839	Replace %@?
+00840	The skills folder already has a skill here. Replacing it removes its files.
+00841	Replace
+00842	Unable to Import Skill
+00843	A skill can hold up to 2,000 files and 32 MB.
+00844	Choose a folder that holds a SKILL.md, or a Markdown file.
+00845	Needs a build script
+00846	This workspace needs a build script before it can be distributed. Ask your agent to declare one that writes a package.
+00847	Fix these before building.
+00848	The package is checked after the build script writes it.
+00849	Running Build Script
+00850	Both targets should ship the same package.
+00851	Compact Context…
+00852	Compact Context?
+00853	Your agent will continue from a summary of the earlier messages, which frees room for new work. The messages stay in this chat.
+00854	Compact Context
+00855	Compacting Chat
+00856	Summarizing the earlier messages…
+00857	Compacted
+00858	Summary
+00859	Nothing to Compact
+00860	This chat is still short enough for your agent to read in full.
+00861	Unable to Compact Chat
+00862	This chat is no longer running.
+00863	Read the SDK
+00864	Check the tweak loaded
+00865	Read crash reports
+00866	Symbolicate a crash
+00867	Read memories
+00868	Save a memory
+00869	Delete a memory
+00870	Read a skill
+00871	Check for distribution
+00872	List skills
+00873	Save a skill
+00874	Remove a skill
+00875	List projects
+00876	Delete a project
+00877	Rename the project
+00878	GitHub
+00879	Sign In with GitHub
+00880	Sign In with GitHub…
+00881	Signed in as %@
+00882	Linked
+00883	Create Distribution Repository…
+00884	Link Distribution Repository…
+00885	Create Distribution Repository
+00886	Sign in so agents can clone, pull and push your repositories on GitHub.
+00887	Publishing
+00888	Publishing Package
+00889	A package repository is an APT source on GitHub Pages that your release builds are published to. You can set it up later in Settings ▸ Git.
+00890	Publish to Package Repository
+00891	Publish to the package repository
+00892	Publish to Repository
+00893	No Package Repository
+00894	Publish to %@?
+00895	Publish
+00896	Unable to Publish
+00897	Unable to Share
+00898	Published
+00899	Creating Repository
+00900	Adding Files
+00901	Pushing
+00902	Turning On GitHub Pages
+00903	A public repository on your GitHub account, published with GitHub Pages as a package source.
+00904	Repository Name
+00905	Repository Ready
+00906	Link %@?
+00907	Link
+00908	Linking Repository
+00909	Repository Linked
+00910	Unlink %@?
+00911	Unlink
+00912	Unlinked
+00913	Unable to Unlink
+00914	Unable to Star Apelin
+00915	Unable to Start
+00916	Link Repository
+00917	Choose the repository your packages go to. Apelin adds what the package index needs and leaves everything else as it is.
+00918	Repositories Unavailable
+00919	This account has no repositories of its own.
+00920	Private
+00921	Has GitHub Pages
+00922	GitHub Pages
+00923	The sign-in was declined on GitHub.
+00924	The code expired before it was entered.
+00925	GitHub refused the sign-in: %@
+00926	Enter this code on GitHub to sign in.
+00927	Open GitHub
+00928	Other Hosts
+00929	Credentials an agent saved for other hosts.
+00930	Sign Out of GitHub?
+00931	Clones, pulls and pushes to github.com stop working until you sign in again. The package repository stays linked.
+00932	Copies the source address.
+00933	Open on GitHub
+00934	Copy Source Address
+00935	Create repository
+00936	The author of your commits, your GitHub account, and the package repository your releases are published to.
+00937	Repository Card
+00938	Repository Card…
+00939	Choose Icon…
+00940	Edit Title…
+00941	Edit Title
+00942	Scan with Camera to add in Irisin
+00943	Unable to Choose Icon
+00944	The image could not be read.
+00945	Unable to Save Image
+00946	Allow Apelin to add photos in Settings.
+00947	Choose an Owner
+00948	Create the repository on your account or in one of your organizations.
+00949	A public repository in the organization %@, published with GitHub Pages as a package source.

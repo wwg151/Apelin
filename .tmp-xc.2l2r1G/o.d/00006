@@ -1,0 +1,18 @@
+    "Withdrawing Packages" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Withdrawing Packages" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "جارٍ سحب الحزم" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Pakete werden zurückgezogen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Retirando paquetes" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retrait des paquets" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Ritiro dei pacchetti" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージを取り下げ中" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지 철회 중" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Retirando pacotes" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отзыв пакетов" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Đang rút các gói" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "正在撤回软件包" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "正在撤回套件" } }
+      }
+    },

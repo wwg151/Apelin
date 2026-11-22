@@ -1,0 +1,76 @@
+    "The author of your commits, your GitHub account, and the package repository your releases are published to." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مؤلف التزاماتك، وحساب GitHub الخاص بك، ومستودع الحزم الذي تُنشر إليه إصداراتك."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Autor deiner Commits, dein GitHub-Konto und das Paket-Repository, in dem deine Releases veröffentlicht werden."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El autor de tus confirmaciones, tu cuenta de GitHub y el repositorio de paquetes donde se publican tus versiones."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’auteur de vos commits, votre compte GitHub et le dépôt de paquets où sont publiées vos versions."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’autore dei tuoi commit, il tuo account GitHub e il repository di pacchetti in cui vengono pubblicate le tue versioni."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コミットの作成者、GitHubアカウント、リリースを公開するパッケージリポジトリです。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "커밋 작성자, GitHub 계정, 릴리스를 게시하는 패키지 저장소입니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O autor dos seus commits, sua conta do GitHub e o repositório de pacotes onde suas versões são publicadas."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Автор ваших коммитов, ваш аккаунт GitHub и репозиторий пакетов, куда публикуются ваши релизы."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tác giả của các commit, tài khoản GitHub của bạn và kho gói nơi các bản phát hành của bạn được phát hành."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提交的作者、你的 GitHub 账户，以及发布版本所在的软件源仓库。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提交的作者、你的 GitHub 帳號，以及發佈版本所在的軟體源儲存庫。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,83 @@
+    "We will locate the title, make the change, and review the build output before installing it. You can type here to preview how your own messages appear." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سنحدد موضع العنوان، ونجري التغيير، ونراجع مخرجات البناء قبل تثبيته. يمكنك الكتابة هنا لمعاينة شكل رسائلك."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wir finden den Titel, nehmen die Änderung vor und prüfen die Build-Ausgabe vor der Installation. Du kannst hier tippen, um zu sehen, wie deine eigenen Nachrichten aussehen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We will locate the title, make the change, and review the build output before installing it. You can type here to preview how your own messages appear."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Localizaremos el título, haremos el cambio y revisaremos el resultado de la compilación antes de instalarlo. Puedes escribir aquí para ver cómo se muestran tus propios mensajes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nous allons trouver le titre, effectuer la modification et examiner le résultat de la compilation avant de l’installer. Vous pouvez écrire ici pour voir à quoi ressemblent vos propres messages."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Individueremo il titolo, apporteremo la modifica e controlleremo l’output della build prima di installarla. Puoi scrivere qui per vedere in anteprima come appaiono i tuoi messaggi."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイトルの場所を特定して変更し、インストールする前にビルド出力を確認します。ここに入力すると、自分のメッセージがどのように表示されるかをプレビューできます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "제목 위치를 찾아 변경하고, 설치하기 전에 빌드 출력을 검토하겠습니다. 여기에 입력하면 내 메시지가 어떻게 표시되는지 미리 볼 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vamos localizar o título, fazer a alteração e revisar o resultado da compilação antes de instalá-lo. Você pode digitar aqui para ver como suas próprias mensagens aparecem."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мы найдём заголовок, внесём изменение и проверим результат сборки перед установкой. Здесь можно ввести текст, чтобы увидеть, как будут выглядеть ваши сообщения."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chúng ta sẽ tìm tiêu đề, thực hiện thay đổi và xem lại kết quả xây dựng trước khi cài đặt. Bạn có thể nhập ở đây để xem trước tin nhắn của mình hiển thị thế nào."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我们会找到标题、完成修改，并在安装前检查构建输出。你可以在这里输入内容，预览自己发出的消息。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我們會找到標題、完成修改，並在安裝前檢查建置輸出。你可以在這裡輸入內容，預覽自己傳出的訊息。"
+          }
+        }
+      }
+    },

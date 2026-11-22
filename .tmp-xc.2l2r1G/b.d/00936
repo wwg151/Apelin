@@ -1,0 +1,83 @@
+    "Choose one target, then tap “Build”. To build the other target, come back and build again." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر هدفًا واحدًا، ثم اضغط «بناء». لبناء الهدف الآخر، ارجع وابنِ مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle ein Ziel und tippe dann auf „Bauen“. Um das andere Ziel zu bauen, kehre zurück und baue erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose one target, then tap “Build”. To build the other target, come back and build again."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige un destino y toca “Compilar”. Para compilar el otro destino, vuelve y compila de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez une cible, puis touchez « Compiler ». Pour compiler l’autre cible, revenez et compilez à nouveau."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli una destinazione, poi tocca “Compila”. Per compilare l’altra destinazione, torna indietro e compila di nuovo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ターゲットを1つ選んで「ビルド」をタップしてください。もう一方のターゲットをビルドするには、戻ってもう一度ビルドしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대상을 하나 선택한 다음 ‘빌드’를 탭하세요. 다른 대상을 빌드하려면 돌아와서 다시 빌드하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolha um destino e toque em “Compilar”. Para compilar o outro destino, volte e compile novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите одну цель и коснитесь «Собрать». Чтобы собрать другую цель, вернитесь и запустите сборку снова."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn một đích, rồi chạm “Xây dựng”. Để xây dựng cho đích còn lại, hãy quay lại và xây dựng lần nữa."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择一个目标后轻点“构建”。要构建另一个目标，请返回后再构建一次。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選擇一個目標後點一下「建置」。若要建置另一個目標，請返回後再建置一次。"
+          }
+        }
+      }
+    },

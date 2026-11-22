@@ -1,0 +1,76 @@
+    "%@ asks for a sign-in. Give your agent a token for it in a chat, which it saves for Apelin, then import again." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يطلب %@ تسجيل الدخول. أعطِ الوكيل رمزًا مميزًا له في محادثة ليحفظه لـ Apelin، ثم أعد الاستيراد."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ verlangt eine Anmeldung. Gib deinem Agent in einem Chat ein Token dafür, das er für Apelin sichert, und importiere dann erneut."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ pide iniciar sesión. Dale a tu agente un token para ese sitio en un chat, que lo guardará para Apelin, y vuelve a importar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ demande une connexion. Donnez un jeton pour ce site à votre agent dans une discussion ; il l’enregistre pour Apelin. Puis importez à nouveau."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ richiede l’accesso. Fornisci all’agente un token per questo sito in una chat: lo salverà per Apelin. Poi importa di nuovo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ はサインインを求めています。チャットでエージェントにそのトークンを渡すと、Apelin用に保存されます。その後、もう一度インポートしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@에서 로그인을 요구합니다. 채팅에서 에이전트에게 해당 토큰을 주면 Apelin용으로 저장합니다. 그런 다음 다시 가져오세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ pede para entrar. Dê ao seu agente um token para esse site em uma conversa; ele o salva para o Apelin. Depois importe de novo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ требует входа. Передайте агенту токен для этого сайта в чате — он сохранит его для Apelin, — затем повторите импорт."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ yêu cầu đăng nhập. Hãy đưa token của trang này cho tác nhân trong một cuộc trò chuyện để lưu cho Apelin, rồi nhập lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 要求登录。请在聊天中把该站点的令牌交给智能体，它会为 Apelin 保存，然后重新导入。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 要求登入。請在聊天中將該網站的權杖交給代理程式，它會為 Apelin 儲存，然後重新匯入。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,77 @@
+    "The agent can run commands and make changes without asking, within the app’s permissions. Each chat switches when you send its next message." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمكن للوكيل تنفيذ الأوامر وإجراء التغييرات دون سؤال، ضمن أذونات التطبيق. تتحول كل محادثة عند إرسال رسالتها التالية."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Agent kann im Rahmen der Berechtigungen der App ohne Nachfrage Befehle ausführen und Änderungen vornehmen. Jeder Chat wechselt, wenn du seine nächste Nachricht sendest."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El agente puede ejecutar comandos y hacer cambios sin preguntar, dentro de los permisos de la app. Cada chat cambia cuando envías su siguiente mensaje."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’agent peut exécuter des commandes et apporter des modifications sans demander, dans la limite des autorisations de l’app. Chaque discussion bascule lorsque vous envoyez son prochain message."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’agente può eseguire comandi e apportare modifiche senza chiedere, entro i permessi dell’app. Ogni chat cambia modalità quando invii il suo prossimo messaggio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エージェントはAppの権限の範囲内で、確認せずにコマンドを実行したり変更を加えたりできます。各チャットは、次にメッセージを送信したときに切り替わります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "에이전트가 앱 권한 범위 내에서 묻지 않고 명령을 실행하고 변경할 수 있습니다. 각 채팅은 다음 메시지를 보낼 때 전환됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O agente pode executar comandos e fazer alterações sem perguntar, dentro das permissões do app. Cada conversa muda quando você envia a próxima mensagem dela."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Агент сможет выполнять команды и вносить изменения без вопросов в пределах прав приложения. Каждый чат переключится, когда вы отправите в нём следующее сообщение."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tác nhân có thể chạy lệnh và thực hiện thay đổi mà không hỏi, trong phạm vi quyền của ứng dụng. Mỗi cuộc trò chuyện sẽ chuyển chế độ khi bạn gửi tin nhắn tiếp theo trong đó."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "智能体可以在 App 权限范围内执行命令和进行改动，无需确认。每个聊天会在你下次发送消息时切换。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理程式可以在 App 權限範圍內執行指令和進行變更，不會詢問。每個聊天會在你傳送下一則訊息時切換。"
+          }
+        }
+      }
+    },

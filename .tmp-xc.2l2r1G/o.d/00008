@@ -1,0 +1,18 @@
+    "Unable to Withdraw Packages" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Unable to Withdraw Packages" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تعذر سحب الحزم" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Pakete konnten nicht zurückgezogen werden" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudieron retirar los paquetes" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Impossible de retirer les paquets" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Impossibile ritirare i pacchetti" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージを取り下げられません" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지를 철회할 수 없음" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Não foi possível retirar os pacotes" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Не удалось отозвать пакеты" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Không thể rút các gói" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法撤回软件包" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "無法撤回套件" } }
+      }
+    },

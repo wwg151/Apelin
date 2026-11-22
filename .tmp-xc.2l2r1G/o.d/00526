@@ -1,0 +1,76 @@
+    "Apelin opens toolchains (.apetc), SDKs (.apesdk) and projects (.apeproj)." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يفتح Apelin سلاسل الأدوات (.apetc) وSDK (.apesdk) والمشاريع (.apeproj)."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin öffnet Toolchains (.apetc), SDKs (.apesdk) und Projekte (.apeproj)."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin abre cadenas de herramientas (.apetc), SDK (.apesdk) y proyectos (.apeproj)."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin ouvre les chaînes d’outils (.apetc), les SDK (.apesdk) et les projets (.apeproj)."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin apre toolchain (.apetc), SDK (.apesdk) e progetti (.apeproj)."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelinで開けるのは、ツールチェーン（.apetc）、SDK（.apesdk）、プロジェクト（.apeproj）です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin은 툴체인(.apetc), SDK(.apesdk), 프로젝트(.apeproj)를 열 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Apelin abre cadeias de ferramentas (.apetc), SDKs (.apesdk) e projetos (.apeproj)."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin открывает наборы инструментов (.apetc), SDK (.apesdk) и проекты (.apeproj)."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin mở được chuỗi công cụ (.apetc), SDK (.apesdk) và dự án (.apeproj)."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 可以打开工具链（.apetc）、SDK（.apesdk）和项目（.apeproj）。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 可以打開工具鏈（.apetc）、SDK（.apesdk）和專案（.apeproj）。"
+          }
+        }
+      }
+    },

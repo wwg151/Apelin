@@ -1,0 +1,76 @@
+    "Includes project files and Git history, if available. Files ignored by Git are excluded." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتضمن ملفات المشروع وتاريخ Git إن وُجد. تُستبعد الملفات التي يتجاهلها Git."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enthält Projektdateien und, falls vorhanden, den Git-Verlauf. Von Git ignorierte Dateien sind ausgeschlossen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Incluye los archivos del proyecto y el historial de Git, si lo hay. Se excluyen los archivos que Git ignora."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comprend les fichiers du projet et l’historique Git, le cas échéant. Les fichiers ignorés par Git sont exclus."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Include i file del progetto e lo storico Git, se disponibile. I file ignorati da Git sono esclusi."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プロジェクトのファイルと、あればGit履歴が含まれます。Gitで無視されているファイルは除外されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로젝트 파일과 Git 기록(있는 경우)이 포함됩니다. Git에서 무시하는 파일은 제외됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inclui os arquivos do projeto e o histórico do Git, se houver. Arquivos ignorados pelo Git ficam de fora."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включает файлы проекта и историю Git, если она есть. Файлы, игнорируемые Git, не включаются."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bao gồm các tệp dự án và lịch sử Git (nếu có). Các tệp bị Git bỏ qua sẽ không được đưa vào."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "包含项目文件和 Git 历史（如有）。被 Git 忽略的文件不会包含在内。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "包含專案檔案和 Git 歷史記錄（如有）。被 Git 忽略的檔案不會包含在內。"
+          }
+        }
+      }
+    },

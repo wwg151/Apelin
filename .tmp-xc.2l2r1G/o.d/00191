@@ -1,0 +1,76 @@
+    "Publish or share that build as it is. Raise the version only to ship a change, so package managers offer it as an update." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انشر ذلك البناء أو شاركه كما هو. ارفع الإصدار فقط لنشر تغيير، كي تعرضه مديرات الحزم كتحديث."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veröffentliche oder teile diesen Build so, wie er ist. Erhöhe die Version nur, um eine Änderung auszuliefern, damit Paketmanager sie als Update anbieten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Publica o comparte esa compilación tal como está. Sube la versión solo para publicar un cambio, para que los gestores de paquetes lo ofrezcan como actualización."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Publiez ou partagez cette compilation telle quelle. N’augmentez la version que pour livrer une modification, afin que les gestionnaires de paquets la proposent comme mise à jour."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pubblica o condividi quella build così com’è. Aumenta la versione solo per distribuire una modifica, così i gestori di pacchetti la offrono come aggiornamento."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "そのビルドをそのまま公開または共有してください。バージョンを上げるのは変更を配布するときだけにしてください。そうすればパッケージマネージャがアップデートとして表示します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "그 빌드를 그대로 게시하거나 공유하세요. 버전은 변경 사항을 배포할 때만 올리세요. 그래야 패키지 관리자가 업데이트로 제공합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Publique ou compartilhe essa compilação como está. Aumente a versão só para distribuir uma alteração, para que os gerenciadores de pacotes a ofereçam como atualização."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Опубликуйте эту сборку или поделитесь ею как есть. Повышайте версию, только чтобы выпустить изменение, — тогда менеджеры пакетов предложат его как обновление."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy phát hành hoặc chia sẻ bản dựng đó như hiện có. Chỉ tăng phiên bản khi phát hành thay đổi, để trình quản lý gói hiển thị nó dưới dạng bản cập nhật."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请直接发布或分享那次构建。只有要发布改动时才提高版本号，这样软件包管理器才会把它作为更新提供。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請直接發佈或分享那次建置。只有要發佈變更時才提高版本號，這樣套件管理器才會把它當作更新提供。"
+          }
+        }
+      }
+    },

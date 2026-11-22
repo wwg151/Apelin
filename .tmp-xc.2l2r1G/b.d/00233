@@ -1,0 +1,83 @@
+    "The package changed after it was built. Build it again before exporting." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تغيّرت الحزمة بعد بنائها. ابنِها مرة أخرى قبل التصدير."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Paket wurde nach dem Bauen verändert. Baue es vor dem Exportieren erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The package changed after it was built. Build it again before exporting."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El paquete cambió después de compilarse. Vuelve a compilarlo antes de exportarlo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le paquet a changé après sa compilation. Compilez-le à nouveau avant de l’exporter."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il pacchetto è cambiato dopo la compilazione. Compilalo di nuovo prima di esportarlo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ビルド後にパッケージが変更されました。エクスポートする前にもう一度ビルドしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빌드 후 패키지가 변경되었습니다. 내보내기 전에 다시 빌드하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O pacote mudou depois de ser compilado. Compile-o novamente antes de exportar."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пакет изменился после сборки. Соберите его снова перед экспортом."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gói đã thay đổi sau khi được xây dựng. Hãy xây dựng lại trước khi xuất."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "软件包在构建后发生了变化。请重新构建后再导出。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "套件在建置後已變更。請重新建置後再匯出。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,76 @@
+    "Unlocking with a passcode requires icli 0.11.0 or later. Update icli using your preferred package manager." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتطلب فتح القفل باستخدام رمز الدخول توفر icli بالإصدار 0.11.0 أو أحدث. حدّث icli باستخدام مدير الحزم المفضل لديك."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zum Entsperren mit einem Code ist icli 0.11.0 oder neuer erforderlich. Aktualisiere icli über deinen bevorzugten Paketmanager."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para desbloquear con un código se necesita icli 0.11.0 o posterior. Actualiza icli con tu gestor de paquetes preferido."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le déverrouillage par code nécessite icli 0.11.0 ou une version ultérieure. Mettez à jour icli à l’aide de votre gestionnaire de paquets préféré."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lo sblocco con codice richiede icli 0.11.0 o versioni successive. Aggiorna icli usando il tuo gestore di pacchetti preferito."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パスコードによるロック解除にはicli 0.11.0以降が必要です。お使いのパッケージマネージャでicliをアップデートしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "암호로 잠금을 해제하려면 icli 0.11.0 이상이 필요합니다. 선호하는 패키지 관리자를 사용하여 icli를 업데이트하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O desbloqueio com código requer o icli 0.11.0 ou posterior. Atualize o icli usando o seu gerenciador de pacotes preferido."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для разблокировки с помощью код-пароля требуется icli 0.11.0 или новее. Обновите icli с помощью предпочитаемого пакетного менеджера."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở khóa bằng mật mã yêu cầu icli 0.11.0 trở lên. Hãy cập nhật icli bằng trình quản lý gói ưa thích của bạn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用密码解锁需要 icli 0.11.0 或更高版本。请使用你偏好的软件包管理器更新 icli。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用密碼解鎖需要 icli 0.11.0 或以上版本。請使用你偏好的套件管理器更新 icli。"
+          }
+        }
+      }
+    },

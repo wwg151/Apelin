@@ -1,0 +1,76 @@
+    "This device has a failed passcode attempt on record, so Apelin didn’t try the passcode. Unlock the device with its passcode, then try again." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يوجد سجل بمحاولة رمز دخول فاشلة على هذا الجهاز، لذا لم يجرب Apelin رمز الدخول. افتح قفل الجهاز باستخدام رمز الدخول الخاص به، ثم حاول مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auf diesem Gerät ist ein fehlgeschlagener Code-Versuch verzeichnet, daher hat Apelin den Code nicht ausprobiert. Entsperre das Gerät mit seinem Code und versuche es dann erneut."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este dispositivo tiene registrado un intento de código fallido, por lo que Apelin no probó el código. Desbloquea el dispositivo con su código e inténtalo de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cet appareil a enregistré une tentative de code échouée, Apelin n’a donc pas essayé le code. Déverrouillez l’appareil avec son code, puis réessayez."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo dispositivo ha in memoria un tentativo di codice fallito, quindi Apelin non ha provato il codice. Sblocca il dispositivo con il suo codice, poi riprova."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このデバイスにはパスコードの入力失敗が記録されているため、Apelinはパスコードを試行しませんでした。パスコードでデバイスのロックを解除してから、もう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 기기에 암호 입력 실패 기록이 있어 Apelin이 암호를 시도하지 않았습니다. 기기 암호로 잠금을 해제한 후 다시 시도하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este dispositivo tem um registro de tentativa de código malsucedida, portanto o Apelin não tentou usar o código. Desbloqueie o dispositivo com o código e tente novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На этом устройстве зафиксирована неудачная попытка ввода код-пароля, поэтому Apelin не стал проверять код-пароль. Разблокируйте устройство его код-паролем, а затем повторите попытку."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thiết bị này đang ghi nhận một lần nhập mật mã không thành công, vì vậy Apelin đã không thử mật mã. Hãy mở khóa thiết bị bằng mật mã của thiết bị, sau đó thử lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此设备上有密码尝试失败的记录，因此 Apelin 未尝试输入密码。请先使用设备密码解锁设备，然后重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此裝置上有密碼嘗試失敗的記錄，因此 Apelin 未嘗試輸入密碼。請先使用裝置密碼解鎖裝置，然後再試一次。"
+          }
+        }
+      }
+    },

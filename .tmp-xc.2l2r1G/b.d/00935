@@ -1,0 +1,76 @@
+    "Apple’s catalog lists no Command Line Tools. Check your internet connection, then pull down to try again." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يدرج كتالوج Apple أي Command Line Tools. تحقق من اتصالك بالإنترنت، ثم اسحب لأسفل للمحاولة مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apples Katalog enthält keine Command Line Tools. Prüfe deine Internetverbindung und ziehe dann zum erneuten Versuchen nach unten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El catálogo de Apple no muestra ninguna versión de Command Line Tools. Comprueba tu conexión a internet y desliza hacia abajo para volver a intentarlo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le catalogue d’Apple ne contient aucun Command Line Tools. Vérifiez votre connexion Internet, puis tirez vers le bas pour réessayer."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il catalogo di Apple non elenca alcun Command Line Tools. Controlla la connessione a Internet, poi trascina verso il basso per riprovare."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AppleのカタログにCommand Line Toolsが見つかりません。インターネット接続を確認してから、下に引っ張ってもう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple 카탈로그에 Command Line Tools가 없습니다. 인터넷 연결을 확인한 다음 아래로 당겨 다시 시도하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O catálogo da Apple não lista nenhuma versão das Command Line Tools. Verifique sua conexão com a internet e puxe para baixo para tentar novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В каталоге Apple нет Command Line Tools. Проверьте подключение к интернету и потяните вниз, чтобы повторить попытку."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danh mục của Apple không có Command Line Tools nào. Hãy kiểm tra kết nối internet, rồi kéo xuống để thử lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple 的目录中没有 Command Line Tools。请检查网络连接，然后下拉重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple 的目錄中沒有 Command Line Tools。請檢查網際網路連線，然後向下拉以再試一次。"
+          }
+        }
+      }
+    },

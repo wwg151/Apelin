@@ -1,0 +1,76 @@
+    "Open files and folders with Fila. Install it from the OwnGoal Studio repository in Irisin." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "افتح الملفات والمجلدات باستخدام Fila. ثبّته من مستودع OwnGoal Studio في Irisin."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öffne Dateien und Ordner mit Fila. Installiere es in Irisin aus der Quelle von OwnGoal Studio."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre archivos y carpetas con Fila. Instálala desde el repositorio de OwnGoal Studio en Irisin."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrez des fichiers et des dossiers avec Fila. Installez-la depuis le dépôt OwnGoal Studio dans Irisin."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apri file e cartelle con Fila. Installala dal repository di OwnGoal Studio in Irisin."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filaでファイルやフォルダを開けます。IrisinのOwnGoal Studioリポジトリからインストールしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fila로 파일과 폴더를 열 수 있습니다. Irisin의 OwnGoal Studio 소스에서 설치하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abra arquivos e pastas com o Fila. Instale-o pelo repositório OwnGoal Studio no Irisin."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открывайте файлы и папки в Fila. Установите приложение из репозитория OwnGoal Studio в Irisin."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở tệp và thư mục bằng Fila. Hãy cài đặt Fila từ nguồn OwnGoal Studio trong Irisin."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用 Fila 打开文件和文件夹。请在 Irisin 中从 OwnGoal Studio 软件源安装。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用 Fila 打開檔案和檔案夾。請在 Irisin 中從 OwnGoal Studio 軟體源安裝。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,83 @@
+    "ChatGPT and Codex use the same ChatGPT account authorization." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يستخدم ChatGPT وCodex تفويض حساب ChatGPT نفسه."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ChatGPT und Codex verwenden dieselbe Autorisierung des ChatGPT-Accounts."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ChatGPT and Codex use the same ChatGPT account authorization."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ChatGPT y Codex usan la misma autorización de la cuenta de ChatGPT."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ChatGPT et Codex utilisent la même autorisation de compte ChatGPT."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ChatGPT e Codex usano la stessa autorizzazione dell’account ChatGPT."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ChatGPTとCodexは同じChatGPTアカウントの認証を使用します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ChatGPT와 Codex는 같은 ChatGPT 계정 인증을 사용합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O ChatGPT e o Codex usam a mesma autorização da conta do ChatGPT."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ChatGPT и Codex используют одну и ту же авторизацию учётной записи ChatGPT."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ChatGPT và Codex dùng chung quyền truy cập tài khoản ChatGPT."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ChatGPT 和 Codex 使用同一套 ChatGPT 账户授权。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ChatGPT 和 Codex 使用同一個 ChatGPT 帳號的授權。"
+          }
+        }
+      }
+    },

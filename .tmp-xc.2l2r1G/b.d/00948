@@ -1,0 +1,83 @@
+    "If you haven’t decided on a name yet, your agent will name the project later." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إذا لم تختر اسمًا بعد، فسيسمّي الوكيل المشروع لاحقًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn du noch keinen Namen hast, benennt dein Agent das Projekt später."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you haven’t decided on a name yet, your agent will name the project later."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si aún no has decidido un nombre, tu agente pondrá nombre al proyecto más tarde."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si vous n’avez pas encore choisi de nom, votre agent nommera le projet plus tard."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se non hai ancora scelto un nome, l’agente darà un nome al progetto più tardi."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだ名前が決まっていなければ、あとでエージェントがプロジェクトに名前を付けます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 이름을 정하지 않았다면 나중에 에이전트가 프로젝트 이름을 정합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se você ainda não decidiu um nome, seu agente dará um nome ao projeto depois."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если вы ещё не выбрали название, агент назовёт проект позже."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nếu bạn chưa nghĩ ra tên, tác nhân sẽ đặt tên cho dự án sau."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果现在还没想好名字，智能体会稍后为你的项目命名。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果還沒想好名稱，代理程式稍後會為專案命名。"
+          }
+        }
+      }
+    },

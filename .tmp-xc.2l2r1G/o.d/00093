@@ -1,0 +1,83 @@
+    "This project needs a build description before it can be distributed. Ask your agent to add one." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يحتاج هذا المشروع إلى وصف للبناء قبل توزيعه. اطلب من الوكيل إضافته."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieses Projekt benötigt eine Build-Beschreibung, bevor es verteilt werden kann. Bitte deinen Agenten, eine hinzuzufügen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This project needs a build description before it can be distributed. Ask your agent to add one."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este proyecto necesita una descripción de compilación para poder distribuirse. Pide a tu agente que añada una."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce projet a besoin d’une description de compilation avant de pouvoir être distribué. Demandez à votre agent d’en ajouter une."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo progetto ha bisogno di una descrizione della build prima di poter essere distribuito. Chiedi all’agente di aggiungerne una."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このプロジェクトを配布するには、ビルド定義が必要です。エージェントに追加を依頼してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 프로젝트를 배포하려면 빌드 정의가 필요합니다. 에이전트에게 추가를 요청하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este projeto precisa de uma descrição de compilação para ser distribuído. Peça ao seu agente para adicionar uma."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чтобы распространять этот проект, нужно описание сборки. Попросите агента добавить его."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dự án này cần có mô tả bản dựng trước khi phân phối. Hãy nhờ tác nhân thêm vào."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此项目需要构建描述才能分发。请让智能体添加一个。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此專案需要建置描述才能分發。請讓代理程式加入一個。"
+          }
+        }
+      }
+    },

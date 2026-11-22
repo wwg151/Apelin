@@ -1,0 +1,83 @@
+    "Please star us on GitHub. It helps us go further." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يُرجى منحنا نجمة على GitHub، فهذا يساعدنا على المضي قدمًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gib uns bitte einen Stern auf GitHub. Das hilft uns, weiterzukommen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please star us on GitHub. It helps us go further."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danos una estrella en GitHub. Nos ayuda a llegar más lejos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajoutez-nous une étoile sur GitHub. Cela nous aide à aller plus loin."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lasciaci una stella su GitHub. Ci aiuta ad andare più lontano."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHubでスターを付けてください。私たちがさらに前へ進む力になります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub에서 별표를 눌러 주세요. 저희가 더 멀리 나아가는 데 힘이 됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dê uma estrela para nós no GitHub. Isso nos ajuda a ir mais longe."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поставьте нам звезду на GitHub. Это поможет нам двигаться дальше."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy gắn sao cho chúng tôi trên GitHub. Điều đó giúp chúng tôi tiến xa hơn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请在 GitHub 上为我们加星标，这能帮助我们走得更远。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請在 GitHub 上為我們加上星標，這能幫助我們走得更遠。"
+          }
+        }
+      }
+    },

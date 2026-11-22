@@ -1,0 +1,83 @@
+    "Unable to load recommendations. Tap “Retry” or continue to set up later." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذّر تحميل التوصيات. اضغط «إعادة المحاولة» أو تابع لإعدادها لاحقًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empfehlungen können nicht geladen werden. Tippe auf „Wiederholen“ oder fahre fort und richte alles später ein."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unable to load recommendations. Tap “Retry” or continue to set up later."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pueden cargar las recomendaciones. Toca “Reintentar” o continúa para configurarlo más tarde."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de charger les recommandations. Touchez « Réessayer » ou continuez pour configurer plus tard."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossibile caricare i consigli. Tocca “Riprova” o continua per configurare più tardi."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "おすすめを読み込めません。「再試行」をタップするか、続行してあとでセットアップしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추천 항목을 불러올 수 없습니다. ‘다시 시도’를 탭하거나, 계속 진행하고 나중에 설정하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não foi possível carregar as recomendações. Toque em “Tentar novamente” ou continue para configurar depois."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось загрузить рекомендации. Коснитесь «Повторить» или продолжите, чтобы настроить позже."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể tải đề xuất. Chạm “Thử lại” hoặc tiếp tục để thiết lập sau."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法载入推荐。请轻点“重试”，或继续并稍后配置。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法載入推薦項目。請點一下「重試」，或繼續並稍後設定。"
+          }
+        }
+      }
+    },

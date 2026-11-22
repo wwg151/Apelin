@@ -1,0 +1,76 @@
+    "If the page does not work on this device, open this link in a browser on another device and sign in there. That browser ends on a page it cannot open. Copy that page’s address and paste it here." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إذا لم تعمل الصفحة على هذا الجهاز، فافتح هذا الرابط في متصفح على جهاز آخر وسجّل الدخول هناك. سينتهي الأمر بذلك المتصفح إلى صفحة يتعذر عليه فتحها. انسخ عنوان تلك الصفحة والصقه هنا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn die Seite auf diesem Gerät nicht funktioniert, öffne diesen Link in einem Browser auf einem anderen Gerät und melde dich dort an. Dieser Browser landet am Ende auf einer Seite, die er nicht öffnen kann. Kopiere die Adresse dieser Seite und setze sie hier ein."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si la página no funciona en este dispositivo, abre este enlace en un navegador de otro dispositivo e inicia sesión allí. Ese navegador termina en una página que no puede abrir. Copia la dirección de esa página y pégala aquí."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si la page ne fonctionne pas sur cet appareil, ouvrez ce lien dans un navigateur sur un autre appareil et connectez-vous-y. Ce navigateur aboutit à une page qu’il ne peut pas ouvrir. Copiez l’adresse de cette page et collez-la ici."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se la pagina non funziona su questo dispositivo, apri questo link in un browser su un altro dispositivo e accedi da lì. Quel browser arriva a una pagina che non riesce ad aprire. Copia l’indirizzo di quella pagina e incollalo qui."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このデバイスでページが正しく動作しない場合は、別のデバイスのブラウザでこのリンクを開き、そこでサインインしてください。そのブラウザは最後に開けないページに移動します。そのページのアドレスをコピーして、ここにペーストしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 기기에서 페이지가 작동하지 않으면 다른 기기의 브라우저에서 이 링크를 열고 거기에서 로그인하세요. 그 브라우저는 마지막에 열 수 없는 페이지로 이동합니다. 해당 페이지의 주소를 복사해 여기에 붙여넣으세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se a página não funcionar neste dispositivo, abra este link em um navegador de outro dispositivo e inicie sessão lá. Esse navegador termina em uma página que não consegue abrir. Copie o endereço dessa página e cole-o aqui."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если страница не работает на этом устройстве, откройте эту ссылку в браузере на другом устройстве и войдите там. В конце этот браузер перейдёт на страницу, которую не сможет открыть. Скопируйте адрес этой страницы и вставьте его здесь."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nếu trang không hoạt động trên thiết bị này, hãy mở liên kết này trong trình duyệt trên thiết bị khác và đăng nhập tại đó. Sau đó, trình duyệt đó sẽ chuyển đến một trang không mở được. Hãy sao chép địa chỉ của trang đó và dán vào đây."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果页面在这台设备上无法使用，请在另一台设备的浏览器中打开此链接，并在那里登录。登录后，该浏览器会跳转到一个无法打开的页面。请拷贝该页面的地址，并粘贴到这里。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果頁面在此裝置上無法使用，請在另一台裝置的瀏覽器中打開此連結，並在那裡登入。登入後，該瀏覽器會跳轉到一個無法打開的頁面。請拷貝該頁面的位址，並貼到這裡。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,83 @@
+    "The maximum tokens one reply can use, including the model’s thinking. Leave a field empty to use the automatic value. A custom value cannot exceed what the server allows." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الحد الأقصى للرموز التي يمكن لرد واحد استخدامها، بما في ذلك تفكير النموذج. اترك الحقل فارغًا لاستخدام القيمة التلقائية. لا يمكن أن تتجاوز القيمة المخصصة ما يسمح به الخادم."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die maximale Anzahl an Tokens für eine Antwort, einschließlich des Denkens des Modells. Lass ein Feld für den automatischen Wert leer. Ein eigener Wert kann das Serverlimit nicht überschreiten."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The maximum tokens one reply can use, including the model’s thinking. Leave a field empty to use the automatic value. A custom value cannot exceed what the server allows."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El máximo de tokens que puede usar una respuesta, incluido el razonamiento del modelo. Deja un campo vacío para usar el valor automático. Un valor personalizado no puede superar lo que permite el servidor."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le nombre maximal de jetons qu’une réponse peut utiliser, y compris la réflexion du modèle. Laissez un champ vide pour utiliser la valeur automatique. Une valeur personnalisée ne peut pas dépasser la limite du serveur."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il numero massimo di token utilizzabili da una risposta, incluso il ragionamento del modello. Lascia un campo vuoto per usare il valore automatico. Un valore personalizzato non può superare il limite del server."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "モデルの思考を含む、1回の返信で使用できる最大トークン数です。空欄にすると自動値が使用されます。設定値がサーバーの上限を超えることはできません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모델의 사고 과정을 포함해 한 번의 응답에 사용할 수 있는 최대 토큰 수입니다. 자동 값을 사용하려면 필드를 비워 두세요. 설정한 값은 서버가 허용하는 한도를 초과할 수 없습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O máximo de tokens que uma resposta pode usar, incluindo o raciocínio do modelo. Deixe um campo vazio para usar o valor automático. Um valor personalizado não pode exceder o limite permitido pelo servidor."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Максимальное количество токенов для одного ответа с учетом размышлений модели. Оставьте поле пустым для автоматического значения. Заданное значение не может превышать лимит сервера."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Số token tối đa cho một câu trả lời, bao gồm cả quá trình suy nghĩ của mô hình. Để trống trường nhằm dùng giá trị tự động. Giá trị tùy chỉnh không thể vượt quá mức máy chủ cho phép."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "单次回复可使用的最大 Token 数，包含模型的思考过程。留空以使用自动值。自定值不能超过服务器允许的上限。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "單次回覆可使用的最大 Token 數，包含模型的思考過程。留空以使用自動值。自訂值不能超過伺服器允許的上限。"
+          }
+        }
+      }
+    },

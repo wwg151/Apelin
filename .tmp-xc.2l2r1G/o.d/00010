@@ -1,0 +1,18 @@
+    "These packages will be removed from the repository in one commit. Local builds and installed packages are kept. The source updates after GitHub Actions finishes." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "These packages will be removed from the repository in one commit. Local builds and installed packages are kept. The source updates after GitHub Actions finishes." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "ستُزال هذه الحزم من المستودع في إيداع واحد. تُحفظ البنيات المحلية والحزم المثبتة. يُحدَّث المصدر بعد انتهاء GitHub Actions." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Diese Pakete werden mit einem Commit aus dem Repository entfernt. Lokale Builds und installierte Pakete bleiben erhalten. Die Quelle wird nach Abschluss von GitHub Actions aktualisiert." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Estos paquetes se eliminarán del repositorio en un solo commit. Se conservan las compilaciones locales y los paquetes instalados. La fuente se actualiza cuando finaliza GitHub Actions." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ces paquets seront supprimés du dépôt en un seul commit. Les compilations locales et les paquets installés sont conservés. La source est actualisée après la fin de GitHub Actions." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Questi pacchetti verranno rimossi dal repository in un unico commit. Le build locali e i pacchetti installati vengono conservati. La sorgente si aggiorna al termine di GitHub Actions." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "これらのパッケージは1回のコミットでリポジトリから削除されます。ローカルのビルドとインストール済みパッケージは保持されます。GitHub Actions の完了後にソースが更新されます。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "이 패키지는 하나의 커밋으로 저장소에서 제거됩니다. 로컬 빌드와 설치된 패키지는 유지됩니다. GitHub Actions가 완료되면 소스가 업데이트됩니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Estes pacotes serão removidos do repositório em um único commit. As compilações locais e os pacotes instalados são mantidos. A fonte é atualizada após a conclusão do GitHub Actions." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Эти пакеты будут удалены из репозитория одним коммитом. Локальные сборки и установленные пакеты сохранятся. Источник обновится после завершения GitHub Actions." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Các gói này sẽ được xóa khỏi kho trong một commit. Bản dựng cục bộ và các gói đã cài đặt được giữ lại. Nguồn cập nhật sau khi GitHub Actions hoàn tất." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "这些软件包将通过一次提交从仓库移除。本地构建和已安装的软件包会保留。GitHub Actions 完成后软件源才会更新。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "這些套件將透過一次提交從倉庫移除。本機建置和已安裝的套件會保留。GitHub Actions 完成後軟體源才會更新。" } }
+      }
+    },

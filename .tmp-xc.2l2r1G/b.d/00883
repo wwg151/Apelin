@@ -1,0 +1,76 @@
+    "Choose the repository your packages go to. Apelin adds what the package index needs and leaves everything else as it is." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر المستودع الذي تذهب إليه حزمك. يضيف Apelin ما يحتاجه فهرس الحزم ويترك كل ما عداه كما هو."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle das Repository, in das deine Pakete kommen. Apelin ergänzt, was der Paketindex braucht, und lässt alles andere unverändert."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige el repositorio al que van tus paquetes. Apelin añade lo que necesita el índice de paquetes y deja todo lo demás como está."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez le dépôt où vont vos paquets. Apelin ajoute ce dont l’index des paquets a besoin et laisse tout le reste tel quel."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli il repository in cui vanno i tuoi pacchetti. Apelin aggiunge ciò che serve all’indice dei pacchetti e lascia tutto il resto com’è."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パッケージの公開先リポジトリを選んでください。Apelinはパッケージインデックスに必要なものだけを追加し、それ以外はそのままにします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "패키지를 올릴 저장소를 선택하세요. Apelin은 패키지 색인에 필요한 것만 추가하고 나머지는 그대로 둡니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolha o repositório para onde vão seus pacotes. O Apelin adiciona o que o índice de pacotes precisa e deixa todo o resto como está."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите репозиторий для ваших пакетов. Apelin добавит то, что нужно индексу пакетов, и оставит всё остальное как есть."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn kho mà các gói của bạn sẽ được đưa vào. Apelin chỉ thêm những gì chỉ mục gói cần và giữ nguyên mọi thứ khác."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择软件包要发布到的仓库。Apelin 只补上软件包索引需要的内容，其余一切保持原样。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選擇套件要發佈到的儲存庫。Apelin 只補上套件索引需要的內容，其餘一切保持原樣。"
+          }
+        }
+      }
+    },

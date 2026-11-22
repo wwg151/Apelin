@@ -1,0 +1,83 @@
+    "Installation stopped because a package permission record refers to an unknown user or group." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installation stopped because a package permission record refers to an unknown user or group."
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توقف التثبيت لأن سجل أذونات حزمة يشير إلى مستخدم أو مجموعة غير معروفة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Installation wurde gestoppt, weil ein Berechtigungseintrag eines Pakets auf einen unbekannten Benutzer oder eine unbekannte Gruppe verweist."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La instalación se detuvo porque un registro de permisos de un paquete hace referencia a un usuario o grupo desconocido."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’installation s’est arrêtée car une entrée d’autorisations d’un paquet fait référence à un utilisateur ou à un groupe inconnu."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’installazione si è interrotta perché un record dei permessi di un pacchetto fa riferimento a un utente o gruppo sconosciuto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パッケージの権限設定に不明なユーザーまたはグループが指定されているため、インストールが停止しました。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "패키지 권한 기록이 알 수 없는 사용자 또는 그룹을 참조하여 설치가 중단되었습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A instalação foi interrompida porque um registro de permissões de um pacote se refere a um usuário ou grupo desconhecido."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Установка остановлена: запись разрешений пакета ссылается на неизвестного пользователя или группу."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quá trình cài đặt đã dừng vì một bản ghi quyền của gói tham chiếu đến người dùng hoặc nhóm không xác định."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安装已停止，因为软件包的权限记录引用了不存在的用户或用户组。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安裝已停止，因為套件的權限記錄引用了不存在的使用者或群組。"
+          }
+        }
+      }
+    },

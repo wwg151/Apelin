@@ -1,0 +1,83 @@
+    "Shorten or delete an older memory before adding more." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختصر ذكرى قديمة أو احذفها قبل إضافة المزيد."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kürze oder lösche eine ältere Erinnerung, bevor du weitere hinzufügst."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shorten or delete an older memory before adding more."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acorta o elimina una memoria antigua antes de añadir más."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raccourcissez ou supprimez un ancien souvenir avant d’en ajouter d’autres."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accorcia o elimina una memoria meno recente prima di aggiungerne altre."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追加する前に、古いメモリを短くするか削除してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "더 추가하기 전에 이전 메모리를 줄이거나 삭제하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encurte ou apague uma memória antiga antes de adicionar mais."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сократите или удалите старое воспоминание, чтобы добавить новое."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy rút gọn hoặc xóa một ghi nhớ cũ trước khi thêm."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请缩短或删除旧记忆后再添加。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請先縮短或刪除較舊的記憶，再加入新的。"
+          }
+        }
+      }
+    },

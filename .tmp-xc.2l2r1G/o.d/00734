@@ -1,0 +1,76 @@
+    "Sign in to Z.ai to get an API key for your GLM Coding Plan." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجّل الدخول إلى Z.ai للحصول على مفتاح API لخطة GLM Coding Plan."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Melde dich bei Z.ai an, um einen API-Schlüssel für deinen GLM Coding Plan zu erhalten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicia sesión en Z.ai para obtener una clave de API para tu GLM Coding Plan."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connectez-vous à Z.ai pour obtenir une clé API pour votre GLM Coding Plan."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accedi a Z.ai per ottenere una chiave API per il tuo GLM Coding Plan."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z.aiにサインインして、GLM Coding PlanのAPIキーを取得します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z.ai에 로그인하여 GLM Coding Plan용 API 키를 받습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicie sessão no Z.ai para obter uma chave de API para seu GLM Coding Plan."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Войдите в Z.ai, чтобы получить ключ API для тарифа GLM Coding Plan."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đăng nhập Z.ai để lấy khóa API cho GLM Coding Plan của bạn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登录 Z.ai，为你的 GLM Coding Plan 获取 API 密钥。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登入 Z.ai，為你的 GLM Coding Plan 取得 API 金鑰。"
+          }
+        }
+      }
+    },

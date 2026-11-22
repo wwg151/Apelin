@@ -1,0 +1,83 @@
+    "Downloaded from Apple. No Apple ID needed.\n\nIncludes C, C++ and Objective-C. “—” in the Swift column means Swift is unavailable.\n\nSDK shows the highest supported version. A compatible iOS SDK downloads automatically." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloaded from Apple. No Apple ID needed.\n\nIncludes C, C++ and Objective-C. “—” in the Swift column means Swift is unavailable.\n\nSDK shows the highest supported version. A compatible iOS SDK downloads automatically."
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يُنزّل من Apple. لا يلزم Apple ID.\n\nيتضمن C وC++ وObjective-C. تعني «—» في عمود Swift أنه غير متاح.\n\nيشير SDK إلى أعلى إصدار مدعوم. تُنزّل حزمة iOS SDK متوافقة تلقائيًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download von Apple. Keine Apple-ID erforderlich.\n\nEnthält C, C++ und Objective-C. „—“ in der Swift-Spalte bedeutet, dass Swift nicht verfügbar ist.\n\nSDK zeigt die höchste unterstützte Version. Ein kompatibles iOS-SDK wird automatisch geladen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se descarga de Apple. No requiere Apple ID.\n\nIncluye C, C++ y Objective-C. “—” en la columna Swift indica que Swift no está disponible.\n\nSDK indica la versión máxima compatible. Se descarga automáticamente un SDK de iOS compatible."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Téléchargement depuis Apple. Aucun identifiant Apple requis.\n\nInclut C, C++ et Objective-C. « — » dans la colonne Swift signifie que Swift est indisponible.\n\nSDK indique la version maximale prise en charge. Un SDK iOS compatible est téléchargé automatiquement."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download da Apple. Non serve un Apple ID.\n\nInclude C, C++ e Objective-C. “—” nella colonna Swift indica che Swift non è disponibile.\n\nSDK indica la versione massima supportata. Un SDK iOS compatibile viene scaricato automaticamente."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appleからダウンロードします。Apple IDは不要です。\n\nC、C++、Objective-Cを含みます。Swift列の「—」はSwiftが利用できないことを示します。\n\nSDKは対応する最新バージョンを示します。互換性のあるiOS SDKは自動でダウンロードされます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple에서 다운로드합니다. Apple ID는 필요하지 않습니다.\n\nC, C++, Objective-C가 포함됩니다. Swift 열의 “—”는 Swift를 사용할 수 없음을 뜻합니다.\n\nSDK는 지원되는 최고 버전을 나타냅니다. 호환되는 iOS SDK가 자동으로 다운로드됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download da Apple. Não é necessário um Apple ID.\n\nInclui C, C++ e Objective-C. “—” na coluna Swift indica que Swift não está disponível.\n\nSDK indica a versão máxima compatível. Um SDK do iOS compatível é baixado automaticamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузка с серверов Apple. Apple ID не нужен.\n\nВключает C, C++ и Objective-C. «—» в столбце Swift означает, что Swift недоступен.\n\nSDK показывает максимальную поддерживаемую версию. Совместимый SDK для iOS загружается автоматически."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tải từ Apple. Không cần Apple ID.\n\nBao gồm C, C++ và Objective-C. “—” trong cột Swift nghĩa là Swift không khả dụng.\n\nSDK là phiên bản cao nhất được hỗ trợ. SDK iOS tương thích sẽ được tải tự động."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从 Apple 下载，无需 Apple ID。\n\n包含 C、C++ 和 Objective-C。Swift 列中的“—”表示 Swift 暂不可用。\n\nSDK 表示支持的最高版本。兼容的 iOS SDK 会自动下载。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "從 Apple 下載，無需 Apple ID。\n\n包含 C、C++ 和 Objective-C。Swift 欄中的「—」表示 Swift 暫不可用。\n\nSDK 表示支援的最高版本。相容的 iOS SDK 會自動下載。"
+          }
+        }
+      }
+    },

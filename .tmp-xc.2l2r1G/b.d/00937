@@ -1,0 +1,76 @@
+    "Publish the selected packages to your package repository together, or share one. Each is the file its build made, unchanged." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انشر الحزم المحددة معًا في مستودع الحزم الخاص بك، أو شارك واحدة منها. كل منها هو الملف الذي أنتجه البناء، دون تغيير."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veröffentliche die ausgewählten Pakete gemeinsam in deinem Paket-Repository oder teile eines davon. Jedes ist die Datei, die sein Build erstellt hat, unverändert."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Publica juntos los paquetes seleccionados en tu repositorio de paquetes o comparte uno. Cada uno es el archivo que generó su compilación, sin cambios."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Publiez ensemble les paquets sélectionnés dans votre dépôt de paquets, ou partagez-en un. Chacun est le fichier produit par sa compilation, inchangé."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pubblica insieme i pacchetti selezionati nel tuo repository di pacchetti, oppure condividine uno. Ognuno è il file prodotto dalla sua build, invariato."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選択したパッケージをまとめてパッケージリポジトリに公開するか、1つを共有します。どれもビルドで作られたファイルそのままです。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택한 패키지를 패키지 저장소에 함께 게시하거나 하나를 공유하세요. 각 패키지는 빌드가 만든 파일 그대로입니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Publique juntos os pacotes selecionados no seu repositório de pacotes ou compartilhe um deles. Cada um é o arquivo que a compilação gerou, sem alterações."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Опубликуйте выбранные пакеты вместе в своём репозитории пакетов или поделитесь одним из них. Каждый — это файл, созданный его сборкой, без изменений."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phát hành cùng lúc các gói đã chọn lên kho gói của bạn, hoặc chia sẻ một gói. Mỗi gói là tệp do bản dựng của nó tạo ra, không thay đổi."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将所选软件包一起发布到你的软件源仓库，或分享其中一个。每个都是构建生成的原始文件，未经改动。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "將所選套件一起發佈到你的軟體源儲存庫，或分享其中一個。每個都是建置產生的原始檔案，未經更動。"
+          }
+        }
+      }
+    },

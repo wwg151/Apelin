@@ -1,0 +1,83 @@
+    "A single-screen UIKit app with scene support, saved-state cleanup and entitlements for running outside a container." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تطبيق UIKit بشاشة واحدة يدعم المشاهد، وينظّف الحالة المحفوظة، ويتضمن الاستحقاقات اللازمة للعمل خارج الحاوية."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine UIKit-App mit einem Bildschirm, Szenenunterstützung, Bereinigung des gespeicherten Zustands und Berechtigungen für die Ausführung außerhalb eines Containers."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A single-screen UIKit app with scene support, saved-state cleanup and entitlements for running outside a container."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una app UIKit de una sola pantalla con soporte de escenas, limpieza del estado guardado y los permisos para ejecutarse fuera de un contenedor."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une app UIKit à écran unique, avec prise en charge des scènes, nettoyage de l’état enregistré et droits d’exécution hors conteneur."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un’app UIKit a schermata singola con supporto delle scene, pulizia dello stato salvato e autorizzazioni per l’esecuzione fuori da un container."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シーン対応、保存された状態のクリーンアップ、コンテナ外で実行するためのエンタイトルメントを備えた、1画面構成のUIKit App。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "장면 지원, 저장된 상태 정리, 컨테이너 밖에서 실행하기 위한 엔타이틀먼트를 갖춘 단일 화면 UIKit 앱입니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um app UIKit de tela única com suporte a cenas, limpeza do estado salvo e as permissões para rodar fora de um contêiner."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Одноэкранное приложение UIKit с поддержкой сцен, очисткой сохранённого состояния и правами (entitlements) для работы вне контейнера."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng UIKit một màn hình, hỗ trợ scene, dọn trạng thái đã lưu và có các quyền cần thiết để chạy bên ngoài container."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "单屏 UIKit App，支持场景，会清理保存的界面状态，并带有在容器外运行所需的权限。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "單一畫面的 UIKit App，支援場景，會清除儲存的介面狀態，並具備在容器外執行所需的權限。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,76 @@
+    "%@\n\nEach package goes into the repository’s debs folder as it was built, in one commit that is pushed. Devices with %@ see the update within a few minutes." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nتُضاف كل حزمة كما بُنيت إلى مجلد debs في المستودع، وتُثبَّت في إيداع واحد ثم تُدفع. ستجد الأجهزة التي أضافت %@ التحديث خلال بضع دقائق."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nJedes Paket kommt so, wie es gebaut wurde, in den Ordner debs des Repositorys, in einem Commit, der gepusht wird. Geräte mit %@ sehen das Update in wenigen Minuten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nCada paquete se añade tal como se compiló a la carpeta debs del repositorio, en un solo commit que se envía. Los dispositivos con %@ verán la actualización en unos minutos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nChaque paquet est ajouté tel qu’il a été compilé au dossier debs du dépôt, dans un seul commit qui est poussé. Les appareils ayant %@ verront la mise à jour d’ici quelques minutes."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nOgni pacchetto viene aggiunto così come è stato compilato alla cartella debs del repository, in un unico commit che viene inviato. I dispositivi con %@ vedranno l’aggiornamento entro pochi minuti."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\n各パッケージはビルドされたままの状態でリポジトリのdebsフォルダに追加され、1つのコミットとしてプッシュされます。%@を追加したデバイスには数分でアップデートが表示されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\n각 패키지는 빌드된 그대로 저장소의 debs 폴더에 추가되고 하나의 커밋으로 푸시됩니다. %@을(를) 추가한 기기에서 몇 분 안에 업데이트가 보입니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nCada pacote é adicionado à pasta debs do repositório como foi compilado, em um único commit que é enviado. Dispositivos com %@ verão a atualização em alguns minutos."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nКаждый пакет добавляется в папку debs репозитория в том виде, в каком он собран, одним коммитом, который отправляется. Устройства с %@ увидят обновление через несколько минут."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\nMỗi gói được thêm vào thư mục debs của kho đúng như khi được xây dựng, trong một commit rồi được đẩy lên. Các thiết bị đã thêm %@ sẽ thấy bản cập nhật trong vài phút."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\n每个软件包会按构建时的原样放进仓库的 debs 文件夹，合为一次提交并推送。添加了 %@ 的设备几分钟内就能看到更新。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@\n\n每個套件會按建置時的原樣放進儲存庫的 debs 檔案夾，合為一次提交並推送。加入了 %@ 的裝置幾分鐘內就能看到更新。"
+          }
+        }
+      }
+    },

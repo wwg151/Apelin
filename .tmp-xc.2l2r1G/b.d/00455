@@ -1,0 +1,83 @@
+    "This is a sample conversation. These messages do not come from a model." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هذه محادثة تجريبية. هذه الرسائل ليست من نموذج."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das ist ein Beispielchat. Diese Nachrichten stammen nicht von einem Modell."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is a sample conversation. These messages do not come from a model."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este es un chat de ejemplo. Estos mensajes no proceden de un modelo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ceci est un exemple de discussion. Ces messages ne proviennent pas d’un modèle."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questa è una conversazione di esempio. Questi messaggi non provengono da un modello."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "これはサンプルのチャットです。これらのメッセージはモデルによるものではありません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "샘플 채팅입니다. 이 메시지는 모델이 생성한 것이 아닙니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta é uma conversa de exemplo. Estas mensagens não vêm de um modelo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Это пример переписки. Эти сообщения созданы не моделью."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đây là cuộc trò chuyện mẫu. Các tin nhắn này không do mô hình tạo ra."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这是示例聊天，消息并非由模型生成。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這是範例聊天，這些訊息並非由模型產生。"
+          }
+        }
+      }
+    },

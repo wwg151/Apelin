@@ -1,0 +1,76 @@
+    "This file contains Apple’s iPhoneOS SDK for your own devices. Apelin does not upload it." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يحتوي هذا الملف على iPhoneOS SDK من Apple لأجهزتك الخاصة. لا يرفعه Apelin إلى أي مكان."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Datei enthält das iPhoneOS SDK von Apple für deine eigenen Geräte. Apelin lädt sie nicht hoch."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este archivo contiene el SDK de iPhoneOS de Apple para tus propios dispositivos. Apelin no lo sube a ningún sitio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce fichier contient le SDK iPhoneOS d’Apple pour vos propres appareils. Apelin ne l’envoie sur aucun serveur."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo file contiene l’SDK iPhoneOS di Apple per i tuoi dispositivi. Apelin non lo carica online."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このファイルには、ご自身のデバイスで使用するためのAppleのiPhoneOS SDKが含まれています。Apelinがこのファイルをアップロードすることはありません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 파일에는 본인의 기기에서 사용할 Apple의 iPhoneOS SDK가 들어 있습니다. Apelin은 이 파일을 업로드하지 않습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este arquivo contém o SDK do iPhoneOS da Apple para seus próprios dispositivos. O Apelin não o envia para lugar nenhum."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Этот файл содержит iPhoneOS SDK от Apple для ваших собственных устройств. Apelin не выгружает его в сеть."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tệp này chứa iPhoneOS SDK của Apple dành cho các thiết bị của riêng bạn. Apelin không tải tệp này lên."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此文件包含供你自己的设备使用的 Apple iPhoneOS SDK。Apelin 不会上传它。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此檔案包含供你自己的裝置使用的 Apple iPhoneOS SDK。Apelin 不會上傳此檔案。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,76 @@
+    "A package repository is an APT source on GitHub Pages: “Distribute…” publishes a project’s release builds to it." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مستودع الحزم هو مصدر APT على GitHub Pages: يُنشر «توزيع…» إصدارات المشروع إليه."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Paket-Repository ist eine APT-Quelle auf GitHub Pages: „Verteilen …“ veröffentlicht die Release-Builds eines Projekts dort."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un repositorio de paquetes es una fuente APT en GitHub Pages: «Distribuir…» publica en él las compilaciones de versión de un proyecto."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un dépôt de paquets est une source APT sur GitHub Pages : « Distribuer… » y publie les versions d’un projet."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un repository di pacchetti è una sorgente APT su GitHub Pages: «Distribuisci…» vi pubblica le build di rilascio di un progetto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パッケージリポジトリはGitHub Pages上のAPTソースです。「配布…」でプロジェクトのリリースビルドをここに公開します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "패키지 저장소는 GitHub Pages의 APT 소스입니다. ‘배포…’가 프로젝트의 릴리스 빌드를 여기에 게시합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um repositório de pacotes é uma fonte APT no GitHub Pages: “Distribuir…” publica nele as compilações de versão de um projeto."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Репозиторий пакетов — это источник APT на GitHub Pages: «Распространить…» публикует в него релизные сборки проекта."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kho gói là một nguồn APT trên GitHub Pages: “Phân phối…” sẽ phát hành các bản dựng phát hành của dự án lên đó."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "软件源仓库是托管在 GitHub Pages 上的 APT 软件源：“分发…”会把项目的正式构建发布到这里。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "軟體源儲存庫是託管在 GitHub Pages 上的 APT 軟體源：「分發…」會把專案的正式建置發佈到這裡。"
+          }
+        }
+      }
+    },

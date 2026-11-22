@@ -1,0 +1,83 @@
+    "Enter a title and memory text. The title must be a single line." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter a title and memory text. The title must be a single line."
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أدخل عنوانًا ونصًا للذاكرة. يجب أن يكون العنوان في سطر واحد."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gib einen Titel und einen Erinnerungstext ein. Der Titel muss einzeilig sein."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce un título y el texto de la memoria. El título debe ocupar una sola línea."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saisissez un titre et le texte de la mémoire. Le titre doit tenir sur une seule ligne."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inserisci un titolo e il testo della memoria. Il titolo deve essere su una sola riga."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイトルとメモリの本文を入力してください。タイトルは1行にしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "제목과 메모리 내용을 입력하세요. 제목은 한 줄이어야 합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insira um título e o texto da memória. O título deve ter uma única linha."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите заголовок и текст памяти. Заголовок должен занимать одну строку."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhập tiêu đề và nội dung ghi nhớ. Tiêu đề phải nằm trên một dòng."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请输入标题和记忆正文。标题必须为单行。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請輸入標題和記憶正文。標題必須為單行。"
+          }
+        }
+      }
+    },

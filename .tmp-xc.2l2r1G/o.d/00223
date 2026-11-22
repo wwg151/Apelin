@@ -1,0 +1,83 @@
+    "A chat or another window changed these memories. Reopen the memory to review the latest version before editing." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "غيّرت محادثةٌ أو نافذةٌ أخرى هذه الذكريات. أعد فتح الذكرى لمراجعة أحدث نسخة قبل التعديل."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Chat oder ein anderes Fenster hat diese Erinnerungen geändert. Öffne die Erinnerung erneut, um vor dem Bearbeiten die neueste Version zu prüfen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A chat or another window changed these memories. Reopen the memory to review the latest version before editing."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un chat u otra ventana ha modificado estas memorias. Vuelve a abrir la memoria para revisar la versión más reciente antes de editarla."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une discussion ou une autre fenêtre a modifié ces souvenirs. Rouvrez le souvenir pour consulter la dernière version avant de le modifier."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una chat o un’altra finestra ha modificato queste memorie. Riapri la memoria per vedere la versione più recente prima di modificarla."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チャットまたは別のウインドウでメモリが変更されました。編集する前に、メモリを開き直して最新の内容を確認してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "채팅 또는 다른 윈도우에서 메모리가 변경되었습니다. 편집하기 전에 메모리를 다시 열어 최신 내용을 확인하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uma conversa ou outra janela alterou estas memórias. Abra a memória novamente para revisar a versão mais recente antes de editar."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Эти воспоминания изменены в чате или другом окне. Откройте воспоминание снова и проверьте последнюю версию, прежде чем редактировать."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một cuộc trò chuyện hoặc cửa sổ khác đã thay đổi các ghi nhớ này. Hãy mở lại ghi nhớ để xem phiên bản mới nhất trước khi sửa."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "聊天或其他窗口已更改这些记忆。请重新打开，查看最新内容后再编辑。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "聊天或其他視窗已變更這些記憶。請重新打開記憶，查看最新內容後再編輯。"
+          }
+        }
+      }
+    },

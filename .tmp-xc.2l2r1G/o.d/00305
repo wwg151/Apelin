@@ -1,0 +1,83 @@
+    "Set up a compiler and SDK, then start from a project template." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أعدّ مُصرّفًا وSDK، ثم ابدأ من قالب مشروع."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richte einen Compiler und ein SDK ein und starte dann mit einer Projektvorlage."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set up a compiler and SDK, then start from a project template."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configura un compilador y un SDK, y empieza con una plantilla de proyecto."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configurez un compilateur et un SDK, puis partez d’un modèle de projet."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configura un compilatore e un SDK, poi parti da un template di progetto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コンパイラとSDKをセットアップして、プロジェクトテンプレートから始めます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "컴파일러와 SDK를 설정한 다음 프로젝트 템플릿으로 시작하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configure um compilador e um SDK e comece com um modelo de projeto."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройте компилятор и SDK, затем начните с шаблона проекта."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thiết lập trình biên dịch và SDK, rồi bắt đầu từ một mẫu dự án."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "配置编译器和 SDK，然后从项目模板开始。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定編譯器和 SDK，然後從專案範本開始。"
+          }
+        }
+      }
+    },

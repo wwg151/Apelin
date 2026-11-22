@@ -1,0 +1,83 @@
+    "Apelin sends its instructions and tools with every request, so a context window under %@ tokens leaves little room for the chat." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يرسل Apelin تعليماته وأدواته مع كل طلب، لذا فإن نافذة السياق التي تقل عن %@ رمز لا تترك سوى مساحة صغيرة للمحادثة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin sendet seine Anweisungen und Werkzeuge bei jeder Anfrage mit, sodass ein Kontextfenster unter %@ Tokens wenig Platz für den Chat lässt."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin sends its instructions and tools with every request, so a context window under %@ tokens leaves little room for the chat."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin envía sus instrucciones y herramientas con cada solicitud, por lo que una ventana de contexto inferior a %@ tokens deja poco espacio para el chat."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin envoie ses instructions et ses outils avec chaque requête ; une fenêtre de contexte inférieure à %@ jetons laisse donc peu de place à la discussion."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin invia istruzioni e strumenti con ogni richiesta, quindi una finestra di contesto inferiore a %@ token lascia poco spazio per la chat."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelinはリクエストごとに指示とツールを送信するため、%@トークン未満のコンテキストウィンドウではチャット用の空きがほとんど残りません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin은 모든 요청에 지침과 도구를 함께 보내므로, 컨텍스트 윈도우가 %@토큰 미만이면 채팅에 사용할 공간이 부족해집니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Apelin envia suas instruções e ferramentas a cada solicitação, portanto uma janela de contexto abaixo de %@ tokens deixa pouco espaço para a conversa."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin отправляет свои инструкции и инструменты с каждым запросом, поэтому при контекстном окне менее %@ токенов для чата остается мало места."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin gửi kèm hướng dẫn và công cụ trong mỗi yêu cầu, nên cửa sổ ngữ cảnh dưới %@ token sẽ chừa lại rất ít chỗ cho cuộc trò chuyện."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 会在每次请求中发送指令和工具定义，因此小于 %@ 个 Token 的上下文窗口留给聊天的空间很小。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 會在每次請求中傳送指令和工具定義，因此小於 %@ 個 Token 的上下文視窗留給聊天的空間很小。"
+          }
+        }
+      }
+    },

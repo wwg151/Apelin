@@ -1,0 +1,76 @@
+    "Apelin downloads the repository into a new project and opens it. Nothing in it runs, and nothing is sent to your agent." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ينزّل Apelin المستودع إلى مشروع جديد ويفتحه. لا يُشغَّل أي شيء منه، ولا يُرسَل أي شيء إلى الوكيل."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin lädt das Repository in ein neues Projekt und öffnet es. Nichts darin wird ausgeführt und nichts an deinen Agent gesendet."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin descarga el repositorio en un proyecto nuevo y lo abre. No se ejecuta nada de su contenido ni se envía nada a tu agente."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin télécharge le dépôt dans un nouveau projet et l’ouvre. Rien de son contenu n’est exécuté, et rien n’est envoyé à votre agent."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin scarica il repository in un nuovo progetto e lo apre. Nulla al suo interno viene eseguito e nulla viene inviato all’agente."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelinはリポジトリを新しいプロジェクトにダウンロードして開きます。その中のものは何も実行されず、エージェントにも何も送信されません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin이 저장소를 새 프로젝트로 다운로드하고 엽니다. 저장소의 어떤 것도 실행되지 않으며 에이전트에게 아무것도 보내지 않습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Apelin baixa o repositório para um novo projeto e o abre. Nada nele é executado, e nada é enviado ao seu agente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin загрузит репозиторий в новый проект и откроет его. Ничего из него не запускается, и агенту ничего не отправляется."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin tải kho lưu trữ về một dự án mới và mở dự án đó. Không có gì trong kho được chạy và không có gì được gửi cho tác nhân."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 会把仓库下载到一个新项目中并打开它。仓库中的任何内容都不会运行，也不会向智能体发送任何内容。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 會將儲存庫下載到新專案並打開它。儲存庫中的任何內容都不會執行，也不會傳送任何內容給代理程式。"
+          }
+        }
+      }
+    },

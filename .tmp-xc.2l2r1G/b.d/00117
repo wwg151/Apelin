@@ -1,0 +1,83 @@
+    "Import the Git repository %@ into this workspace with git_clone, then work out how to build it and tell me what you find." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استورد مستودع Git %@ إلى مساحة العمل هذه باستخدام git_clone، ثم اكتشف طريقة بنائه وأخبرني بما توصلت إليه."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importiere das Git-Repository %@ mit git_clone in diesen Arbeitsbereich, finde dann heraus, wie es gebaut wird, und sag mir, was du herausfindest."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Import the Git repository %@ into this workspace with git_clone, then work out how to build it and tell me what you find."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importa el repositorio Git %@ a este espacio de trabajo con git_clone, luego averigua cómo compilarlo y cuéntame lo que encuentres."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importez le dépôt Git %@ dans cet espace de travail avec git_clone, puis déterminez comment le compiler et dites-moi ce que vous trouvez."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importa il repository Git %@ in questo spazio di lavoro con git_clone, poi capisci come compilarlo e dimmi cosa trovi."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "git_clone でGitリポジトリ %@ をこのワークスペースにインポートしてから、ビルド方法を調べて、わかったことを教えてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "git_clone으로 Git 저장소 %@을(를) 이 작업 공간에 가져온 다음, 빌드 방법을 알아내고 알게 된 내용을 알려 주세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importe o repositório Git %@ para este espaço de trabalho com git_clone, depois descubra como compilá-lo e me conte o que encontrar."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Импортируйте репозиторий Git %@ в это рабочее пространство с помощью git_clone, затем выясните, как его собрать, и расскажите о результатах."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhập kho lưu trữ Git %@ vào không gian làm việc này bằng git_clone, sau đó tìm cách xây dựng nó và cho tôi biết bạn phát hiện được gì."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用 git_clone 把 Git 仓库 %@ 导入这个工作区，然后弄清楚它怎么构建，再告诉我你的发现。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用 git_clone 將 Git 儲存庫 %@ 匯入此工作區，然後找出建置方式，並告訴我你的發現。"
+          }
+        }
+      }
+    },

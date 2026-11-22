@@ -1,0 +1,83 @@
+    "Choose one or both targets, then tap “Build”. Selected targets build in order: roothide, then rootless." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر هدفًا واحدًا أو كليهما، ثم اضغط «بناء». تُبنى الأهداف المحددة بالترتيب: roothide ثم rootless."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle ein oder beide Ziele und tippe auf „Erstellen“. Die ausgewählten Ziele werden der Reihe nach erstellt: roothide, dann rootless."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose one or both targets, then tap “Build”. Selected targets build in order: roothide, then rootless."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige uno o ambos destinos y toca “Compilar”. Los destinos seleccionados se compilan en orden: roothide y luego rootless."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez une ou deux cibles, puis touchez « Compiler ». Les cibles sélectionnées sont compilées dans l’ordre : roothide, puis rootless."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli una o entrambe le destinazioni, poi tocca “Compila”. Le destinazioni selezionate vengono compilate in ordine: prima roothide, poi rootless."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一方または両方のターゲットを選択して「ビルド」をタップしてください。選択したターゲットは roothide、rootless の順にビルドされます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대상을 하나 또는 둘 다 선택한 다음 “빌드”를 탭하세요. 선택한 대상은 roothide, rootless 순서로 빌드됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolha um ou ambos os destinos e toque em “Compilar”. Os destinos selecionados são compilados em ordem: roothide, depois rootless."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите одну или обе цели и нажмите «Собрать». Выбранные цели собираются по порядку: сначала roothide, затем rootless."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn một hoặc cả hai mục tiêu, rồi chạm “Xây dựng”. Các mục tiêu đã chọn được xây dựng theo thứ tự: roothide, rồi rootless."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择一个或两个目标，然后轻点“构建”。所选目标将按顺序构建：先 roothide，后 rootless。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選擇一個或兩個目標，然後點一下「建置」。所選目標將依序建置：先 roothide，再 rootless。"
+          }
+        }
+      }
+    },

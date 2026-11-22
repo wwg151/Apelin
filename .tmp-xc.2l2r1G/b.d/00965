@@ -1,0 +1,83 @@
+    "Prepare this workspace for distribution: run apelin_project_check_distribution and fix everything it lists, and make sure its build script writes a release package for each target when APELIN_CONFIGURATION is release, with the package’s real name, identifier, author and a new version. Then tell me what you changed. Do not build yet." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جهّز مساحة العمل هذه للتوزيع: شغّل apelin_project_check_distribution وأصلح كل ما يذكره، وتأكد من أن سكربت البناء يكتب حزمة إصدار لكل هدف عندما تكون قيمة APELIN_CONFIGURATION هي release، باسم الحزمة الحقيقي ومعرّفها ومؤلفها وإصدار جديد. ثم أخبرني بما غيّرته. لا تبنِ بعد."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bereite diesen Arbeitsbereich für die Verteilung vor: Führe apelin_project_check_distribution aus, behebe alles, was es auflistet, und stelle sicher, dass sein Build-Skript für jedes Ziel ein Release-Paket schreibt, wenn APELIN_CONFIGURATION release ist – mit dem echten Namen, Bezeichner und Autor des Pakets und einer neuen Version. Sag mir dann, was du geändert hast. Baue noch nicht."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prepare this workspace for distribution: run apelin_project_check_distribution and fix everything it lists, and make sure its build script writes a release package for each target when APELIN_CONFIGURATION is release, with the package’s real name, identifier, author and a new version. Then tell me what you changed. Do not build yet."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prepara este espacio de trabajo para distribuirlo: ejecuta apelin_project_check_distribution, corrige todo lo que indique y asegúrate de que su script de compilación genere un paquete de publicación para cada destino cuando APELIN_CONFIGURATION sea release, con el nombre, el identificador y el autor reales del paquete y una versión nueva. Luego dime qué cambiaste. No compiles todavía."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Préparez cet espace de travail pour la distribution : exécutez apelin_project_check_distribution, corrigez tout ce qu’il signale et assurez-vous que son script de compilation produit un paquet de publication pour chaque cible lorsque APELIN_CONFIGURATION vaut release, avec le vrai nom, l’identifiant et l’auteur du paquet et une nouvelle version. Puis dites-moi ce que vous avez modifié. Ne compilez pas encore."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prepara questo spazio di lavoro per la distribuzione: esegui apelin_project_check_distribution, correggi tutto ciò che segnala e assicurati che il suo script di build produca un pacchetto di release per ogni destinazione quando APELIN_CONFIGURATION è release, con il nome, l’identificatore e l’autore reali del pacchetto e una nuova versione. Poi dimmi cosa hai modificato. Non compilare ancora."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "配布できるよう、このワークスペースを準備してください。apelin_project_check_distribution を実行して表示された項目をすべて修正し、APELIN_CONFIGURATION が release のときにビルドスクリプトが各ターゲット向けのリリースパッケージを書き出すようにしてください。パッケージには実際の名前、識別子、作者と新しいバージョンを使ってください。その後、変更内容を教えてください。まだビルドはしないでください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "배포할 수 있도록 이 작업 공간을 준비해 주세요. apelin_project_check_distribution을 실행해 표시된 항목을 모두 수정하고, APELIN_CONFIGURATION이 release일 때 빌드 스크립트가 각 대상용 릴리스 패키지를 만들도록 해 주세요. 패키지에는 실제 이름, 식별자, 작성자와 새 버전을 사용해 주세요. 그런 다음 무엇을 변경했는지 알려 주세요. 아직 빌드하지 마세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prepare este espaço de trabalho para distribuição: execute apelin_project_check_distribution, corrija tudo o que ele listar e garanta que o script de compilação gere um pacote de release para cada destino quando APELIN_CONFIGURATION for release, com o nome, o identificador e o autor reais do pacote e uma nova versão. Depois me diga o que você alterou. Não compile ainda."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подготовьте это рабочее пространство к распространению: запустите apelin_project_check_distribution, исправьте всё, что он перечислит, и убедитесь, что скрипт сборки создаёт релизный пакет для каждой цели, когда APELIN_CONFIGURATION равно release, — с настоящими названием, идентификатором и автором пакета и новой версией. Затем расскажите, что изменили. Пока не собирайте."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy chuẩn bị không gian làm việc này để phân phối: chạy apelin_project_check_distribution, sửa mọi mục mà nó liệt kê và bảo đảm tập lệnh bản dựng tạo gói phát hành cho từng đích khi APELIN_CONFIGURATION là release, với tên, định danh, tác giả thật của gói và một phiên bản mới. Rồi cho tôi biết bạn đã thay đổi những gì. Chưa xây dựng vội."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为分发准备这个工作区：运行 apelin_project_check_distribution，修正它列出的所有问题，并确保在 APELIN_CONFIGURATION 为 release 时，构建脚本会为每个目标写出正式版软件包，使用软件包真实的名称、标识符、作者和新的版本号。然后告诉我你改了什么。先不要构建。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "為分發準備這個工作區：執行 apelin_project_check_distribution，修正它列出的所有問題，並確保在 APELIN_CONFIGURATION 為 release 時，建置指令碼會為每個目標寫出正式版套件，使用套件真實的名稱、識別碼、作者和新的版本號。然後告訴我你改了什麼。先不要建置。"
+          }
+        }
+      }
+    },

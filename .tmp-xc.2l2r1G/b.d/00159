@@ -1,0 +1,83 @@
+    "Some details still need attention before other people install this package." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا تزال بعض التفاصيل بحاجة إلى مراجعة قبل أن يثبّت آخرون هذه الحزمة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einige Details müssen noch bearbeitet werden, bevor andere dieses Paket installieren."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Some details still need attention before other people install this package."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Algunos detalles aún requieren atención antes de que otras personas instalen este paquete."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Certains détails doivent encore être réglés avant que d’autres personnes installent ce paquet."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alcuni dettagli richiedono ancora attenzione prima che altri installino questo pacchetto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ほかの人がこのパッケージをインストールする前に、確認が必要な項目が残っています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다른 사람이 이 패키지를 설치하기 전에 확인해야 할 사항이 남아 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alguns detalhes ainda precisam de atenção antes que outras pessoas instalem este pacote."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прежде чем другие установят этот пакет, нужно проверить некоторые детали."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một số chi tiết vẫn cần xử lý trước khi người khác cài đặt gói này."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在其他人安装这个软件包之前，还有一些细节需要处理。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在其他人安裝這個套件之前，還有一些細節需要處理。"
+          }
+        }
+      }
+    },

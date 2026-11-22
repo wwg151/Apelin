@@ -1,0 +1,83 @@
+    "A compatible toolchain and iOS SDK, selected for this device. You can also install them later in Settings." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سلسلة أدوات وiOS SDK متوافقان، تم اختيارهما لهذا الجهاز. يمكنك أيضًا تثبيتهما لاحقًا في «الإعدادات»."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine kompatible Toolchain und ein iOS SDK, für dieses Gerät ausgewählt. Du kannst sie auch später in den Einstellungen installieren."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A compatible toolchain and iOS SDK, selected for this device. You can also install them later in Settings."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una cadena de herramientas y un SDK de iOS compatibles, elegidos para este dispositivo. También puedes instalarlos más tarde en Ajustes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une chaîne d’outils et un SDK iOS compatibles, choisis pour cet appareil. Vous pouvez aussi les installer plus tard dans Réglages."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una toolchain e un SDK iOS compatibili, scelti per questo dispositivo. Puoi anche installarli più tardi in Impostazioni."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このデバイス向けに選ばれた、互換性のあるツールチェーンとiOS SDKです。あとで「設定」でインストールすることもできます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 기기에 맞게 선택된 호환 툴체인과 iOS SDK입니다. 나중에 ‘설정’에서 설치할 수도 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uma cadeia de ferramentas e um SDK do iOS compatíveis, escolhidos para este dispositivo. Você também pode instalá-los depois em Ajustes."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Совместимые набор инструментов и iOS SDK, подобранные для этого устройства. Их также можно установить позже в «Настройках»."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuỗi công cụ và iOS SDK tương thích, được chọn cho thiết bị này. Bạn cũng có thể cài đặt chúng sau trong Cài đặt."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为此设备选择的兼容工具链和 iOS SDK。你也可以稍后在“设置”中安装。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "為此裝置選擇的相容工具鏈和 iOS SDK。你也可以稍後在「設定」中安裝。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,76 @@
+    "This is not the address the other browser ended on after sign-in. Copy the full address from its address bar and paste it again." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هذا ليس العنوان الذي انتهى إليه المتصفح الآخر بعد تسجيل الدخول. انسخ العنوان كاملًا من شريط العناوين فيه والصقه مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das ist nicht die Adresse, auf der der andere Browser nach der Anmeldung gelandet ist. Kopiere die vollständige Adresse aus seiner Adressleiste und setze sie erneut ein."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta no es la dirección en la que terminó el otro navegador tras iniciar sesión. Copia la dirección completa de su barra de direcciones y pégala de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce n’est pas l’adresse à laquelle l’autre navigateur a abouti après la connexion. Copiez l’adresse complète depuis sa barre d’adresse et collez-la à nouveau."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo non è l’indirizzo a cui è arrivato l’altro browser dopo l’accesso. Copia l’indirizzo completo dalla sua barra degli indirizzi e incollalo di nuovo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "これは、サインイン後に別のブラウザで最後に表示されたアドレスではありません。そのブラウザのアドレスバーからアドレス全体をコピーして、もう一度ペーストしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로그인 후 다른 브라우저가 마지막으로 이동한 주소가 아닙니다. 해당 브라우저의 주소 표시줄에서 전체 주소를 복사해 다시 붙여넣으세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este não é o endereço em que o outro navegador terminou após o início de sessão. Copie o endereço completo da barra de endereços dele e cole-o novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Это не тот адрес, на который другой браузер перешёл после входа. Скопируйте полный адрес из его адресной строки и вставьте ещё раз."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đây không phải là địa chỉ mà trình duyệt kia chuyển đến sau khi đăng nhập. Hãy sao chép toàn bộ địa chỉ từ thanh địa chỉ của trình duyệt đó và dán lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这不是另一个浏览器登录后最后跳转到的地址。请从该浏览器的地址栏拷贝完整地址，然后重新粘贴。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這不是另一個瀏覽器登入後最後跳轉到的位址。請從該瀏覽器的網址列拷貝完整位址，然後重新貼上。"
+          }
+        }
+      }
+    },

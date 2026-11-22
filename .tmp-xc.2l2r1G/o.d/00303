@@ -1,0 +1,83 @@
+    "Review changes, test results, and approve actions that affect your device." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "راجِع التغييرات ونتائج الاختبارات، ووافق على الإجراءات التي تؤثر في جهازك."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prüfe Änderungen und Testergebnisse und genehmige Aktionen, die dein Gerät betreffen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Review changes, test results, and approve actions that affect your device."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Revisa los cambios y los resultados de las pruebas, y aprueba las acciones que afectan a tu dispositivo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Examinez les modifications et les résultats des tests, et approuvez les actions qui touchent votre appareil."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Controlla le modifiche e i risultati dei test, e approva le azioni che riguardano il dispositivo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "変更内容やテスト結果を確認し、デバイスに影響する操作を承認します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "변경 사항과 테스트 결과를 검토하고, 기기에 영향을 주는 작업을 승인합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Revise as alterações e os resultados dos testes, e aprove as ações que afetam seu dispositivo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверяйте изменения и результаты тестов, разрешайте действия, затрагивающие устройство."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xem lại thay đổi, kết quả kiểm thử và phê duyệt các thao tác ảnh hưởng đến thiết bị."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "审查改动、测试结果，并批准影响设备的操作。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "檢視變更和測試結果，並核准會影響裝置的操作。"
+          }
+        }
+      }
+    },

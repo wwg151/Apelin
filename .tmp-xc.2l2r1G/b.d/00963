@@ -1,0 +1,83 @@
+    "Prepare this project for distribution to %@: run apelin_project_check_distribution, fix everything it lists (the package’s name, description, author and version, its identifiers, and the app’s icon if it has one), then tell me what you changed. Do not build yet." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جهّز هذا المشروع للتوزيع على %@: شغّل apelin_project_check_distribution، وأصلح كل ما يذكره (اسم الحزمة ووصفها ومؤلفها وإصدارها، ومعرّفاتها، وأيقونة التطبيق إن وُجدت)، ثم أخبرني بما غيّرته. لا تبنِ بعد."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bereite dieses Projekt für die Verteilung auf %@ vor: Führe apelin_project_check_distribution aus, behebe alles, was es auflistet (Name, Beschreibung, Autor und Version des Pakets, seine Bezeichner und das Symbol der App, falls vorhanden), und sag mir dann, was du geändert hast. Baue noch nicht."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prepare this project for distribution to %@: run apelin_project_check_distribution, fix everything it lists (the package’s name, description, author and version, its identifiers, and the app’s icon if it has one), then tell me what you changed. Do not build yet."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prepara este proyecto para distribuirlo en %@: ejecuta apelin_project_check_distribution, corrige todo lo que indique (el nombre, la descripción, el autor y la versión del paquete, sus identificadores y el icono de la app, si tiene) y luego dime qué cambiaste. No compiles todavía."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Préparez ce projet pour la distribution vers %@ : exécutez apelin_project_check_distribution, corrigez tout ce qu’il signale (nom, description, auteur et version du paquet, ses identifiants, et l’icône de l’app s’il y en a une), puis dites-moi ce que vous avez modifié. Ne compilez pas encore."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prepara questo progetto per la distribuzione su %@: esegui apelin_project_check_distribution, correggi tutto ciò che segnala (nome, descrizione, autore e versione del pacchetto, i suoi identificatori e l’icona dell’app, se presente), poi dimmi cosa hai modificato. Non compilare ancora."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@向けに配布できるよう、このプロジェクトを準備してください。apelin_project_check_distribution を実行し、表示された項目（パッケージの名前、説明、作者、バージョン、識別子、AppがあればAppのアイコン）をすべて修正してから、変更内容を教えてください。まだビルドはしないでください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@에 배포할 수 있도록 이 프로젝트를 준비해 주세요. apelin_project_check_distribution을 실행하고, 표시된 항목(패키지의 이름, 설명, 작성자, 버전, 식별자, 앱이 있다면 앱 아이콘)을 모두 수정한 다음 무엇을 변경했는지 알려 주세요. 아직 빌드하지 마세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prepare este projeto para distribuição em %@: execute apelin_project_check_distribution, corrija tudo o que ele listar (o nome, a descrição, o autor e a versão do pacote, seus identificadores e o ícone do app, se houver) e depois me diga o que você alterou. Não compile ainda."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подготовьте этот проект к распространению для %@: запустите apelin_project_check_distribution, исправьте всё, что он перечислит (название, описание, автора и версию пакета, его идентификаторы, а также значок приложения, если оно есть), затем расскажите, что изменили. Пока не собирайте."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy chuẩn bị dự án này để phân phối cho %@: chạy apelin_project_check_distribution, sửa mọi mục mà nó liệt kê (tên, mô tả, tác giả và phiên bản của gói, các định danh, và biểu tượng ứng dụng nếu có), rồi cho tôi biết bạn đã thay đổi những gì. Chưa xây dựng vội."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为分发到 %@ 准备这个项目：运行 apelin_project_check_distribution，修正它列出的所有问题（软件包的名称、描述、作者和版本、各个标识符，以及 App 的图标，如果有的话），然后告诉我你改了什么。先不要构建。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "為分發到 %@ 準備這個專案：執行 apelin_project_check_distribution，修正它列出的所有問題（套件的名稱、描述、作者和版本、各個識別碼，以及 App 的圖像，如果有的話），然後告訴我你改了什麼。先不要建置。"
+          }
+        }
+      }
+    },

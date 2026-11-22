@@ -1,0 +1,83 @@
+    "Install or update the required app with your preferred package manager, then try again." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ثبّت التطبيق المطلوب أو حدّثه باستخدام مدير الحزم المفضّل لديك، ثم حاول مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installiere oder aktualisiere die benötigte App mit deinem bevorzugten Paketmanager und versuche es dann erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Install or update the required app with your preferred package manager, then try again."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instala o actualiza la app necesaria con tu gestor de paquetes preferido e inténtalo de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installez ou mettez à jour l’app requise avec votre gestionnaire de paquets préféré, puis réessayez."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installa o aggiorna l’app richiesta con il tuo gestore di pacchetti preferito, poi riprova."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "お使いのパッケージマネージャで必要なAppをインストールまたはアップデートしてから、もう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선호하는 패키지 관리자로 필요한 앱을 설치하거나 업데이트한 후 다시 시도하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instale ou atualize o app necessário com seu gerenciador de pacotes preferido e tente novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Установите или обновите нужное приложение через удобный вам менеджер пакетов и повторите попытку."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy cài đặt hoặc cập nhật ứng dụng cần thiết bằng trình quản lý gói bạn ưa dùng, rồi thử lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请使用你喜欢的软件包管理器安装或更新所需的 App，然后重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請使用你偏好的套件管理器安裝或更新所需的 App，然後再試一次。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,83 @@
+    "Leave it empty to use the name shown for now. Your agent will name the project once it knows what you’re making." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اتركه فارغًا لاستخدام الاسم المعروض حاليًا. سيسمّي الوكيل المشروع بعد أن يعرف ما الذي تصنعه."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lass das Feld leer, um vorerst den angezeigten Namen zu verwenden. Dein Agent benennt das Projekt, sobald er weiß, was du baust."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leave it empty to use the name shown for now. Your agent will name the project once it knows what you’re making."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Déjalo vacío para usar por ahora el nombre que se muestra. Tu agente pondrá nombre al proyecto cuando sepa qué estás creando."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laissez vide pour utiliser le nom affiché pour l’instant. Votre agent nommera le projet dès qu’il saura ce que vous créez."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lascia vuoto per usare per ora il nome mostrato. L’agente darà un nome al progetto quando saprà cosa stai creando."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "空欄のままにすると、表示中の名前がひとまず使われます。何を作るのかがわかった時点で、エージェントがプロジェクトに名前を付けます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "비워 두면 표시된 이름을 일단 사용합니다. 무엇을 만드는지 알게 되면 에이전트가 프로젝트 이름을 정합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deixe em branco para usar o nome mostrado por enquanto. Seu agente dará um nome ao projeto quando souber o que você está criando."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оставьте поле пустым, чтобы пока использовать показанное название. Агент назовёт проект, когда поймёт, что вы создаёте."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Để trống để tạm dùng tên đang hiển thị. Tác nhân sẽ đặt tên cho dự án khi biết bạn đang làm gì."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "留空则暂用框中显示的名字，智能体了解你要做什么之后会为项目命名。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "留空則暫時使用目前顯示的名稱。代理程式了解你要做什麼之後，會為專案命名。"
+          }
+        }
+      }
+    },

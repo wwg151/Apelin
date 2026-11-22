@@ -1,0 +1,18 @@
+    "Withdraw" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Withdraw" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "سحب" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zurückziehen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Retirar" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retirer" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Ritira" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "取り下げる" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "철회" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Retirar" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отозвать" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Rút" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "撤回" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "撤回" } }
+      }
+    },

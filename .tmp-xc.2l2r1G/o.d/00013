@@ -1,0 +1,18 @@
+    "Batch Remove…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Batch Remove…" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إزالة متعددة…" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Mehrere entfernen…" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Eliminar varios…" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Suppression multiple…" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Rimuovi più pacchetti…" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "一括削除…" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "일괄 제거…" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Remover vários…" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалить несколько…" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Xóa hàng loạt…" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "批量移除…" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "批次移除…" } }
+      }
+    },

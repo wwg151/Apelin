@@ -1,0 +1,76 @@
+    "This deletes the SDK files. SDKs used by a project cannot be removed." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سيؤدي هذا إلى حذف ملفات SDK. لا يمكن إزالة SDK يستخدمه مشروع."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dadurch werden die SDK-Dateien gelöscht. SDKs, die ein Projekt verwendet, können nicht entfernt werden."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se eliminarán los archivos del SDK. No se pueden eliminar los SDK que use un proyecto."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette action supprime les fichiers du SDK. Les SDK utilisés par un projet ne peuvent pas être supprimés."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questa azione elimina i file dell’SDK. Gli SDK usati da un progetto non possono essere rimossi."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SDKのファイルが削除されます。プロジェクトで使用中のSDKは削除できません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SDK 파일이 삭제됩니다. 프로젝트에서 사용 중인 SDK는 제거할 수 없습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isso apaga os arquivos do SDK. SDKs usados por um projeto não podem ser removidos."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Файлы SDK будут удалены. SDK, используемые проектами, удалить нельзя."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thao tác này sẽ xóa các tệp SDK. Không thể gỡ bỏ SDK đang được dự án sử dụng."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这会删除 SDK 文件。项目正在使用的 SDK 无法移除。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這會刪除 SDK 檔案。專案正在使用的 SDK 無法移除。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,76 @@
+    "After locking, the device didn’t ask for its passcode in time, so Apelin didn’t try it. Make sure Require Passcode is set to Immediately, then try again." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بعد قفل الجهاز، لم يطلب رمز الدخول في الوقت المحدد، لذا لم يجربه Apelin. تأكد من ضبط ”طلب رمز الدخول“ على ”فورًا“، ثم حاول مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach dem Sperren hat das Gerät nicht rechtzeitig nach seinem Code gefragt, daher hat Apelin ihn nicht ausprobiert. Stelle sicher, dass „Code anfordern“ auf „Sofort“ eingestellt ist, und versuche es erneut."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tras bloquearse, el dispositivo no pidió el código a tiempo, por lo que Apelin no lo probó. Asegúrate de que «Solicitar código» esté configurado en «Inmediatamente» e inténtalo de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Après le verrouillage, l’appareil n’a pas demandé son code à temps, Apelin ne l’a donc pas essayé. Assurez-vous que « Exiger le code » est réglé sur « Immédiatement », puis réessayez."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dopo il blocco, il dispositivo non ha richiesto il codice in tempo, quindi Apelin non lo ha provato. Assicurati che “Richiedi codice” sia impostato su “Subito”, poi riprova."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ロック後にデバイスが時間内にパスコードを要求しなかったため、Apelinは試行しませんでした。「パスコードを要求」が「即時」に設定されていることを確認してから、もう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잠근 후 기기가 시간 내에 암호를 요청하지 않아 Apelin이 암호를 시도하지 않았습니다. ‘암호 요구’가 ‘즉시’로 설정되어 있는지 확인한 후 다시 시도하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Após o bloqueio, o dispositivo não solicitou o código a tempo, portanto o Apelin não o testou. Certifique-se de que “Exigir Código” esteja definido como “Imediatamente” e tente novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "После блокировки устройство не запросило код-пароль вовремя, поэтому Apelin не стал его вводить. Убедитесь, что для параметра «Запрос код-пароля» установлено значение «Сразу», и повторите попытку."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sau khi khóa, thiết bị đã không yêu cầu mật mã kịp thời nên Apelin chưa thử mật mã. Hãy đảm bảo “Yêu cầu mật mã” được đặt thành “Ngay lập tức”, sau đó thử lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "锁定后，设备未及时要求输入密码，因此 Apelin 未作尝试。请确保“需要密码”已设为“立即”，然后重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鎖定後，裝置未及時要求輸入密碼，因此 Apelin 未作嘗試。請確認「需要密碼」已設為「立即」，然後再試一次。"
+          }
+        }
+      }
+    },

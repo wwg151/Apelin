@@ -1,0 +1,76 @@
+    "Your agent will continue from a summary of the earlier messages, which frees room for new work. The messages stay in this chat." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سيتابع الوكيل انطلاقًا من ملخص للرسائل السابقة، مما يفسح المجال لعمل جديد. تبقى الرسائل في هذه المحادثة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Agent arbeitet mit einer Zusammenfassung der früheren Nachrichten weiter. So hat er Platz für Neues. Die Nachrichten bleiben in diesem Chat."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu agente continuará a partir de un resumen de los mensajes anteriores, lo que deja espacio para trabajo nuevo. Los mensajes se quedan en este chat."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre agent poursuivra à partir d’un résumé des messages précédents, ce qui libère de la place pour de nouvelles tâches. Les messages restent dans cette discussion."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’agente continuerà da un riepilogo dei messaggi precedenti, liberando spazio per nuovo lavoro. I messaggi restano in questa chat."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エージェントは以前のメッセージの要約をもとに作業を続けるため、新しい作業のための余裕が生まれます。メッセージはこのチャットに残ります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "에이전트가 이전 메시지의 요약을 바탕으로 작업을 이어 가므로 새 작업을 위한 공간이 생깁니다. 메시지는 이 채팅에 그대로 남습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seu agente vai continuar a partir de um resumo das mensagens anteriores, o que libera espaço para novos trabalhos. As mensagens continuam nesta conversa."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Агент продолжит работу по краткому изложению прежних сообщений — так освободится место для новой работы. Сами сообщения останутся в этом чате."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tác nhân sẽ tiếp tục từ bản tóm tắt các tin nhắn trước đó, giúp có thêm chỗ cho công việc mới. Các tin nhắn vẫn được giữ trong cuộc trò chuyện này."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "智能体将基于之前消息的摘要继续工作，为新的工作腾出空间。这些消息仍会保留在此聊天中。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理程式將根據先前訊息的摘要繼續工作，為新的工作騰出空間。這些訊息仍會保留在此聊天中。"
+          }
+        }
+      }
+    },

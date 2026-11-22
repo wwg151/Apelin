@@ -1,0 +1,76 @@
+    "A package repository is an APT source on GitHub Pages that your release builds are published to. You can set it up later in Settings ▸ Git." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مستودع الحزم هو مصدر APT على GitHub Pages تُنشر إليه إصداراتك. يمكنك إعداده لاحقًا في الإعدادات ▸ Git."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Paket-Repository ist eine APT-Quelle auf GitHub Pages, in der deine Release-Builds veröffentlicht werden. Du kannst es später unter Einstellungen ▸ Git einrichten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un repositorio de paquetes es una fuente APT en GitHub Pages donde se publican tus compilaciones de versión. Puedes configurarlo más tarde en Ajustes ▸ Git."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un dépôt de paquets est une source APT sur GitHub Pages où sont publiées vos versions. Vous pourrez le configurer plus tard dans Réglages ▸ Git."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un repository di pacchetti è una sorgente APT su GitHub Pages in cui vengono pubblicate le tue build di rilascio. Puoi configurarlo più tardi in Impostazioni ▸ Git."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パッケージリポジトリは、リリースビルドを公開するGitHub Pages上のAPTソースです。あとで「設定」▸「Git」で設定できます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "패키지 저장소는 릴리스 빌드를 게시하는 GitHub Pages의 APT 소스입니다. 나중에 설정 ▸ Git에서 설정할 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um repositório de pacotes é uma fonte APT no GitHub Pages onde suas compilações de versão são publicadas. Você pode configurá-lo depois em Ajustes ▸ Git."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Репозиторий пакетов — это источник APT на GitHub Pages, куда публикуются ваши релизные сборки. Его можно настроить позже в разделе «Настройки» ▸ Git."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kho gói là một nguồn APT trên GitHub Pages, nơi các bản dựng phát hành của bạn được phát hành. Bạn có thể thiết lập sau trong Cài đặt ▸ Git."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "软件源仓库是托管在 GitHub Pages 上的 APT 软件源，你的正式构建会发布到这里。你也可以稍后在“设置 ▸ Git”中配置。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "軟體源儲存庫是託管在 GitHub Pages 上的 APT 軟體源，你的正式建置會發佈到這裡。你也可以稍後在「設定 ▸ Git」中設定。"
+          }
+        }
+      }
+    },

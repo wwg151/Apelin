@@ -1,0 +1,83 @@
+    "This overwrites the repository’s home page, README, icon, GitHub Pages workflow and index script with Apelin’s current template, replacing any changes made to them, then commits and pushes. Packages, depictions and banners stay as they are." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سيؤدي هذا إلى استبدال الصفحة الرئيسية للمستودع وREADME والأيقونة وسير عمل GitHub Pages وبرنامج الفهرسة بالقالب الحالي لـ Apelin، مع فقدان أي تغييرات أُجريت عليها، ثم الإيداع والدفع. تبقى الحزم والأوصاف واللافتات كما هي."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dies überschreibt die Startseite, README, das Symbol, den GitHub-Pages-Workflow und das Indexskript des Repositorys mit Apelins aktueller Vorlage, ersetzt alle Änderungen daran, erstellt dann einen Commit und pusht. Pakete, Depictions und Banner bleiben, wie sie sind."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This overwrites the repository’s home page, README, icon, GitHub Pages workflow and index script with Apelin’s current template, replacing any changes made to them, then commits and pushes. Packages, depictions and banners stay as they are."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esto sobrescribe la página de inicio, el README, el icono, el flujo de GitHub Pages y el script de índice del repositorio con la plantilla actual de Apelin, reemplazando cualquier cambio hecho en ellos, y luego hace commit y push. Los paquetes, las descripciones y los banners se quedan como están."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cela remplace la page d’accueil, le README, l’icône, le workflow GitHub Pages et le script d’index du dépôt par le modèle actuel d’Apelin, en écrasant toute modification, puis crée un commit et pousse. Les paquets, les descriptions et les bannières restent tels quels."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo sovrascrive la home page, il README, l’icona, il workflow di GitHub Pages e lo script di indicizzazione del repository con il modello attuale di Apelin, sostituendo qualsiasi modifica, poi esegue commit e push. Pacchetti, descrizioni e banner restano come sono."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リポジトリのホームページ、README、アイコン、GitHub Pages のワークフロー、インデックススクリプトを Apelin の現在のテンプレートで上書きし、加えた変更は失われます。その後コミットしてプッシュします。パッケージ、説明ページ、バナーはそのままです。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장소의 홈페이지, README, 아이콘, GitHub Pages 워크플로, 색인 스크립트를 Apelin의 현재 템플릿으로 덮어쓰며, 여기에 적용한 변경 사항은 사라집니다. 그런 다음 커밋하고 푸시합니다. 패키지, 설명, 배너는 그대로 유지됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isso substitui a página inicial, o README, o ícone, o workflow do GitHub Pages e o script de índice do repositório pelo modelo atual do Apelin, descartando quaisquer alterações feitas neles, e então faz commit e push. Pacotes, descrições e banners permanecem como estão."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Домашняя страница, README, значок, workflow GitHub Pages и скрипт индексации репозитория будут перезаписаны текущим шаблоном Apelin, все внесённые в них изменения пропадут, затем будет выполнен коммит и push. Пакеты, описания и баннеры останутся без изменений."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thao tác này ghi đè trang chủ, README, biểu tượng, quy trình GitHub Pages và tập lệnh lập chỉ mục của kho bằng mẫu hiện tại của Apelin, thay thế mọi thay đổi bạn đã thực hiện, rồi commit và push. Các gói, trang mô tả và biểu ngữ vẫn giữ nguyên."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这将用 Apelin 当前的模板覆盖仓库的首页、README、图标、GitHub Pages 工作流和索引脚本，你对这些文件的修改都会丢失，然后提交并推送。软件包、介绍页和横幅保持不变。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這將以 Apelin 目前的範本覆寫儲存庫的首頁、README、圖像、GitHub Pages 工作流程與索引指令碼，你對這些檔案的修改都會遺失，接著提交並推送。套件、介紹頁與橫幅維持不變。"
+          }
+        }
+      }
+    },

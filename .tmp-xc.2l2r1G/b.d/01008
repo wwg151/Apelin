@@ -1,0 +1,76 @@
+    "This repository is already a project on this device. Open it, or import it again as a new project with another name." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هذا المستودع موجود بالفعل كمشروع على هذا الجهاز. افتحه، أو استورده مجددًا كمشروع جديد باسم آخر."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieses Repository ist auf diesem Gerät bereits ein Projekt. Öffne es oder importiere es erneut als neues Projekt mit einem anderen Namen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este repositorio ya es un proyecto en este dispositivo. Ábrelo o vuelve a importarlo como un proyecto nuevo con otro nombre."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce dépôt est déjà un projet sur cet appareil. Ouvrez-le, ou importez-le à nouveau comme nouveau projet sous un autre nom."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo repository è già un progetto su questo dispositivo. Aprilo oppure importalo di nuovo come nuovo progetto con un altro nome."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このリポジトリは、このデバイスにすでにプロジェクトとしてあります。そのプロジェクトを開くか、別の名前の新しいプロジェクトとしてもう一度インポートしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 저장소는 이미 이 기기에 프로젝트로 있습니다. 해당 프로젝트를 열거나 다른 이름의 새 프로젝트로 다시 가져오세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este repositório já é um projeto neste dispositivo. Abra-o ou importe-o de novo como um novo projeto com outro nome."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Этот репозиторий уже есть на устройстве как проект. Откройте его или импортируйте заново как новый проект под другим названием."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kho lưu trữ này đã là một dự án trên thiết bị. Hãy mở dự án đó, hoặc nhập lại thành dự án mới với tên khác."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此仓库已是这台设备上的一个项目。可以打开它，或以另一个名称将其重新导入为新项目。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此儲存庫已是這台裝置上的專案。可以打開它，或以另一個名稱將其重新匯入為新專案。"
+          }
+        }
+      }
+    },

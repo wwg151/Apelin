@@ -1,0 +1,83 @@
+    "Enter a whole number of tokens, or leave the field empty to use the automatic value." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أدخل عددًا صحيحًا من الرموز، أو اترك الحقل فارغًا لاستخدام القيمة التلقائية."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gib eine ganze Zahl an Tokens ein oder lass das Feld für den automatischen Wert leer."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter a whole number of tokens, or leave the field empty to use the automatic value."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce un número entero de tokens o deja el campo vacío para usar el valor automático."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saisissez un nombre entier de jetons ou laissez le champ vide pour utiliser la valeur automatique."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inserisci un numero intero di token o lascia il campo vuoto per usare il valore automatico."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トークン数を整数で入力するか、自動値を使用する場合は空欄にしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "토큰 수를 정수로 입력하거나, 자동 값을 사용하려면 필드를 비워 두세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insira um número inteiro de tokens ou deixe o campo vazio para usar o valor automático."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите целое число токенов или оставьте поле пустым для автоматического значения."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhập một số nguyên cho lượng token, hoặc để trống trường để dùng giá trị tự động."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请输入整数 Token 数量，或留空以使用自动值。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請輸入整數 Token 數量，或留空以使用自動值。"
+          }
+        }
+      }
+    },

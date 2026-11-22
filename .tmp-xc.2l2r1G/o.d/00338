@@ -1,0 +1,77 @@
+    "This permanently deletes “%@” and its files and chats from this device." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سيؤدي هذا إلى حذف «%@» وملفاته ومحادثاته نهائيًا من هذا الجهاز."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dadurch werden „%@“ sowie seine Dateien und Chats endgültig von diesem Gerät gelöscht."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se eliminarán de forma permanente “%@”, sus archivos y sus chats de este dispositivo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette action supprime définitivement « %@ », ainsi que ses fichiers et discussions, de cet appareil."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questa azione elimina definitivamente “%@”, con i suoi file e le sue chat, da questo dispositivo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「%@」とそのファイルおよびチャットが、このデバイスから完全に削除されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 기기에서 ‘%@’ 및 해당 파일과 채팅이 영구적으로 삭제됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isso apaga permanentemente “%@”, seus arquivos e suas conversas deste dispositivo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проект «%@», его файлы и чаты будут навсегда удалены с этого устройства."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thao tác này sẽ xóa vĩnh viễn “%@” cùng các tệp và cuộc trò chuyện của nó khỏi thiết bị này."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这会从此设备永久删除“%@”及其文件和聊天。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這會從此裝置永久刪除「%@」及其檔案和聊天。"
+          }
+        }
+      }
+    },

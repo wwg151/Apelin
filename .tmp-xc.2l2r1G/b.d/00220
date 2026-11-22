@@ -1,0 +1,83 @@
+    "Allow notifications from Apelin. You can change permission in Settings at any time." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسمح لـ Apelin بإرسال الإشعارات. يمكنك تغيير الإذن في «الإعدادات» في أي وقت."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erlaube Mitteilungen von Apelin. Du kannst die Berechtigung jederzeit in den Einstellungen ändern."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allow notifications from Apelin. You can change permission in Settings at any time."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permite las notificaciones de Apelin. Puedes cambiar el permiso en Ajustes en cualquier momento."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autorisez les notifications d’Apelin. Vous pouvez modifier cette autorisation à tout moment dans Réglages."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consenti le notifiche di Apelin. Puoi modificare l’autorizzazione in qualsiasi momento in Impostazioni."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelinからの通知を許可してください。許可はいつでも「設定」で変更できます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin의 알림을 허용하세요. 권한은 언제든지 ‘설정’에서 변경할 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permita as notificações do Apelin. Você pode alterar a permissão em Ajustes a qualquer momento."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разрешите уведомления от Apelin. Изменить разрешение можно в любой момент в «Настройках»."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cho phép Apelin gửi thông báo. Bạn có thể thay đổi quyền này trong Cài đặt bất cứ lúc nào."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "允许 Apelin 发送通知。你随时可以在“设置”中更改权限。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "允許 Apelin 傳送通知。你隨時可以在「設定」中變更權限。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,83 @@
+    "The model will be able to run commands and make changes without asking for confirmation, within the app’s permissions. This applies to all chats." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سيتمكن النموذج من تنفيذ الأوامر وإجراء التغييرات دون طلب تأكيد، ضمن أذونات التطبيق. ينطبق هذا على كل المحادثات."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Modell kann dann im Rahmen der Berechtigungen der App ohne Bestätigung Befehle ausführen und Änderungen vornehmen. Das gilt für alle Chats."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The model will be able to run commands and make changes without asking for confirmation, within the app’s permissions. This applies to all chats."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El modelo podrá ejecutar comandos y hacer cambios sin pedir confirmación, dentro de los permisos de la app. Se aplica a todos los chats."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le modèle pourra exécuter des commandes et apporter des modifications sans demander de confirmation, dans la limite des autorisations de l’app. Cela s’applique à toutes les discussions."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il modello potrà eseguire comandi e apportare modifiche senza chiedere conferma, entro i permessi dell’app. Vale per tutte le chat."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "モデルはAppの権限の範囲内で、確認を求めずにコマンドを実行したり変更を加えたりできるようになります。この設定はすべてのチャットに適用されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모델이 앱 권한 범위 내에서 확인을 요청하지 않고 명령을 실행하고 변경할 수 있게 됩니다. 이 설정은 모든 채팅에 적용됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O modelo poderá executar comandos e fazer alterações sem pedir confirmação, dentro das permissões do app. Isso se aplica a todas as conversas."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Модель сможет выполнять команды и вносить изменения без подтверждения в пределах прав приложения. Это касается всех чатов."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mô hình sẽ có thể chạy lệnh và thực hiện thay đổi mà không cần xác nhận, trong phạm vi quyền của ứng dụng. Áp dụng cho mọi cuộc trò chuyện."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "模型将能在 App 权限范围内直接执行命令和进行改动，无需请求确认。此设置适用于所有聊天。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "模型將能在 App 權限範圍內直接執行指令和進行變更，不會要求確認。此設定適用於所有聊天。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,77 @@
+    "New projects will use this toolchain. To switch an existing project’s toolchain, ask the model in that project." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ستستخدم المشاريع الجديدة سلسلة الأدوات هذه. لتغيير سلسلة أدوات مشروع موجود، اطلب ذلك من النموذج داخل المشروع."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neue Projekte verwenden diese Toolchain. Um die Toolchain eines bestehenden Projekts zu wechseln, bitte das Modell in diesem Projekt darum."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los proyectos nuevos usarán esta cadena de herramientas. Para cambiar la de un proyecto existente, pídeselo al modelo en ese proyecto."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les nouveaux projets utiliseront cette chaîne d’outils. Pour changer celle d’un projet existant, demandez-le au modèle dans ce projet."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I nuovi progetti useranno questa toolchain. Per cambiarla in un progetto esistente, chiedilo al modello in quel progetto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しいプロジェクトはこのツールチェーンを使用します。既存のプロジェクトで切り替えるには、そのプロジェクト内でモデルに依頼してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새 프로젝트는 이 도구 체인을 사용합니다. 기존 프로젝트의 도구 체인을 변경하려면 해당 프로젝트에서 모델에게 요청하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Novos projetos usarão esta cadeia de ferramentas. Para alterar a de um projeto existente, peça ao modelo nesse projeto."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Новые проекты будут использовать этот набор инструментов. Чтобы изменить его для существующего проекта, попросите модель в этом проекте."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dự án mới sẽ dùng bộ công cụ này. Để đổi bộ công cụ của dự án hiện có, hãy yêu cầu mô hình trong dự án đó."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新项目将使用此工具链。要切换已有项目的工具链，请在该项目中告诉模型。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新專案將使用此工具鏈。若要切換現有專案的工具鏈，請在該專案中告訴模型。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,18 @@
+    "Removed %lld packages; %lld could not be removed." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Removed %lld packages; %lld could not be removed." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تمت إزالة %lld حزمة؛ تعذرت إزالة %lld." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%lld Pakete entfernt; %lld konnten nicht entfernt werden." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Se eliminaron %lld paquetes; no se pudieron eliminar %lld." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "%lld paquets supprimés ; %lld n’ont pas pu être supprimés." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Rimossi %lld pacchetti; impossibile rimuoverne %lld." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%lld個を削除しました。%lld個は削除できませんでした。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%lld개를 제거했으며 %lld개는 제거하지 못했습니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "%lld pacotes removidos; não foi possível remover %lld." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалено пакетов: %lld; не удалось удалить: %lld." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Đã xóa %lld gói; không thể xóa %lld gói." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已移除 %lld 个，%lld 个未能移除。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "已移除 %lld 個，%lld 個無法移除。" } }
+      }
+    },

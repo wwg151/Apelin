@@ -1,0 +1,76 @@
+    "Progress so far is discarded. Starting again begins from scratch." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سيُفقد التقدم الحالي، وستبدأ المحاولة التالية من البداية."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der bisherige Fortschritt wird verworfen. Ein Neustart beginnt von vorn."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se descartará el progreso actual. Si vuelves a empezar, comenzará desde cero."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La progression actuelle est perdue. Une nouvelle tentative recommence depuis le début."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I progressi finora vengono persi. Ricominciare riparte da zero."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "これまでの進行状況は破棄されます。再開すると最初からやり直しになります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지금까지의 진행 상황은 삭제됩니다. 다시 시작하면 처음부터 진행됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O progresso até aqui será descartado. Ao recomeçar, tudo começa do zero."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Текущий прогресс будет потерян. При повторном запуске всё начнётся заново."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiến trình hiện tại sẽ bị hủy bỏ. Khi bắt đầu lại, quá trình sẽ chạy từ đầu."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已有进度会被丢弃，重新开始时将从头进行。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目前的進度會被捨棄，重新開始時將從頭進行。"
+          }
+        }
+      }
+    },

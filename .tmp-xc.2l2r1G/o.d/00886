@@ -1,0 +1,76 @@
+    "Sign in so agents can clone, pull and push your repositories on GitHub." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجّل الدخول ليتمكن الوكلاء من استنساخ مستودعاتك على GitHub وسحبها ودفعها."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Melde dich an, damit Agenten deine Repositorys auf GitHub klonen, pullen und pushen können."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicia sesión para que los agentes puedan clonar, extraer y enviar tus repositorios de GitHub."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connectez-vous pour que les agents puissent cloner, tirer et pousser vos dépôts sur GitHub."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accedi perché gli agenti possano clonare, scaricare e inviare i tuoi repository su GitHub."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サインインすると、エージェントがGitHub上のリポジトリをクローン、プル、プッシュできます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로그인하면 에이전트가 GitHub의 저장소를 복제, 풀, 푸시할 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entre para que os agentes possam clonar, puxar e enviar seus repositórios no GitHub."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Войдите, чтобы агенты могли клонировать, получать и отправлять ваши репозитории на GitHub."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đăng nhập để các tác tử có thể sao chép, kéo và đẩy kho của bạn trên GitHub."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登录后，智能体可以克隆、拉取和推送你在 GitHub 上的仓库。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登入後，代理程式可以複製、拉取和推送你在 GitHub 上的儲存庫。"
+          }
+        }
+      }
+    },

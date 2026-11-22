@@ -1,0 +1,18 @@
+    "Withdraw from Repository?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Withdraw from Repository?" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "السحب من المستودع؟" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Aus Repository zurückziehen?" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "¿Retirar del repositorio?" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retirer du dépôt ?" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Ritirare dal repository?" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "リポジトリから取り下げますか？" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "저장소에서 철회할까요?" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Retirar do repositório?" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отозвать из репозитория?" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Rút khỏi kho?" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "从仓库撤回？" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "從倉庫撤回？" } }
+      }
+    },

@@ -1,0 +1,76 @@
+    "Enter an HTTPS link to a zip, tar.xz or tar.zst archive containing one iPhoneOS SDK." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أدخل رابط HTTPS لأرشيف zip أو tar.xz أو tar.zst يحتوي على iPhoneOS SDK واحد."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gib einen HTTPS-Link zu einem zip-, tar.xz- oder tar.zst-Archiv ein, das ein iPhoneOS SDK enthält."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce un enlace HTTPS a un archivo zip, tar.xz o tar.zst que contenga un SDK de iPhoneOS."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saisissez un lien HTTPS vers une archive zip, tar.xz ou tar.zst contenant un SDK iPhoneOS."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inserisci un link HTTPS a un archivio zip, tar.xz o tar.zst che contiene un SDK iPhoneOS."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPhoneOS SDKを1つ含むzip、tar.xz、tar.zstアーカイブへのHTTPSリンクを入力してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPhoneOS SDK 하나가 들어 있는 zip, tar.xz 또는 tar.zst 아카이브의 HTTPS 링크를 입력하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Digite um link HTTPS para um arquivo zip, tar.xz ou tar.zst que contenha um SDK do iPhoneOS."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите ссылку HTTPS на архив zip, tar.xz или tar.zst с одним iPhoneOS SDK."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhập liên kết HTTPS tới tệp nén zip, tar.xz hoặc tar.zst chứa một iPhoneOS SDK."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请输入 HTTPS 链接，指向包含一个 iPhoneOS SDK 的 zip、tar.xz 或 tar.zst 归档。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請輸入 HTTPS 連結，指向包含一個 iPhoneOS SDK 的 zip、tar.xz 或 tar.zst 封存檔。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,83 @@
+    "This provider is not available. You can add another provider in Settings." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هذا المزوّد غير متاح. يمكنك إضافة مزوّد آخر في «الإعدادات»."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieser Anbieter ist nicht verfügbar. Du kannst in den Einstellungen einen anderen Anbieter hinzufügen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This provider is not available. You can add another provider in Settings."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este proveedor no está disponible. Puedes añadir otro en Ajustes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce fournisseur n’est pas disponible. Vous pouvez en ajouter un autre dans Réglages."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo fornitore non è disponibile. Puoi aggiungerne un altro in Impostazioni."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このプロバイダは利用できません。「設定」で別のプロバイダを追加できます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 제공업체를 사용할 수 없습니다. ‘설정’에서 다른 제공업체를 추가할 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este provedor não está disponível. Você pode adicionar outro em Ajustes."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Этот поставщик недоступен. Другого поставщика можно добавить в «Настройках»."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhà cung cấp này không khả dụng. Bạn có thể thêm nhà cung cấp khác trong Cài đặt."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此服务商暂不可用。你可以在“设置”中添加其他服务商。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此供應商目前無法使用。你可以在「設定」中加入其他供應商。"
+          }
+        }
+      }
+    },

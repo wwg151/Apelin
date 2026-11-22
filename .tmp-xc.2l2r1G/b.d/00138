@@ -1,0 +1,83 @@
+    "A C program with --version and --help that greets its argument and exits with sysexits codes." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "برنامج C يدعم الخيارين --version و--help، يحيّي الوسيط الذي يتلقاه ويخرج برموز sysexits."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein C-Programm mit --version und --help, das sein Argument begrüßt und mit sysexits-Codes endet."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A C program with --version and --help that greets its argument and exits with sysexits codes."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un programa en C con --version y --help que saluda a su argumento y termina con códigos de sysexits."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un programme C avec --version et --help qui salue son argument et se termine avec des codes sysexits."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un programma C con --version e --help che saluta il suo argomento ed esce con codici sysexits."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "--version と --help に対応し、引数にあいさつしてsysexitsの終了コードで終了するCプログラム。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "--version과 --help를 지원하고, 인수에게 인사한 뒤 sysexits 종료 코드로 끝나는 C 프로그램입니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um programa em C com --version e --help que cumprimenta o argumento e encerra com códigos sysexits."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Программа на C с --version и --help: приветствует свой аргумент и завершается с кодами sysexits."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chương trình C có --version và --help, chào đối số được truyền vào và thoát với mã sysexits."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支持 --version 和 --help 的 C 程序，向参数打招呼，并以 sysexits 退出码退出。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支援 --version 和 --help 的 C 程式，會向引數打招呼，並以 sysexits 結束代碼退出。"
+          }
+        }
+      }
+    },

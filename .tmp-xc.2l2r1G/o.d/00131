@@ -1,0 +1,83 @@
+    "Your chats keep working, but Apelin can’t save them on this device until you free up space." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تستمر المحادثات في العمل، لكن لا يمكن لـ Apelin حفظها على هذا الجهاز حتى تُفرغ بعض المساحة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine Chats laufen weiter, aber Apelin kann sie auf diesem Gerät erst speichern, wenn du Speicherplatz freigibst."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your chats keep working, but Apelin can’t save them on this device until you free up space."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tus chats siguen funcionando, pero Apelin no puede guardarlos en este dispositivo hasta que liberes espacio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vos discussions continuent de fonctionner, mais Apelin ne peut pas les enregistrer sur cet appareil tant que vous n’avez pas libéré de l’espace."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le chat continuano a funzionare, ma Apelin non può salvarle su questo dispositivo finché non liberi spazio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チャットは引き続き使用できますが、空き領域を確保するまで、Apelinはこのデバイスにチャットを保存できません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "채팅은 계속 사용할 수 있지만, 공간을 확보할 때까지 Apelin이 이 기기에 채팅을 저장할 수 없습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suas conversas continuam funcionando, mas o Apelin não pode salvá-las neste dispositivo até você liberar espaço."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чаты продолжают работать, но Apelin не сможет сохранить их на этом устройстве, пока вы не освободите место."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các cuộc trò chuyện vẫn hoạt động, nhưng Apelin không thể lưu chúng trên thiết bị này cho đến khi bạn giải phóng dung lượng."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "聊天可以继续，但在你腾出空间之前，Apelin 无法把它们保存到这台设备上。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "聊天可以繼續進行，但在你釋放空間之前，Apelin 無法將聊天儲存到此裝置。"
+          }
+        }
+      }
+    },

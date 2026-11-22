@@ -1,0 +1,77 @@
+    "Keep the existing layout, update the title, and check the result on both screen sizes." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حافظ على التخطيط الحالي، وحدّث العنوان، وتحقق من النتيجة على كلا حجمي الشاشة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Behalte das bestehende Layout bei, aktualisiere den Titel und prüfe das Ergebnis auf beiden Bildschirmgrößen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mantén el diseño actual, actualiza el título y comprueba el resultado en ambos tamaños de pantalla."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conservez la mise en page actuelle, mettez à jour le titre et vérifiez le résultat sur les deux tailles d’écran."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mantieni il layout esistente, aggiorna il titolo e controlla il risultato su entrambe le dimensioni dello schermo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "既存のレイアウトはそのままでタイトルを更新し、両方の画面サイズで結果を確認してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기존 레이아웃은 유지하고 제목을 업데이트한 뒤, 두 화면 크기에서 결과를 확인해 주세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mantenha o layout atual, atualize o título e confira o resultado nos dois tamanhos de tela."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохраните текущую раскладку, обновите заголовок и проверьте результат на обоих размерах экрана."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giữ nguyên bố cục hiện tại, cập nhật tiêu đề và kiểm tra kết quả trên cả hai kích thước màn hình."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保留现有布局，更新标题，并在两种屏幕尺寸上检查结果。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保留現有版面，更新標題，並在兩種螢幕尺寸上檢查結果。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,76 @@
+    "Copy the address of the page the other browser ended on, then try again." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انسخ عنوان الصفحة التي انتهى إليها المتصفح الآخر، ثم حاول مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopiere die Adresse der Seite, auf der der andere Browser gelandet ist, und versuche es dann erneut."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copia la dirección de la página en la que terminó el otro navegador y vuelve a intentarlo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiez l’adresse de la page à laquelle l’autre navigateur a abouti, puis réessayez."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copia l’indirizzo della pagina a cui è arrivato l’altro browser, poi riprova."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "別のブラウザで最後に表示されたページのアドレスをコピーしてから、もう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다른 브라우저가 마지막으로 이동한 페이지의 주소를 복사한 다음 다시 시도하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copie o endereço da página em que o outro navegador terminou e tente novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скопируйте адрес страницы, на которую в конце перешёл другой браузер, и повторите попытку."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy sao chép địa chỉ của trang cuối cùng mà trình duyệt kia chuyển đến, rồi thử lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请先拷贝另一个浏览器最后跳转到的页面地址，然后重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請先拷貝另一個瀏覽器最後跳轉到的頁面位址，然後再試一次。"
+          }
+        }
+      }
+    },

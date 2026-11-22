@@ -1,0 +1,83 @@
+    "A dylib injected into SpringBoard that hooks -[SpringBoard applicationDidFinishLaunching:] and logs when it loads." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مكتبة dylib تُحقن في SpringBoard، تعترض -[SpringBoard applicationDidFinishLaunching:] وتكتب في السجل عند تحميلها."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine in SpringBoard injizierte dylib, die -[SpringBoard applicationDidFinishLaunching:] hookt und beim Laden einen Protokolleintrag schreibt."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A dylib injected into SpringBoard that hooks -[SpringBoard applicationDidFinishLaunching:] and logs when it loads."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una dylib inyectada en SpringBoard que intercepta -[SpringBoard applicationDidFinishLaunching:] y deja un registro al cargarse."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une dylib injectée dans SpringBoard qui intercepte -[SpringBoard applicationDidFinishLaunching:] et écrit dans le journal à son chargement."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una dylib iniettata in SpringBoard che aggancia -[SpringBoard applicationDidFinishLaunching:] e scrive nel log quando viene caricata."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SpringBoardに注入され、-[SpringBoard applicationDidFinishLaunching:] をフックし、読み込まれたときにログを出力するdylib。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SpringBoard에 주입되어 -[SpringBoard applicationDidFinishLaunching:]을 후킹하고, 로드될 때 로그를 남기는 dylib입니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uma dylib injetada no SpringBoard que intercepta -[SpringBoard applicationDidFinishLaunching:] e grava um registro quando é carregada."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Библиотека dylib, внедряемая в SpringBoard: перехватывает -[SpringBoard applicationDidFinishLaunching:] и пишет в журнал при загрузке."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một dylib được nạp vào SpringBoard, hook -[SpringBoard applicationDidFinishLaunching:] và ghi nhật ký khi được tải."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "注入 SpringBoard 的 dylib，挂钩 -[SpringBoard applicationDidFinishLaunching:]，并在载入时写入日志。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "注入 SpringBoard 的 dylib，會掛鉤 -[SpringBoard applicationDidFinishLaunching:]，並在載入時寫入記錄。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,83 @@
+    "Agents can make mistakes. Review generated code and important changes before you run or install them." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قد يخطئ الوكلاء. راجِع الشيفرة المُنشأة والتغييرات المهمة قبل تشغيلها أو تثبيتها."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agenten können Fehler machen. Prüfe generierten Code und wichtige Änderungen, bevor du sie ausführst oder installierst."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agents can make mistakes. Review generated code and important changes before you run or install them."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los agentes pueden cometer errores. Revisa el código generado y los cambios importantes antes de ejecutarlos o instalarlos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les agents peuvent commettre des erreurs. Examinez le code généré et les modifications importantes avant de les exécuter ou de les installer."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gli agenti possono commettere errori. Controlla il codice generato e le modifiche importanti prima di eseguirli o installarli."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エージェントは間違えることがあります。実行やインストールの前に、生成されたコードと重要な変更を確認してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "에이전트는 실수할 수 있습니다. 실행하거나 설치하기 전에 생성된 코드와 중요한 변경 사항을 검토하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Os agentes podem cometer erros. Revise o código gerado e as alterações importantes antes de executá-los ou instalá-los."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Агенты могут ошибаться. Проверяйте сгенерированный код и важные изменения перед запуском или установкой."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tác nhân có thể mắc lỗi. Xem lại mã được tạo và các thay đổi quan trọng trước khi chạy hoặc cài đặt."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "智能体可能会犯错。运行或安装前，请检查生成的代码和重要改动。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理程式可能會犯錯。執行或安裝前，請先檢視產生的程式碼和重要變更。"
+          }
+        }
+      }
+    },

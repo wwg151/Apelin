@@ -1,0 +1,18 @@
+    "Select the local packages to remove." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Select the local packages to remove." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "حدد الحزم المحلية المراد إزالتها." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wähle die zu entfernenden lokalen Pakete aus." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Selecciona los paquetes locales que quieres eliminar." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Sélectionnez les paquets locaux à supprimer." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Seleziona i pacchetti locali da rimuovere." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "削除するローカルパッケージを選択してください。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "제거할 로컬 패키지를 선택하세요." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Selecione os pacotes locais a remover." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Выберите локальные пакеты для удаления." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Chọn các gói cục bộ cần xóa." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "选择要移除的本地软件包。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "選取要移除的本機套件。" } }
+      }
+    },

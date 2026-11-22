@@ -1,0 +1,76 @@
+    "This device has no passcode, so the agent can unlock it without one." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يوجد رمز دخول لهذا الجهاز، لذا يمكن للوكيل فتح قفله بدون رمز."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieses Gerät hat keinen Code, sodass der Agent es ohne Code entsperren kann."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este dispositivo no tiene código, por lo que el agente puede desbloquearlo sin uno."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cet appareil n’a pas de code, l’agent peut donc le déverrouiller sans code."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo dispositivo non ha un codice, quindi l’agente può sbloccarlo senza codice."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このデバイスにはパスコードが設定されていないため、エージェントはパスコードなしでロックを解除できます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 기기에는 암호가 설정되어 있지 않으므로 에이전트가 암호 없이 잠금을 해제할 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este dispositivo não tem código, portanto o agente pode desbloqueá-lo sem um."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На этом устройстве нет код-пароля, поэтому агент может разблокировать его без код-пароля."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thiết bị này không có mật mã, vì vậy tác nhân có thể mở khóa mà không cần mật mã."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此设备未设置密码，智能体无需密码即可将其解锁。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此裝置未設定密碼，因此代理程式無需密碼即可將其解鎖。"
+          }
+        }
+      }
+    },

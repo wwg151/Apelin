@@ -1,0 +1,83 @@
+    "The agent remembers useful preferences and project facts. You can review or correct them here." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتذكر الوكيل التفضيلات المفيدة وحقائق المشاريع. يمكنك مراجعتها أو تصحيحها هنا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Agent merkt sich nützliche Vorlieben und Fakten zu Projekten. Hier kannst du sie prüfen oder korrigieren."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The agent remembers useful preferences and project facts. You can review or correct them here."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El agente recuerda preferencias útiles y datos de los proyectos. Puedes revisarlos o corregirlos aquí."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’agent retient des préférences utiles et des informations sur vos projets. Vous pouvez les consulter ou les corriger ici."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’agente ricorda preferenze utili e informazioni sui progetti. Qui puoi controllarle o correggerle."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エージェントは役立つ好みやプロジェクトの情報を記憶します。ここで確認や修正ができます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "에이전트는 유용한 선호 사항과 프로젝트 정보를 기억합니다. 여기에서 검토하거나 수정할 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O agente lembra preferências úteis e fatos dos projetos. Você pode revisá-los ou corrigi-los aqui."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Агент запоминает полезные предпочтения и факты о проектах. Здесь их можно просмотреть или исправить."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tác nhân ghi nhớ các tùy chọn hữu ích và thông tin về dự án. Bạn có thể xem lại hoặc sửa chúng tại đây."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "智能体会记住有用的偏好和项目事实。你可以在这里查看或修正。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理程式會記住有用的偏好和專案資訊。你可以在這裡檢視或修正。"
+          }
+        }
+      }
+    },

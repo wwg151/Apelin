@@ -1,0 +1,83 @@
+    "Import a folder that holds a SKILL.md, or a Markdown file. Every chat is offered these skills, and the agent reads one when a task matches its description." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استورد مجلدًا يحتوي على SKILL.md أو ملف Markdown. تُتاح هذه المهارات في كل محادثة، ويقرأ الوكيل إحداها عندما تطابق المهمة وصفها."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importiere einen Ordner mit einer SKILL.md oder eine Markdown-Datei. Diese Skills stehen jedem Chat zur Verfügung, und der Agent liest einen, wenn eine Aufgabe zu seiner Beschreibung passt."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Import a folder that holds a SKILL.md, or a Markdown file. Every chat is offered these skills, and the agent reads one when a task matches its description."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importa una carpeta que contenga un SKILL.md o un archivo Markdown. Todos los chats tienen estas habilidades, y el agente lee una cuando una tarea coincide con su descripción."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importez un dossier contenant un fichier SKILL.md, ou un fichier Markdown. Toutes les conversations disposent de ces compétences, et l’agent en lit une lorsqu’une tâche correspond à sa description."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importa una cartella che contiene un SKILL.md, oppure un file Markdown. Ogni chat dispone di queste competenze, e l’agente ne legge una quando un’attività corrisponde alla sua descrizione."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SKILL.md を含むフォルダ、または Markdown ファイルをインポートします。これらのスキルはすべてのチャットで使え、タスクが説明に合うとエージェントがそのスキルを読みます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SKILL.md가 들어 있는 폴더나 Markdown 파일을 가져오세요. 모든 채팅에서 이 스킬을 사용할 수 있으며, 작업이 설명과 맞으면 에이전트가 해당 스킬을 읽습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importe uma pasta que contenha um SKILL.md ou um arquivo Markdown. Todos os chats têm essas habilidades, e o agente lê uma quando uma tarefa corresponde à descrição dela."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Импортируйте папку с файлом SKILL.md или файл Markdown. Эти навыки доступны во всех чатах, и агент читает навык, когда задача соответствует его описанию."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhập một thư mục chứa SKILL.md hoặc một tệp Markdown. Mọi cuộc trò chuyện đều có các kỹ năng này, và tác nhân sẽ đọc một kỹ năng khi nhiệm vụ khớp với mô tả của nó."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "导入一个包含 SKILL.md 的文件夹，或一个 Markdown 文件。所有聊天都能使用这些技能，任务与某个技能的描述相符时，智能体会读取它。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "匯入包含 SKILL.md 的檔案夾，或一個 Markdown 檔案。所有聊天都能使用這些技能，任務符合某個技能的描述時，代理程式會讀取它。"
+          }
+        }
+      }
+    },

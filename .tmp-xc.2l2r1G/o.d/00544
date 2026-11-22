@@ -1,0 +1,76 @@
+    "Checked after installation by compiling, linking, signing and running a program for each language and architecture." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يُفحص بعد التثبيت بتجميع برنامج وربطه وتوقيعه وتشغيله لكل لغة وبنية."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird nach der Installation geprüft, indem für jede Sprache und Architektur ein Programm kompiliert, gelinkt, signiert und ausgeführt wird."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se comprueba tras la instalación compilando, enlazando, firmando y ejecutando un programa para cada lenguaje y arquitectura."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vérifié après l’installation en compilant, en liant, en signant et en exécutant un programme pour chaque langage et chaque architecture."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verificata dopo l’installazione compilando, collegando, firmando ed eseguendo un programma per ogni linguaggio e architettura."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "インストール後、言語とアーキテクチャごとにプログラムをコンパイル、リンク、署名、実行して確認します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설치 후 각 언어와 아키텍처별로 프로그램을 컴파일, 링크, 서명 및 실행하여 확인합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verificada após a instalação compilando, vinculando, assinando e executando um programa para cada linguagem e arquitetura."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "После установки проверяется компиляцией, компоновкой, подписью и запуском программы для каждого языка и архитектуры."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Được kiểm tra sau khi cài đặt bằng cách biên dịch, liên kết, ký và chạy một chương trình cho mỗi ngôn ngữ và kiến trúc."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安装后会为每种语言和架构编译、链接、签名并运行一个程序来检查。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安裝後會為每種語言和架構編譯、連結、簽署並執行一個程式來檢查。"
+          }
+        }
+      }
+    },

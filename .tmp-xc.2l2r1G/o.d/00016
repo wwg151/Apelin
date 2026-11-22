@@ -1,0 +1,18 @@
+    "Remove %lld Local Packages?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Remove %lld Local Packages?" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إزالة الحزم المحلية المحددة (%lld)؟" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%lld lokale Pakete entfernen?" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "¿Eliminar %lld paquetes locales?" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Supprimer %lld paquets locaux ?" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Rimuovere %lld pacchetti locali?" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "ローカルパッケージを%lld個削除しますか？" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "로컬 패키지 %lld개를 제거할까요?" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Remover %lld pacotes locais?" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалить локальные пакеты (%lld)?" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Xóa %lld gói cục bộ?" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "移除这 %lld 个本地软件包？" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "移除這 %lld 個本機套件？" } }
+      }
+    },

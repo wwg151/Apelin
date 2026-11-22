@@ -1,0 +1,83 @@
+    "Install a toolchain and an iOS SDK before creating this project, or create a project later." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ثبّت سلسلة أدوات وiOS SDK قبل إنشاء هذا المشروع، أو أنشئ مشروعًا لاحقًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installiere eine Toolchain und ein iOS SDK, bevor du dieses Projekt erstellst, oder erstelle später ein Projekt."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Install a toolchain and an iOS SDK before creating this project, or create a project later."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instala una cadena de herramientas y un SDK de iOS antes de crear este proyecto, o crea un proyecto más tarde."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installez une chaîne d’outils et un SDK iOS avant de créer ce projet, ou créez un projet plus tard."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installa una toolchain e un SDK iOS prima di creare questo progetto, oppure crea un progetto più tardi."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このプロジェクトを作成する前にツールチェーンとiOS SDKをインストールするか、あとでプロジェクトを作成してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 프로젝트를 생성하기 전에 툴체인과 iOS SDK를 설치하거나, 나중에 프로젝트를 생성하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instale uma cadeia de ferramentas e um SDK do iOS antes de criar este projeto, ou crie um projeto depois."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перед созданием этого проекта установите набор инструментов и iOS SDK или создайте проект позже."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy cài đặt chuỗi công cụ và iOS SDK trước khi tạo dự án này, hoặc tạo dự án sau."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "创建此项目需要先安装工具链和 iOS SDK，也可以稍后再创建。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "建立此專案前，請先安裝工具鏈和 iOS SDK，或稍後再建立專案。"
+          }
+        }
+      }
+    },

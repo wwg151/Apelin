@@ -1,0 +1,83 @@
+    "A Foundation command-line tool with a greeting, --version, --help, standard sysexits exit codes and iOS version output." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أداة سطر أوامر مبنية على Foundation، تتضمن تحية و--version و--help ورموز خروج sysexits القياسية وعرض إصدار iOS."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Foundation-Befehlszeilentool mit Begrüßung, --version, --help, standardmäßigen sysexits-Exitcodes und Ausgabe der iOS-Version."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A Foundation command-line tool with a greeting, --version, --help, standard sysexits exit codes and iOS version output."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una herramienta de línea de comandos con Foundation que incluye un saludo, --version, --help, los códigos de salida estándar de sysexits y muestra la versión de iOS."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un outil en ligne de commande Foundation avec un message d’accueil, --version, --help, des codes de sortie sysexits standard et l’affichage de la version d’iOS."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uno strumento da riga di comando Foundation con un saluto, --version, --help, codici di uscita sysexits standard e la versione di iOS in output."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "あいさつ、--version、--help、標準のsysexits終了コード、iOSバージョンの出力を備えた、Foundationベースのコマンドラインツール。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "인사말, --version, --help, 표준 sysexits 종료 코드, iOS 버전 출력을 갖춘 Foundation 기반 명령줄 도구입니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uma ferramenta de linha de comando com Foundation que inclui uma saudação, --version, --help, os códigos de saída padrão sysexits e exibe a versão do iOS."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Утилита командной строки на Foundation с приветствием, --version, --help, стандартными кодами выхода sysexits и выводом версии iOS."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Công cụ dòng lệnh dùng Foundation, có lời chào, --version, --help, mã thoát sysexits chuẩn và in ra phiên bản iOS."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "基于 Foundation 的命令行工具，带问候语、--version、--help、标准 sysexits 退出码，并输出 iOS 版本。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "基於 Foundation 的命令列工具，具備問候語、--version、--help、標準 sysexits 結束代碼，並會輸出 iOS 版本。"
+          }
+        }
+      }
+    },

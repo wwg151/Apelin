@@ -1,0 +1,77 @@
+    "Use “From Link…” or “From Files…” in the menu to import an SDK." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استخدم “من رابط…” أو “من الملفات…” في القائمة لاستيراد SDK."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importiere ein SDK über „Von Link…“ oder „Aus Dateien…“ im Menü."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa “Desde enlace…” o “Desde archivos…” en el menú para importar un SDK."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utilisez « Depuis un lien… » ou « Depuis des fichiers… » dans le menu pour importer un SDK."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa “Da link…” o “Da file…” nel menu per importare un SDK."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メニューの「リンクから…」または「ファイルから…」でSDKを読み込みます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴에서 “링크에서…” 또는 “파일에서…”를 선택하여 SDK를 가져오세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use “De um link…” ou “Dos arquivos…” no menu para importar um SDK."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите «По ссылке…» или «Из файлов…» в меню, чтобы импортировать SDK."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng “Từ liên kết…” hoặc “Từ tệp…” trong menu để nhập SDK."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用菜单中的“从链接…”或“从文件…”导入 SDK。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用選單中的「從連結…」或「從檔案…」匯入 SDK。"
+          }
+        }
+      }
+    },

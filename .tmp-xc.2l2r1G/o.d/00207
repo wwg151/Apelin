@@ -1,0 +1,83 @@
+    "Your new project “%@” is ready. Your agent will give it a better name later." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مشروعك الجديد «%@» جاهز. سيمنحه الوكيل اسمًا أفضل لاحقًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein neues Projekt „%@“ ist bereit. Dein Agent gibt ihm später einen besseren Namen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your new project “%@” is ready. Your agent will give it a better name later."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu nuevo proyecto “%@” está listo. Tu agente le dará un nombre mejor más adelante."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre nouveau projet « %@ » est prêt. Votre agent lui donnera un meilleur nom plus tard."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il tuo nuovo progetto “%@” è pronto. L’agente gli darà un nome migliore più avanti."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しいプロジェクト「%@」の準備ができました。あとでエージェントがよりよい名前を付けます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새 프로젝트 ‘%@’이(가) 준비되었습니다. 나중에 에이전트가 더 나은 이름을 지정합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seu novo projeto “%@” está pronto. Seu agente dará a ele um nome melhor depois."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Новый проект «%@» готов. Позже агент даст ему название получше."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dự án mới “%@” đã sẵn sàng. Tác nhân sẽ đặt cho nó một cái tên phù hợp hơn sau."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的新项目“%@”已经就绪，稍后智能体会为它起一个更好的名字。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的新專案「%@」已就緒，稍後代理程式會為它取一個更好的名稱。"
+          }
+        }
+      }
+    },

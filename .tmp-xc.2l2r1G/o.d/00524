@@ -1,0 +1,76 @@
+    "Apelin and its background service are different versions. Reinstall Apelin with your preferred package manager, then try again." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إصدار Apelin يختلف عن إصدار خدمته في الخلفية. أعد تثبيت Apelin باستخدام مدير الحزم المفضّل لديك، ثم حاول مرة أخرى."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin und sein Hintergrunddienst haben unterschiedliche Versionen. Installiere Apelin mit deinem bevorzugten Paketmanager neu und versuche es dann erneut."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin y su servicio en segundo plano tienen versiones distintas. Vuelve a instalar Apelin con tu gestor de paquetes preferido e inténtalo de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin et son service d’arrière-plan ne sont pas de la même version. Réinstallez Apelin avec votre gestionnaire de paquets préféré, puis réessayez."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin e il suo servizio in background hanno versioni diverse. Reinstalla Apelin con il tuo gestore di pacchetti preferito, poi riprova."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelinとそのバックグラウンドサービスのバージョンが一致しません。お使いのパッケージマネージャでApelinを再インストールしてから、もう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin과 백그라운드 서비스의 버전이 다릅니다. 선호하는 패키지 관리자로 Apelin을 다시 설치한 후 다시 시도하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Apelin e o serviço em segundo plano dele estão em versões diferentes. Reinstale o Apelin com seu gerenciador de pacotes preferido e tente novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версии Apelin и его фоновой службы не совпадают. Переустановите Apelin через удобный вам менеджер пакетов и повторите попытку."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin và dịch vụ nền của nó khác phiên bản. Hãy cài đặt lại Apelin bằng trình quản lý gói bạn ưa dùng, rồi thử lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 与它的后台服务版本不一致。请用你喜欢的软件包管理器重新安装 Apelin，然后重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apelin 與其背景服務的版本不一致。請使用你偏好的套件管理器重新安裝 Apelin，然後再試一次。"
+          }
+        }
+      }
+    },

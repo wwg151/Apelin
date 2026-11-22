@@ -1,0 +1,76 @@
+    "Choose a display name. The project folder and build settings stay the same." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر اسمًا للعرض. يبقى مجلد المشروع وإعدادات البناء كما هي."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle einen Anzeigenamen. Projektordner und Build-Einstellungen bleiben unverändert."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige un nombre visible. La carpeta del proyecto y los ajustes de compilación no cambian."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez un nom d’affichage. Le dossier du projet et les réglages de compilation restent inchangés."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli un nome visualizzato. La cartella del progetto e le impostazioni di build restano invariate."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表示名を決めてください。プロジェクトフォルダとビルド設定は変わりません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "표시 이름을 정하세요. 프로젝트 폴더와 빌드 설정은 그대로 유지됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolha um nome de exibição. A pasta do projeto e os ajustes de compilação continuam iguais."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите отображаемое название. Папка проекта и настройки сборки не изменятся."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn tên hiển thị. Thư mục dự án và cài đặt xây dựng vẫn giữ nguyên."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请选择一个显示名称。项目文件夹和构建设置保持不变。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請選擇一個顯示名稱。專案檔案夾和建置設定不會改變。"
+          }
+        }
+      }
+    },

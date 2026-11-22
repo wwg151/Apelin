@@ -1,0 +1,76 @@
+    "No SDKs available. Import one from a link or a file in the menu above." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يتوفر أي SDK. استورد واحدًا من رابط أو ملف عبر القائمة أعلاه."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine SDKs verfügbar. Importiere eines über einen Link oder eine Datei im Menü oben."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay SDK disponibles. Importa uno desde un enlace o un archivo en el menú de arriba."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun SDK disponible. Importez-en un depuis un lien ou un fichier dans le menu ci-dessus."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessun SDK disponibile. Importane uno da un link o da un file nel menu qui sopra."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "利用可能なSDKがありません。上のメニューから、リンクまたはファイルでインポートしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사용 가능한 SDK가 없습니다. 위의 메뉴에서 링크나 파일로 가져오세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nenhum SDK disponível. Importe um de um link ou arquivo pelo menu acima."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет доступных SDK. Импортируйте SDK по ссылке или из файла через меню выше."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không có SDK nào. Hãy nhập từ liên kết hoặc tệp trong menu phía trên."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂无可用的 SDK。请通过上方菜单从链接或文件导入。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有可用的 SDK。請透過上方選單從連結或檔案匯入。"
+          }
+        }
+      }
+    },

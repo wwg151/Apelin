@@ -1,0 +1,83 @@
+    "A single-screen UIKit app in Swift. Requires an installed, verified Swift toolchain component." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تطبيق UIKit بشاشة واحدة مكتوب بلغة Swift. يتطلب مكوّن Swift مثبّتًا وتم التحقق منه في سلسلة الأدوات."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine UIKit-App mit einem Bildschirm in Swift. Erfordert eine installierte, geprüfte Swift-Komponente der Toolchain."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A single-screen UIKit app in Swift. Requires an installed, verified Swift toolchain component."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una app UIKit de una sola pantalla en Swift. Requiere el componente Swift de la cadena de herramientas instalado y verificado."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une app UIKit à écran unique en Swift. Nécessite un composant Swift de chaîne d’outils installé et vérifié."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un’app UIKit a schermata singola in Swift. Richiede un componente Swift della toolchain installato e verificato."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swiftで書かれた1画面構成のUIKit App。インストール済みで検証済みのSwiftツールチェーンコンポーネントが必要です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swift로 작성된 단일 화면 UIKit 앱입니다. 설치 및 검증된 Swift 툴체인 구성 요소가 필요합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um app UIKit de tela única em Swift. Requer o componente Swift da cadeia de ferramentas instalado e verificado."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Одноэкранное приложение UIKit на Swift. Требуется установленный и проверенный компонент Swift в наборе инструментов."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng UIKit một màn hình viết bằng Swift. Cần thành phần Swift của chuỗi công cụ đã được cài đặt và xác minh."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用 Swift 编写的单屏 UIKit App。需要已安装并通过验证的 Swift 工具链组件。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以 Swift 撰寫的單一畫面 UIKit App。需要已安裝並通過驗證的 Swift 工具鏈元件。"
+          }
+        }
+      }
+    },

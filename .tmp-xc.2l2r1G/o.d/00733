@@ -1,0 +1,76 @@
+    "Sign in to WorkBuddy with your CodeBuddy China plan." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجّل الدخول إلى WorkBuddy باستخدام خطة CodeBuddy للصين."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Melde dich bei WorkBuddy mit deinem CodeBuddy-Tarif für China an."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicia sesión en WorkBuddy con tu plan de CodeBuddy para China."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connectez-vous à WorkBuddy avec votre forfait CodeBuddy Chine."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accedi a WorkBuddy con il tuo piano CodeBuddy per la Cina."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CodeBuddyの中国版プランでWorkBuddyにサインインします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CodeBuddy 중국판 요금제로 WorkBuddy에 로그인합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicie sessão no WorkBuddy com seu plano do CodeBuddy para a China."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Войдите в WorkBuddy с китайским тарифом CodeBuddy."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đăng nhập WorkBuddy bằng gói CodeBuddy Trung Quốc của bạn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用你的 CodeBuddy 国内版套餐登录 WorkBuddy。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用你的 CodeBuddy 中國版方案登入 WorkBuddy。"
+          }
+        }
+      }
+    },

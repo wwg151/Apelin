@@ -1,0 +1,76 @@
+    "This repository needs a GitHub sign-in. Sign In with GitHub in Settings ▸ Git, then import again." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتطلب هذا المستودع تسجيل الدخول إلى GitHub. سجّل الدخول باستخدام GitHub في «الإعدادات» ▸ «Git»، ثم أعد الاستيراد."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieses Repository erfordert eine Anmeldung bei GitHub. Melde dich unter Einstellungen ▸ Git mit GitHub an und importiere es dann erneut."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este repositorio requiere iniciar sesión en GitHub. Inicia sesión con GitHub en Ajustes ▸ Git y vuelve a importarlo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce dépôt nécessite une connexion à GitHub. Connectez-vous avec GitHub dans Réglages ▸ Git, puis importez-le à nouveau."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo repository richiede l’accesso a GitHub. Accedi con GitHub in Impostazioni ▸ Git, poi importalo di nuovo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このリポジトリにはGitHubへのサインインが必要です。「設定 ▸ Git」でGitHubでサインインしてから、もう一度インポートしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 저장소는 GitHub 로그인이 필요합니다. ‘설정 ▸ Git’에서 GitHub로 로그인한 다음 다시 가져오세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este repositório exige entrar no GitHub. Entre com o GitHub em Ajustes ▸ Git e importe de novo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для этого репозитория нужен вход в GitHub. Войдите через GitHub в разделе «Настройки» ▸ «Git», затем повторите импорт."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kho lưu trữ này cần đăng nhập GitHub. Hãy đăng nhập bằng GitHub trong Cài đặt ▸ Git, rồi nhập lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此仓库需要登录 GitHub。请在“设置 ▸ Git”中使用 GitHub 登录，然后重新导入。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此儲存庫需要登入 GitHub。請在「設定 ▸ Git」中使用 GitHub 登入，然後重新匯入。"
+          }
+        }
+      }
+    },

@@ -1,0 +1,83 @@
+    "No compatible versions are available. You can set up build tools later in Settings." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا تتوفر إصدارات متوافقة. يمكنك إعداد أدوات البناء لاحقًا في «الإعدادات»."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine kompatiblen Versionen verfügbar. Du kannst die Build-Tools später in den Einstellungen einrichten."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No compatible versions are available. You can set up build tools later in Settings."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay versiones compatibles disponibles. Puedes configurar las herramientas de compilación más tarde en Ajustes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune version compatible n’est disponible. Vous pouvez configurer les outils de compilation plus tard dans Réglages."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessuna versione compatibile disponibile. Puoi configurare gli strumenti di compilazione più tardi in Impostazioni."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "互換性のあるバージョンがありません。ビルドツールはあとで「設定」でセットアップできます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호환되는 버전이 없습니다. 빌드 도구는 나중에 ‘설정’에서 설정할 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nenhuma versão compatível disponível. Você pode configurar as ferramentas de compilação depois em Ajustes."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Совместимых версий нет. Инструменты сборки можно настроить позже в «Настройках»."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không có phiên bản tương thích. Bạn có thể thiết lập công cụ xây dựng sau trong Cài đặt."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂无兼容版本。你可以稍后在“设置”中配置构建工具。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目前沒有相容的版本。你可以稍後在「設定」中設定建置工具。"
+          }
+        }
+      }
+    },

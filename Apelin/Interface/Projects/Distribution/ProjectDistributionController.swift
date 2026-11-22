@@ -636,7 +636,9 @@ final class ProjectDistributionController: TableController {
 
     /// The selected packages, roothide's first, as one GitHub Release.
     @objc private dynamic func publishRelease() {
-        let chosen = BuildBootstrap.allCases.compactMap { packages[$0] }.filter { selectedPackages.contains($0.artifactID) }
+        let chosen = BuildBootstrap.allCases.flatMap { target in
+            packages.filter { $0.bootstrap == target && selectedPackages.contains($0.artifactID) }
+        }
         guard !chosen.isEmpty, !isPreparingPackage else { return }
         isPreparingPackage = true
         updateRows()

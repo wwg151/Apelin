@@ -1,0 +1,83 @@
+    "Strict: asks before commands and sensitive changes.\n\nRelaxed: runs these operations without asking, within the app’s permissions, but asks before any command that runs as root.\n\nFull: runs commands as root without asking too." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صارم: يسأل قبل الأوامر والتغييرات الحساسة.\n\nمتساهل: ينفّذ هذه العمليات دون سؤال، ضمن أذونات التطبيق، لكنه يسأل قبل أي أمر يعمل بصلاحيات الجذر.\n\nكامل: ينفّذ الأوامر بصلاحيات الجذر دون سؤال أيضًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Streng: fragt vor Befehlen und sensiblen Änderungen.\n\nLocker: führt diese Vorgänge ohne Nachfrage im Rahmen der App-Berechtigungen aus, fragt aber vor jedem Befehl, der als root läuft.\n\nVollständig: führt auch Befehle als root ohne Nachfrage aus."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strict: asks before commands and sensitive changes.\n\nRelaxed: runs these operations without asking, within the app’s permissions, but asks before any command that runs as root.\n\nFull: runs commands as root without asking too."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estricto: pregunta antes de comandos y cambios sensibles.\n\nFlexible: ejecuta estas operaciones sin preguntar, dentro de los permisos de la app, pero pregunta antes de cualquier comando que se ejecute como root.\n\nCompleto: también ejecuta comandos como root sin preguntar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strict : demande avant les commandes et les modifications sensibles.\n\nSouple : exécute ces opérations sans demander, dans la limite des autorisations de l’app, mais demande avant toute commande exécutée en tant que root.\n\nComplet : exécute aussi les commandes en tant que root sans demander."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rigorosa: chiede prima dei comandi e delle modifiche sensibili.\n\nPermissiva: esegue queste operazioni senza chiedere, entro i permessi dell’app, ma chiede prima di qualsiasi comando eseguito come root.\n\nCompleta: esegue anche i comandi come root senza chiedere."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "厳格：コマンドや慎重な変更の前に確認します。\n\n緩和：Appの権限の範囲内でこれらの操作を確認せずに実行しますが、root として実行するコマンドの前には確認します。\n\n完全：root としてのコマンドも確認せずに実行します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "엄격: 명령과 민감한 변경 전에 묻습니다.\n\n완화: 앱 권한 범위 내에서 이러한 작업을 묻지 않고 실행하지만, root로 실행하는 명령 전에는 묻습니다.\n\n전체: root 명령도 묻지 않고 실행합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estrito: pergunta antes de comandos e alterações sensíveis.\n\nFlexível: executa essas operações sem perguntar, dentro das permissões do app, mas pergunta antes de qualquer comando executado como root.\n\nCompleto: também executa comandos como root sem perguntar."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Строгий: спрашивает перед командами и важными изменениями.\n\nСвободный: выполняет эти операции без вопросов в пределах прав приложения, но спрашивает перед любой командой, выполняемой от имени root.\n\nПолный: выполняет команды от имени root тоже без вопросов."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghiêm ngặt: hỏi trước khi chạy lệnh và thực hiện thay đổi nhạy cảm.\n\nLinh hoạt: chạy các thao tác này mà không hỏi, trong phạm vi quyền của ứng dụng, nhưng hỏi trước bất kỳ lệnh nào chạy với quyền root.\n\nToàn quyền: chạy cả lệnh với quyền root mà không hỏi."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "严格：执行命令和敏感改动前询问。\n\n宽松：在 App 权限范围内直接执行这些操作，但任何以 root 身份运行的命令都会先询问。\n\n完全：以 root 身份运行命令也不再询问。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "嚴格：執行指令和敏感變更前詢問。\n\n寬鬆：在 App 權限範圍內直接執行這些操作，但任何以 root 身分執行的指令都會先詢問。\n\n完全：以 root 身分執行指令也不再詢問。"
+          }
+        }
+      }
+    },

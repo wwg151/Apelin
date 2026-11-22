@@ -1,0 +1,83 @@
+    "A maximum output above half the context window leaves little room for the chat, and Apelin will compact the chat sooner." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يترك الحد الأقصى للمخرجات الذي يتجاوز نصف نافذة السياق سوى مساحة صغيرة للمحادثة، وسيضغط Apelin المحادثة في وقت أقرب."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine maximale Ausgabe über der Hälfte des Kontextfensters lässt wenig Platz für den Chat, und Apelin komprimiert den Chat früher."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A maximum output above half the context window leaves little room for the chat, and Apelin will compact the chat sooner."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una salida máxima superior a la mitad de la ventana de contexto deja poco espacio para el chat y Apelin lo compactará antes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une sortie maximale supérieure à la moitié de la fenêtre de contexte laisse peu de place à la discussion, et Apelin la compactera plus tôt."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un output massimo superiore alla metà della finestra di contesto lascia poco spazio per la chat e Apelin la compatterà prima."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最大出力がコンテキストウィンドウの半分を超えると、チャット用の空きがほとんど残らず、Apelinはより早い段階でチャットを圧縮します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최대 출력이 컨텍스트 윈도우의 절반을 넘으면 채팅 공간이 부족해져 Apelin이 채팅을 더 일찍 압축합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uma saída máxima acima da metade da janela de contexto deixa pouco espaço para a conversa, e o Apelin a compactará mais cedo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если максимальный вывод превышает половину контекстного окна, для чата остается мало места, и Apelin сожмет его раньше."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đầu ra tối đa lớn hơn một nửa cửa sổ ngữ cảnh sẽ chừa lại rất ít chỗ cho cuộc trò chuyện, và Apelin sẽ nén cuộc trò chuyện sớm hơn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最大输出超过上下文窗口的一半时，留给聊天的空间很小，Apelin 会更早压缩聊天。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最大輸出超過上下文視窗的一半時，留給聊天的空間很小，Apelin 會更早壓縮聊天。"
+          }
+        }
+      }
+    },
