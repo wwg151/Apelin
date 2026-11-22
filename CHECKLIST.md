@@ -164,18 +164,15 @@ platformize-app-ios's; the quoted name is its section.
 
 ## Release and debugging
 
-- [x] `ci.yml` and `release.yml` are both in, copied as a pair: CI builds and keeps `<app>-<sha>` for thirty days, Release waits for that run, compiles nothing, and publishes the artifact CI verified.
-      SKILL.md "Publishing": CI builds, Release publishes what CI built.
-      **Done:** Both in, trimmed: CI runs the harness beside deb-all and keeps `apelin-<sha>` 30 days; Release compiles nothing.
+- [x] `build.yml` builds once and retains `apelin-<sha>` for thirty days; publish and deploy consume those verified artifacts.
+      **Done:** Fork owner consolidated CI and the AdSkip-style prerelease/source deployment into one workflow; all three verification jobs must pass before either publishing job runs.
 - [x] The SDK the app is linked against is chosen, `make build` refuses an older one, the packager reads it back from the app it ships, and CI selects that Xcode by name.
       iphone-duo-readiness, "Establish the baseline": the SDK, not the floor, decides how an iPhone Duo lays the app out.
       **Done:** iOS 27.1 (`IOS_SDK_TIER`, `AGENTS.md` ▸ Decisions ▸ The SDK tier); CI on the `xcode-27` image with Xcode 27.1.
-- [x] The release workflow is named `Release`, shaped test ‖ compile → release, and publishes one dSYM zip per build listed in `SHA256SUMS`.
-      SKILL.md "Publishing"; "Native Depiction".
-      **Done:** Named `Release`; CI's test ‖ build, then Release publishes; one dSYM zip in `SHA256SUMS`.
-- [x] CI's concurrency keys a push on `github.sha` and a pull request on `github.ref`, so a push's run survives to be published by a tag on that commit.
-      SKILL.md "Publishing": the concurrency keys are not decoration.
-      **Done:** `github.sha` for a push, `github.ref` for a pull request.
+- [x] `build.yml` runs test ‖ old-runtime ‖ compile → publish/deploy and publishes one dSYM zip per build listed in `SHA256SUMS`.
+      **Done:** The single workflow publishes the verified packages to `dev-builds`; the separate tag-release workflow was removed by the fork owner.
+- [x] Concurrency cancels superseded runs on the same ref and serializes writes to each shared publishing destination.
+      **Done:** Workflow group uses `github.ref`; publish and deploy each have a cross-branch group with cancellation disabled.
 - [x] `<docs>/Releases/` exists and the first release's note is written before its tag: a headline sentence, a bullet per user-visible change, a closing line naming the package and `SHA256SUMS`.
       SKILL.md "Publishing": the release notes are a file in the repo.
       **Done:** `Documents/Releases/` exists; the 0.1.0 note is written before its tag.

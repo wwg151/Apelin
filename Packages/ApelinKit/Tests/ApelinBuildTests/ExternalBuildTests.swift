@@ -258,9 +258,9 @@ final class ExternalBuildTests: XCTestCase {
     }
 
     /// A workspace has no description for the distribution check to read,
-    /// so its release build reads the package: a made-up identifier, a
-    /// version already packaged for the target, and a package other than
-    /// the other target's latest release. A debug build says nothing.
+    /// so its release build reads the package: a made-up identifier and a
+    /// package other than the other target's latest release.
+    /// Rebuilding the same version adds no warning. A debug build says nothing.
     func testReleaseBuildReportsWhatThePackageShouldNotCarry() throws {
         let local = try package(.roothide, id: "local.apelin.imported")
         let rootless = try package(.rootless, id: "com.example.other")
@@ -276,7 +276,7 @@ final class ExternalBuildTests: XCTestCase {
         XCTAssertEqual(try findings(build(project.id, configuration: .release).1), ["distribution.package.id.local"])
         XCTAssertEqual(
             try findings(build(project.id, configuration: .release).1),
-            ["distribution.package.id.local", "distribution.version.packaged"],
+            ["distribution.package.id.local"],
         )
         let other = try build(project.id, configuration: .release, bootstrap: .rootless).1
         XCTAssertEqual(findings(other), ["distribution.package.id.differs"])

@@ -107,16 +107,43 @@ struct FailureReasonTests {
     /// connection that answers nothing may not.
     @Test(.timeLimit(.minutes(1)))
     func `an operation past its limit is no longer waited for`() async throws {
-        let started = Date()
+        let operation = SuspendedOperation()
+        defer { operation.release() }
         await #expect(throws: Deadline.Exceeded.self) {
             _ = try await Deadline.within(.milliseconds(100)) {
-                await withCheckedContinuation { continuation in
-                    DispatchQueue.global().asyncAfter(deadline: .now() + 5) { continuation.resume() }
-                }
+                // A checked continuation ignores cancellation. Only this test
+                // releases it, after the deadline has answered the caller.
+                await operation.wait()
                 return 1
             }
         }
-        #expect(Date().timeIntervalSince(started) < 3)
+    }
+
+    /// Release may precede registration when the executor is busy.
+    private final class SuspendedOperation: @unchecked Sendable {
+        private let lock = NSLock()
+        private var continuation: CheckedContinuation<Void, Never>?
+        private var released = false
+
+        func wait() async {
+            await withCheckedContinuation { continuation in
+                let resume = lock.withLock {
+                    if released { return true }
+                    self.continuation = continuation
+                    return false
+                }
+                if resume { continuation.resume() }
+            }
+        }
+
+        func release() {
+            let pending = lock.withLock {
+                released = true
+                defer { continuation = nil }
+                return continuation
+            }
+            pending?.resume()
+        }
     }
 
     @Test(.timeLimit(.minutes(1)))

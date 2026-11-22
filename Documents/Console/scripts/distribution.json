@@ -117,6 +117,45 @@
       "label": "unlink"
     },
     {
+      "op": "distributionPackages",
+      "label": "packages-unlinked",
+      "allowError": true
+    },
+    {
+      "op": "expect",
+      "request": {
+        "step": "packages-unlinked",
+        "errorCode": "notFound"
+      }
+    },
+    {
+      "op": "distributionWithdraw",
+      "request": {
+        "snapshot": {
+          "repository": {
+            "fullName": "example/packages",
+            "url": "https://github.com/example/packages",
+            "sourceURL": "https://example.github.io/packages/",
+            "projectID": "unlinked-repository",
+            "projectName": "packages"
+          },
+          "branch": "main",
+          "commit": "before",
+          "packages": []
+        },
+        "packages": []
+      },
+      "label": "withdraw-unlinked",
+      "allowError": true
+    },
+    {
+      "op": "expect",
+      "request": {
+        "step": "withdraw-unlinked",
+        "errorCode": "conflict"
+      }
+    },
+    {
       "op": "distributionRepositoryList",
       "request": {
         "repositories": false

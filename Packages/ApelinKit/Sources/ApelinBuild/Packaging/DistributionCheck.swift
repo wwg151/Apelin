@@ -6,8 +6,8 @@ import Foundation
 /// What `projectCheck` adds for `purpose: distribution`: what a package
 /// meant for other people should not carry. A template's placeholder name,
 /// description or author, its first version, an identifier `projectCreate`
-/// made up, an app without an icon, a version this project already packaged
-/// for the target. Every finding is a warning with a `distribution.*` code,
+/// made up and an app without an icon. Every finding is a warning with a
+/// `distribution.*` code,
 /// so the build is never refused for one; the app asks before packaging
 /// and the agent is told what to change.
 public struct DistributionCheck: Sendable {
@@ -32,7 +32,7 @@ public struct DistributionCheck: Sendable {
     }
 
     /// Nothing when the project does not read: `ProjectCheck` reports that.
-    public func run(projectID: String, bootstrap: Bootstrap?) -> [ProjectDiagnostic] {
+    public func run(projectID: String, bootstrap _: Bootstrap?) -> [ProjectDiagnostic] {
         guard let (_, root) = try? store.root(of: projectID),
               let data = try? ProjectFiles.read(ProjectStore.projectFileName, in: root),
               let document = try? StrictJSON.parse(data),
@@ -90,31 +90,14 @@ public struct DistributionCheck: Sendable {
             }
         }
 
-        let release = ConfigurationName.release.rawValue
-        let packaged = ArtifactStore(store: store).all()
-            .filter {
-                $0.projectID == project.projectID && $0.configuration == release && $0.packageID == package.id
-                    && $0.packageVersion == package.version && (bootstrap == nil || $0.bootstrap == bootstrap?.rawValue)
-            }
-            .max { $0.createdAt < $1.createdAt }
-        if let packaged {
-            let date = packaged.createdAt.formatted(.iso8601.year().month().day())
-            warn(
-                "distribution.version.packaged",
-                "/package/version",
-                "version \(package.version) was already packaged for \(packaged.bootstrap) on \(date): publish or share that "
-                    + "package as it is; raise /package/version only to ship a change, so package managers offer it as an update",
-            )
-        }
         return out
     }
 
     /// What a workspace's release package carries that a package for other
     /// people should not, read off the package its script wrote
     /// (`ExternalBuild`), since a workspace has no description to read
-    /// before it is built: the identifier Apelin makes up, a version this
-    /// project already packaged for the target, and a package other than
-    /// the one the other target's latest release carried. `record` is the
+    /// before it is built: the identifier Apelin makes up and a package
+    /// other than the one the other target's latest release carried. `record` is the
     /// new package's, before it is saved.
     public static func packageFindings(_ record: ArtifactRecord, store: ProjectStore) -> [ProjectDiagnostic] {
         var out: [ProjectDiagnostic] = []
@@ -130,20 +113,6 @@ public struct DistributionCheck: Sendable {
         let releases = ArtifactStore(store: store).all().filter {
             $0.projectID == record.projectID && $0.configuration == ConfigurationName.release.rawValue
                 && $0.artifactID != record.artifactID
-        }
-        let packaged = releases
-            .filter {
-                $0.bootstrap == record.bootstrap && $0.packageID == record.packageID
-                    && $0.packageVersion == record.packageVersion
-            }
-            .max { $0.createdAt < $1.createdAt }
-        if let packaged {
-            let date = packaged.createdAt.formatted(.iso8601.year().month().day())
-            warn(
-                "distribution.version.packaged",
-                "version \(record.packageVersion) was already packaged for \(record.bootstrap) on \(date): publish or share that "
-                    + "package as it is; raise the version the build script writes only to ship a change, so package managers offer it as an update",
-            )
         }
         let other = releases.filter { $0.bootstrap != record.bootstrap }.max { $0.createdAt < $1.createdAt }
         if let other, other.packageID != record.packageID {

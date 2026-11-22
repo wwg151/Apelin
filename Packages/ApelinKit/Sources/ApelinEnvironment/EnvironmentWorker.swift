@@ -206,6 +206,18 @@ public final class EnvironmentWorker: @unchecked Sendable {
                     reporter.emit("result", result)
                 }
             }
+        case .distributionPackages:
+            await WorkerMain.serve(DistributionPackagesRequest.self, request) { [self] _ in
+                try await distribution.packages()
+            }
+        case .distributionWithdraw:
+            await startTask(DistributionWithdrawRequest.self, request, resultInState: true) { [self] typed, _ in
+                try distribution.prepareWithdraw(typed)
+                return { reporter, _ in
+                    let result = try await self.distribution.withdraw(typed, reporter: reporter)
+                    reporter.emit("result", result)
+                }
+            }
         case .feedbackSend:
             await WorkerMain.serve(FeedbackSendRequest.self, request) { [self] in try await feedback.send($0) }
         case .feedbackRead:

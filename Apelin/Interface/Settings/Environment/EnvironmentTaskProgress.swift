@@ -23,6 +23,7 @@ struct EnvironmentTaskProgress {
         case distributionCreate
         case distributionLink
         case distributionPublish
+        case distributionWithdraw
         /// Open in Apelin for a repository: `gitCloneInto` into the
         /// workspace made for it.
         case repositoryImport
@@ -60,7 +61,7 @@ struct EnvironmentTaskProgress {
                 ["creating", "preparing", "pushing", "publishing"]
             case .distributionLink:
                 ["fetching", "preparing", "pushing", "publishing"]
-            case .distributionPublish:
+            case .distributionPublish, .distributionWithdraw:
                 ["fetching", "preparing", "pushing"]
             case .repositoryImport:
                 ["fetching"]

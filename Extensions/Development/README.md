@@ -144,7 +144,7 @@ the IDE alone. Removing an extension is never an error.
 added to `deb-all`, and `Documents/Schemas/Tools/check-fixtures.py` plus
 `Extensions/Development/check-templates.py --no-build` in `check`.
 
-**`ci.yml` / `manifest.json`** — the extension debs land in `build/Packages/`
+**`build.yml` / `manifest.json`** — the extension debs land in `build/Packages/`
 beside the IDE's, so the existing artifact and release carry them; the
 owngoal-packages entry lists the four package ids with their own versions.
 

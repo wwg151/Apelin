@@ -130,6 +130,65 @@ struct GitHubAPI: Sendable {
         try await send("GET", "/repos/\(fullName)", as: Repository.self)
     }
 
+    struct GitCommit: Decodable, Sendable {
+        let sha: String
+        let tree: GitObject
+    }
+
+    struct GitObject: Decodable, Sendable {
+        let sha: String
+    }
+
+    struct GitTree: Decodable, Sendable {
+        let tree: [Entry]
+        let truncated: Bool
+
+        struct Entry: Decodable, Sendable {
+            let path: String
+            let mode: String
+            let type: String
+            let sha: String
+        }
+    }
+
+    struct GitReference: Decodable, Sendable {
+        let object: GitObject
+    }
+
+    func branchHead(_ repository: String, branch: String) async throws -> String {
+        let encoded = branch.addingPercentEncoding(withAllowedCharacters: .alphanumerics) ?? ""
+        return try await send("GET", "/repos/\(repository)/git/ref/heads/\(encoded)", as: GitReference.self).object.sha
+    }
+
+    func gitCommit(_ repository: String, sha: String) async throws -> GitCommit {
+        try await send("GET", "/repos/\(repository)/git/commits/\(sha)", as: GitCommit.self)
+    }
+
+    func gitTree(_ repository: String, sha: String) async throws -> GitTree {
+        let tree = try await send("GET", "/repos/\(repository)/git/trees/\(sha)?recursive=1", as: GitTree.self)
+        guard !tree.truncated else { throw ApelinError(.unavailable, "The repository file list is incomplete. Manage this repository on GitHub.") }
+        return tree
+    }
+
+    /// The branch update is never forced: a concurrent push is refused.
+    func withdraw(_ repository: String, branch: String, parent: GitCommit, paths: [String]) async throws -> String {
+        let entries: [[String: Any]] = paths.map {
+            ["path": $0, "mode": "100644", "type": "blob", "sha": NSNull()]
+        }
+        let tree = try await send("POST", "/repos/\(repository)/git/trees", body: [
+            "base_tree": parent.tree.sha, "tree": entries,
+        ], as: GitObject.self)
+        let commit = try await send("POST", "/repos/\(repository)/git/commits", body: [
+            "message": "Withdraw packages\n\n" + paths.joined(separator: "\n"),
+            "tree": tree.sha, "parents": [parent.sha],
+        ], as: GitObject.self)
+        let encoded = branch.addingPercentEncoding(withAllowedCharacters: .alphanumerics) ?? ""
+        try await sendExpectingNothing("PATCH", "/repos/\(repository)/git/refs/heads/\(encoded)", body: [
+            "sha": commit.sha, "force": false,
+        ])
+        return commit.sha
+    }
+
     /// A new repository on the account, or in `organization`, with nothing
     /// in it: no README, licence or `.gitignore`, so a first push lays down
     /// its history. `features` are GitHub's `has_*` switches; one not named

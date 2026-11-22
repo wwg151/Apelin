@@ -71,10 +71,9 @@ struct DpkgStatusDatabase: InstalledPackageSource {
 /// - The bootstrap's core, the install service, Apelin itself and protected
 ///   system packages are never a project's: an install naming one is
 ///   refused, and so is its removal, whatever the records say.
-/// - An install whose package ID is already installed by someone else — no
-///   installation record of ours claims it at the installed version — is
-///   refused, so a project cannot overwrite a package and then remove it as
-///   its own.
+/// - An install whose package ID is already installed by someone else is
+///   refused by default. The app may opt in when installing a registered
+///   build, without relaxing the protection for system packages.
 /// - A removal acts only on a record this bridge wrote when irisind reported
 ///   the install succeeded, and only while the installed state still matches
 ///   it: the same package at the same version. Anything else is not managed,
@@ -145,6 +144,7 @@ enum ManagedPackagePolicy {
         origin: InstallationRecord.Origin = .build,
         installed: [String: InstalledPackage],
         records: [InstallationRecord],
+        allowExternalReplacement: Bool = false,
     ) throws {
         guard isValidPackageID(packageID) else {
             throw ApelinError(.badRequest, "\(packageID) is not a valid package ID")
@@ -158,6 +158,7 @@ enum ManagedPackagePolicy {
                     : "\(packageID) is a protected system package, so a project cannot install it.",
             )
         }
+        if allowExternalReplacement, origin == .build { return }
         guard let current, current.isInstalled else { return }
         let ours = records.contains {
             $0.packageID == packageID && $0.status == .installed && $0.version == current.version

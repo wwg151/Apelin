@@ -265,7 +265,7 @@ final class BuildWorkerTests: XCTestCase {
         XCTAssertEqual(digests.count, 2, "the two outputs must be independently built packages")
         for target in BuildBootstrap.allCases {
             let check = try worker.projectCheck(ProjectCheckRequest(projectID: project.projectID, purpose: .distribution, bootstrap: target))
-            XCTAssertTrue(check.diagnostics.contains { $0.code == "distribution.version.packaged" && $0.message.contains(target.rawValue) }, "\(check.diagnostics)")
+            XCTAssertFalse(check.diagnostics.contains { $0.code == "distribution.version.packaged" }, "same-version rebuilds need no advice: \(check.diagnostics)")
             XCTAssertTrue(check.passed, "distribution findings never fail the check")
         }
         let legacy = try JSONCoding.decode(BuildStartRequest.self, from: Data(#"{"projectID":"legacy","configuration":"debug"}"#.utf8))

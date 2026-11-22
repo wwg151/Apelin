@@ -15,9 +15,9 @@ import ApelinProtocol
 enum DistributionHandler: DomainHandler {
     static func handle(_ request: HostRequest, host: SessionHost) async -> HostReply {
         switch request.operation {
-        case .distributionRepositoryList, .distributionRepositoryUnlink:
+        case .distributionRepositoryList, .distributionRepositoryUnlink, .distributionPackages:
             await host.forward(request, to: .environment)
-        case .distributionRepositoryCreate, .distributionRepositoryLink:
+        case .distributionRepositoryCreate, .distributionRepositoryLink, .distributionWithdraw:
             await host.startTask(request, kind: .environment, role: .environment, resumable: false)
         case .distributionPublish:
             await publish(request, host: host)

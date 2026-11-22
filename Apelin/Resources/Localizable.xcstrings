@@ -1,6 +1,1297 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Jump to Latest" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Jump to Latest" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "الانتقال إلى الأحدث" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zum neuesten Eintrag" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Ir a lo último" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Aller au plus récent" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Vai all’ultimo" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "最新に移動" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "최신 로그로 이동" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Ir para o mais recente" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "К последней записи" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Đến mới nhất" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "回到最新" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "回到最新" } }
+      }
+    },
+    "Withdraw from Repository…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Withdraw from Repository…" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "سحب من المستودع…" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Aus Repository zurückziehen…" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Retirar del repositorio…" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retirer du dépôt…" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Ritira dal repository…" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "リポジトリから取り下げる…" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "저장소에서 철회…" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Retirar do repositório…" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отозвать из репозитория…" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Rút khỏi kho…" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "从仓库撤回…" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "從倉庫撤回…" } }
+      }
+    },
+    "Withdraw" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Withdraw" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "سحب" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zurückziehen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Retirar" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retirer" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Ritira" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "取り下げる" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "철회" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Retirar" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отозвать" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Rút" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "撤回" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "撤回" } }
+      }
+    },
+    "Withdraw from Repository?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Withdraw from Repository?" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "السحب من المستودع؟" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Aus Repository zurückziehen?" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "¿Retirar del repositorio?" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retirer du dépôt ?" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Ritirare dal repository?" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "リポジトリから取り下げますか？" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "저장소에서 철회할까요?" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Retirar do repositório?" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отозвать из репозитория?" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Rút khỏi kho?" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "从仓库撤回？" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "從倉庫撤回？" } }
+      }
+    },
+    "No Published Packages" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "No Published Packages" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "لا توجد حزم منشورة" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Keine veröffentlichten Pakete" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "No hay paquetes publicados" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Aucun paquet publié" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Nessun pacchetto pubblicato" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "公開済みパッケージはありません" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "게시된 패키지 없음" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Nenhum pacote publicado" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Нет опубликованных пакетов" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Chưa có gói đã phát hành" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "没有已发布的软件包" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "沒有已發佈的套件" } }
+      }
+    },
+    "Withdrawing Packages" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Withdrawing Packages" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "جارٍ سحب الحزم" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Pakete werden zurückgezogen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Retirando paquetes" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retrait des paquets" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Ritiro dei pacchetti" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージを取り下げ中" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지 철회 중" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Retirando pacotes" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отзыв пакетов" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Đang rút các gói" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "正在撤回软件包" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "正在撤回套件" } }
+      }
+    },
+    "Withdrawn" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Withdrawn" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تم السحب" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zurückgezogen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Retirado" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retiré" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Ritirato" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "取り下げ済み" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "철회됨" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Retirado" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отозвано" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Đã rút" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已撤回" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "已撤回" } }
+      }
+    },
+    "Unable to Withdraw Packages" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Unable to Withdraw Packages" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تعذر سحب الحزم" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Pakete konnten nicht zurückgezogen werden" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudieron retirar los paquetes" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Impossible de retirer les paquets" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Impossibile ritirare i pacchetti" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージを取り下げられません" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지를 철회할 수 없음" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Não foi possível retirar os pacotes" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Не удалось отозвать пакеты" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Không thể rút các gói" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法撤回软件包" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "無法撤回套件" } }
+      }
+    },
+    "Select packages to withdraw. Local builds and installed packages are kept. The source updates after GitHub Actions finishes." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Select packages to withdraw. Local builds and installed packages are kept. The source updates after GitHub Actions finishes." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "حدد الحزم المراد سحبها. تُحفظ البنيات المحلية والحزم المثبتة. يُحدَّث المصدر بعد انتهاء GitHub Actions." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wähle die zurückzuziehenden Pakete. Lokale Builds und installierte Pakete bleiben erhalten. Die Quelle wird nach Abschluss von GitHub Actions aktualisiert." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Selecciona los paquetes que quieres retirar. Se conservan las compilaciones locales y los paquetes instalados. La fuente se actualiza cuando finaliza GitHub Actions." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Sélectionnez les paquets à retirer. Les compilations locales et les paquets installés sont conservés. La source est actualisée après la fin de GitHub Actions." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Seleziona i pacchetti da ritirare. Le build locali e i pacchetti installati vengono conservati. La sorgente si aggiorna al termine di GitHub Actions." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "取り下げるパッケージを選択してください。ローカルのビルドとインストール済みパッケージは保持されます。GitHub Actions の完了後にソースが更新されます。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "철회할 패키지를 선택하세요. 로컬 빌드와 설치된 패키지는 유지됩니다. GitHub Actions가 완료되면 소스가 업데이트됩니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Selecione os pacotes a retirar. As compilações locais e os pacotes instalados são mantidos. A fonte é atualizada após a conclusão do GitHub Actions." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Выберите пакеты для отзыва. Локальные сборки и установленные пакеты сохранятся. Источник обновится после завершения GitHub Actions." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Chọn các gói cần rút. Bản dựng cục bộ và các gói đã cài đặt được giữ lại. Nguồn cập nhật sau khi GitHub Actions hoàn tất." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "选择要撤回的软件包。本地构建和已安装的软件包会保留。GitHub Actions 完成后软件源才会更新。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "選取要撤回的套件。本機建置和已安裝的套件會保留。GitHub Actions 完成後軟體源才會更新。" } }
+      }
+    },
+    "These packages will be removed from the repository in one commit. Local builds and installed packages are kept. The source updates after GitHub Actions finishes." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "These packages will be removed from the repository in one commit. Local builds and installed packages are kept. The source updates after GitHub Actions finishes." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "ستُزال هذه الحزم من المستودع في إيداع واحد. تُحفظ البنيات المحلية والحزم المثبتة. يُحدَّث المصدر بعد انتهاء GitHub Actions." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Diese Pakete werden mit einem Commit aus dem Repository entfernt. Lokale Builds und installierte Pakete bleiben erhalten. Die Quelle wird nach Abschluss von GitHub Actions aktualisiert." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Estos paquetes se eliminarán del repositorio en un solo commit. Se conservan las compilaciones locales y los paquetes instalados. La fuente se actualiza cuando finaliza GitHub Actions." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ces paquets seront supprimés du dépôt en un seul commit. Les compilations locales et les paquets installés sont conservés. La source est actualisée après la fin de GitHub Actions." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Questi pacchetti verranno rimossi dal repository in un unico commit. Le build locali e i pacchetti installati vengono conservati. La sorgente si aggiorna al termine di GitHub Actions." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "これらのパッケージは1回のコミットでリポジトリから削除されます。ローカルのビルドとインストール済みパッケージは保持されます。GitHub Actions の完了後にソースが更新されます。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "이 패키지는 하나의 커밋으로 저장소에서 제거됩니다. 로컬 빌드와 설치된 패키지는 유지됩니다. GitHub Actions가 완료되면 소스가 업데이트됩니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Estes pacotes serão removidos do repositório em um único commit. As compilações locais e os pacotes instalados são mantidos. A fonte é atualizada após a conclusão do GitHub Actions." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Эти пакеты будут удалены из репозитория одним коммитом. Локальные сборки и установленные пакеты сохранятся. Источник обновится после завершения GitHub Actions." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Các gói này sẽ được xóa khỏi kho trong một commit. Bản dựng cục bộ và các gói đã cài đặt được giữ lại. Nguồn cập nhật sau khi GitHub Actions hoàn tất." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "这些软件包将通过一次提交从仓库移除。本地构建和已安装的软件包会保留。GitHub Actions 完成后软件源才会更新。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "這些套件將透過一次提交從倉庫移除。本機建置和已安裝的套件會保留。GitHub Actions 完成後軟體源才會更新。" } }
+      }
+    },
+    "Select All" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Select All" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تحديد الكل" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Alle auswählen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Seleccionar todo" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Tout sélectionner" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Seleziona tutto" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "すべて選択" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "전체 선택" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Selecionar tudo" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Выбрать все" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Chọn tất cả" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "全选" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "全選" } }
+      }
+    },
+    "More" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "More" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "المزيد" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Mehr" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Más" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Plus" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Altro" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "その他" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "더 보기" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Mais" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Ещё" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Thêm" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "更多" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "更多" } }
+      }
+    },
+    "Batch Remove…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Batch Remove…" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إزالة متعددة…" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Mehrere entfernen…" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Eliminar varios…" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Suppression multiple…" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Rimuovi più pacchetti…" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "一括削除…" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "일괄 제거…" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Remover vários…" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалить несколько…" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Xóa hàng loạt…" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "批量移除…" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "批次移除…" } }
+      }
+    },
+    "Deselect All" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Deselect All" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إلغاء تحديد الكل" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Alle abwählen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Deseleccionar todo" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Tout désélectionner" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Deseleziona tutto" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "すべて選択解除" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "전체 선택 해제" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Desmarcar tudo" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Снять выделение" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Bỏ chọn tất cả" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "取消全选" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "取消全選" } }
+      }
+    },
+    "Remove (%lld)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Remove (%lld)" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إزالة (%lld)" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Entfernen (%lld)" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Eliminar (%lld)" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Supprimer (%lld)" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Rimuovi (%lld)" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "削除（%lld）" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "제거 (%lld)" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Remover (%lld)" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалить (%lld)" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Xóa (%lld)" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "移除（%lld）" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "移除（%lld）" } }
+      }
+    },
+    "Remove %lld Local Packages?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Remove %lld Local Packages?" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إزالة الحزم المحلية المحددة (%lld)؟" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%lld lokale Pakete entfernen?" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "¿Eliminar %lld paquetes locales?" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Supprimer %lld paquets locaux ?" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Rimuovere %lld pacchetti locali?" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "ローカルパッケージを%lld個削除しますか？" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "로컬 패키지 %lld개를 제거할까요?" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Remover %lld pacotes locais?" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалить локальные пакеты (%lld)?" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Xóa %lld gói cục bộ?" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "移除这 %lld 个本地软件包？" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "移除這 %lld 個本機套件？" } }
+      }
+    },
+    "Select the local packages to remove." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Select the local packages to remove." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "حدد الحزم المحلية المراد إزالتها." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wähle die zu entfernenden lokalen Pakete aus." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Selecciona los paquetes locales que quieres eliminar." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Sélectionnez les paquets locaux à supprimer." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Seleziona i pacchetti locali da rimuovere." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "削除するローカルパッケージを選択してください。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "제거할 로컬 패키지를 선택하세요." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Selecione os pacotes locais a remover." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Выберите локальные пакеты для удаления." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Chọn các gói cục bộ cần xóa." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "选择要移除的本地软件包。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "選取要移除的本機套件。" } }
+      }
+    },
+    "Removed %lld packages; %lld could not be removed." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Removed %lld packages; %lld could not be removed." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تمت إزالة %lld حزمة؛ تعذرت إزالة %lld." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%lld Pakete entfernt; %lld konnten nicht entfernt werden." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Se eliminaron %lld paquetes; no se pudieron eliminar %lld." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "%lld paquets supprimés ; %lld n’ont pas pu être supprimés." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Rimossi %lld pacchetti; impossibile rimuoverne %lld." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%lld個を削除しました。%lld個は削除できませんでした。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%lld개를 제거했으며 %lld개는 제거하지 못했습니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "%lld pacotes removidos; não foi possível remover %lld." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалено пакетов: %lld; не удалось удалить: %lld." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Đã xóa %lld gói; không thể xóa %lld gói." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已移除 %lld 个，%lld 个未能移除。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "已移除 %lld 個，%lld 個無法移除。" } }
+      }
+    },
+    "These files will no longer be available to share or publish. You will need to build them again. Installed packages, repository copies, logs and debug symbols are kept." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "These files will no longer be available to share or publish. You will need to build them again. Installed packages, repository copies, logs and debug symbols are kept." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "لن تتوفر هذه الملفات للمشاركة أو النشر. ستحتاج إلى بنائها مجددًا. تُحفظ الحزم المثبتة ونسخ المستودع والسجلات ورموز التصحيح." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Diese Dateien müssen neu gebaut werden, bevor sie geteilt oder veröffentlicht werden können. Installierte Pakete, Repository-Kopien, Protokolle und Debugsymbole bleiben erhalten." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Estos archivos ya no estarán disponibles para compartir o publicar. Tendrás que compilarlos de nuevo. Se conservan los paquetes instalados, las copias del repositorio, los registros y los símbolos de depuración." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ces fichiers ne pourront plus être partagés ni publiés. Vous devrez les reconstruire. Les paquets installés, les copies du dépôt, les journaux et les symboles de débogage sont conservés." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Questi file non saranno più disponibili per la condivisione o la pubblicazione. Dovrai ricompilarli. I pacchetti installati, le copie nel repository, i log e i simboli di debug vengono conservati." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "これらのファイルは共有・公開できなくなり、再ビルドが必要になります。インストール済みのパッケージ、リポジトリのコピー、ログ、デバッグシンボルは保持されます。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "이 파일은 더 이상 공유하거나 게시할 수 없으며 다시 빌드해야 합니다. 설치된 패키지, 저장소 사본, 로그 및 디버그 심볼은 유지됩니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Estes arquivos não poderão mais ser compartilhados ou publicados. Será necessário compilá-los novamente. Os pacotes instalados, as cópias no repositório, os logs e os símbolos de depuração serão mantidos." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Эти файлы больше нельзя будет отправить или опубликовать. Их потребуется собрать заново. Установленные пакеты, копии в репозитории, журналы и отладочные символы сохранятся." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Các tệp này sẽ không còn để chia sẻ hoặc phát hành. Bạn cần biên dịch lại. Các gói đã cài, bản sao trong kho, nhật ký và ký hiệu gỡ lỗi vẫn được giữ." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "移除后无法再分享或发布这些文件，需要重新构建。已安装的软件包、源仓库副本、日志和调试符号会保留。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "移除後無法再分享或發佈這些檔案，需要重新建置。已安裝的套件、來源儲存庫副本、日誌和偵錯符號會保留。" } }
+      }
+    },
+    "Remove Package" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Remove Package" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إزالة الحزمة" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Paket entfernen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Eliminar paquete" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Supprimer le paquet" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Rimuovi pacchetto" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージを削除" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지 제거" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Remover pacote" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалить пакет" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Xóa gói" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "移除软件包" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "移除套件" } }
+      }
+    },
+    "Unable to Remove Package" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Unable to Remove Package" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تعذرت إزالة الحزمة" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Paket kann nicht entfernt werden" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudo eliminar el paquete" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Impossible de supprimer le paquet" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Impossibile rimuovere il pacchetto" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージを削除できません" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지를 제거할 수 없음" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Não foi possível remover o pacote" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Не удалось удалить пакет" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Không thể xóa gói" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法移除软件包" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "無法移除套件" } }
+      }
+    },
+    "Choose one or both targets, then tap “Build”. Selected targets build in order: roothide, then rootless." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر هدفًا واحدًا أو كليهما، ثم اضغط «بناء». تُبنى الأهداف المحددة بالترتيب: roothide ثم rootless."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle ein oder beide Ziele und tippe auf „Erstellen“. Die ausgewählten Ziele werden der Reihe nach erstellt: roothide, dann rootless."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose one or both targets, then tap “Build”. Selected targets build in order: roothide, then rootless."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige uno o ambos destinos y toca “Compilar”. Los destinos seleccionados se compilan en orden: roothide y luego rootless."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez une ou deux cibles, puis touchez « Compiler ». Les cibles sélectionnées sont compilées dans l’ordre : roothide, puis rootless."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli una o entrambe le destinazioni, poi tocca “Compila”. Le destinazioni selezionate vengono compilate in ordine: prima roothide, poi rootless."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一方または両方のターゲットを選択して「ビルド」をタップしてください。選択したターゲットは roothide、rootless の順にビルドされます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대상을 하나 또는 둘 다 선택한 다음 “빌드”를 탭하세요. 선택한 대상은 roothide, rootless 순서로 빌드됩니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolha um ou ambos os destinos e toque em “Compilar”. Os destinos selecionados são compilados em ordem: roothide, depois rootless."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите одну или обе цели и нажмите «Собрать». Выбранные цели собираются по порядку: сначала roothide, затем rootless."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn một hoặc cả hai mục tiêu, rồi chạm “Xây dựng”. Các mục tiêu đã chọn được xây dựng theo thứ tự: roothide, rồi rootless."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择一个或两个目标，然后轻点“构建”。所选目标将按顺序构建：先 roothide，后 rootless。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選擇一個或兩個目標，然後點一下「建置」。所選目標將依序建置：先 roothide，再 rootless。"
+          }
+        }
+      }
+    },
+    "Preparing %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جارٍ تحضير %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ wird vorbereitet"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preparing %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preparando %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Préparation de %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preparazione di %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ を準備中"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 준비 중"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preparando %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подготовка %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang chuẩn bị %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在准备 %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在準備 %@"
+          }
+        }
+      }
+    },
+    "Compiling %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جارٍ تجميع %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ wird kompiliert"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compiling %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compilando %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compilation de %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compilazione di %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ をコンパイル中"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 컴파일 중"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compilando %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Компиляция %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang biên dịch %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在编译 %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在編譯 %@"
+          }
+        }
+      }
+    },
+    "Running Build Script for %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جارٍ تشغيل سكربت البناء لـ %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Build-Skript für %@ wird ausgeführt"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Running Build Script for %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ejecutando el script de compilación para %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exécution du script de compilation pour %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esecuzione dello script di build per %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ のビルドスクリプトを実行中"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 빌드 스크립트 실행 중"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Executando o script de compilação para %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выполнение скрипта сборки для %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang chạy tập lệnh bản dựng cho %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在运行 %@ 的构建脚本"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在執行 %@ 的建置指令碼"
+          }
+        }
+      }
+    },
+    "Packaging %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جارٍ تحزيم %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ wird paketiert"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Packaging %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empaquetando %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empaquetage de %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impacchettamento di %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ のパッケージを作成中"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 패키징 중"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empacotando %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Упаковка %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang đóng gói %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在打包 %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在封裝 %@"
+          }
+        }
+      }
+    },
+    "Verifying Package for %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جارٍ التحقق من حزمة %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paket für %@ wird überprüft"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verifying Package for %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verificando el paquete para %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vérification du paquet pour %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verifica del pacchetto per %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ のパッケージを検証中"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 패키지 검증 중"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verificando o pacote para %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверка пакета для %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang xác minh gói cho %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在验证 %@ 的软件包"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在驗證 %@ 的套件"
+          }
+        }
+      }
+    },
+    "Ready to Distribute %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ جاهز للتوزيع"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ ist bereit zum Verteilen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ready to Distribute %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ listo para distribuir"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ prêt à distribuer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ pronto per la distribuzione"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ の配布準備完了"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 배포 준비 완료"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ pronto para distribuir"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ готово к распространению"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sẵn sàng phân phối %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 可以分发"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 可以分發"
+          }
+        }
+      }
+    },
+    "Continue with %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المتابعة مع %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit %@ fortfahren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue with %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar con %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuer avec %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continua con %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ に進む"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 계속 진행"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar com %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продолжить с %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếp tục với %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "继续构建 %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "繼續建置 %@"
+          }
+        }
+      }
+    },
+    "Retry %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إعادة محاولة %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ erneut versuchen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retry %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reintentar %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réessayer %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riprova %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ を再試行"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 다시 시도"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tentar %@ novamente"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Повторить %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thử lại %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重试 %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重試 %@"
+          }
+        }
+      }
+    },
+    "Build Log: %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجل البناء: %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Build-Protokoll: %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Build Log: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registro de compilación: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Journal de compilation : %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Log della build: %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ビルドログ：%@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빌드 로그: %@"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registro de compilação: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Журнал сборки: %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhật ký xây dựng: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "构建日志：%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "建置記錄：%@"
+          }
+        }
+      }
+    },
+    "Share Package: %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مشاركة الحزمة: %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paket teilen: %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share Package: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compartir paquete: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Partager le paquet : %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Condividi pacchetto: %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パッケージを共有：%@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "패키지 공유: %@"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compartilhar pacote: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поделиться пакетом: %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chia sẻ gói: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分享软件包：%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分享套件：%@"
+          }
+        }
+      }
+    },
     "Raccoon" : {
       "localizations" : {
         "ar" : {
@@ -75177,89 +76468,6 @@
         }
       }
     },
-    "Choose one target, then tap “Build”. To build the other target, come back and build again." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "اختر هدفًا واحدًا، ثم اضغط «بناء». لبناء الهدف الآخر، ارجع وابنِ مرة أخرى."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wähle ein Ziel und tippe dann auf „Bauen“. Um das andere Ziel zu bauen, kehre zurück und baue erneut."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose one target, then tap “Build”. To build the other target, come back and build again."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elige un destino y toca “Compilar”. Para compilar el otro destino, vuelve y compila de nuevo."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choisissez une cible, puis touchez « Compiler ». Pour compiler l’autre cible, revenez et compilez à nouveau."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scegli una destinazione, poi tocca “Compila”. Per compilare l’altra destinazione, torna indietro e compila di nuovo."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ターゲットを1つ選んで「ビルド」をタップしてください。もう一方のターゲットをビルドするには、戻ってもう一度ビルドしてください。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "대상을 하나 선택한 다음 ‘빌드’를 탭하세요. 다른 대상을 빌드하려면 돌아와서 다시 빌드하세요."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Escolha um destino e toque em “Compilar”. Para compilar o outro destino, volte e compile novamente."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Выберите одну цель и коснитесь «Собрать». Чтобы собрать другую цель, вернитесь и запустите сборку снова."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chọn một đích, rồi chạm “Xây dựng”. Để xây dựng cho đích còn lại, hãy quay lại và xây dựng lần nữa."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "选择一个目标后轻点“构建”。要构建另一个目标，请返回后再构建一次。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "選擇一個目標後點一下「建置」。若要建置另一個目標，請返回後再建置一次。"
-          }
-        }
-      }
-    },
     "Publish the selected packages to your package repository together, or share one. Each is the file its build made, unchanged." : {
       "localizations" : {
         "ar" : {
@@ -76281,6 +77489,82 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "要安裝 Command Line Tools %@ 嗎？"
+          }
+        }
+      }
+    },
+    "Installation Complete" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اكتمل التثبيت"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installation abgeschlossen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instalación completada"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installation terminée"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installazione completata"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "インストール完了"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설치 완료"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instalação concluída"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Установка завершена"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt hoàn tất"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安装完成"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安裝完成"
           }
         }
       }

@@ -1276,6 +1276,9 @@ do {
 
     for reserved in ["wiki.qaq.apelin", "wiki.qaq.apelin.dev.tweak", "wiki.qaq.irisin", "dpkg", "apt", "firmware", "gsc.ipad", "cy+cpu.arm64", "com.example.essential"] {
         expectError("installing \(reserved)", code: .denied) { try ManagedPackagePolicy.checkInstall(packageID: reserved, installed: installed, records: []) }
+        expectError("manually installing \(reserved)", code: .denied) {
+            try ManagedPackagePolicy.checkInstall(packageID: reserved, installed: installed, records: [], allowExternalReplacement: true)
+        }
     }
     expectError("a bad package ID", code: .badRequest) { try ManagedPackagePolicy.checkInstall(packageID: "Bad ID", installed: installed, records: []) }
     expectError("overwriting a package Apelin did not install", code: .conflict) {
@@ -1516,7 +1519,7 @@ final class FakeIrisin: InstallService, @unchecked Sendable {
                     ),
                 )
                 events.append(
-                    InstallTransactionEvent(sequence: 4, kind: "phase", text: "completed", phase: "completed"),
+                    InstallTransactionEvent(sequence: 4, kind: "progress", text: "configuring", completed: 3, total: 4),
                 )
                 events.append(InstallTransactionEvent(sequence: 5, kind: "exit", text: "exit 0", exitStatus: 0))
             }
@@ -1793,6 +1796,8 @@ do {
     check(batch.state == .succeeded, "the install succeeds (\(batch.events.last?.payload?["message"]?.stringValue ?? ""))")
     let irisinEvents = batch.events.filter { $0.kind == "irisin" }.compactMap { $0.payload?["seq"]?.doubleValue }
     check(irisinEvents == [1, 2, 3, 4, 5], "every irisind event is relayed once, in order")
+    let progress = batch.events.first { $0.kind == "irisin" && $0.payload?["kind"]?.stringValue == "progress" }
+    check(progress?.payload?["done"]?.doubleValue == 3 && progress?.payload?["total"]?.doubleValue == 4, "the installation relays Irisin's progress counters")
     let result = try batch.events.first { $0.kind == "result" }?.payload?.decode(InstallResult.self)
     check(result?.packageID == "com.example.hello" && result?.projectID == "p-1" && result?.artifactDigest == digest, "the result names the package, project and digest")
     let stored = await installations.record(result?.installationID ?? "")
@@ -1800,15 +1805,39 @@ do {
     check(stored.map { UUID(uuidString: $0.transactionID) != nil && $0.transactionID == $0.transactionID.lowercased() } == true, "the transaction ID is a lowercase UUID")
     check((try? FileManager.default.contentsOfDirectory(atPath: state.appendingPathComponent("staging").path))?.isEmpty ?? true, "the staged copy is removed after the run")
 
-    // A package someone else installed is not overwritten, a core one never.
+    // The default install path cannot overwrite a package installed elsewhere.
     let foreign = data + "/foreign.deb"
     makeDeb(at: foreign, package: "com.example.foreign", version: "2")
-    await expectErrorAsync("overwriting a foreign package", code: .conflict) {
+    let foreignDigest = sha256(foreign)
+    _ = await artifacts.record(event: .object([
+        "artifactID": .string("art-foreign"),
+        "digest": .string(foreignDigest),
+        "packageID": .string("com.example.foreign"),
+        "version": .string("2"),
+        "path": .string(foreign),
+        "projectID": .string("p-1"),
+        "packagingDigest": .string(packaging),
+    ]), buildID: buildTask.taskID)
+    await expectErrorAsync("overwriting a foreign package without opting in", code: .conflict) {
         _ = try await install.install(
-            InstallPackageRequest(artifactID: "file:foreign.deb", digest: sha256(foreign)),
+            InstallPackageRequest(artifactID: "art-foreign", digest: foreignDigest),
             caller: .app,
         )
     }
+    await expectErrorAsync("a file install opting into external replacement", code: .denied) {
+        _ = try await install.install(
+            InstallPackageRequest(artifactID: "file:foreign.deb", digest: foreignDigest, allowExternalReplacement: true),
+            caller: .app,
+        )
+    }
+    let replacement = InstallPackageRequest(artifactID: "art-foreign", digest: foreignDigest, allowExternalReplacement: true)
+    await expectErrorAsync("an agent install opting into external replacement", code: .denied) {
+        _ = try await install.install(replacement, caller: .worker(.agent, instance: "s"))
+    }
+    let replacementHandle = try await install.install(replacement, caller: .app)
+    let replacementBatch = try await waitForEnd(registry, replacementHandle)
+    let replacedVersion = try FakeDatabase(irisin: irisin, extra: extra).installedPackages()["com.example.foreign"]?.version
+    check(replacementBatch.state == .succeeded && replacedVersion == "2", "an explicit app build install replaces the foreign package")
     let core = data + "/core.deb"
     makeDeb(at: core, package: "wiki.qaq.irisin", version: "9")
     await expectErrorAsync("installing the install service", code: .denied) {
@@ -1993,7 +2022,7 @@ do {
         check(error.code == .conflict && error.message.contains(newer?.installationID ?? "-"), "the refusal of a superseded installation names the newer one")
     }
     let everything = try await install.list(InstallationListRequest(), caller: lister)
-    check(everything.installations.map(\.packageID) == ["com.example.hello", "com.example.resume"], "every package still installed is listed, newest first (\(everything.installations.map(\.packageID)))")
+    check(everything.installations.map(\.packageID) == ["com.example.hello", "com.example.resume", "com.example.foreign"], "every package still installed is listed, newest first (\(everything.installations.map(\.packageID)))")
     // The agent installs build artifacts only, and removes only those.
     let fileForAgent = everything.installations.first { $0.packageID == "com.example.resume" }
     check(fileForAgent.map { !$0.removable && ($0.reason ?? "").contains("from a file") } == true, "the agent sees a file the app installed as not its to remove")
@@ -2004,7 +2033,7 @@ do {
     }
     let byProject = try await install.list(InstallationListRequest(projectID: "p-1"), caller: lister)
     let otherProject = try await install.list(InstallationListRequest(projectID: "p-2"), caller: lister)
-    check(byProject.installations.map(\.packageID) == ["com.example.hello"] && otherProject.installations.isEmpty, "the list is filtered by project")
+    check(byProject.installations.map(\.packageID) == ["com.example.hello", "com.example.foreign"] && otherProject.installations.isEmpty, "the list is filtered by project, including a build that replaced an external package")
 
     irisin.lock.withLock { irisin.installedVersions["com.example.hello"] = "2.0" }
     let replaced = try await install.list(InstallationListRequest(packageID: "com.example.hello"), caller: lister)
@@ -3519,6 +3548,9 @@ do {
 // MARK: - Packages are published under Strict only as the user approved exactly them
 
 do {
+    check(CallerPolicy.allows(.app, .distributionWithdraw), "the app may withdraw confirmed packages")
+    check(!CallerPolicy.allows(.worker(.agent, instance: "s"), .distributionWithdraw), "withdrawal stays app-only")
+    check(!CallerPolicy.allows(.worker(.environment, instance: nil), .distributionWithdraw), "workers cannot start withdrawals")
     check(CallerPolicy.allows(.worker(.agent, instance: "s"), .distributionPublish), "the agent may publish packages")
     check(!CallerPolicy.allows(.worker(.build, instance: nil), .distributionPublish), "the build worker may not")
     check(!CallerPolicy.allows(.worker(.environment, instance: nil), .distributionPublish), "nor the environment worker")
