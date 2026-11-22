@@ -53,6 +53,7 @@ extension UIViewController {
         cancelTitle: String.LocalizationValue = "Cancel",
         confirmTitle: String.LocalizationValue = "Confirm",
         destructive: Bool = false,
+        onCancel: @escaping () -> Void = {},
         onConfirm: @escaping () -> Void,
     ) {
         let accent = AlertControllerConfiguration.accentColor
@@ -63,7 +64,7 @@ extension UIViewController {
         }
         let alert = AlertViewController(title: title, message: message) { context in
             context.addAction(title: cancelTitle) {
-                context.dispose()
+                context.dispose { onCancel() }
             }
             context.addAction(title: confirmTitle, attribute: .accent) {
                 context.dispose { onConfirm() }

@@ -97,6 +97,7 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
     private var installState: EnvironmentTaskProgress.StageState = .pending
     private var deviceTarget: BuildBootstrap?
     private var installFailure: String?
+    private var pendingInstall: BuildArtifact?
     @objc private dynamic var installing = false
 
     private func refreshLogs() {
@@ -297,7 +298,18 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
         dataSource.headerTitle = { section in
             section == .progress ? String(localized: "Steps") : nil
         }
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didBecomeActive(_:)),
+            name: UIApplication.didBecomeActiveNotification,
+            object: nil,
+        )
         start()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        offerInstallationIfVisible()
     }
 
     // MARK: - Rows
@@ -536,21 +548,48 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
         )
     }
 
-    private func autoInstall(_ artifact: BuildArtifact) async {
-        if deviceTarget == nil {
-            do {
-                try await resolveDeviceTarget()
-            } catch {
-                appendLog(error.readableMessage, isError: true)
-                return
+    @objc private func didBecomeActive(_ notification: Notification) {
+        offerInstallationIfVisible()
+    }
+
+    private func offerInstallationIfVisible() {
+        guard work == nil, let pendingInstall,
+              UIApplication.shared.applicationState == .active,
+              viewIfLoaded?.window != nil,
+              navigationController?.topViewController === self,
+              presentedViewController == nil, navigationController?.presentedViewController == nil,
+              !isMovingFromParent, navigationController?.isBeingDismissed != true else { return }
+        self.pendingInstall = nil
+        let shouldCountBuild = finishedState == .succeeded
+        presentConfirmation(
+            title: "Install on This Device?",
+            message: "The package is ready to export.",
+            cancelTitle: "Skip Installation",
+            confirmTitle: "Install",
+            onCancel: { [weak self] in
+                guard let self, shouldCountBuild else { return }
+                StarPrompt.buildsCompleted(1, from: self)
+            },
+        ) { [weak self] in
+            guard let self, work == nil, !installing,
+                  let deviceTarget, let result = results[deviceTarget], result.artifact == pendingInstall else { return }
+            showResult(result, for: deviceTarget)
+            installing = true
+            installState = .running(nil)
+            work = Task { [self] in
+                await install(pendingInstall)
+                installing = false
+                work = nil
+                updateNavigation()
+                updateRows()
+                if shouldCountBuild { StarPrompt.buildsCompleted(1, from: self) }
             }
+            updateNavigation()
+            updateRows()
         }
-        guard !Task.isCancelled, target == deviceTarget, artifact.bootstrap == target.rawValue else { return }
-        installing = true
-        installState = .running(nil)
-        updateNavigation()
-        updateRows()
-        defer { installing = false }
+    }
+
+    private func install(_ artifact: BuildArtifact) async {
         do {
             let handle = try await ApelinService.app.installPackage(
                 artifactID: artifact.artifactID,
@@ -601,6 +640,7 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
     @objc private dynamic func start() {
         guard work == nil else { return }
         if target == deviceTarget {
+            pendingInstall = nil
             installState = .pending
             installFailure = nil
         }
@@ -640,7 +680,16 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
                     appendLog(error.readableMessage, isError: true)
                 }
                 if finishedState == .succeeded, let artifact, !Task.isCancelled {
-                    await autoInstall(artifact)
+                    if deviceTarget == nil {
+                        do {
+                            try await resolveDeviceTarget()
+                        } catch {
+                            appendLog(error.readableMessage, isError: true)
+                        }
+                    }
+                    if !Task.isCancelled, target == deviceTarget, artifact.bootstrap == target.rawValue {
+                        pendingInstall = artifact
+                    }
                 }
                 results[target] = Result(
                     state: finishedState ?? .failed,
@@ -666,7 +715,7 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
                 updateRows()
             }
             work = nil
-            // Keep the native install result in view after both builds succeed.
+            // Prefer the native result after the selected builds finish.
             if finishedState == .succeeded, nextTarget == nil,
                let deviceTarget, deviceTarget != target,
                let result = results[deviceTarget], result.state == .succeeded
@@ -675,7 +724,9 @@ final class DistributionBuildController: UIViewController, UITableViewDelegate {
             }
             updateNavigation()
             updateRows()
-            if finishedState == .succeeded {
+            if pendingInstall != nil {
+                offerInstallationIfVisible()
+            } else if finishedState == .succeeded {
                 StarPrompt.buildsCompleted(1, from: self)
             }
         }
