@@ -225,14 +225,14 @@ final class DistributionTests: XCTestCase {
         service.exchange = { request in
             let url = try XCTUnwrap(request.url)
             guard url.path.contains("/contents/") else { return try await github.exchange(request) }
-            XCTAssertEqual(url.path, "/repos/someone/packages/contents/images/\(id).png")
+            XCTAssertEqual(url.path, "/repos/someone/packages/contents/images/package+icon.png")
             func reply(_ status: Int, _ object: [String: Any]) throws -> (Data, HTTPURLResponse) {
                 try (JSONSerialization.data(withJSONObject: object), XCTUnwrap(HTTPURLResponse(url: url, statusCode: status, httpVersion: nil, headerFields: nil)))
             }
             if request.httpMethod == "GET" {
                 XCTAssertEqual(url.query, "ref=main")
                 guard let sha = remote.sha else { return try reply(404, [:]) }
-                return try reply(200, ["type": "file", "sha": sha, "path": "images/\(id).png"])
+                return try reply(200, ["type": "file", "sha": sha, "path": "images/package+icon.png"])
             }
             XCTAssertEqual(request.httpMethod, "PUT")
             let body = try XCTUnwrap(JSONSerialization.jsonObject(with: XCTUnwrap(request.httpBody)) as? [String: String])

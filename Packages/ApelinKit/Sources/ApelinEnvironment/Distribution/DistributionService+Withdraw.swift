@@ -9,7 +9,7 @@ extension DistributionService {
     static func iconBlobSHA(packageID: String, png: Data) throws -> String {
         let alnum = Set("abcdefghijklmnopqrstuvwxyz0123456789".utf8)
         let bytes = packageID.utf8
-        guard (2 ... 251).contains(bytes.count), let first = bytes.first, alnum.contains(first),
+        guard !packageID.hasSuffix("."), (2 ... 251).contains(bytes.count), let first = bytes.first, alnum.contains(first),
               bytes.allSatisfy(alnum.union(".+-".utf8).contains)
         else { throw ApelinError(.badRequest, "Use a valid Debian package ID.") }
 
@@ -34,7 +34,8 @@ extension DistributionService {
         guard remote.fullName.lowercased() == repository.lowercased(), let branch = remote.defaultBranch, !branch.isEmpty,
               let ref = branch.addingPercentEncoding(withAllowedCharacters: .alphanumerics)
         else { throw ApelinError(.conflict, "The linked repository changed or has no default branch.") }
-        let path = "/repos/\(repository)/contents/images/\(packageID).png?ref=\(ref)"
+        let iconPath = DistributionIconStatus.path(for: packageID)
+        let path = "/repos/\(repository)/contents/\(iconPath)?ref=\(ref)"
         var request = try api.request("GET", path, body: nil)
         request.cachePolicy = .reloadIgnoringLocalCacheData
         let (data, response) = try await api.exchange(request)
@@ -45,7 +46,7 @@ extension DistributionService {
             try GitHubAPI.check(response, data)
             struct Entry: Decodable { let type: String; let sha: String; let path: String }
             let entry = try GitHubAPI.decode(Entry.self, data, "GET", path)
-            guard entry.type == "file", entry.path == "images/\(packageID).png", entry.sha.utf8.count == 40,
+            guard entry.type == "file", entry.path == iconPath, entry.sha.utf8.count == 40,
                   entry.sha.utf8.allSatisfy(Set("0123456789abcdef".utf8).contains)
             else { throw ApelinError(.conflict, "The icon path is not a regular file.") }
             sha = entry.sha

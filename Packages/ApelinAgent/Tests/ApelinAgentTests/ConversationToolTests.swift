@@ -299,17 +299,17 @@ struct ConversationToolTests {
     @Test
     func `a stop cancels a read that is still waiting`() async throws {
         let cancellation = CancellationHandle()
-        let started = Date()
+        let (entered, signal) = AsyncStream<Void>.makeStream()
         let read = Task {
             try await ToolRunner.untilCancelled(cancellation) {
+                signal.finish()
                 try await Task.sleep(for: .seconds(30))
                 return 1
             }
         }
-        try await Task.sleep(for: .milliseconds(50))
+        for await _ in entered {}
         cancellation.cancel(reason: "aborted")
         await #expect(throws: CancellationError.self) { _ = try await read.value }
-        #expect(Date().timeIntervalSince(started) < 10)
     }
 
     /// #59: a call waiting on something that answers neither it nor its
@@ -320,18 +320,22 @@ struct ConversationToolTests {
     func `a stop ends a call that would never answer`() async throws {
         let cancellation = CancellationHandle()
         let never = NeverAnswers()
-        let started = Date()
+        let (entered, signal) = AsyncStream<Void>.makeStream()
         let call = Task {
             try await ToolRunner.untilCancelled(cancellation, grace: .milliseconds(200)) {
-                await never.wait()
+                await never.wait { signal.finish() }
                 return 1
             }
         }
-        try await Task.sleep(for: .milliseconds(50))
+        for await _ in entered {}
+        // Release a broken implementation too: a normal answer fails the assertion.
+        let watchdog = Task {
+            do { try await Task.sleep(for: .seconds(60)) } catch { return }
+            never.answer()
+        }
+        defer { watchdog.cancel(); never.answer() }
         cancellation.cancel(reason: "aborted")
         await #expect(throws: CancellationError.self) { _ = try await call.value }
-        #expect(Date().timeIntervalSince(started) < 10)
-        never.answer()
     }
 
     /// What the worker's stop watch reads (`WorkerState.stop`): whether
@@ -466,9 +470,10 @@ private final class NeverAnswers: @unchecked Sendable {
     private let lock = NSLock()
     private var waiting: [CheckedContinuation<Void, Never>] = []
 
-    func wait() async {
+    func wait(onWaiting: @Sendable () -> Void = {}) async {
         await withCheckedContinuation { continuation in
             lock.withLock { waiting.append(continuation) }
+            onWaiting()
         }
     }
 

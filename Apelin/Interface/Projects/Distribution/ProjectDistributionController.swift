@@ -775,7 +775,7 @@ private final class DistributionIconController: UITableViewController, UIDocumen
             value.secondaryText = repository ?? String(localized: "Link a package repository in Settings → Git.")
         case (1, 1):
             value.text = String(localized: "Destination File")
-            value.secondaryText = packageID.map { "images/\($0).png" } ?? String(localized: "A unique package ID is required.")
+            value.secondaryText = packageID.map { DistributionIconStatus.path(for: $0) } ?? String(localized: "A unique package ID is required.")
         default:
             value.text = busy ? String(localized: "Working…") : String(localized: "Push Package Icon…")
             actionable = repository != nil && packageID != nil && png != nil

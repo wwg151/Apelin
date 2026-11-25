@@ -24,7 +24,11 @@ public struct DistributionIconStatus: Codable, Sendable, Equatable {
     public let packageID: String
     public let blobSHA: String?
     public let localBlobSHA: String
-    public var path: String { "images/\(packageID).png" }
+    public static func path(for packageID: String) -> String {
+        "images/\(packageID.components(separatedBy: ".").last ?? packageID).png"
+    }
+
+    public var path: String { Self.path(for: packageID) }
     public var identical: Bool { blobSHA == localBlobSHA }
 
     public init(repository: String, branch: String, packageID: String, blobSHA: String?, localBlobSHA: String) {
