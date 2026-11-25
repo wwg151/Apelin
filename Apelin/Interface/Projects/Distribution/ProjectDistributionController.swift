@@ -67,7 +67,6 @@ final class ProjectDistributionController: TableController {
     private var packages: [DistributionPackage] = []
     @objc private dynamic var selectedPackages: Set<String> = []
     private var iconData: Data?
-    private var iconDetail = "Distribution/icon.png"
     private var packageReader: Task<Void, Never>?
     private var isRemovingPackages = false
     private var removalSelection: Set<String> = []
@@ -156,13 +155,7 @@ final class ProjectDistributionController: TableController {
     /// or a publish may have changed them.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        do {
-            iconData = try DistributionIconFile.read(projectName: projectName)
-            iconDetail = iconData == nil ? "Distribution/icon.png" : "256 × 256 PNG"
-        } catch {
-            iconData = nil
-            iconDetail = error.readableMessage
-        }
+        iconData = try? DistributionIconFile.read(projectName: projectName)
         updateRows()
         if hasAppeared {
             refreshCheck()
@@ -395,8 +388,8 @@ final class ProjectDistributionController: TableController {
             }
         }
         var projectRows = [RowContent(row: .project, text: String(localized: "Project"), secondaryText: displayName ?? projectName)]
-        if !isRemovingPackages {
-            projectRows.append(RowContent(row: .icon, text: String(localized: "Package Icon"), secondaryText: iconDetail))
+        if iconData != nil, !isRemovingPackages {
+            projectRows.append(RowContent(row: .icon, text: String(localized: "Package Icon"), secondaryText: "256 × 256 PNG"))
         }
         var sections: [(Section, [RowContent])] = [(.project, projectRows)]
         let listed = packages
