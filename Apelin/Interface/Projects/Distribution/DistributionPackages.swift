@@ -259,10 +259,10 @@ enum SharedPackages {
 /// The repository-facing icon is independent of the project's sidebar icon.
 @MainActor
 enum DistributionIconFile {
-    static func filename(packageID: String?) -> String {
+    static func filename(packageID: String?) throws -> String {
         guard let suffix = packageID?.components(separatedBy: ".").last, !suffix.isEmpty,
               suffix.utf8.count <= 251,
-              suffix.utf8.allSatisfy({ (97...122).contains($0) || (48...57).contains($0) || $0 == 45 || $0 == 43 }) else { return "icon.png" }
+              suffix.utf8.allSatisfy({ (97...122).contains($0) || (48...57).contains($0) || $0 == 45 || $0 == 43 }) else { throw CocoaError(.fileReadInvalidFileName) }
         return suffix + ".png"
     }
     private static let side = 256
@@ -323,14 +323,11 @@ enum DistributionIconFile {
     static func read(projectName: String, packageID: String?) throws -> (data: Data, name: String)? {
         guard let folder = try directory(projectName, create: false) else { return nil }
         defer { close(folder) }
-        let preferred = filename(packageID: packageID)
-        for name in preferred == "icon.png" ? [preferred] : [preferred, "icon.png"] {
-            let fd = openat(folder, name, readFlags)
-            if fd < 0, errno == ENOENT { continue }
-            guard fd >= 0 else { throw systemError() }
-            return (try validatedPNG(fd), name)
-        }
-        return nil
+        let name = try filename(packageID: packageID)
+        let fd = openat(folder, name, readFlags)
+        if fd < 0, errno == ENOENT { return nil }
+        guard fd >= 0 else { throw systemError() }
+        return (try validatedPNG(fd), name)
     }
 
     private static func validatedPNG(_ fd: Int32) throws -> Data {

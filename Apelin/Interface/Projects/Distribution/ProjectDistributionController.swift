@@ -724,7 +724,7 @@ private final class DistributionIconController: UITableViewController, UIDocumen
     private var packageID: String?
     private var repository: String?
     private var png: Data?
-    private var detail = "Distribution/icon.png"
+    private var detail: String?
     private var busy = false { didSet { tableView.reloadData() } }
 
     init(projectName: String, artifactPackageID: String?) {
@@ -746,7 +746,7 @@ private final class DistributionIconController: UITableViewController, UIDocumen
                 packageID = project.package?.id ?? (project.method == .script ? artifactPackageID : nil)
                 let icon = try DistributionIconFile.read(projectName: projectName, packageID: packageID)
                 png = icon?.data
-                detail = "Distribution/" + (icon?.name ?? DistributionIconFile.filename(packageID: packageID))
+                detail = icon.map { "Distribution/" + $0.name }
                 repository = try await ApelinService.app.distributionRepositoryList(repositories: false).linked?.fullName
             } catch { detail = error.readableMessage }
             tableView.reloadData()
@@ -807,7 +807,7 @@ private final class DistributionIconController: UITableViewController, UIDocumen
         guard let url = urls.first else { return }
         do {
             png = try DistributionIconFile.importImage(from: url, projectName: projectName, packageID: packageID)
-            detail = "Distribution/" + DistributionIconFile.filename(packageID: packageID)
+            detail = "Distribution/" + (try DistributionIconFile.filename(packageID: packageID))
             tableView.reloadData()
         } catch { presentNotice(title: "Package Icon", message: error.readableMessage) }
     }
