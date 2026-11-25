@@ -192,6 +192,15 @@ final class ServiceTableTests: XCTestCase {
             return Row(reply: handle) { _ = try await $0.distributionRepositoryLink(fullName: "someone/packages") }
         case .distributionRepositoryUnlink:
             return Row(reply: ack) { try await $0.distributionRepositoryUnlink() }
+        case .distributionIconStatus, .distributionIconPublish:
+            let snapshot = DistributionIconStatus(repository: "someone/packages", branch: "main", packageID: "demo", blobSHA: nil, localBlobSHA: "abc")
+            return Row(reply: snapshot) { service in
+                if operation == .distributionIconStatus {
+                    _ = try await service.distributionIconStatus(packageID: snapshot.packageID, png: Data())
+                } else {
+                    _ = try await service.distributionIconPublish(snapshot: snapshot, png: Data())
+                }
+            }
         case .distributionPackages:
             let repository = DistributionRepository(fullName: "someone/packages", url: "https://github.com/someone/packages", sourceURL: "https://someone.github.io/packages/", projectID: "repo", projectName: "packages")
             let snapshot = DistributionPackagesResponse(repository: repository, branch: "main", commit: "abc", packages: [])

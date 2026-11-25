@@ -56,6 +56,12 @@ original files. You can edit code and build the same version again without a
 version-history confirmation; publishing different bytes under an already
 published package ID, version and architecture still requires a new version.
 
+## Project package icon
+
+Put a single-frame 256 × 256 PNG at `Distribution/icon.png` in the plugin project. Opening or returning to **Distribute Project** reads it from that project, even before a release build. **Package Icon → Choose Image…** imports another image into the same location, fitting it without cropping and padding with transparency. The two bootstraps share the icon.
+
+**Push Package Icon…** checks `images/<package-id>.png` in the linked package repository. Review the repository, branch and path before confirming an addition or replacement. Identical content needs no commit. An ambiguous workspace package ID cannot be published. This publishes the image only: it does not publish a package or change an existing `.deb` or its `Icon` field. To show the icon in a package manager, serve `images/` on the repository site and use the image’s public HTTPS URL as the package icon before building.
+
 ## Publishing to a package repository
 
 A package repository is an APT source in a GitHub repository of the user's,

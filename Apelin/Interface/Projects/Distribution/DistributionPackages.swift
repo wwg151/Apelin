@@ -1,7 +1,11 @@
 import ApelinCore
 import ApelinProtocol
 import CryptoKit
+import Darwin
 import Foundation
+import ImageIO
+import UIKit
+import UniformTypeIdentifiers
 
 /// A release package a build left in `Builds/`, offered only while the file
 /// there still has the bytes the build recorded, so what is shared or
@@ -249,5 +253,135 @@ enum SharedPackages {
         var digests = UserDefaults.standard.stringArray(forKey: key)?.filter { $0 != digest } ?? []
         digests.append(digest)
         UserDefaults.standard.set(Array(digests.suffix(limit)), forKey: key)
+    }
+}
+
+/// The repository-facing icon is independent of the project's sidebar icon.
+@MainActor
+enum DistributionIconFile {
+    private static let name = "icon.png"
+    private static let side = 256
+    private static let iconLimit = 1 << 20
+    private static let inputLimit = 32 << 20
+    private static let directoryFlags = O_RDONLY | O_DIRECTORY | O_NOFOLLOW | O_CLOEXEC
+    private static let readFlags = O_RDONLY | O_NONBLOCK | O_NOFOLLOW | O_CLOEXEC
+
+    private static func systemError() -> NSError {
+        NSError(domain: NSPOSIXErrorDomain, code: Int(errno))
+    }
+
+    /// Walk single components from the canonical data root. Keep the directory
+    /// open across the operation rather than re-resolving its name at commit.
+    private static func directory(_ projectName: String, create: Bool) throws -> Int32? {
+        guard DataFolder.app.project(named: projectName) != nil,
+              let root = CanonicalPath.resolve(DataFolder.app.root.path)
+        else { throw CocoaError(.fileReadInvalidFileName) }
+        let base = open(root, directoryFlags)
+        guard base >= 0 else { throw systemError() }
+        defer { close(base) }
+        let projects = openat(base, "Projects", directoryFlags)
+        guard projects >= 0 else { throw systemError() }
+        defer { close(projects) }
+        let project = openat(projects, projectName, directoryFlags)
+        guard project >= 0 else { throw systemError() }
+        defer { close(project) }
+        if create, mkdirat(project, "Distribution", 0o755) != 0, errno != EEXIST { throw systemError() }
+        let folder = openat(project, "Distribution", directoryFlags)
+        if folder < 0, !create, errno == ENOENT { return nil }
+        guard folder >= 0 else { throw systemError() }
+        return folder
+    }
+
+    /// Takes ownership of fd. Bound the actual read too: the file may grow
+    /// after fstat, and mapping a mutable picker file would not be a snapshot.
+    private static func bytes(_ fd: Int32, limit: Int) throws -> Data {
+        let handle = FileHandle(fileDescriptor: fd, closeOnDealloc: true)
+        defer { try? handle.close() }
+        var info = stat()
+        guard fstat(fd, &info) == 0 else { throw systemError() }
+        guard info.st_mode & S_IFMT == S_IFREG, info.st_size > 0 else { throw CocoaError(.fileReadCorruptFile) }
+        guard info.st_size <= limit else { throw CocoaError(.fileReadTooLarge) }
+        var result = Data()
+        while let chunk = try handle.read(upToCount: min(65536, limit + 1 - result.count)), !chunk.isEmpty {
+            result.append(chunk)
+            guard result.count <= limit else { throw CocoaError(.fileReadTooLarge) }
+        }
+        return result
+    }
+
+    private static func source(_ data: Data) throws -> CGImageSource {
+        guard let source = CGImageSourceCreateWithData(data as CFData, [kCGImageSourceShouldCache: false] as CFDictionary),
+              CGImageSourceGetCount(source) > 0 else { throw CocoaError(.fileReadCorruptFile) }
+        return source
+    }
+
+    static func read(projectName: String) throws -> Data? {
+        guard let folder = try directory(projectName, create: false) else { return nil }
+        defer { close(folder) }
+        let fd = openat(folder, name, readFlags)
+        if fd < 0, errno == ENOENT { return nil }
+        guard fd >= 0 else { throw systemError() }
+        let data = try bytes(fd, limit: iconLimit)
+        let image = try source(data)
+        guard CGImageSourceGetType(image) as String? == UTType.png.identifier,
+              CGImageSourceGetCount(image) == 1,
+              let props = CGImageSourceCopyPropertiesAtIndex(image, 0, nil) as? [CFString: Any],
+              props[kCGImagePropertyPixelWidth] as? Int == side, props[kCGImagePropertyPixelHeight] as? Int == side,
+              CGImageSourceCreateImageAtIndex(image, 0, [kCGImageSourceShouldCacheImmediately: true] as CFDictionary) != nil,
+              CGImageSourceGetStatusAtIndex(image, 0) == .statusComplete,
+              CGImageSourceGetStatus(image) == .statusComplete else { throw CocoaError(.fileReadCorruptFile) }
+        return data
+    }
+
+    static func importImage(from url: URL, projectName: String) throws -> Data {
+        guard url.isFileURL, !url.path.contains("\0") else { throw CocoaError(.fileReadInvalidFileName) }
+        let scoped = url.startAccessingSecurityScopedResource()
+        defer { if scoped { url.stopAccessingSecurityScopedResource() } }
+        let fd = open(url.path, readFlags)
+        guard fd >= 0 else { throw systemError() }
+        let image = try source(bytes(fd, limit: inputLimit))
+        guard let props = CGImageSourceCopyPropertiesAtIndex(image, 0, nil) as? [CFString: Any],
+              let width = props[kCGImagePropertyPixelWidth] as? Int, width > 0,
+              let height = props[kCGImagePropertyPixelHeight] as? Int, height > 0,
+              width <= 64_000_000 / height else { throw CocoaError(.fileReadCorruptFile) }
+        guard let thumb = CGImageSourceCreateThumbnailAtIndex(image, 0, [
+            kCGImageSourceCreateThumbnailFromImageAlways: true, kCGImageSourceCreateThumbnailWithTransform: true,
+            kCGImageSourceThumbnailMaxPixelSize: side,
+        ] as CFDictionary) else { throw CocoaError(.fileReadCorruptFile) }
+        let edge = CGFloat(side)
+        let scale = edge / CGFloat(max(thumb.width, thumb.height))
+        let w = CGFloat(thumb.width) * scale, h = CGFloat(thumb.height) * scale
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = 1
+        format.opaque = false
+        format.preferredRange = .standard
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: edge, height: edge), format: format)
+        let png = renderer.pngData { _ in
+            UIImage(cgImage: thumb).draw(in: CGRect(x: (edge - w) / 2, y: (edge - h) / 2, width: w, height: h))
+        }
+        guard !png.isEmpty, png.count <= iconLimit else { throw CocoaError(.fileWriteUnknown) }
+        guard let folder = try directory(projectName, create: true) else { throw CocoaError(.fileNoSuchFile) }
+        defer { close(folder) }
+        try replace(in: folder, with: png)
+        return png
+    }
+
+    private static func replace(in folder: Int32, with png: Data) throws {
+        let temp = ".icon-\(UUID().uuidString).tmp"
+        let fd = openat(folder, temp, O_WRONLY | O_CREAT | O_EXCL | O_NOFOLLOW | O_CLOEXEC, 0o644)
+        guard fd >= 0 else { throw systemError() }
+        defer { unlinkat(folder, temp, 0) }
+        let handle = FileHandle(fileDescriptor: fd, closeOnDealloc: true)
+        try handle.write(contentsOf: png)
+        try handle.close()
+        var info = stat()
+        var flags = UInt32(RENAME_NOFOLLOW_ANY)
+        if fstatat(folder, name, &info, AT_SYMLINK_NOFOLLOW) == 0 {
+            guard info.st_mode & S_IFMT == S_IFREG, info.st_nlink == 1 else { throw CocoaError(.fileWriteInvalidFileName) }
+        } else {
+            guard errno == ENOENT else { throw systemError() }
+            flags |= UInt32(RENAME_EXCL)
+        }
+        guard renameatx_np(folder, temp, folder, name, flags) == 0 else { throw systemError() }
     }
 }

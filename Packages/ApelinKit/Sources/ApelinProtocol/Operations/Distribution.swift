@@ -15,6 +15,51 @@
 // `Settings/distribution.json` in the data folder, naming the repository
 // and that project.
 
+import Foundation
+
+/// One observation of a single package icon. The path is never supplied by a caller.
+public struct DistributionIconStatus: Codable, Sendable, Equatable {
+    public let repository: String
+    public let branch: String
+    public let packageID: String
+    public let blobSHA: String?
+    public let localBlobSHA: String
+    public var path: String { "images/\(packageID).png" }
+    public var identical: Bool { blobSHA == localBlobSHA }
+
+    public init(repository: String, branch: String, packageID: String, blobSHA: String?, localBlobSHA: String) {
+        self.repository = repository
+        self.branch = branch
+        self.packageID = packageID
+        self.blobSHA = blobSHA
+        self.localBlobSHA = localBlobSHA
+    }
+}
+
+public struct DistributionIconStatusRequest: OperationRequest {
+    public typealias Response = DistributionIconStatus
+    public static let operation = AppOperation.distributionIconStatus
+    public let packageID: String
+    public let png: Data
+}
+
+public struct DistributionIconPublishRequest: OperationRequest {
+    public typealias Response = DistributionIconStatus
+    public static let operation = AppOperation.distributionIconPublish
+    public let snapshot: DistributionIconStatus
+    public let png: Data
+}
+
+public extension ApelinService {
+    func distributionIconStatus(packageID: String, png: Data) async throws -> DistributionIconStatus {
+        try await send(DistributionIconStatusRequest(packageID: packageID, png: png))
+    }
+
+    func distributionIconPublish(snapshot: DistributionIconStatus, png: Data) async throws -> DistributionIconStatus {
+        try await send(DistributionIconPublishRequest(snapshot: snapshot, png: png))
+    }
+}
+
 /// The linked package repository.
 public struct DistributionRepository: Codable, Sendable, Equatable, Hashable {
     /// `owner/name`.

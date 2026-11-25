@@ -5,7 +5,9 @@ import ApelinDebian
 @testable import ApelinGit
 import ApelinProject
 @testable import ApelinProtocol
+import CoreGraphics
 import Foundation
+import ImageIO
 import XCTest
 
 /// The package repository: GitHub's API answered by a fake, the repository
@@ -180,6 +182,90 @@ final class DistributionTests: XCTestCase {
         return String(decoding: data, as: UTF8.self).split(separator: "\n").map(String.init)
     }
 
+    // MARK: Package icon
+
+    private func iconPNG(size: Int) throws -> Data {
+        let context = try XCTUnwrap(CGContext(data: nil, width: size, height: size, bitsPerComponent: 8, bytesPerRow: size * 4,
+                                              space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue))
+        let image = try XCTUnwrap(context.makeImage())
+        let data = NSMutableData()
+        let writer = try XCTUnwrap(CGImageDestinationCreateWithData(data, "public.png" as CFString, 1, nil))
+        CGImageDestinationAddImage(writer, image, nil)
+        XCTAssertTrue(CGImageDestinationFinalize(writer))
+        return data as Data
+    }
+
+    func testIconOnlyAcceptsPackageNamesAndCompleteSquarePNGs() throws {
+        let png = try iconPNG(size: 256)
+        for id in ["A.test", "../demo", "demo/file", "-demo", "x", "test\n", "test%2fpath"] {
+            XCTAssertThrowsError(try DistributionService.iconBlobSHA(packageID: id, png: png))
+        }
+        for invalid in [Data(), Data(png.dropLast()), try iconPNG(size: 128)] {
+            XCTAssertThrowsError(try DistributionService.iconBlobSHA(packageID: "valid.package", png: invalid))
+        }
+    }
+
+    func testIconPublicationIsBoundToPreviewAndUsesConditionalPut() async throws {
+        let fixture = try Fixture(self)
+        _ = try fixture.bare("someone/packages")
+        let create = DistributionRepositoryCreateRequest(name: "packages")
+        _ = try await fixture.service.create(create, name: fixture.service.prepareCreate(create), reporter: .silent)
+        let png = try iconPNG(size: 256)
+        let id = "test.package+icon"
+        let local = try DistributionService.iconBlobSHA(packageID: id, png: png)
+        let old = String(repeating: "a", count: 40)
+        var service = fixture.service
+        let github = fixture.github
+        final class Remote: @unchecked Sendable {
+            var sha: String?
+            var writes = 0
+            var race = false
+        }
+        let remote = Remote()
+        service.exchange = { request in
+            let url = try XCTUnwrap(request.url)
+            guard url.path.contains("/contents/") else { return try await github.exchange(request) }
+            XCTAssertEqual(url.path, "/repos/someone/packages/contents/images/\(id).png")
+            func reply(_ status: Int, _ object: [String: Any]) throws -> (Data, HTTPURLResponse) {
+                try (JSONSerialization.data(withJSONObject: object), XCTUnwrap(HTTPURLResponse(url: url, statusCode: status, httpVersion: nil, headerFields: nil)))
+            }
+            if request.httpMethod == "GET" {
+                XCTAssertEqual(url.query, "ref=main")
+                guard let sha = remote.sha else { return try reply(404, [:]) }
+                return try reply(200, ["type": "file", "sha": sha, "path": "images/\(id).png"])
+            }
+            XCTAssertEqual(request.httpMethod, "PUT")
+            let body = try XCTUnwrap(JSONSerialization.jsonObject(with: XCTUnwrap(request.httpBody)) as? [String: String])
+            XCTAssertEqual(body["sha"], remote.sha)
+            XCTAssertEqual(body["branch"], "main")
+            XCTAssertEqual(body["content"], png.base64EncodedString())
+            remote.writes += 1
+            if remote.race { return try reply(409, ["message": "stale sha"]) }
+            remote.sha = local
+            return try reply(200, ["content": ["sha": local]])
+        }
+        let missing = try await service.iconStatus(packageID: id, png: png)
+        XCTAssertNil(missing.blobSHA)
+        let added = try await service.publishIcon(snapshot: missing, png: png)
+        XCTAssertTrue(added.identical)
+        _ = try await service.publishIcon(snapshot: added, png: png)
+        XCTAssertEqual(remote.writes, 1)
+        remote.sha = old
+        do {
+            _ = try await service.publishIcon(snapshot: added, png: png)
+            XCTFail("stale preview accepted")
+        } catch let error as ApelinError { XCTAssertEqual(error.code, .conflict) }
+        XCTAssertEqual(remote.writes, 1)
+        let replacement = try await service.iconStatus(packageID: id, png: png)
+        remote.race = true
+        do {
+            _ = try await service.publishIcon(snapshot: replacement, png: png)
+            XCTFail("concurrent change overwritten")
+        } catch let error as ApelinError { XCTAssertEqual(error.code, .conflict) }
+        XCTAssertEqual(remote.writes, 2)
+        XCTAssertEqual(remote.sha, old)
+    }
+
     // MARK: Create
 
     func testCreateMakesTheRepositoryProjectCommitPagesAndLink() async throws {
@@ -197,7 +283,11 @@ final class DistributionTests: XCTestCase {
         }
         let workflow = try String(contentsOf: root.appendingPathComponent(DistributionTemplate.workflowPath), encoding: .utf8)
         XCTAssertTrue(workflow.contains("- main\n"), "the workflow runs on the branch packages go to")
-        XCTAssertTrue(FileManager.default.isExecutableFile(atPath: root.appendingPathComponent("scripts/update-repository.sh").path))
+        XCTAssertTrue(workflow.contains("- \"images/**\""), "an icon-only push rebuilds Pages")
+        let scriptURL = root.appendingPathComponent("scripts/update-repository.sh")
+        XCTAssertTrue(FileManager.default.isExecutableFile(atPath: scriptURL.path))
+        let script = try String(contentsOf: scriptURL, encoding: .utf8)
+        XCTAssertTrue(script.contains(#"cp -R images "$site_dir/images""#), "Pages serves package icons at images/")
         XCTAssertEqual(try commits(in: bare), ["Set up the package repository"])
         let status = try GitService(layout: fixture.home.layout).status(GitStatusRequest(projectID: "packages"))
         XCTAssertEqual(status.entries, [], "Apelin's own files stay out of the repository")

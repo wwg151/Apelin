@@ -106,6 +106,12 @@ extension BuiltInSkills {
           `https://owngoal-dev.github.io/Apelin/icons/wiki.qaq.apelin.dev.tweak.png`.
           Keep it, or put in an https image the user gives as their own. It
           is not an app's own icon, which its Info.plist names.
+          When designing a plugin's distribution icon, export a single-frame
+          256 × 256 PNG to `Distribution/icon.png` relative to that project.
+          Distribute Project discovers it automatically, without a build or
+          install. The Package Icon page offers a confirmed push to the linked
+          source's `images/<package id>.png`. Never set `package.icon` to a
+          local path; it is the published image's HTTPS URL.
         - `depiction` and `sileoDepiction`: optional, the package's page in a
           package manager, written as the control's `Depiction` (a web page)
           and `SileoDepiction` (the native depiction JSON, where a changelog

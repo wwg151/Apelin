@@ -1,6 +1,294 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Package Icon" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Package Icon" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "أيقونة الحزمة" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Paketsymbol" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Icono del paquete" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Icône du paquet" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Icona del pacchetto" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージアイコン" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지 아이콘" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Ícone do pacote" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Значок пакета" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Biểu tượng gói" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "软件包图标" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "套件圖示" } }
+      }
+    },
+    "No Project Icon" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "No Project Icon" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "لا توجد أيقونة للمشروع" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Kein Projektsymbol" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "El proyecto no tiene icono" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Aucune icône de projet" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Nessuna icona del progetto" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "プロジェクトアイコンなし" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "프로젝트 아이콘 없음" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Projeto sem ícone" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "У проекта нет значка" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Dự án chưa có biểu tượng" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "项目暂无图标" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "專案尚無圖示" } }
+      }
+    },
+    "Choose Image…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Choose Image…" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "اختيار صورة…" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Bild auswählen…" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Elegir imagen…" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Choisir une image…" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Scegli immagine…" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "画像を選択…" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "이미지 선택…" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Escolher imagem…" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Выбрать изображение…" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Chọn hình ảnh…" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "选择图像…" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "選擇影像…" } }
+      }
+    },
+    "Package Repository" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Package Repository" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "مستودع الحزم" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Paket-Repository" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Repositorio de paquetes" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Dépôt de paquets" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Repository dei pacchetti" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージリポジトリ" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지 저장소" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Repositório de pacotes" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Репозиторий пакетов" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Kho gói" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "软件包仓库" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "套件倉庫" } }
+      }
+    },
+    "Link a package repository in Settings → Git." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Link a package repository in Settings → Git." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "اربط مستودع حزم من قسم Git في الإعدادات." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Verknüpfe unter „Einstellungen → Git“ ein Paket-Repository." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Vincula un repositorio de paquetes en Ajustes → Git." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Associez un dépôt de paquets dans Réglages → Git." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Collega un repository di pacchetti in Impostazioni → Git." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "「設定」→「Git」でパッケージリポジトリをリンクしてください。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "설정 → Git에서 패키지 저장소를 연결하세요." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Vincule um repositório de pacotes em Ajustes → Git." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Привяжите репозиторий пакетов в разделе «Настройки → Git»." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Liên kết kho gói trong Cài đặt → Git." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "请在“设置 → Git”中关联软件包仓库。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "請在「設定 → Git」中連結套件倉庫。" } }
+      }
+    },
+    "Destination File" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Destination File" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "الملف الوجهة" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zieldatei" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Archivo de destino" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Fichier de destination" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "File di destinazione" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "保存先ファイル" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "대상 파일" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Arquivo de destino" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Целевой файл" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Tệp đích" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "目标文件" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "目標檔案" } }
+      }
+    },
+    "A unique package ID is required." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "A unique package ID is required." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "يلزم معرّف حزمة فريد." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Eine eindeutige Paket-ID ist erforderlich." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Se necesita un identificador de paquete único." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Un identifiant de paquet unique est requis." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "È necessario un ID pacchetto univoco." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "一意のパッケージIDが必要です。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "고유한 패키지 ID가 필요합니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "É necessário um ID de pacote único." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Требуется уникальный идентификатор пакета." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Cần có mã định danh gói duy nhất." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "需要唯一的软件包标识符。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "需要唯一的套件識別碼。" } }
+      }
+    },
+    "Working…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Working…" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "جارٍ التنفيذ…" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wird ausgeführt…" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Procesando…" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Traitement en cours…" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Operazione in corso…" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "処理中…" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "처리 중…" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Processando…" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Обработка…" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Đang xử lý…" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "正在处理…" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "正在處理…" } }
+      }
+    },
+    "Push Package Icon…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Push Package Icon…" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إرسال أيقونة الحزمة…" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Paketsymbol hochladen…" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Enviar icono del paquete…" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Envoyer l’icône du paquet…" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Invia icona del pacchetto…" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージアイコンをプッシュ…" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지 아이콘 푸시…" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Enviar ícone do pacote…" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отправить значок пакета…" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Đẩy biểu tượng gói…" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "推送软件包图标…" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "推送套件圖示…" } }
+      }
+    },
+    "The linked repository changed. Reopen this page." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "The linked repository changed. Reopen this page." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تغيّر المستودع المرتبط. أعد فتح هذه الصفحة." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Das verknüpfte Repository hat sich geändert. Öffne diese Seite erneut." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "El repositorio vinculado ha cambiado. Vuelve a abrir esta página." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Le dépôt associé a changé. Rouvrez cette page." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Il repository collegato è cambiato. Riapri questa pagina." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "リンク先のリポジトリが変更されました。このページを開き直してください。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "연결된 저장소가 변경되었습니다. 이 페이지를 다시 여세요." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "O repositório vinculado mudou. Abra esta página novamente." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Привязанный репозиторий изменился. Откройте эту страницу заново." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Kho đã liên kết đã thay đổi. Hãy mở lại trang này." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "关联的仓库已更改。请重新打开此页面。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "連結的倉庫已變更。請重新開啟此頁面。" } }
+      }
+    },
+    "The repository already contains this icon." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "The repository already contains this icon." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "هذه الأيقونة موجودة بالفعل في المستودع." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Dieses Symbol ist bereits im Repository vorhanden." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Este icono ya está en el repositorio." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Cette icône figure déjà dans le dépôt." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Questa icona è già presente nel repository." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "このアイコンはすでにリポジトリにあります。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "저장소에 이미 이 아이콘이 있습니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Este ícone já está no repositório." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Этот значок уже есть в репозитории." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Kho đã có biểu tượng này." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "仓库中已有此图标。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "倉庫中已有此圖示。" } }
+      }
+    },
+    "Add Package Icon?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Add Package Icon?" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "هل تريد إضافة أيقونة الحزمة؟" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Paketsymbol hinzufügen?" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "¿Añadir el icono del paquete?" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ajouter l’icône du paquet ?" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Aggiungere l’icona del pacchetto?" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージアイコンを追加しますか？" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지 아이콘을 추가할까요?" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Adicionar o ícone do pacote?" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Добавить значок пакета?" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Thêm biểu tượng gói?" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "添加软件包图标？" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "加入套件圖示？" } }
+      }
+    },
+    "Replace Package Icon?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Replace Package Icon?" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "هل تريد استبدال أيقونة الحزمة؟" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Paketsymbol ersetzen?" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "¿Reemplazar el icono del paquete?" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Remplacer l’icône du paquet ?" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Sostituire l’icona del pacchetto?" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "パッケージアイコンを置き換えますか？" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "패키지 아이콘을 교체할까요?" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Substituir o ícone do pacote?" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Заменить значок пакета?" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Thay thế biểu tượng gói?" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "替换软件包图标？" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "取代套件圖示？" } }
+      }
+    },
+    "Push" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Push" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "إرسال" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Pushen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Enviar" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Envoyer" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "Invia" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "プッシュ" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "푸시" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Enviar" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отправить" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Đẩy" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "推送" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "推送" } }
+      }
+    },
+    "The icon is in the package repository." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "The icon is in the package repository." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "الأيقونة موجودة في مستودع الحزم." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Das Symbol ist jetzt im Paket-Repository." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "El icono ya está en el repositorio de paquetes." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "L’icône est désormais dans le dépôt de paquets." } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "L’icona è ora nel repository dei pacchetti." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "アイコンがパッケージリポジトリに保存されました。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "아이콘이 패키지 저장소에 저장되었습니다." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "O ícone está no repositório de pacotes." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Значок сохранён в репозитории пакетов." } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "Biểu tượng đã được lưu vào kho gói." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "图标已保存到软件包仓库。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "圖示已儲存至套件倉庫。" } }
+      }
+    },
+    "%@ · %@\n%@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "%@ · %@\n%@" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "%@ · %@\n%@" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%@ · %@\n%@" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "%@ · %@\n%@" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "%@ · %@\n%@" } },
+        "it" : { "stringUnit" : { "state" : "translated", "value" : "%@ · %@\n%@" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@ · %@\n%@" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%@ · %@\n%@" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "%@ · %@\n%@" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "%@ · %@\n%@" } },
+        "vi" : { "stringUnit" : { "state" : "translated", "value" : "%@ · %@\n%@" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%@ · %@\n%@" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "%@ · %@\n%@" } }
+      }
+    },
     "Jump to Latest" : {
       "extractionState" : "manual",
       "localizations" : {

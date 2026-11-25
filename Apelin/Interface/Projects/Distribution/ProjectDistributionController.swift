@@ -1,6 +1,7 @@
 import ApelinCore
 import ApelinProtocol
 import UIKit
+import UniformTypeIdentifiers
 
 /// The first step of distributing a project. The release packages builds
 /// already made of its current version, roothide and rootless, come first
@@ -28,7 +29,7 @@ final class ProjectDistributionController: TableController {
     }
 
     private enum Row: Hashable {
-        case project, package(String), publish, release, target(BuildBootstrap), checking, ready, blocker(Int), issue(Int),
+        case project, icon, package(String), publish, release, target(BuildBootstrap), checking, ready, blocker(Int), issue(Int),
              prepare, unavailable
     }
 
@@ -65,6 +66,8 @@ final class ProjectDistributionController: TableController {
     /// Available release builds, newest first; selection names artifacts.
     private var packages: [DistributionPackage] = []
     @objc private dynamic var selectedPackages: Set<String> = []
+    private var iconData: Data?
+    private var iconDetail = "Distribution/icon.png"
     private var packageReader: Task<Void, Never>?
     private var isRemovingPackages = false
     private var removalSelection: Set<String> = []
@@ -153,7 +156,14 @@ final class ProjectDistributionController: TableController {
     /// or a publish may have changed them.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateRemovalControls()
+        do {
+            iconData = try DistributionIconFile.read(projectName: projectName)
+            iconDetail = iconData == nil ? "Distribution/icon.png" : "256 × 256 PNG"
+        } catch {
+            iconData = nil
+            iconDetail = error.readableMessage
+        }
+        updateRows()
         if hasAppeared {
             refreshCheck()
         }
@@ -183,6 +193,10 @@ final class ProjectDistributionController: TableController {
                 selectedPackages.insert(artifactID)
             }
             updateRows()
+        case .icon:
+            let ids = Set(packages.map(\.packageID))
+            let page = DistributionIconController(projectName: projectName, artifactPackageID: ids.count == 1 ? ids.first : nil)
+            navigationController?.pushViewController(page, animated: true)
         case .publish:
             publish()
         case .release:
@@ -259,6 +273,12 @@ final class ProjectDistributionController: TableController {
         switch value.row {
         case .project:
             break
+        case .icon:
+            content.image = iconData.flatMap { UIImage(data: $0) } ?? UIImage(systemName: "photo")
+            content.imageProperties.maximumSize = CGSize(width: 40, height: 40)
+            cell.accessoryType = .disclosureIndicator
+            cell.selectionStyle = .default
+            cell.accessibilityTraits = .button
         case let .package(artifactID):
             content.secondaryTextProperties.numberOfLines = 0
             let paragraph = NSMutableParagraphStyle()
@@ -374,9 +394,11 @@ final class ProjectDistributionController: TableController {
                 readiness.append(RowContent(row: .prepare, text: String(localized: "Ask Agent to Prepare")))
             }
         }
-        var sections: [(Section, [RowContent])] = [
-            (.project, [RowContent(row: .project, text: String(localized: "Project"), secondaryText: displayName ?? projectName)]),
-        ]
+        var projectRows = [RowContent(row: .project, text: String(localized: "Project"), secondaryText: displayName ?? projectName)]
+        if !isRemovingPackages {
+            projectRows.append(RowContent(row: .icon, text: String(localized: "Package Icon"), secondaryText: iconDetail))
+        }
+        var sections: [(Section, [RowContent])] = [(.project, projectRows)]
         let listed = packages
         if !listed.isEmpty {
             let rows = listed.map { package in
@@ -685,6 +707,139 @@ final class ProjectDistributionController: TableController {
             String(localized: "Prepare this project for distribution: run apelin_project_check_distribution, fix everything it lists (the package’s name, description, author and version, its identifiers, and the app’s icon if it has one), then tell me what you changed. Do not build yet.")
         }
         dismiss(animated: true) { onPrepare(prompt) }
+    }
+}
+
+/// Preview and import are local; only confirming the named destination writes to GitHub.
+@MainActor
+private final class DistributionIconController: UITableViewController, UIDocumentPickerDelegate {
+    private let projectName: String
+    private let artifactPackageID: String?
+    private var packageID: String?
+    private var repository: String?
+    private var png: Data?
+    private var detail = "Distribution/icon.png"
+    private var busy = false { didSet { tableView.reloadData() } }
+
+    init(projectName: String, artifactPackageID: String?) {
+        self.projectName = projectName
+        self.artifactPackageID = artifactPackageID
+        super.init(style: .insetGrouped)
+    }
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) { fatalError() }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = String(localized: "Package Icon")
+        do { png = try DistributionIconFile.read(projectName: projectName) }
+        catch { detail = error.readableMessage }
+        Task { [weak self] in
+            guard let self else { return }
+            do {
+                let project = try await DistributionProject.resolve(named: projectName)
+                packageID = project.package?.id ?? (project.method == .script ? artifactPackageID : nil)
+                repository = try await ApelinService.app.distributionRepositoryList(repositories: false).linked?.fullName
+            } catch { detail = error.readableMessage }
+            tableView.reloadData()
+        }
+    }
+
+    override func numberOfSections(in _: UITableView) -> Int { 2 }
+    override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int { section == 0 ? 2 : 3 }
+
+    override func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        cell.selectionStyle = .none
+        var value = cell.defaultContentConfiguration()
+        var actionable = false
+        switch (indexPath.section, indexPath.row) {
+        case (0, 0):
+            value.text = png == nil ? String(localized: "No Project Icon") : "256 × 256 PNG"
+            value.secondaryText = detail
+            value.image = png.flatMap { UIImage(data: $0) } ?? UIImage(systemName: "photo")
+            value.imageProperties.maximumSize = CGSize(width: 96, height: 96)
+        case (0, 1):
+            value.text = String(localized: "Choose Image…")
+            actionable = true
+        case (1, 0):
+            value.text = String(localized: "Package Repository")
+            value.secondaryText = repository ?? String(localized: "Link a package repository in Settings → Git.")
+        case (1, 1):
+            value.text = String(localized: "Destination File")
+            value.secondaryText = packageID.map { "images/\($0).png" } ?? String(localized: "A unique package ID is required.")
+        default:
+            value.text = busy ? String(localized: "Working…") : String(localized: "Push Package Icon…")
+            actionable = repository != nil && packageID != nil && png != nil
+            if !actionable { value.textProperties.color = .tertiaryLabel }
+        }
+        if actionable {
+            value.textProperties.color = busy ? .tertiaryLabel : .tintColor
+            cell.selectionStyle = busy ? .none : .default
+            cell.accessibilityTraits = busy ? [.button, .notEnabled] : .button
+        }
+        value.secondaryTextProperties.numberOfLines = 0
+        cell.contentConfiguration = value
+        return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard !busy else { return }
+        if indexPath.section == 0, indexPath.row == 1 {
+            let picker = UIDocumentPickerViewController(forOpeningContentTypes: [.image], asCopy: true)
+            picker.delegate = self
+            present(picker, animated: true)
+        } else if indexPath.section == 1, indexPath.row == 2, let png, let packageID, let repository {
+            checkDestination(png, packageID: packageID, repository: repository)
+        }
+    }
+
+    func documentPicker(_: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard let url = urls.first else { return }
+        do {
+            png = try DistributionIconFile.importImage(from: url, projectName: projectName)
+            detail = "Distribution/icon.png"
+            tableView.reloadData()
+        } catch { presentNotice(title: "Package Icon", message: error.readableMessage) }
+    }
+
+    private func checkDestination(_ data: Data, packageID: String, repository: String) {
+        busy = true
+        Task { [weak self] in
+            guard let self else { return }
+            defer { busy = false }
+            do {
+                let snapshot = try await ApelinService.app.distributionIconStatus(packageID: packageID, png: data)
+                guard viewIfLoaded?.window != nil else { return }
+                guard snapshot.repository == repository else {
+                    presentNotice(title: "Package Icon", message: "The linked repository changed. Reopen this page.")
+                    return
+                }
+                if snapshot.identical {
+                    presentNotice(title: "Package Icon", message: "The repository already contains this icon.")
+                    return
+                }
+                presentConfirmation(
+                    title: snapshot.blobSHA == nil ? "Add Package Icon?" : "Replace Package Icon?",
+                    message: String.LocalizationValue("\(snapshot.repository) · \(snapshot.branch)\n\(snapshot.path)"),
+                    confirmTitle: "Push", destructive: snapshot.blobSHA != nil,
+                ) { [weak self] in self?.upload(data, snapshot: snapshot) }
+            } catch { presentNotice(title: "Package Icon", message: error.readableMessage) }
+        }
+    }
+
+    private func upload(_ data: Data, snapshot: DistributionIconStatus) {
+        busy = true
+        Task { [weak self] in
+            guard let self else { return }
+            defer { busy = false }
+            do {
+                _ = try await ApelinService.app.distributionIconPublish(snapshot: snapshot, png: data)
+                presentNotice(title: "Package Icon", message: "The icon is in the package repository.")
+            } catch { presentNotice(title: "Package Icon", message: error.readableMessage) }
+        }
     }
 }
 

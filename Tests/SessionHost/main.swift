@@ -3103,7 +3103,7 @@ do {
     check(!CallerPolicy.allows(.worker(.build, instance: nil), .feedbackSend), "the build worker may not")
     check(!CallerPolicy.allows(.worker(.diagnostics, instance: nil), .feedbackSend), "nor the diagnostics worker")
     for operation in [AppOperation.distributionRepositoryList, .distributionRepositoryCreate,
-                      .distributionRepositoryLink, .distributionRepositoryUnlink]
+                      .distributionRepositoryLink, .distributionRepositoryUnlink, .distributionIconStatus, .distributionIconPublish]
     {
         check(!CallerPolicy.allows(.worker(.agent, instance: "s"), operation), "the package repository stays the app's: \(operation)")
     }

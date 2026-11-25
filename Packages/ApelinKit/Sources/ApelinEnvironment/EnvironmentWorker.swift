@@ -207,6 +207,14 @@ public final class EnvironmentWorker: @unchecked Sendable {
                     reporter.emit("result", result)
                 }
             }
+        case .distributionIconStatus:
+            await WorkerMain.serve(DistributionIconStatusRequest.self, request) { [self] typed in
+                try await distribution.iconStatus(packageID: typed.packageID, png: typed.png)
+            }
+        case .distributionIconPublish:
+            await WorkerMain.serve(DistributionIconPublishRequest.self, request) { [self] typed in
+                try await distribution.publishIcon(snapshot: typed.snapshot, png: typed.png)
+            }
         case .distributionPackages:
             await WorkerMain.serve(DistributionPackagesRequest.self, request) { [self] _ in
                 try await distribution.packages()

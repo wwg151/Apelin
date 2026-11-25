@@ -55,6 +55,7 @@ enum DistributionTemplate {
           - ".github/workflows/update-repository.yml"
           - "debs/**"
           - "depictions/**"
+          - "images/**"
           - "scripts/update-repository.sh"
           - "CydiaIcon.png"
           - "index.html"
@@ -200,6 +201,9 @@ enum DistributionTemplate {
     fi
     if [[ -d depictions ]]; then
       cp -R depictions "$site_dir/depictions"
+    fi
+    if [[ -d images ]]; then
+      cp -R images "$site_dir/images"
     fi
     cp "$work_dir/Packages" "$work_dir/Packages.xz" "$work_dir/Release" "$site_dir/"
     # Pages runs no Jekyll over the site.
