@@ -66,7 +66,16 @@ final class ProjectDistributionController: TableController {
     /// Available release builds, newest first; selection names artifacts.
     private var packages: [DistributionPackage] = []
     @objc private dynamic var selectedPackages: Set<String> = []
+    private var manifestPackageID: String?
+    private var iconPackageID: String? {
+        if let manifestPackageID { return manifestPackageID }
+        let ids = Set(packages.map(\.packageID))
+        return method == .script && ids.count == 1 ? ids.first : nil
+    }
     private var iconData: Data?
+    private func refreshIcon() {
+        iconData = (try? DistributionIconFile.read(projectName: projectName, packageID: iconPackageID))?.data
+    }
     private var packageReader: Task<Void, Never>?
     private var isRemovingPackages = false
     private var removalSelection: Set<String> = []
@@ -155,7 +164,7 @@ final class ProjectDistributionController: TableController {
     /// or a publish may have changed them.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        iconData = try? DistributionIconFile.read(projectName: projectName)
+        refreshIcon()
         updateRows()
         if hasAppeared {
             refreshCheck()
@@ -538,6 +547,9 @@ final class ProjectDistributionController: TableController {
                 let project = try await DistributionProject.resolve(named: projectName)
                 guard !Task.isCancelled else { return }
                 method = project.method
+                manifestPackageID = project.package?.id
+                refreshIcon()
+                updateRows()
                 guard project.method.canBuild else {
                     blockers = []
                     issues = []
@@ -615,6 +627,7 @@ final class ProjectDistributionController: TableController {
                 && architectures.insert(package.architecture).inserted
         }.map(\.artifactID))
         packages = found
+        if method == .script { refreshIcon() }
         removalSelection.formIntersection(Set(found.map(\.artifactID)))
         updateRows()
     }
@@ -726,13 +739,14 @@ private final class DistributionIconController: UITableViewController, UIDocumen
     override func viewDidLoad() {
         super.viewDidLoad()
         title = String(localized: "Package Icon")
-        do { png = try DistributionIconFile.read(projectName: projectName) }
-        catch { detail = error.readableMessage }
         Task { [weak self] in
             guard let self else { return }
             do {
                 let project = try await DistributionProject.resolve(named: projectName)
                 packageID = project.package?.id ?? (project.method == .script ? artifactPackageID : nil)
+                let icon = try DistributionIconFile.read(projectName: projectName, packageID: packageID)
+                png = icon?.data
+                detail = "Distribution/" + (icon?.name ?? DistributionIconFile.filename(packageID: packageID))
                 repository = try await ApelinService.app.distributionRepositoryList(repositories: false).linked?.fullName
             } catch { detail = error.readableMessage }
             tableView.reloadData()
@@ -792,8 +806,8 @@ private final class DistributionIconController: UITableViewController, UIDocumen
     func documentPicker(_: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         guard let url = urls.first else { return }
         do {
-            png = try DistributionIconFile.importImage(from: url, projectName: projectName)
-            detail = "Distribution/icon.png"
+            png = try DistributionIconFile.importImage(from: url, projectName: projectName, packageID: packageID)
+            detail = "Distribution/" + DistributionIconFile.filename(packageID: packageID)
             tableView.reloadData()
         } catch { presentNotice(title: "Package Icon", message: error.readableMessage) }
     }

@@ -259,7 +259,12 @@ enum SharedPackages {
 /// The repository-facing icon is independent of the project's sidebar icon.
 @MainActor
 enum DistributionIconFile {
-    private static let name = "icon.png"
+    static func filename(packageID: String?) -> String {
+        guard let suffix = packageID?.components(separatedBy: ".").last, !suffix.isEmpty,
+              suffix.utf8.count <= 251,
+              suffix.utf8.allSatisfy({ (97...122).contains($0) || (48...57).contains($0) || $0 == 45 || $0 == 43 }) else { return "icon.png" }
+        return suffix + ".png"
+    }
     private static let side = 256
     private static let iconLimit = 1 << 20
     private static let inputLimit = 32 << 20
@@ -315,12 +320,20 @@ enum DistributionIconFile {
         return source
     }
 
-    static func read(projectName: String) throws -> Data? {
+    static func read(projectName: String, packageID: String?) throws -> (data: Data, name: String)? {
         guard let folder = try directory(projectName, create: false) else { return nil }
         defer { close(folder) }
-        let fd = openat(folder, name, readFlags)
-        if fd < 0, errno == ENOENT { return nil }
-        guard fd >= 0 else { throw systemError() }
+        let preferred = filename(packageID: packageID)
+        for name in preferred == "icon.png" ? [preferred] : [preferred, "icon.png"] {
+            let fd = openat(folder, name, readFlags)
+            if fd < 0, errno == ENOENT { continue }
+            guard fd >= 0 else { throw systemError() }
+            return (try validatedPNG(fd), name)
+        }
+        return nil
+    }
+
+    private static func validatedPNG(_ fd: Int32) throws -> Data {
         let data = try bytes(fd, limit: iconLimit)
         let image = try source(data)
         guard CGImageSourceGetType(image) as String? == UTType.png.identifier,
@@ -333,7 +346,7 @@ enum DistributionIconFile {
         return data
     }
 
-    static func importImage(from url: URL, projectName: String) throws -> Data {
+    static func importImage(from url: URL, projectName: String, packageID: String?) throws -> Data {
         guard url.isFileURL, !url.path.contains("\0") else { throw CocoaError(.fileReadInvalidFileName) }
         let scoped = url.startAccessingSecurityScopedResource()
         defer { if scoped { url.stopAccessingSecurityScopedResource() } }
@@ -362,11 +375,11 @@ enum DistributionIconFile {
         guard !png.isEmpty, png.count <= iconLimit else { throw CocoaError(.fileWriteUnknown) }
         guard let folder = try directory(projectName, create: true) else { throw CocoaError(.fileNoSuchFile) }
         defer { close(folder) }
-        try replace(in: folder, with: png)
+        try replace(in: folder, name: filename(packageID: packageID), with: png)
         return png
     }
 
-    private static func replace(in folder: Int32, with png: Data) throws {
+    private static func replace(in folder: Int32, name: String, with png: Data) throws {
         let temp = ".icon-\(UUID().uuidString).tmp"
         let fd = openat(folder, temp, O_WRONLY | O_CREAT | O_EXCL | O_NOFOLLOW | O_CLOEXEC, 0o644)
         guard fd >= 0 else { throw systemError() }

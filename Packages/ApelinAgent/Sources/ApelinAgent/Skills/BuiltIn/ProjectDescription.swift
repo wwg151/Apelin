@@ -107,7 +107,9 @@ extension BuiltInSkills {
           Keep it, or put in an https image the user gives as their own. It
           is not an app's own icon, which its Info.plist names.
           When designing a plugin's distribution icon, export a single-frame
-          256 × 256 PNG to `Distribution/icon.png` relative to that project.
+          256 × 256 PNG directly to `Distribution/<last package ID component>.png`
+          in that project (create the folder if needed). For `com.mg.smartnetwork`,
+          write `Distribution/smartnetwork.png`; do not ask the user to move it.
           Distribute Project discovers it automatically, without a build or
           install. The Package Icon page offers a confirmed push to the linked
           source's `images/<package id>.png`. Never set `package.icon` to a
