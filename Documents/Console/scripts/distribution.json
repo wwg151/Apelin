@@ -139,6 +139,34 @@
       "label": "unlink"
     },
     {
+      "op": "distributionIconStatus",
+      "request": { "packageID": "example.plugin", "png": "" },
+      "label": "icon-empty",
+      "allowError": true
+    },
+    {
+      "op": "expect",
+      "request": { "step": "icon-empty", "errorCode": "badRequest" }
+    },
+    {
+      "op": "distributionIconPublish",
+      "request": {
+        "snapshot": {
+          "repository": "example/packages",
+          "branch": "main",
+          "packageID": "example.plugin",
+          "localBlobSHA": "unused"
+        },
+        "png": ""
+      },
+      "label": "icon-publish-unlinked",
+      "allowError": true
+    },
+    {
+      "op": "expect",
+      "request": { "step": "icon-publish-unlinked", "errorCode": "conflict" }
+    },
+    {
       "op": "distributionPackages",
       "label": "packages-unlinked",
       "allowError": true
