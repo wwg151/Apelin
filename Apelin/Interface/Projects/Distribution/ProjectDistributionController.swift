@@ -76,6 +76,7 @@ final class ProjectDistributionController: TableController {
     private func refreshIcon() {
         iconData = (try? DistributionIconFile.read(projectName: projectName, packageID: iconPackageID))?.data
     }
+    private var repositoryLookup: Task<DistributionRepository?, Error>?
     private var packageReader: Task<Void, Never>?
     private var isRemovingPackages = false
     private var removalSelection: Set<String> = []
@@ -164,6 +165,7 @@ final class ProjectDistributionController: TableController {
     /// or a publish may have changed them.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        repositoryLookup = Task { try await ApelinService.app.distributionRepositoryList(repositories: false).linked }
         refreshIcon()
         updateRows()
         if hasAppeared {
@@ -196,9 +198,9 @@ final class ProjectDistributionController: TableController {
             }
             updateRows()
         case .icon:
-            guard let packageID = iconPackageID, let png = iconData,
+            guard let repositoryLookup, let packageID = iconPackageID, let png = iconData,
                   let filename = try? DistributionIconFile.filename(packageID: packageID) else { return }
-            let page = DistributionIconController(projectName: projectName, packageID: packageID, png: png, filename: filename)
+            let page = DistributionIconController(projectName: projectName, packageID: packageID, png: png, filename: filename, repositoryLookup: repositoryLookup)
             navigationController?.pushViewController(page, animated: true)
         case .publish:
             publish()
@@ -606,7 +608,7 @@ final class ProjectDistributionController: TableController {
             var found: [DistributionPackage] = []
             if let project = try? await DistributionProject.resolve(named: projectName), project.method.canBuild {
                 // the link needs no network; a failure leaves every package unpublished
-                let linked = try? await ApelinService.app.distributionRepositoryList(repositories: false).linked
+                let linked = try? await repositoryLookup?.value
                 found = await DistributionPackages.history(
                     projectID: project.id,
                     package: project.package,
@@ -728,7 +730,10 @@ private final class DistributionIconController: UITableViewController, UIDocumen
     private var detail: String?
     private var busy = false { didSet { tableView.reloadData() } }
 
-    init(projectName: String, packageID: String, png: Data, filename: String) {
+    private let repositoryLookup: Task<DistributionRepository?, Error>
+
+    init(projectName: String, packageID: String, png: Data, filename: String, repositoryLookup: Task<DistributionRepository?, Error>) {
+        self.repositoryLookup = repositoryLookup
         self.projectName = projectName
         self.packageID = packageID
         self.png = png
@@ -745,7 +750,7 @@ private final class DistributionIconController: UITableViewController, UIDocumen
         Task { [weak self] in
             guard let self else { return }
             do {
-                repository = try await ApelinService.app.distributionRepositoryList(repositories: false).linked?.fullName
+                repository = try await repositoryLookup.value?.fullName
                 repositoryDetail = repository ?? String(localized: "Link a package repository in Settings → Git.")
             } catch { repositoryDetail = error.readableMessage }
             tableView.reloadData()
