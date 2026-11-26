@@ -196,8 +196,9 @@ final class ProjectDistributionController: TableController {
             }
             updateRows()
         case .icon:
-            let ids = Set(packages.map(\.packageID))
-            let page = DistributionIconController(projectName: projectName, artifactPackageID: ids.count == 1 ? ids.first : nil)
+            guard let packageID = iconPackageID, let png = iconData,
+                  let filename = try? DistributionIconFile.filename(packageID: packageID) else { return }
+            let page = DistributionIconController(projectName: projectName, packageID: packageID, png: png, filename: filename)
             navigationController?.pushViewController(page, animated: true)
         case .publish:
             publish()
@@ -720,16 +721,18 @@ final class ProjectDistributionController: TableController {
 @MainActor
 private final class DistributionIconController: UITableViewController, UIDocumentPickerDelegate {
     private let projectName: String
-    private let artifactPackageID: String?
-    private var packageID: String?
+    private let packageID: String?
     private var repository: String?
+    private var repositoryDetail = String(localized: "Loading…")
     private var png: Data?
     private var detail: String?
     private var busy = false { didSet { tableView.reloadData() } }
 
-    init(projectName: String, artifactPackageID: String?) {
+    init(projectName: String, packageID: String, png: Data, filename: String) {
         self.projectName = projectName
-        self.artifactPackageID = artifactPackageID
+        self.packageID = packageID
+        self.png = png
+        detail = "Distribution/" + filename
         super.init(style: .insetGrouped)
     }
 
@@ -742,13 +745,9 @@ private final class DistributionIconController: UITableViewController, UIDocumen
         Task { [weak self] in
             guard let self else { return }
             do {
-                let project = try await DistributionProject.resolve(named: projectName)
-                packageID = project.package?.id ?? (project.method == .script ? artifactPackageID : nil)
-                let icon = try DistributionIconFile.read(projectName: projectName, packageID: packageID)
-                png = icon?.data
-                detail = icon.map { "Distribution/" + $0.name }
                 repository = try await ApelinService.app.distributionRepositoryList(repositories: false).linked?.fullName
-            } catch { detail = error.readableMessage }
+                repositoryDetail = repository ?? String(localized: "Link a package repository in Settings → Git.")
+            } catch { repositoryDetail = error.readableMessage }
             tableView.reloadData()
         }
     }
@@ -772,7 +771,7 @@ private final class DistributionIconController: UITableViewController, UIDocumen
             actionable = true
         case (1, 0):
             value.text = String(localized: "Package Repository")
-            value.secondaryText = repository ?? String(localized: "Link a package repository in Settings → Git.")
+            value.secondaryText = repositoryDetail
         case (1, 1):
             value.text = String(localized: "Destination File")
             value.secondaryText = packageID.map { DistributionIconStatus.path(for: $0) } ?? String(localized: "A unique package ID is required.")
