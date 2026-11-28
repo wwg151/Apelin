@@ -198,6 +198,25 @@ console now goes on after a restart only past a successful respring.
 
 ## Still to run on the owner's devices
 
+- [ ] An Antigravity sign-in left by 0.4.11 (`agy`) or earlier
+      (`antigravity`), after the upgrade to 0.4.12 (2026-11-27, issue #88,
+      kwwk 0.1.139, AGENTS.md ▸ Agent sign-in; none has run on a device).
+      On 0.4.11, with another account signed in: save a placeholder under
+      store id `agy` (and optionally `antigravity` from an earlier build)
+      through the credentials inbox, enable one of its models in Settings
+      ▸ Model Providers ▸ Antigravity, and pick it in a chat. Start
+      `device.py logs --process apelin-agent --seconds 300`, install
+      0.4.12 and open a chat. The capture logs "removed the saved sign-in
+      of agy, a provider Apelin no longer offers" (and likewise for
+      `antigravity` if present) once, with nothing of the placeholder;
+      `device.py call agentCredentialImport` refuses both `antigravity`
+      and `agy` and lists neither in `available`. The chat switches to
+      another signed-in account's enabled model (or Select Model when none
+      is enabled) and answers a sent message. Model Providers has no
+      Antigravity row, its footer ends "Currently using kwwk 0.1.139.",
+      and `wiki.qaq.apelin.plist` holds no `antigravity` keys once the app
+      backgrounds.
+
 - [ ] The lessons of a GitHub Actions release (2026-11-22, issue #79;
       the Mac harness holds the wording, the tools' answers and the
       committed file mode; on the iOS 26.4 iPhone vphone the created
@@ -1431,20 +1450,12 @@ console now goes on after a restart only past a successful respring.
       key fails verification without the key in what the app shows. Kimi
       For Coding Global signs in with its code on kimi.ai, a chat answers,
       and a sign-in again keeps the device id the first one recorded.
-- [ ] Antigravity's Google sign-in (2026-11-04, kwwk 0.1.111; offered
-      again in 0.4.9 on kwwk 0.1.127 with Antigravity restored, AGENTS.md
-      ▸ Agent sign-in). An account's renewal and a chat have run on a
-      device, from a sign-in another client made (the 0.4.9 record below);
-      no Google account has signed in through Apelin's own page. With a
-      Google account, Settings ▸ Model Providers ▸ Antigravity opens
-      Google's page in Safari, which comes back to
-      `localhost:51121/oauth-callback` (or the address pasted from
-      Safari's address bar where it cannot), and Antigravity is listed
-      signed in. A chat on `gemini-4-argon` and one on `claude-sonnet-5-5`
-      read a file with file_read and answer, Compact… compacts one, and the
-      chat still answers after the hour Google's token lasts. A free
-      account and a Google AI Pro one say which of the listed models each
-      serves; one it does not serve fails in Google's words.
+- [x] Antigravity's Google sign-in (2026-11-04, kwwk 0.1.111; offered
+      again in 0.4.9–0.4.11): no longer applicable. kwwk 0.1.139 removed
+      the relay-only `agy` provider from the shared SDK, and 0.4.12
+      retires Antigravity from Apelin (#88, AGENTS.md ▸ Agent sign-in);
+      upgrade cleanup of both legacy store ids (`antigravity`, `agy`) is
+      tracked in the 0.4.12 entry above.
 - [ ] Custom instructions (2026-11-22, issue #74, AGENTS.md ▸ Custom
       instructions; the store, the prompt section, its ranking and the
       prompt staying the same bytes ran on the Mac; the editor, a chat
@@ -3883,3 +3894,42 @@ products on iOS 15, the reporter's `dtremotedisplayd` and iOS 17.3.1
 devices, a setup of 27.0's own release again, the rest of the From GitHub
 cases (Select All, replace, SKILL.md and slash-branch links, a private
 repository, Cancel, the rate limit) and the rootless package.
+
+## 0.4.11 round (2026-11-27, kwwk 0.1.138 & #73)
+
+On the Mac and CI (PR #89, run 45975667238, Xcode 27.1): `make check`,
+the full `make harness` (ApelinAgent 489 tests, session host 1556/1556,
+apelind and workers typechecks), `make old-runtime`, `make deb-all`
+(both roothide and rootless packages and all extensions), `check-catalog-keys.py`,
+and `audit-objc-selectors.sh` (2 accepted, nothing new).
+
+CI's roothide package (`wiki.qaq.apelin_0.4.11_iphoneos-arm64e.deb`,
+build 198, `sha256` `4d42d58ef470`) installed over 0.4.9 on both jp-01
+iPhone guests and jp-02's iOS 26.4 iPad, and over 0.4.8 on jp-02's
+iOS 27.0.1 iPad:
+
+- `jp-01` `ios264` (iOS 26.4, roothide, Irisin 5.1.7): `suite smoke`
+  7 pass; `suite accounts` 2 pass (`accounts` reached Google's
+  `accounts.google.com/o/oauth2/v2/auth` with dynamic loopback redirect
+  `http://localhost:49219/oauth-callback` and all 7 `agy` scopes, then
+  cancelled; `a3-endpoint-beside` passed); `agentCredentialImport`
+  accepted `agy.json`, `agentAccountList` reported Antigravity signed in
+  with 27 bundled `AgyModels` (`claude-opus-5-5-high`, …), and
+  `agentSignOut` removed only `agy` leaving `openai-compatible`; 0 crash
+  reports.
+- `jp-01` `ios27` (iOS 27.0.1, roothide, Irisin 5.1.7): `suite smoke`
+  7 pass; `suite accounts` 2 pass; `agy.json` imported and signed out
+  cleanly; installed `Apelin.app/Licenses.json` verified `kwwk` version
+  `0.1.138` (`https://github.com/yellowplushq/kwwk`); 0 crash reports.
+- `jp-02` `ipad264` (iOS 26.4, roothide, Irisin 5.1.6): `suite smoke`
+  6 pass, 1 skip (`files`, no toolchain); `suite accounts` 2 pass; 0 new
+  crash reports.
+- `jp-02` `ipad27` (iOS 27.0.1, roothide, Irisin 5.1.4): `suite smoke`
+  6 pass, 1 skip (`files`, no toolchain); `suite accounts` 2 pass; 0
+  crash reports.
+- Both `jp-01` and `jp-02` VMs stopped cleanly afterwards (`vphone-slot
+  stop`, slots free) and the temporary transfer drop removed.
+
+Not run: live OpenCode Go / AirRelay chat with a real key or relay
+endpoint on device, the full `regression` suite, and the rootless
+package on a rootless device.
